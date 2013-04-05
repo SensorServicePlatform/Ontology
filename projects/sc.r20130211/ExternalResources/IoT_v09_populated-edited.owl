@@ -1,0 +1,1810 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/IoT/iot"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/IoT/iot"
+     versionIRI="http://purl.org/IoT/iot">
+    <Prefix name="sweet" IRI="http://sweet.jpl.nasa.gov/2.2/sweetAll.owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="IoT" IRI="http://www.vtt.fi/ontologies/IoT.owl#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dul" IRI="http://www.loa-cnr.it/ontologies/DUL.owl#"/>
+    <Prefix name="qudt" IRI="http://qudt.org/1.1/schema/qudt#"/>
+    <Import>http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl</Import>
+    <Import>http://purl.oclc.org/NET/ssnx/ssn</Import>
+    <Import>http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://purl.org/IoT/iot</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://purl.org/IoT/iot</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">K. Kotis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The aim of the ontology is to provide a clear understanding of the new research domain of IoT in respect to the need for ‘true’ (i.e. semantic) interoperability of smart entities and other kind of entities (control, physical) that may be plugged in it anytime, by anyone and from anyplace.  The objective is not to focus in sensor and observation data descriptions as in SSN ontology, but instead to emphasize the notion of interconnected, clustered andaligned smart entities towards supporting their semantic registration, coordination and retrieval in a Web of Things.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI=":versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">K. Kotis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">IoT-ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A. Katasonov</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Internet of Things (IoT) reference ontology for data integration and semantic coordination of smart entities.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Accelerometer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actuating_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airplane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_cell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_header"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_output_in_OWL_axioms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attached_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bath_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bed_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blood_presure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blood_presure_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body_temperature_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloud"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloud_smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication_bandwidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication_info_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computing_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cross_domain_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Depth_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_specific_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elderly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electric_and_mechanic_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electric_home_appliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronic_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronic_home_appliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embedded_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environmental_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facial_emotion_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardware_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heart_beat_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heart_rate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heat_temperature_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Home_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#House_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_temperature_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identification_info_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identification_message"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Internet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IoT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kinect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kitchen_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Living_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meeting_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motion_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network_infrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network_specific_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ontology_definition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ontology_definition_alignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orientation_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personal_computer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Photo_frame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processing_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public_transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFID_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFID_tag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference_ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantic_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorOutput_in_cloud"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Server"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Phone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sound_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structural_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Syntactic_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Translation_message"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transportation_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UCODE_ID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vendor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visual_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Web_of_thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_speed_observatation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wrist_Watch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#access_resource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accessed_by_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#acts_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alignment_computed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aligns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attached_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compete_for_resources"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compute_ontology_learning_for_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connects_entities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controlled_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controls_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describe_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describe_resource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity1Value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity2Value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_cell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_header"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_owner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_UCODE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_actuator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_observation_values"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_processor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_sensing_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_software_agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_space"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_vendor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_equipped_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lives_in_place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_access_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_meaning_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offer_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#process_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reside_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#use_smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#used_by_application"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAlignmentCellValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMeasureValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalAlignmentFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalAlignmentOutputFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalOntologyFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRelationValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_IPv6_address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_URI_associated_ucode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ontology_definition_iri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuatingDevice-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BedroomTemperature-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CloudDataStream4BeckombergaTemperatureAtPachube"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-A1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-C1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-C1OntologyDefintion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HeatFeatureOfInterest-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Heater-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OnRoof_Near_house_outdoor_temperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A2OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-D1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-D1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WoT-1"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Physical_entity"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <Class abbreviatedIRI="ssn:System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#timestamp"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+        <Class IRI="#Hardware_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accelerometer"/>
+        <Class IRI="#Orientation_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuating_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuating_device"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#acts_on"/>
+            <Class IRI="#Electric_and_mechanic_device"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Air_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airplane"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEntity1Value"/>
+            <Class abbreviatedIRI="ssn:Property"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEntity2Value"/>
+            <Class abbreviatedIRI="ssn:Property"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasMeasureValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRelationValue"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">&amp;gt</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">&amp;lt</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">equiv</Literal>
+            </DataOneOf>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_header"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalAlignmentOutputFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output_in_OWL_axioms"/>
+        <Class IRI="#Alignment_output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#use_smart_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attached_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attached_device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attached_to"/>
+            <ObjectUnionOf>
+                <Class IRI="#Computing_device"/>
+                <Class IRI="#Electric_and_mechanic_device"/>
+                <Class IRI="#Embedded_device"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bath_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bed_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blood_presure"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blood_presure_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body_temperature_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_facility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camera"/>
+        <Class IRI="#Visual_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carer"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_smart_network"/>
+        <Class IRI="#Smart_Network"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_smart_network"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_smart_entity"/>
+        <Class IRI="#Smart_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_device"/>
+            <Class IRI="#SensorOutput_in_cloud"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cluster"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication_bandwidth"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication_info_object"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Computing_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_learning_for_data"/>
+            <Class IRI="#SensorOutput_in_cloud"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_ontology_definition"/>
+            <Class IRI="#Ontology_definition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#controls_entity"/>
+            <ObjectUnionOf>
+                <Class IRI="#Physical_entity"/>
+                <Class IRI="#Smart_entity"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cross_domain_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depth_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Domain_ontology"/>
+        <Class IRI="#Ontology_definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Domain_specific_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elderly"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_and_mechanic_device"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_home_appliance"/>
+        <Class IRI="#Electric_and_mechanic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_device"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_home_appliance"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_processor"/>
+            <Class IRI="#Processor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_actuator"/>
+            <Class IRI="#Actuating_device"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_part_actuator"/>
+            <Class IRI="#Actuating_device"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotion"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Environmental_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facial_emotion_observation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facial_emotion_observation_value"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="dul:hasDataValue"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">happy</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">sad</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hardware_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heart_beat_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heart_rate"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Temperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat_temperature_observation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat_temperature_observation_value"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Home_smart_network"/>
+        <Class IRI="#Smart_Network"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Home_smart_network"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#House_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#House_space_facility"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Room_space_facility"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Blood_presure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Heart_rate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Human_body_temperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_temperature_observation_value"/>
+        <Class IRI="#Heat_temperature_observation_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identification_info_object"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identification_message"/>
+        <Class IRI="#Communication_info_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Internet"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IoT"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <Class IRI="#Motion_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Depth_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Sound_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Visual_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchen_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Living_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meeting_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memory"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metadata"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motion_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network_infrastructure"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network_specific_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <ObjectUnionOf>
+                <Class IRI="#Bath_room"/>
+                <Class IRI="#Meeting_room"/>
+                <Class IRI="#Office_room"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Office_room"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <Class IRI="#Semantic_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describe_resource"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalOntologyFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ontology_definition_iri"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#alignment_computed_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Control_entity"/>
+                <Class IRI="#Smart_entity"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_alignment_cell"/>
+            <Class IRI="#Alignment_cell"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_alignment_output"/>
+            <Class IRI="#Alignment_output"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_alignment_cell"/>
+            <Class IRI="#Alignment_cell"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#aligns"/>
+            <Class IRI="#Ontology_definition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_alignment_header"/>
+            <Class IRI="#Alignment_header"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalAlignmentFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orientation_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personal_computer"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Photo_frame"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Photo_frame"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Emotion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_time"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processor"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public_transport"/>
+        <Class IRI="#Transportation_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RFID_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RFID_tag"/>
+        <Class IRI="#Attached_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference_ontology"/>
+        <Class IRI="#Ontology_definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessed_by_service"/>
+            <Class IRI="#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_space_facility"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Room_space_facility"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semantic_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorOutput_in_cloud"/>
+        <Class abbreviatedIRI="ssn:SensorOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorOutput_in_cloud"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#reside_in"/>
+            <Class IRI="#Cloud"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Server"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#access_resource"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_part"/>
+            <ObjectUnionOf>
+                <Class IRI="#Control_entity"/>
+                <Class IRI="#Physical_entity"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty abbreviatedIRI="dul:isPartOf"/>
+            <Class IRI="#Web_of_thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_vendor"/>
+            <Class IRI="#Vendor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Phone"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#controlled_by"/>
+            <Class IRI="#Control_entity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#negotiate_access_of"/>
+            <ObjectUnionOf>
+                <Class IRI="#Electronic_device"/>
+                <Class IRI="#Resource"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#offer_service"/>
+            <Class IRI="#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#Smart_Network"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#Smart_entity_cluster"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#used_by_application"/>
+            <Class IRI="#Application"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_UCODE"/>
+            <Class IRI="#UCODE_ID"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_device"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="ssn:Sensing_device"/>
+                <Class IRI="#Actuating_device"/>
+                <Class IRI="#Attached_device"/>
+                <Class IRI="#Embedded_device"/>
+                <Class IRI="#SensorOutput_in_cloud"/>
+            </ObjectUnionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_ontology_definition"/>
+            <Class IRI="#Domain_ontology"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_vendor"/>
+            <Class IRI="#Vendor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#lives_in_place"/>
+            <Class IRI="#Facility"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity_cluster"/>
+        <Class IRI="#Cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity_cluster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software_agent"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sound_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structural_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Syntactic_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Translation_message"/>
+        <Class IRI="#Communication_info_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transportation_facility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#has_IPv6_address"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vendor"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visual_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Web_of_thing"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Web_of_thing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_smart_network"/>
+            <Class IRI="#Smart_Network"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Wind_speed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed"/>
+        <Class IRI="#Speed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed_observatation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed_observatation_value"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wrist_Watch"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dul:FormalEntity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dul:InformationEntity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class abbreviatedIRI="dul:NaturalPerson"/>
+    </SubClassOf>
+    
+
+
+
+<!-- Generated by the OWL API (version 3.2.5.1912) http://owlapi.sourceforge.net -->
+

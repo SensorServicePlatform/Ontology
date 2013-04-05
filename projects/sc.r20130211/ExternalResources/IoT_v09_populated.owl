@@ -1,0 +1,4223 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/IoT/iot"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/IoT/iot"
+     versionIRI="http://purl.org/IoT/iot">
+    <Prefix name="sweet" IRI="http://sweet.jpl.nasa.gov/2.2/sweetAll.owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="IoT" IRI="http://www.vtt.fi/ontologies/IoT.owl#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dul" IRI="http://www.loa-cnr.it/ontologies/DUL.owl#"/>
+    <Prefix name="qudt" IRI="http://qudt.org/1.1/schema/qudt#"/>
+    <Import>http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl</Import>
+    <Import>http://purl.oclc.org/NET/ssnx/ssn</Import>
+    <Import>http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://purl.org/IoT/iot</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://purl.org/IoT/iot</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">K. Kotis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The aim of the ontology is to provide a clear understanding of the new research domain of IoT in respect to the need for ‘true’ (i.e. semantic) interoperability of smart entities and other kind of entities (control, physical) that may be plugged in it anytime, by anyone and from anyplace.  The objective is not to focus in sensor and observation data descriptions as in SSN ontology, but instead to emphasize the notion of interconnected, clustered andaligned smart entities towards supporting their semantic registration, coordination and retrieval in a Web of Things.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI=":versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">0.9</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">K. Kotis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">IoT-ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/author"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A. Katasonov</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Internet of Things (IoT) reference ontology for data integration and semantic coordination of smart entities.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Accelerometer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actuating_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airplane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_cell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_header"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment_output_in_OWL_axioms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attached_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bath_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bed_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blood_presure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blood_presure_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body_temperature_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloud"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloud_smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication_bandwidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communication_info_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Computing_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cross_domain_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Depth_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Domain_specific_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Elderly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electric_and_mechanic_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electric_home_appliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronic_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronic_home_appliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embedded_device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Emotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Environmental_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facial_emotion_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardware_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heart_beat_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heart_rate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heat_temperature_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Home_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#House_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_body_temperature_observation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identification_info_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identification_message"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Internet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IoT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kinect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kitchen_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Living_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meeting_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motion_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network_infrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network_specific_smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office_room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Office_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ontology_definition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ontology_definition_alignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orientation_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personal_computer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Photo_frame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processing_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public_transport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFID_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RFID_tag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference_ontology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room_space_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room_temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantic_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorOutput_in_cloud"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Server"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_Phone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smart_entity_cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sound_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structural_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Syntactic_metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Translation_message"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transportation_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UCODE_ID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vendor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visual_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Web_of_thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind_speed_observatation_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wrist_Watch"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#access_resource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accessed_by_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#acts_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alignment_computed_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aligns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attached_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compete_for_resources"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compute_ontology_learning_for_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connects_entities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controlled_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#controls_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describe_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describe_resource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity1Value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntity2Value"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_cell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_header"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_alignment_output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_owner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_UCODE"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_actuator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_observation_values"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_processor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_sensing_device"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_smart_network"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_software_agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_part_space"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_vendor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_equipped_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lives_in_place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_access_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_meaning_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offer_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#process_data"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reside_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#use_smart_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#used_by_application"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAlignmentCellValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMeasureValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalAlignmentFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalAlignmentOutputFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhysicalOntologyFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRelationValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_IPv6_address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_URI_associated_ucode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ontology_definition_iri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ActuatingDevice-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BedroomTemperature-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CloudDataStream4BeckombergaTemperatureAtPachube"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-A1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-C1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ControlE-C1OntologyDefintion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HeatFeatureOfInterest-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Heater-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OnRoof_Near_house_outdoor_temperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A1SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-A2OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-B1SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-D1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartE-D1OntologyDefinition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemperatureSensorDevice-3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor-D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WoT-1"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Physical_entity"/>
+        <Class abbreviatedIRI="dul:PhysicalObject"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <Class abbreviatedIRI="ssn:System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.linkedmodel.org/schema/vaem#timestamp"/>
+            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+        <Class IRI="#Hardware_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accelerometer"/>
+        <Class IRI="#Orientation_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuating_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actuating_device"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#acts_on"/>
+            <Class IRI="#Electric_and_mechanic_device"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Air_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airplane"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEntity1Value"/>
+            <Class abbreviatedIRI="ssn:Property"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEntity2Value"/>
+            <Class abbreviatedIRI="ssn:Property"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasMeasureValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_cell"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRelationValue"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">&amp;gt</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">&amp;lt</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">equiv</Literal>
+            </DataOneOf>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_header"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalAlignmentOutputFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment_output_in_OWL_axioms"/>
+        <Class IRI="#Alignment_output"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#use_smart_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attached_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attached_device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#attached_to"/>
+            <ObjectUnionOf>
+                <Class IRI="#Computing_device"/>
+                <Class IRI="#Electric_and_mechanic_device"/>
+                <Class IRI="#Embedded_device"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bath_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bed_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blood_presure"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Blood_presure_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body_temperature_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building_facility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camera"/>
+        <Class IRI="#Visual_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carer"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_smart_network"/>
+        <Class IRI="#Smart_Network"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City_smart_network"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_smart_entity"/>
+        <Class IRI="#Smart_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cloud_smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_device"/>
+            <Class IRI="#SensorOutput_in_cloud"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cluster"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication_bandwidth"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communication_info_object"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Computing_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_learning_for_data"/>
+            <Class IRI="#SensorOutput_in_cloud"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_ontology_definition"/>
+            <Class IRI="#Ontology_definition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#controls_entity"/>
+            <ObjectUnionOf>
+                <Class IRI="#Physical_entity"/>
+                <Class IRI="#Smart_entity"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Control_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cross_domain_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Depth_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Domain_ontology"/>
+        <Class IRI="#Ontology_definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Domain_specific_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Elderly"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_and_mechanic_device"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electric_home_appliance"/>
+        <Class IRI="#Electric_and_mechanic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_device"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_home_appliance"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <Class IRI="#Electronic_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_processor"/>
+            <Class IRI="#Processor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_actuator"/>
+            <Class IRI="#Actuating_device"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embedded_device"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_part_actuator"/>
+            <Class IRI="#Actuating_device"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Emotion"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Environmental_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facial_emotion_observation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facial_emotion_observation_value"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="dul:hasDataValue"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">happy</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">sad</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Facility"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hardware_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heart_beat_sensor"/>
+        <Class IRI="#Human_body_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heart_rate"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Temperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat_temperature_observation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Heat_temperature_observation_value"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Home_smart_network"/>
+        <Class IRI="#Smart_Network"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Home_smart_network"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#has_outdoor_sensing_device"/>
+            <Class abbreviatedIRI="ssn:Sensing_device"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#House_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#House_space_facility"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Room_space_facility"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Blood_presure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Heart_rate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Human_body_temperature"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_body_temperature_observation_value"/>
+        <Class IRI="#Heat_temperature_observation_value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identification_info_object"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identification_message"/>
+        <Class IRI="#Communication_info_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Internet"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IoT"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <Class IRI="#Motion_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Depth_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Sound_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kinect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part"/>
+            <Class IRI="#Visual_sensor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kitchen_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Living_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meeting_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memory"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metadata"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Motion_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network_infrastructure"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network_specific_smart_entity_cluster"/>
+        <Class IRI="#Smart_entity_cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_room"/>
+        <Class IRI="#Room_space_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <ObjectUnionOf>
+                <Class IRI="#Bath_room"/>
+                <Class IRI="#Meeting_room"/>
+                <Class IRI="#Office_room"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Office_space_facility"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Office_room"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <Class IRI="#Semantic_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describe_resource"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalOntologyFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ontology_definition_iri"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <Class IRI="#Structural_metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#alignment_computed_by"/>
+            <ObjectUnionOf>
+                <Class IRI="#Control_entity"/>
+                <Class IRI="#Smart_entity"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_alignment_cell"/>
+            <Class IRI="#Alignment_cell"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_alignment_output"/>
+            <Class IRI="#Alignment_output"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_alignment_cell"/>
+            <Class IRI="#Alignment_cell"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#aligns"/>
+            <Class IRI="#Ontology_definition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_alignment_header"/>
+            <Class IRI="#Alignment_header"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPhysicalAlignmentFile"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orientation_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personal_computer"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Photo_frame"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Photo_frame"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Emotion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processing_time"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Processor"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public_transport"/>
+        <Class IRI="#Transportation_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RFID_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RFID_tag"/>
+        <Class IRI="#Attached_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference_ontology"/>
+        <Class IRI="#Ontology_definition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#accessed_by_service"/>
+            <Class IRI="#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_space_facility"/>
+        <Class IRI="#Building_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_space_facility"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_space"/>
+            <Class IRI="#Room_space_facility"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room_temperature"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Semantic_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorOutput_in_cloud"/>
+        <Class abbreviatedIRI="ssn:SensorOutput"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorOutput_in_cloud"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#reside_in"/>
+            <Class IRI="#Cloud"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Server"/>
+        <Class IRI="#Computing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#access_resource"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#has_part"/>
+            <ObjectUnionOf>
+                <Class IRI="#Control_entity"/>
+                <Class IRI="#Physical_entity"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty abbreviatedIRI="dul:isPartOf"/>
+            <Class IRI="#Web_of_thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Network"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_vendor"/>
+            <Class IRI="#Vendor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_Phone"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#controlled_by"/>
+            <Class IRI="#Control_entity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#negotiate_access_of"/>
+            <ObjectUnionOf>
+                <Class IRI="#Electronic_device"/>
+                <Class IRI="#Resource"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#offer_service"/>
+            <Class IRI="#Service"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#Smart_Network"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#part_of"/>
+            <Class IRI="#Smart_entity_cluster"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#used_by_application"/>
+            <Class IRI="#Application"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_UCODE"/>
+            <Class IRI="#UCODE_ID"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_device"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="ssn:Sensing_device"/>
+                <Class IRI="#Actuating_device"/>
+                <Class IRI="#Attached_device"/>
+                <Class IRI="#Embedded_device"/>
+                <Class IRI="#SensorOutput_in_cloud"/>
+            </ObjectUnionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_ontology_definition"/>
+            <Class IRI="#Domain_ontology"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_part_software_agent"/>
+            <Class IRI="#Software_agent"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has_vendor"/>
+            <Class IRI="#Vendor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#lives_in_place"/>
+            <Class IRI="#Facility"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity_cluster"/>
+        <Class IRI="#Cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smart_entity_cluster"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_entity"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software_agent"/>
+        <Class IRI="#Software"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sound_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structural_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Syntactic_metadata"/>
+        <Class IRI="#Metadata"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train"/>
+        <Class IRI="#Public_transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Translation_message"/>
+        <Class IRI="#Communication_info_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transportation_facility"/>
+        <Class IRI="#Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <Class abbreviatedIRI="dul:InformationObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#has_IPv6_address"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UCODE_ID"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#has_URI_associated_ucode"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vendor"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visual_sensor"/>
+        <Class abbreviatedIRI="ssn:Sensing_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Web_of_thing"/>
+        <Class IRI="#Network_infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Web_of_thing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_part_smart_network"/>
+            <Class IRI="#Smart_Network"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class abbreviatedIRI="ssn:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+            <Class IRI="#Wind_speed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_sensor"/>
+        <Class IRI="#Environmental_sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed"/>
+        <Class IRI="#Speed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed_observatation_value"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind_speed_observatation_value"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://qudt.org/schema/qudt#numericValue"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wrist_Watch"/>
+        <Class IRI="#Embedded_device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dul:FormalEntity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dul:InformationEntity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl#Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class IRI="#Physical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <Class abbreviatedIRI="dul:NaturalPerson"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Actuating_device"/>
+        <NamedIndividual IRI="#ActuatingDevice-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Alignment_cell"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Bedroom_air_temperature"/>
+        <NamedIndividual IRI="#BedroomTemperature-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City_smart_network"/>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorOutput_in_cloud"/>
+        <NamedIndividual IRI="#CloudDataStream4BeckombergaTemperatureAtPachube"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Control_entity"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#ControlE-A1OntologyDefinition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Control_entity"/>
+        <NamedIndividual IRI="#ControlE-C1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#ControlE-C1OntologyDefintion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Heat"/>
+        <NamedIndividual IRI="#HeatFeatureOfInterest-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Electric_home_appliance"/>
+        <NamedIndividual IRI="#Heater-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Home_smart_network"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room_temperature"/>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Elderly"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#House_space_facility"/>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl#Near_house_outdoor_temperature"/>
+        <NamedIndividual IRI="#OnRoof_Near_house_outdoor_temperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Smart_entity"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#SmartE-A1OntologyDefinition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software_agent"/>
+        <NamedIndividual IRI="#SmartE-A1SoftwareAgent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Smart_entity"/>
+        <NamedIndividual IRI="#SmartE-A2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#SmartE-A2OntologyDefinition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Smart_entity"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#SmartE-B1OntologyDefinition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software_agent"/>
+        <NamedIndividual IRI="#SmartE-B1SoftwareAgent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cloud_smart_entity"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Domain_ontology"/>
+        <NamedIndividual IRI="#SmartE-D1OntologyDefinition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ontology_definition_alignment"/>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temperature_sensor"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temperature_sensor"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Temperature_sensor"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vendor"/>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vendor"/>
+        <NamedIndividual IRI="#Vendor-B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vendor"/>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vendor"/>
+        <NamedIndividual IRI="#Vendor-D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Web_of_thing"/>
+        <NamedIndividual IRI="#WoT-1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#acts_on"/>
+        <NamedIndividual IRI="#ActuatingDevice-1"/>
+        <NamedIndividual IRI="#Heater-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEntity1Value"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEntity2Value"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Living_room_air_temperature_in_celcius"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+        <NamedIndividual IRI="#ControlE-C1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+        <NamedIndividual IRI="#ControlE-A1OntologyDefinition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#ControlE-C1"/>
+        <NamedIndividual IRI="#ControlE-C1OntologyDefintion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#ControlE-C1"/>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+        <NamedIndividual IRI="#HeatFeatureOfInterest-1"/>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:hasMeasurementProperty"/>
+        <NamedIndividual IRI="#HeatFeatureOfInterest-1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Living_room_air_temperature_in_celcius"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlled_by"/>
+        <NamedIndividual IRI="#Heater-1"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:observes"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Living_room_air_temperature_in_celcius"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="#Heater-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_owner"/>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlled_by"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_device"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#SmartE-A1OntologyDefinition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_software_agent"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#SmartE-A1SoftwareAgent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lives_in_place"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+        <NamedIndividual IRI="#SmartE-A1"/>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_device"/>
+        <NamedIndividual IRI="#SmartE-A2"/>
+        <NamedIndividual IRI="#ActuatingDevice-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#SmartE-A2"/>
+        <NamedIndividual IRI="#SmartE-A2OntologyDefinition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#SmartE-A2"/>
+        <NamedIndividual IRI="#Vendor-A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlled_by"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#ControlE-A1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_device"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#SmartE-B1OntologyDefinition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_software_agent"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#SmartE-B1SoftwareAgent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#Vendor-B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#lives_in_place"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#MaryHouseAtBeckomberga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#utilize_ontology_definition_alignment"/>
+        <NamedIndividual IRI="#SmartE-B1"/>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#controlled_by"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+        <NamedIndividual IRI="#ControlE-C1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_device"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+        <NamedIndividual IRI="#CloudDataStream4BeckombergaTemperatureAtPachube"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+        <NamedIndividual IRI="#SmartE-D1OntologyDefinition"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_vendor"/>
+        <NamedIndividual IRI="#SmartE-D1"/>
+        <NamedIndividual IRI="#Vendor-C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_alignment_cell"/>
+        <NamedIndividual IRI="#SmartVendorBOntology_definition_alignment-1"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:observes"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-1"/>
+        <NamedIndividual IRI="#LivingRoomTemperature-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:observes"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-2"/>
+        <NamedIndividual IRI="#BedroomTemperature-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ssn:observes"/>
+        <NamedIndividual IRI="#TemperatureSensorDevice-3"/>
+        <NamedIndividual IRI="#OnRoof_Near_house_outdoor_temperature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_smart_network"/>
+        <NamedIndividual IRI="#WoT-1"/>
+        <NamedIndividual IRI="#CitySmartNetwork-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_part_smart_network"/>
+        <NamedIndividual IRI="#WoT-1"/>
+        <NamedIndividual IRI="#HomeSmartNetwork-1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMeasureValue"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+        <Literal datatypeIRI="&xsd;double">0.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRelationValue"/>
+        <NamedIndividual IRI="#AlignmentCell-1"/>
+        <Literal datatypeIRI="&xsd;string">equiv</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ontology_definition_iri"/>
+        <NamedIndividual IRI="#SmartE-A1OntologyDefinition"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://purl.org/IoT/iot</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ontology_definition_iri"/>
+        <NamedIndividual IRI="#SmartE-B1OntologyDefinition"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ontology_definition_iri"/>
+        <NamedIndividual IRI="#SmartE-D1OntologyDefinition"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#has_part"/>
+        <ObjectProperty IRI="#is_equipped_with"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#controls_entity"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_UCODE"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_actuator"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_device"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_entity"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_observation_values"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_ontology_definition"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_processor"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_sensing_device"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_smart_network"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_software_agent"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_part_space"/>
+        <ObjectProperty IRI="#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#negotiate_meaning_of_ontology_definition_between"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#offer_service"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reside_in"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#accessed_by_service"/>
+        <ObjectProperty IRI="#access_resource"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#alignment_computed_by"/>
+        <ObjectProperty IRI="#compute_ontology_definitions_alignment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#controls_entity"/>
+        <ObjectProperty IRI="#controlled_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#use_smart_entity"/>
+        <ObjectProperty IRI="#used_by_application"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#access_resource"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aligns"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aligns"/>
+            <Class IRI="#Ontology_definition_alignment"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#controls_entity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#controls_entity"/>
+            <Class IRI="#Control_entity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="ssn:Device"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_owner"/>
+            <Class IRI="#Facility"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_owner"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#negotiate_access_of"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#negotiate_access_of"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#negotiate_meaning_of"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#negotiate_meaning_of"/>
+            <Class IRI="#Smart_entity"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#access_resource"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aligns"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#aligns"/>
+            <Class IRI="#Ontology_definition"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#compete_for_resources"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#compete_for_resources"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_owner"/>
+            <Class abbreviatedIRI="foaf:Person"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#negotiate_access_of"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#negotiate_access_of"/>
+            <Class IRI="#Resource"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMeasureValue"/>
+        <DataProperty IRI="#hasAlignmentCellValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPhysicalAlignmentFile"/>
+        <DataProperty IRI="#hasPhysicalFile"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPhysicalAlignmentOutputFile"/>
+        <DataProperty IRI="#hasPhysicalFile"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPhysicalOntologyFile"/>
+        <DataProperty IRI="#hasPhysicalFile"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRelationValue"/>
+        <DataProperty IRI="#hasAlignmentCellValue"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRelationValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>ssn:FeatureOfInterest</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FeatureOfInterests</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>ssn:FeatureOfInterest</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FeatureOfInterest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>ssn:MeasurementProperty</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">MeasurementProperties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>ssn:MeasurementProperty</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">MeasurementProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>ssn:ObservationValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ObservationValues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>ssn:ObservationValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ObservationValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>ssn:Sensing_device</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sensing_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>ssn:Sensing_device</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sensing_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>ssn:Sensor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Accelerometer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Single- and multi-axis models of accelerometer are available to detect magnitude and direction of the proper acceleration (or g-force), as a vector quantity, and can be used to sense orientation (because direction of weight changes), coordinate acceleration (so long as it produces g-force or a change in g-force), vibration, shock, and falling (a case where the proper acceleration changes, since it tends toward zero). Micromachined accelerometers are increasingly present in portable electronic devices and video game controllers, to detect the position of the device or provide for game input.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Actuating_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Actuating_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Actuating_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Actuating_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actuating_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An electronic device that is responsible for acting in order to execute a task, after the related reception of commands.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Actuating_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">actuating device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Air_temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Air temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Airplane</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Airplane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AlignmentCell-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cell-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Alignment_cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The result is expressed in the Alignment format. This format, in RDF/XML, is made of a header containing &quot;metadata&quot; about the alignment and of a set of alignment cells (correspondences). Each correspondence is made of two references to the aligned entities, the relation holding between the entities (=) and a confidence measure (1.0) in this correspondence. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alignment_cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alignment cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alignment_cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">alignment correspondence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Alignment_header</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The result is expressed in the Alignment format. This format, in RDF/XML, is made of a header containing &quot;metadata&quot; about the alignment and of a set of alignment cells (correspondences).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alignment_header</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alignment header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Alignment_output</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Once a good alignment has been found, it is necessary to transform it into some processable format. For instance, if one wants to merge two OWL ontologies, the alignment can be changed into set of OWL &quot;bridging&quot; axioms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alignment_output</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alignment axioms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Alignment_output_in_OWL_axioms</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The result is a set of OWL assertions of the form:
+
+  &lt;owl:Class rdf:about=&quot;http://purl.org/IoT/iot#Room_Temperature&quot;&gt;
+    &lt;owl:equivalentClass rdf:resource=&quot;http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Bedroom_air_temperature&quot;/&gt;
+  &lt;/owl:Class&gt;
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Alignment_output_in_OWL_axioms</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alignment output in OWL &quot;bridging&quot; axioms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Application</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Applications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Application</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Attached_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Attached_Devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Attached_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Attached_Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Attached_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An electronic device that is capable of be attached on other devices e.g. RFID tag.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Attached_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">attached device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bath_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bath room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bed_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bed room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BedroomTemperature-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BedroomTemperature-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Blood_presure</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Blood presure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building_facility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bus</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Bus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Camera</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Camera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Carer</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Carer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitySmartNetwork-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartNetwork-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#City_smart_network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">City smart network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Cloud</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clouds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Cloud</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cloud</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A network organization of software systems involved in the delivery of cloud computing,i.e. to the delivery of networked technologies that provide computation, software, data access, and storage services that do not require end-user knowledge of the physical location and configuration of the system that delivers the services.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cloud</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A public cloud is one based on the standard cloud computing model, in which a service provider makes resources, such as applications and storage, available to the general public over the Internet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CloudDataStream4BeckombergaTemperatureAtPachube</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CloudDataStream1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Cloud_smart_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cloud_Smart_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Cloud_smart_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cloud_Smart_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cloud_smart_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A smart entity that integrates data resided in the Cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cloud_smart_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cloud smart entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Cluster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Clusters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Cluster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A cluster is a small group or bunch of something.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Example: A computer cluster is a group of linked computers, working together closely thus in many respects forming a single computer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Communication_bandwidth</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Communication_bandwidths</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Communication_bandwidth</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Communication_bandwidth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Communication_info_object</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Communication_datas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Communication_info_object</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Communication_data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Communication_info_object</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Computing_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Computing_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Computing_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Computing_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Computing_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An electronic device that performs any kind of compuation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Computing_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">computing device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ControlE-A1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">In the iot-ontology scope - use case scenario: Vendor-A’s software controller, running on a computing device, responsible for controlling the interconnection and interoperation of the other two entities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ControlE-A1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ControlE-A1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ControlE-C1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">In the iot-ontology scope - use case scenario: energy-saving predictive heating control, provided by Vendor-C  as a generic software application which could be used as an upgrade of the heating control entity for Mary&apos;s home</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ControlE-C1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ControlE-D1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Control_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Control_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Control_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Control_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Control_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A control entity is an entity (i.e. something that has a distinct, separate existence, although it need not be a material existence) with some control behavior. These entities integrate at least a control software (application) and an ontology definition. A control entity controls some smart entity or physical entity or both in order to achieve a specific goal e.g. to monitor and adjust temperature in a room based on sensed data. A control entity also computes alignments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cross_domain_smart_entity_cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cross domain IoT cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Depth_sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Depth sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Domain_ontology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Domain_ontologies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Domain_ontology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Domain_ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Domain_specific_smart_entity_cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Domain specific IoT cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Elderly</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Elderly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Electric_and_mechanic_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electric_and_mechanic_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Electric_and_mechanic_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electric_and_mechanic_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Electric_and_mechanic_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Electrical or mechanical machines which accomplish some functions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Electric_and_mechanic_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Electrical and Mechanical Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Electric_home_appliance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electric_home_applianceses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Electric_home_appliance</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electric_home_appliances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Electric_home_appliance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home appliances are electrical/mechanical machines which accomplish some household functions, such as cooking or cleaning. Home appliances can be classified into: Major appliances, or White goods, Small appliances, or Brown goods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Electric_home_appliance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home Appliances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Electronic_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electronic_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Electronic_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electronic_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>#Electronic_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.vtt.fi/ontologies/IoT.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Electronic_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any device that has some electronics integrated in it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Electronic_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Electronic Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Embedded_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Embedded_devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Embedded_device</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Embedded_device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Embedded_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An electronic device that embeds other devices such as sensors, actuators and processors.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Embedded_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">embeded device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Emotion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Emotions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Emotion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Emotion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">something that has a distinct, separate existence, although it need not be a material existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Environmental_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Environmental_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Environmental_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Environmental_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Facial_emotion_observation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Facal_emotion_observation_values</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Facial_emotion_observation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Facal_emotion_observation_value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Facility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Facility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hardware_sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hardware sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Heart_rate</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Hear beet rate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Heat</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Heats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Heat</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Heat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Heat</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Heat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HeatFeatureOfInterest-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">HeatFeatureOfInterest-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Heat_temperature_observation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Heat_temperature_observation_values</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Heat_temperature_observation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Heat_temperature_observation_value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Heater-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">heater-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HomeSmartNetwork-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartNetwork-2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Home_smart_network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Home smart network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#House_space_facility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">House</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Human_body</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Human body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Human_body_temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Human body temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Human_body_temperature_observation_value</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Human body temperature observation value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Human_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Human_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Human_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Human_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Identification_info_object</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Identification_datas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Identification_info_object</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Identification_data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Identification_message</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Identification_messages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Identification_message</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Identification_message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Internet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Internets</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Internet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Internet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Internet</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Internet is a global system of interconnected computer networks that use the standard Internet protocol suite (TCP/IP) to serve billions of users worldwide. It is a network of networks that consists of millions of private, public, academic, business, and government networks, of local to global scope, that are linked by a broad array of electronic, wireless and optical networking technologies. The Internet carries a vast range of information resources and services, such as the inter-linked hypertext documents of the World Wide Web (WWW) and the infrastructure to support email.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#IoT</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IoTs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#IoT</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IoT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IoT</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The IoT can be described as “a global network and service infrastructure of variable density and connectivity with self-configuring capabilities based on standard and interoperable protocols and formats.  IoT consists of heterogeneous things that have identities, physical and virtual attributes, and are seamlessly and securely integrated into the Internet” (IoT-SRA, 2011).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kinect</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">a motion sensing input device by Microsoft for the Xbox 360 video game console. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kinect</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MS Kinetic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kitchen_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Kitchen room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LivingRoomTemperature-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LivingRoomTemperature-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Living_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Living room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mary</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MaryHouseAtBeckomberga</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MyHouseAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Meeting_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Meeting room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Memory</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Memories</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Memory</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metadatas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Metadata</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Data (and resources) are described using some kind of metadata. Syntactic metadata describes non-contextual information about content, e.g. Document size, date of creation. Structural metadata provides information regarding the structure of content, i.e. tell us how data are grouped and put in ordered arrangements with other data. Semantic metadata adds relationships, rules and constraints to syntactic and structural metadata, describe contextually relevant or domain-specific information about content, usually capturing a meaning associated with content through the key technology of ontologies. Such a description may be integrated in a Smart Entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Motion_sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Motion sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Network_infrastructure</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Network_Organizations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Network_infrastructure</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Network_Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Network_infrastructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Network infrastructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Network_specific_smart_entity_cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Cross network smart entity cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Office_room</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Office</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Office_space_facility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Office building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OnRoof_Near_house_outdoor_temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OnRoof Near house outdoor temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Ontology_definition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ontology_definitions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Ontology_definition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ontology_definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Ontology_definition_alignment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ontology_alignments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Ontology_definition_alignment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ontology_alignment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Personal_computer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Personal_computers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Personal_computer</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Personal_computer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Photo_frame</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Photo_frames</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Photo_frame</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Photo_frame</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Photo_frame</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">photo frame</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Physical_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Physical_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Physical_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Physical_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Physical_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The “things” on the Internet of Things are various physical entities that present some interest to humans, such as a package to track, an industrial machine to monitor, an electrical current to measure, the temperature in an engine, etc. Depending on the nature of things, different ways of connecting them to IoT will be used. Such ways involve the use of other special purpose physical entities, i.e. electronic devices such as sensors, RFIDs, actuators, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Physical_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Physical entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Position</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Processing_time</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Processing_times</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Processing_time</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Processing_time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Processor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Processors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Processor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Processor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Public_transport</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Public transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#RFID_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID_readers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#RFID_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID_reader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RFID_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID reader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RFID_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID reader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RFID_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#RFID_tag</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID_tags</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#RFID_tag</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RFID_tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Reference_ontology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_ontologies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Reference_ontology</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Reference_ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Resource</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Resource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Devices contain two types of resources i.e. data and software resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Resource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Room_space_facility</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Room_temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Room temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Semantic_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Semantic_metadatas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Semantic_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Semantic_metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#SensorOutput_in_cloud</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Data_in_clouds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#SensorOutput_in_cloud</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Data_in_cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensorOutput_in_cloud</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Some data may be resided in the Cloud</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Server</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Servers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Server</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Server</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Services</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The access to  devices (resources) from the &apos;outside&apos; world is performed via services.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SmartE-A1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">&apos;smart leaving room&apos; in the iot-ontology scope - use case scenario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-A1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-A1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-A1OntologyDefinition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-1OntologyDefinition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-A1SoftwareAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-A1SoftwareAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SmartE-A2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">&apos;Smart heater&apos; in the iot-ontology scope - use case scenario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-A2</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-A2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SmartE-B1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">“smart bedroom” in the iot-ontology scope - use case scenario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-B1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-B1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-B1OntologyDefinition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-B1OntologyDefinition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-B1SoftwareAgent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-B1SoftwareAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SmartE-D1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">“smart city environment” in the iot-ontology scope - use case scenario provided by Vendor-D, equipped with cloud data i.e. remotely-accessible outdoor temperature sensor </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartE-D1OntologyDefinition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartE-C2OntologyDefinition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SmartVendorBOntology_definition_alignment-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SmartVendorBOntology definition alignment-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Smart_Network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Smart_Networks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Smart_Network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Smart_Network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Smart_Network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Smart network is also a network infrastructure that must have at least one instance of a Smart entity as part of it and any other number of instances of a Physical entity or a Control entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Smart_Phone</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Smart_Phones</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Smart_Phone</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Smart_Phone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Smart_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Smart_Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Smart_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Smart_Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Smart_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A smart entity is an entity (i.e. something that has a distinct, separate existence, although it need not be a material existence) with some smart/intelligent behavior, that is composed by different parts i.e. electronic device or data, software agent, ontology definition, and it is part of a Smart Network. In terms of the IoT-iCore project is can be seen as the VO (virtual object).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Smart_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Smart Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Smart_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Virtual Object (an iCore/Alcatel‐Lucent concept)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Smart_entity_cluster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IoT_Clusters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Smart_entity_cluster</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IoT_Cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Smart_entity_cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A smart entity cluster is a network organization of smart entities in the IoT.  It can be considered as the virtual ‘building block’ of IoT for automatically organizing and semantically coordinating domain-specific or cross-domain smart entities. In terms of the IoT-iCore projcet is can be seen as the CVO (composite virtual object).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Smart_entity_cluster</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Composite Virtual Object (an iCore/Alcatel‐Lucent concept)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Softwares</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Software</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Software</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Control and Smart entities integrate software (application or software agents) for enabling them to communicate between each other e.g. for smart-housing applications developed by some vendor (application software) or for communicating the entity’s domain knowledge as well as its abilities, goals, current and intended actions (software agent). </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Software_agent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Software_agents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Software_agent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Software_agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Software_agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A piece of software that acts for a user or other program in a relationship of agency. The main points that distinguish agents from arbitrary programs are: reaction to the environment, autonomy, goal-orientation and persistence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Software_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Software_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Software_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Software_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sound_sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sound sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Speed</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Speeds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Speed</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Speed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Structural_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Structural_metadatas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Structural_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Structural_metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Syntactic_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Syntactic_metadatas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Syntactic_metadata</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Syntactic_metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Temperature</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Temperatures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Temperature</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experimental IoT-ontology&apos;s domain property for describing temperature data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemperatureSensorDevice-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TemperatureSensorDevice-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemperatureSensorDevice-2</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TemperatureSensorDevice-2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemperatureSensorDevice-3</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TemperatureSensorDevice-3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Temperature_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Temperature_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Temperature_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Temperature_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Train</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Train</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Translation_message</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Translation_messages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Translation_message</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Translation_message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Transportation_facility</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Transports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Transportation_facility</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Transport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UCODE_ID</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">UCODE entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vendor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vendor-A</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vendor-B</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-B</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vendor-C</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vendor-D</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-D</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Visual_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Visual_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Visual_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Visual_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Visual_sensor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any kind of camera that takes (senses) photos of physical entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Web_of_thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Web of thing (WoT) is a Network infrastructure that has one or more Smart networks as part of it. It must be stated that this notion regards the set of all individual Webs that are somehow part of the whole WWW infrastructure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Web_of_thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Web of thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Web_of_thing</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">WoT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Wind</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Winds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Wind</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wind</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Wind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Wind_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wind_sensors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Wind_sensor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wind_sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wind_speed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Wind speed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Wind_speed_observatation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wind_speed_observatation_values</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Wind_speed_observatation_value</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wind_speed_observatation_value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WoT-1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">WoT-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#Wrist_Watch</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wrist_Watches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#Wrist_Watch</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Wrist_Watch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#access_resource</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">access resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#accessed_by_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">accessed by service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#alignment_computed_by</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">alignment computed by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">aligns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">alignses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#aligns</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">alignsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attached_to</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">attached to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#compete_for_resources</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">compete_for_resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#compete_for_resources</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">compete_for_resourceses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#compete_for_resources</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">compete_for_resourcesed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#compute_ontology_definitions_alignment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">compute ontology definitions alignment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#compute_ontology_learning_for_data</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">compute ontology learning for data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#connects_entities</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">connects entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">containses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#contains</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">containsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#controlled_by</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlled_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#controlled_by</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlled_bies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#controlled_by</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlled_bied</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#controls_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controls</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#controls_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#controls_entity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#describe_data</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#describe_data</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_datas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#describe_data</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_dataed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#describe_resource</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#describe_resource</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#describe_resource</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describe_resourced</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAlignmentCellValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAlignmentCellValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEntity1Value</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">entity1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEntity2Value</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">entity2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMeasureValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasMeasureValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhysicalAlignmentFile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasExternalAlignmentFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhysicalAlignmentOutputFile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPhysicalAlignmentOutputFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhysicalFile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPhysicalFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhysicalOntologyFile</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPhysicalOntologyFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRelationValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasRelationValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_IPv6_address</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has IPv6 address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_URI_associated_ucode</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has uri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_alignment_cell</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has alignment cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_alignment_header</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has alignment header</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_alignment_output</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has alignment output</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_outdoor_sensing_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has outdoor sensing device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_owner</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#has_part</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has_part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#has_part</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has_parts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#has_part</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has_parted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_UCODE</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part UCODE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_device</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part data or device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part smart entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_observation_values</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part observation values</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_ontology_definition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part ontology definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_smart_network</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part smart network</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_software_agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part software agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_part_space</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_vendor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has Vendor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_equipped_with</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is equipped with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lives_in_place</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">lives in place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#negotiate_access_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_access_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#negotiate_access_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_access_ofs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#negotiate_access_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_access_ofed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#negotiate_meaning_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_meaning_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#negotiate_meaning_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_meaning_ofs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#negotiate_meaning_of</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">negotiate_meaning_ofed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#negotiate_meaning_of_ontology_definition_between</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">negotiate meaning of ontology defintion with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#offer_service</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">offer service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ontology_definition_iri</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ontology definition iri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#part_of</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#process_data</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">process data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#reside_in</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">reside_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#reside_in</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">resides_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#reside_in</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">resided_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#use_smart_entity</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">use smart entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#used_by_application</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">used by application</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#utilize_ontology_definition_alignment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">utilize_resource_description_alignments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#utilize_ontology_definition_alignment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">utilize_resource_description_alignmentses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#utilize_ontology_definition_alignment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">utilize_resource_description_alignmentsed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>dul:FormalEntity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FormalEntities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>dul:FormalEntity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FormalEntity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <AbbreviatedIRI>dul:InformationEntity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">InformationEntities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <AbbreviatedIRI>dul:InformationEntity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">InformationEntity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <AbbreviatedIRI>dul:hasDataValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasDataValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <AbbreviatedIRI>dul:hasDataValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasDataValues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <AbbreviatedIRI>dul:hasDataValue</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasDataValued</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/ontologies/2012/0/SmartVendorB.owl#Temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-B ontology definition for describing indoor smart entities that measure temperature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.semanticweb.org/ontologies/2012/0/SmartVendorC.owl#Temperature</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vendor-C ontology definition for describing indoor and outdoor smart entities that measure temperature</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.5.1912) http://owlapi.sourceforge.net -->
+
