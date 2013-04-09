@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.0
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 # imports: http://dbpedia.org/resource/
 # imports: http://geovocab.org/spatial
 # imports: http://purl.org/dc/dcam/
@@ -16,15 +16,16 @@
 # imports: http://www.w3.org/ns/adms
 # imports: http://xmlns.com/foaf/0.1/
 
+@prefix core:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sc:      <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.0#> .
+@prefix sc:      <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.0>
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.w3.org/2006/vcard/ns> , <http://purl.org/dc/terms/> , <http://geovocab.org/spatial> , <http://purl.org/vocab/vann/> , <http://purl.org/dc/dcmitype/> , <http://www.w3.org/ns/adms> , <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> , <http://www.w3.org/2007/05/powder-s> , <http://www.w3.org/2003/01/geo/wgs84_pos> , <http://dbpedia.org/resource/> , <http://xmlns.com/foaf/0.1/> , <http://qudt.org/vocab/unit> , <http://www.geonames.org/ontology> , <http://www.w3.org/2004/02/skos/core> , <http://rdfs.org/sioc/ns> , <http://purl.org/dc/dcam/> ;
+      owl:imports <http://www.w3.org/2007/05/powder-s> , <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/dcam/> , <http://www.w3.org/2003/01/geo/wgs84_pos> , <http://purl.org/dc/terms/> , <http://www.w3.org/ns/adms> , <http://www.geonames.org/ontology> , <http://rdfs.org/sioc/ns> , <http://www.w3.org/2006/vcard/ns> , <http://geovocab.org/spatial> , <http://purl.org/vocab/vann/> , <http://purl.org/dc/dcmitype/> , <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> , <http://dbpedia.org/resource/> , <http://xmlns.com/foaf/0.1/> , <http://qudt.org/vocab/unit> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 sc:ActuationService
@@ -33,11 +34,44 @@ sc:ActuationService
 
 sc:Actuator
       rdf:type owl:Class ;
-      rdfs:subClassOf sc:Thing .
+      rdfs:subClassOf sc:Device .
+
+sc:ComplexDevice
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Device ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:composedOf
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Device ;
+                owl:onProperty sc:composedOf
+              ] .
+
+sc:ComplexSensor
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Sensor ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:composedOf
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Sensor ;
+                owl:onProperty sc:composedOf
+              ] .
 
 sc:ComplexService
       rdf:type owl:Class ;
       rdfs:subClassOf sc:Service ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:composedOf
+              ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom sc:Service ;
@@ -51,6 +85,28 @@ sc:ComputationService
 sc:ComputerProgram
       rdf:type owl:Class ;
       rdfs:subClassOf sc:InformationArtifact .
+
+sc:Device
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Resource ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onProperty sc:isPartOf ;
+                owl:someValuesFrom sc:DeviceRegistry
+              ] .
+
+sc:DeviceRegistrationService
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:RegistryService .
+
+sc:DeviceRegistry
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:ResourceRegistry ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Device ;
+                owl:onProperty sc:composedOf
+              ] .
 
 sc:Event
       rdf:type owl:Class ;
@@ -109,6 +165,10 @@ sc:Image
 sc:InformationArtifact
       rdf:type owl:Class ;
       rdfs:subClassOf sc:Resource .
+
+sc:MeasurementDevice
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Device .
 
 sc:MeasurementService
       rdf:type owl:Class ;
@@ -174,6 +234,10 @@ sc:Place
                 owl:onProperty sc:isAssociatedWith
               ] .
 
+sc:RegistryService
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Service .
+
 sc:Resource
       rdf:type owl:Class ;
       rdfs:subClassOf
@@ -215,9 +279,36 @@ sc:Resource
                 owl:onProperty sc:hasGUID
               ] .
 
+sc:ResourceRegistry
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Resource .
+
 sc:Sensor
       rdf:type owl:Class ;
-      rdfs:subClassOf sc:Thing .
+      rdfs:subClassOf sc:MeasurementDevice ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:onProperty sc:isPartOf ;
+                owl:someValuesFrom sc:SensorRegistry
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:ServiceProvider ;
+                owl:onProperty sc:playsRoleOf
+              ] .
+
+sc:SensorRegistrationService
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:RegistryService .
+
+sc:SensorRegistry
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:ResourceRegistry ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Sensor ;
+                owl:onProperty sc:composedOf
+              ] .
 
 sc:Service
       rdf:type owl:Class ;
@@ -275,11 +366,12 @@ sc:ServiceProvider
 
 sc:TemperatureSensor
       rdf:type owl:Class ;
-      rdfs:subClassOf sc:Sensor .
-
-sc:Thing
-      rdf:type owl:Class ;
-      rdfs:subClassOf sc:Resource .
+      rdfs:subClassOf sc:Sensor ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://qudt.org/schema/qudt#TemperatureUnit> ;
+                owl:onProperty sc:measures
+              ] .
 
 sc:TimeStamp
       rdf:type owl:Class ;
@@ -330,6 +422,11 @@ sc:isPartOf
 
 sc:locatedAt
       rdf:type owl:ObjectProperty .
+
+sc:measures
+      rdf:type rdf:Property ;
+      rdfs:label "measures"^^xsd:string ;
+      core:prefLabel "measures"^^xsd:string .
 
 sc:orchestrates
       rdf:type owl:AsymmetricProperty .
