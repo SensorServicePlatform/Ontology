@@ -17,6 +17,16 @@
       owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
+devices:ConstructDeviceInstances
+      rdf:type sml:ApplyConstruct ;
+      sm:next devices:ReturnSparqlResultsForDevices ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates () ;
+                sp:where ()
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
 devices:ConvertDeviceJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
       sm:next devices:ExportRdfToDeviceRdfFile ;
@@ -24,9 +34,16 @@ devices:ConvertDeviceJsonToRdf
 
 devices:ExportRdfToDeviceRdfFile
       rdf:type sml:ExportToRDFFile ;
-      sm:next devices:ReturnSparqlResultsForDevices ;
+      sm:next devices:ImportCombinedModel ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts"^^xsd:string ;
       sml:targetFilePath "Output/Devices.rdf"^^xsd:string .
+
+devices:ImportCombinedModel
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next devices:ConstructDeviceInstances ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
 
 devices:ImportDeviceJsonFromSensorRepo
       rdf:type sml:ImportTextFromURL ;
