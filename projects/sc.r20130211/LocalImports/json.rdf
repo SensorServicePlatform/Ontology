@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:json="http://topbraid.org/json#"
+  xml:base="http://topbraid.org/json">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <rdf:Property rdf:ID="guid"/>
+  <rdf:Property rdf:ID="network_address"/>
+  <rdf:Property rdf:ID="id"/>
+  <rdf:Property rdf:ID="alt"/>
+  <rdf:Property rdf:ID="Object"/>
+  <rdf:Property rdf:ID="uri"/>
+  <rdf:Property rdf:ID="created_at"/>
+  <rdf:Property rdf:ID="lat"/>
+  <rdf:Property rdf:ID="print_name"/>
+  <rdf:Property rdf:ID="lon"/>
+  <rdf:Property rdf:ID="updated_at"/>
+  <rdf:Property rdf:ID="format"/>
+  <rdf:Property rdf:ID="metadata_json"/>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://geovocab.org/spatial#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://geovocab.org/spatial">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://geovocab.org/mappings/spatial"/>
+    <rdfs:label>NeoGeo Spatial Ontology</rdfs:label>
+    <rdfs:comment>A vocabulary for describing topological relations between features. $Id: spatial# 81 2012-02-05 11:06:49Z non88sense@gmail.com $</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Feature">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label>Feature</rdfs:label>
+    <rdfs:comment>A geographical feature, capable of holding spatial relations.</rdfs:comment>
+  </owl:Class>
+  <owl:TransitiveProperty rdf:ID="TPPi">
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:ID="TPP"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="PPi"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>tangentially properly contains</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation TPPi(x,y), read as 'x tangentially properly contains y'. Inverse of the TPP(x,y) relation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#TPP">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:ID="PP"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>is tangential proper part of</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation TPP(x,y), read as 'x is a tangential proper part of y'. This relation holds, whenever a region x is 
+						  labeled as a proper part of a region y, and they share at least one common point in their borders, which means that they are
+						  externally connected.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="P">
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:ID="Pi"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="O"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>is part of</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation P(x,y), read as 'x is a part of y', holds whenever the region x is contained within the borders of the region y.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#PPi">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#Pi"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>properly contains</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation PPi(x,y), read as 'x properly contains y'. Inverse of the PP(x,y) relation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="NTPPi">
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:ID="NTPP"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="#PPi"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>non tangentially properly contains</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation NTPPi(x,y), read as 'x non-tangentially properly contains y'. Inverse of the NTPP(x,y) relation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#Pi">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#O"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>contains</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation Pi(x,y), read as 'x contains y'. Inverse of the P(x,y) relation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#NTPP">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="#PP"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>is non-tangential proper part of</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation NTPP(x,y), read as 'x is a non-tangential proper part of y'. This relation holds, whenever a region x is 
+							 labeled as a proper part of a region y, and they do not share common point in their borders.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#PP">
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf rdf:resource="#PPi"/>
+    <rdfs:subPropertyOf rdf:resource="#P"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>is proper part of</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation PP(x,y), read as 'x is a proper part of y', means that the region x is contained within the borders of the 
+				region y, and region y is not contained within the borders of the region y, which means they are not equals.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:about="#O">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="C"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>overlaps</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation O(x,y), read as 'x overlaps y'. A region x overlaps a region y, if they share at least one common point of their interiors.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="DR">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>discrete from</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation DR(x,y), read as 'x is discrete from y'. In order to prevent an exponential growth of triples when handling large
+				  amounts of data, a closed world assumption may also be possible. More precisely, by considering not explicitely connected regions as discrete
+				  regions. Moreover, discrete regions, which are not explicitely labeled as externally connected, would be considered disconnected from
+				  eachother.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="EQ">
+    <rdfs:label>equals</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#Pi"/>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf rdf:resource="#P"/>
+    <rdfs:comment>Relation x=y, read as 'x is identical with y'. This relation holds when two regions are spatially co-located.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#C">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>connects with</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation C(x,y), read as 'x is connected with y'. This relation holds when two regions share a common point. It is the primitive relation
+				in the RCC theory.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="EC">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf rdf:resource="#DR"/>
+    <rdfs:subPropertyOf rdf:resource="#C"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>externally connected with</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation EC(x,y), read as 'x is externally connected with y'. This relation holds, when the two regions share at least
+						 one common point of their borders, but share no points of their interiors, i.e. they do not overlap.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="PO">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf rdf:resource="#O"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>partially overlaps</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation PO(x,y), read as 'x partially overlaps y'. A region x overlaps a region y, if they share at least one common point of their 
+				   interiors, and one does not contain the other within its borders.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="DC">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subPropertyOf rdf:resource="#DR"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:label>disconnected from</rdfs:label>
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:comment>Relation DC(x,y), read as 'x is disconnected from y'. In order to prevent an exponential growth of triples when handling large
+				  amounts of data, a closed world assumption may also be possible. More precisely, by considering not explicitely connected regions as discrete
+				  regions. Moreover, discrete regions, which are not explicitely labeled as externally connected, would be considered disconnected from
+				  eachother.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="inconsistentWith">
+    <vs:term_status>unstable</vs:term_status>
+    <rdfs:label>inconsistent with</rdfs:label>
+    <rdfs:comment>Although this relation is not a part of the RCC theory, it has been introduced in order to detect relations between regions
+								which are inconsistent with the RCC axioms.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

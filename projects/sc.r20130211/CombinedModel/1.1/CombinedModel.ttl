@@ -21,11 +21,12 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc:      <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#> .
+@prefix spatial:  <http://geovocab.org/spatial#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.w3.org/2007/05/powder-s> , <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/dcam/> , <http://www.w3.org/2003/01/geo/wgs84_pos> , <http://purl.org/dc/terms/> , <http://www.w3.org/ns/adms> , <http://www.geonames.org/ontology> , <http://rdfs.org/sioc/ns> , <http://www.w3.org/2006/vcard/ns> , <http://purl.org/vocab/vann/> , <http://geovocab.org/spatial> , <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> , <http://purl.org/dc/dcmitype/> , <http://dbpedia.org/resource/> , <http://xmlns.com/foaf/0.1/> , <http://qudt.org/vocab/unit> ;
+      owl:imports <http://www.w3.org/2007/05/powder-s> , <http://www.w3.org/2004/02/skos/core> , <http://purl.org/dc/dcam/> , <http://www.w3.org/2003/01/geo/wgs84_pos> , <http://purl.org/dc/terms/> , <http://www.w3.org/ns/adms> , <http://www.geonames.org/ontology> , <http://rdfs.org/sioc/ns> , <http://www.w3.org/2006/vcard/ns> , <http://geovocab.org/spatial> , <http://purl.org/vocab/vann/> , <http://purl.org/dc/dcmitype/> , <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> , <http://dbpedia.org/resource/> , <http://xmlns.com/foaf/0.1/> , <http://qudt.org/vocab/unit> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 sc:ActuationService
@@ -41,12 +42,12 @@ sc:ComplexDevice
       rdfs:subClassOf sc:Device ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Device ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:composedOf
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:allValuesFrom sc:Device ;
                 owl:onProperty sc:composedOf
               ] .
 
@@ -55,12 +56,12 @@ sc:ComplexSensor
       rdfs:subClassOf sc:Sensor ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Sensor ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:composedOf
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:allValuesFrom sc:Sensor ;
                 owl:onProperty sc:composedOf
               ] .
 
@@ -69,12 +70,12 @@ sc:ComplexService
       rdfs:subClassOf sc:Service ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Service ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:composedOf
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:allValuesFrom sc:Service ;
                 owl:onProperty sc:composedOf
               ] .
 
@@ -96,12 +97,7 @@ sc:DeviceAgent
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:metadata
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:networkAddress
+                owl:onProperty sc:printName
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -116,12 +112,12 @@ sc:DeviceAgent
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:locationId
+                owl:onProperty sc:id
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom sc:TimeStamp ;
-                owl:onProperty sc:createdAt
+                owl:onProperty sc:updatedAt
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -131,27 +127,32 @@ sc:DeviceAgent
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:metadata
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:createdAt
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom sc:TimeStamp ;
+                owl:onProperty sc:createdAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:locationId
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:updatedAt
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:id
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:updatedAt
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:printName
+                owl:onProperty sc:networkAddress
               ] .
 
 sc:DeviceRegistrationService
@@ -171,8 +172,28 @@ sc:Event
       rdf:type owl:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty sc:isHazard
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty sc:hasGUID
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty sc:hasLabel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasTimeStamp
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:TimeStamp ;
+                owl:onProperty sc:hasTimeStamp
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasGUID
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -184,28 +205,8 @@ sc:Event
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:hasGUID
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:TimeStamp ;
-                owl:onProperty sc:hasTimeStamp
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:hasTimeStamp
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty sc:hasLabel
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty sc:hasGUID
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty sc:isHazard
               ] .
 
 sc:FireflyDevice
@@ -214,7 +215,7 @@ sc:FireflyDevice
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:printName
+                owl:onProperty sc:guid
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -224,7 +225,7 @@ sc:FireflyDevice
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:guid
+                owl:onProperty sc:printName
               ] .
 
 sc:HumiditySensor
@@ -250,17 +251,7 @@ sc:Location
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:format
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:altitude
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:longitude
+                owl:onProperty sc:printName
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -270,7 +261,17 @@ sc:Location
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:printName
+                owl:onProperty sc:longitude
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:altitude
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:format
               ] .
 
 sc:MeasurementDevice
@@ -286,26 +287,26 @@ sc:MeasurementValuePair
       rdfs:subClassOf sc:InformationArtifact ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
+                owl:onProperty <http://qudt.org/schema/qudt#unit>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#unit>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#value>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
                 owl:allValuesFrom
                         [ rdf:type owl:Class ;
                           owl:unionOf (xsd:float xsd:boolean)
                         ] ;
                 owl:onProperty <http://qudt.org/schema/qudt#value>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://qudt.org/schema/qudt#value>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://qudt.org/schema/qudt#unit>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
-                owl:onProperty <http://qudt.org/schema/qudt#unit>
               ] .
 
 sc:Person
@@ -317,17 +318,7 @@ sc:Place
       rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:isAssociatedWith
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty sc:hasLabel
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:hasGUID
               ] ;
       rdfs:subClassOf
@@ -337,8 +328,18 @@ sc:Place
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:hasGUID
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty sc:hasLabel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
               ] .
 
 sc:RegistryService
@@ -349,8 +350,28 @@ sc:Resource
       rdf:type owl:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:allValuesFrom xsd:string ;
                 owl:onProperty sc:hasGUID
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Place ;
+                owl:onProperty sc:locatedAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Event ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty sc:hasLabel
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -362,27 +383,7 @@ sc:Resource
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty sc:hasLabel
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Event ;
-                owl:onProperty sc:isAssociatedWith
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Place ;
-                owl:onProperty sc:locatedAt
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:isAssociatedWith
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:hasGUID
               ] .
 
@@ -395,8 +396,8 @@ sc:Sensor
       rdfs:subClassOf sc:MeasurementDevice ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:printName
+                owl:allValuesFrom sc:ServiceProvider ;
+                owl:onProperty sc:playsRoleOf
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -405,8 +406,8 @@ sc:Sensor
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:ServiceProvider ;
-                owl:onProperty sc:playsRoleOf
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:printName
               ] .
 
 sc:SensorRegistrationService
@@ -426,28 +427,8 @@ sc:Service
       rdf:type owl:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:InformationArtifact ;
-                owl:onProperty sc:produces
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty sc:hasLabel
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:hasGUID
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom sc:Event ;
-                owl:onProperty sc:isAssociatedWith
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty sc:isAssociatedWith
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -456,8 +437,28 @@ sc:Service
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Event ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty sc:hasGUID
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty sc:hasLabel
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:InformationArtifact ;
+                owl:onProperty sc:produces
               ] .
 
 sc:ServiceConductor
@@ -489,12 +490,12 @@ sc:TimeStamp
       rdf:type owl:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
                 owl:onProperty <http://qudt.org/schema/qudt#value>
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
                 owl:onProperty <http://qudt.org/schema/qudt#value>
               ] .
 

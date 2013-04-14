@@ -1,6 +1,8 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Devices
+# imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/Devices#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -14,7 +16,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Devices>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 devices:ConstructDeviceInstances
@@ -39,7 +41,7 @@ devices:ExportRdfToDeviceRdfFile
 
 devices:ImportCombinedModel
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next devices:ReturnSparqlResultsForDevices ;
+      sm:next devices:ImportDeviceJsonFromSensorRepo ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
@@ -55,22 +57,34 @@ devices:IterateOverDevices
       sm:body devices:ConstructDeviceInstances ;
       sm:next devices:ReturnSparqlResultsForDevices ;
       sml:iterationVariable
-              "device"^^xsd:string ;
+              "i"^^xsd:string ;
       sml:selectQuery
               [ rdf:type sp:Select ;
-                sp:resultVariables ([ sp:varName "children"^^xsd:string
-                          ]) ;
-                sp:where ([ rdf:type sp:TriplePath ;
-                            sp:object
-                                    [ sp:varName "deviceRdf"^^xsd:string
-                                    ] ;
-                            sp:path [ rdf:type sp:ModPath ;
-                                      sp:modMax -2 ;
-                                      sp:modMin 1 ;
-                                      sp:subPath rdfs:subClassOf
-                                    ] ;
+                sp:where ([ sp:object <http://topbraid.org/json#Object> ;
+                            sp:predicate rdf:type ;
                             sp:subject
-                                    [ sp:varName "children"^^xsd:string
+                                    [ sp:varName "subject"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "name"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#print_name> ;
+                            sp:subject
+                                    [ sp:varName "subject"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#uri> ;
+                            sp:subject
+                                    [ sp:varName "subject"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "guid"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#guid> ;
+                            sp:subject
+                                    [ sp:varName "subject"^^xsd:string
                                     ]
                           ])
               ] .
