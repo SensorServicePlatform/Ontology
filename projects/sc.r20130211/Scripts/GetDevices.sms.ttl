@@ -14,12 +14,11 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Devices>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 devices:ConstructDeviceInstances
       rdf:type sml:ApplyConstruct ;
-      sm:next devices:ReturnSparqlResultsForDevices ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 sp:templates () ;
@@ -30,18 +29,18 @@ devices:ConstructDeviceInstances
 devices:ConvertDeviceJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
       sm:next devices:ExportRdfToDeviceRdfFile ;
-      sm:outputVariable "root"^^xsd:string .
+      sm:outputVariable "deviceRdf"^^xsd:string .
 
 devices:ExportRdfToDeviceRdfFile
       rdf:type sml:ExportToRDFFile ;
-      sm:next devices:ImportCombinedModel ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts"^^xsd:string ;
+      sm:next devices:IterateOverDevices ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
       sml:targetFilePath "Output/Devices.rdf"^^xsd:string .
 
 devices:ImportCombinedModel
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next devices:ConstructDeviceInstances ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts"^^xsd:string ;
+      sm:next devices:ReturnSparqlResultsForDevices ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
 
@@ -51,7 +50,32 @@ devices:ImportDeviceJsonFromSensorRepo
       sm:outputVariable "text"^^xsd:string ;
       sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
 
+devices:IterateOverDevices
+      rdf:type sml:IterateOverSelect ;
+      sm:body devices:ConstructDeviceInstances ;
+      sm:next devices:ReturnSparqlResultsForDevices ;
+      sml:iterationVariable
+              "device"^^xsd:string ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "children"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:TriplePath ;
+                            sp:object
+                                    [ sp:varName "deviceRdf"^^xsd:string
+                                    ] ;
+                            sp:path [ rdf:type sp:ModPath ;
+                                      sp:modMax -2 ;
+                                      sp:modMin 1 ;
+                                      sp:subPath rdfs:subClassOf
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "children"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
 devices:ReturnSparqlResultsForDevices
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       sml:serialization sm:XML .
