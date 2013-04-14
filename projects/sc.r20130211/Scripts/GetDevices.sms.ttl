@@ -5,12 +5,14 @@
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/Devices#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sm:      <http://topbraid.org/sparqlmotion#> .
 @prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
@@ -23,8 +25,52 @@ devices:ConstructDeviceInstances
       rdf:type sml:ApplyConstruct ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
-                sp:templates () ;
-                sp:where ()
+                sp:templates ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "guid"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#guid> ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#uri> ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "printName"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#printName> ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device" ;
+                            sp:variable
+                                    [ sp:varName "scDevice"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "scDevice"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ sp:varName "iterationCounter"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ])
               ] ;
       sml:replace "true"^^xsd:boolean .
 
@@ -57,34 +103,48 @@ devices:IterateOverDevices
       sm:body devices:ConstructDeviceInstances ;
       sm:next devices:ReturnSparqlResultsForDevices ;
       sml:iterationVariable
-              "i"^^xsd:string ;
+              "iterationCounter"^^xsd:string ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:where ([ sp:object <http://topbraid.org/json#Object> ;
                             sp:predicate rdf:type ;
                             sp:subject
-                                    [ sp:varName "subject"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "name"^^xsd:string
-                                    ] ;
-                            sp:predicate <http://topbraid.org/json#print_name> ;
-                            sp:subject
-                                    [ sp:varName "subject"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "uri"^^xsd:string
-                                    ] ;
-                            sp:predicate <http://topbraid.org/json#uri> ;
-                            sp:subject
-                                    [ sp:varName "subject"^^xsd:string
+                                    [ sp:varName "device"^^xsd:string
                                     ]
                           ] [ sp:object
                                     [ sp:varName "guid"^^xsd:string
                                     ] ;
                             sp:predicate <http://topbraid.org/json#guid> ;
                             sp:subject
-                                    [ sp:varName "subject"^^xsd:string
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#uri> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "deviceAgent"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#device_agent> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "location"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#location> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "sensors"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#sensors> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
                                     ]
                           ])
               ] .
@@ -92,4 +152,13 @@ devices:IterateOverDevices
 devices:ReturnSparqlResultsForDevices
       rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "subject"^^xsd:string
+                                    ]
+                          ])
+              ] ;
       sml:serialization sm:XML .
