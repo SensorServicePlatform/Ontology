@@ -18,7 +18,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Devices>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> ;
+      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 devices:ConstructDeviceInstances
@@ -51,24 +51,97 @@ devices:ConstructDeviceInstances
                             sp:subject
                                     [ sp:varName "newDevice"^^xsd:string
                                     ]
+                          ] [ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Location> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationPrintName"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#printName> ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationLat"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#latitude> ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationLon"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#longitude> ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationAlt"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#altitude> ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationFormat"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#format> ;
+                            sp:subject
+                                    [ sp:varName "newLocation"^^xsd:string
+                                    ]
                           ]) ;
                 sp:where ([ rdf:type sp:Bind ;
-                            sp:expression "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device" ;
+                            sp:expression "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#" ;
                             sp:variable
-                                    [ sp:varName "scDevice"^^xsd:string
+                                    [ sp:varName "sc"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "Device" ;
+                                      sp:arg2 [ sp:varName "iterationCounter"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "deviceName"^^xsd:string
                                     ]
                           ] [ rdf:type sp:Bind ;
                             sp:expression
                                     [ rdf:type spif:buildURI ;
                                       sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "scDevice"^^xsd:string
+                                                sp:arg1 [ sp:varName "sc"^^xsd:string
                                                         ] ;
-                                                sp:arg2 [ sp:varName "iterationCounter"^^xsd:string
+                                                sp:arg2 [ sp:varName "deviceName"^^xsd:string
                                                         ]
                                               ]
                                     ] ;
                             sp:variable
                                     [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 [ sp:varName "deviceName"^^xsd:string
+                                              ] ;
+                                      sp:arg2 "Location"
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "locationName"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "sc"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ sp:varName "locationName"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newLocation"^^xsd:string
                                     ]
                           ])
               ] ;
@@ -133,6 +206,13 @@ devices:IterateOverDevices
                                     [ sp:varName "device"^^xsd:string
                                     ]
                           ] [ sp:object
+                                    [ sp:varName "sensors"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#sensors> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
                                     [ sp:varName "location"^^xsd:string
                                     ] ;
                             sp:predicate <http://topbraid.org/json#location> ;
@@ -140,17 +220,45 @@ devices:IterateOverDevices
                                     [ sp:varName "device"^^xsd:string
                                     ]
                           ] [ sp:object
-                                    [ sp:varName "sensors"^^xsd:string
+                                    [ sp:varName "locationPrintName"^^xsd:string
                                     ] ;
-                            sp:predicate <http://topbraid.org/json#sensors> ;
+                            sp:predicate <http://topbraid.org/json#print_name> ;
                             sp:subject
-                                    [ sp:varName "device"^^xsd:string
+                                    [ sp:varName "location"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationLat"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#lat> ;
+                            sp:subject
+                                    [ sp:varName "location"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationLon"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#lon> ;
+                            sp:subject
+                                    [ sp:varName "location"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationAlt"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#alt> ;
+                            sp:subject
+                                    [ sp:varName "location"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "locationFormat"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#format> ;
+                            sp:subject
+                                    [ sp:varName "location"^^xsd:string
                                     ]
                           ])
               ] .
 
 devices:ReturnSparqlResultsForDevices
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
