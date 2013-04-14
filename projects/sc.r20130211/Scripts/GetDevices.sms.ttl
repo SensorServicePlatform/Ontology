@@ -4,12 +4,14 @@
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/Devices#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spif:    <http://spinrdf.org/spif#> .
@@ -21,8 +23,38 @@
       owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
+devices:BindNewDevice
+      rdf:type sml:BindBySelect ;
+      sm:next devices:IterateOverDeviceSensors ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "newDevice"^^xsd:string
+                          ]) ;
+                sp:where ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "guid"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#guid> ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#uri> ;
+                            sp:subject
+                                    [ sp:varName "newDevice"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
 devices:ConstructDeviceInstances
       rdf:type sml:ApplyConstruct ;
+      sm:next devices:BindNewDevice ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 sp:templates ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
@@ -147,6 +179,68 @@ devices:ConstructDeviceInstances
               ] ;
       sml:replace "true"^^xsd:boolean .
 
+devices:ConstructSensorInstances
+      rdf:type sml:ApplyConstruct ;
+      sml:constructQuery
+              [ rdf:type sp:Construct ;
+                sp:templates ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "newSensor"^^xsd:string
+                                    ]
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#" ;
+                            sp:variable
+                                    [ sp:varName "sc"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type afn:localname ;
+                                      sp:arg1 [ sp:varName "newDevice"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "deviceName"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "Sensor" ;
+                                      sp:arg2 [ sp:varName "iterationCounter"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "sensorId"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 [ sp:varName "deviceName"^^xsd:string
+                                              ] ;
+                                      sp:arg2 [ sp:varName "sensorId"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "sensorName"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "sc"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ sp:varName "sensorName"^^xsd:string
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newSensor"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:replace "true"^^xsd:boolean .
+
 devices:ConvertDeviceJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
       sm:next devices:ExportRdfToDeviceRdfFile ;
@@ -156,7 +250,7 @@ devices:ExportRdfToDeviceRdfFile
       rdf:type sml:ExportToRDFFile ;
       sm:next devices:IterateOverDevices ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
-      sml:targetFilePath "Output/Devices.rdf"^^xsd:string .
+      sml:targetFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
 
 devices:ImportCombinedModel
       rdf:type sml:ImportRDFFromWorkspace ;
@@ -170,6 +264,18 @@ devices:ImportDeviceJsonFromSensorRepo
       sm:next devices:ConvertDeviceJsonToRdf ;
       sm:outputVariable "text"^^xsd:string ;
       sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
+
+devices:IterateOverDeviceSensors
+      rdf:type sml:IterateOverSelect ;
+      sm:body devices:ConstructSensorInstances ;
+      sml:iterationVariable
+              "iterationCounter"^^xsd:string ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "sensors"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
 
 devices:IterateOverDevices
       rdf:type sml:IterateOverSelect ;
