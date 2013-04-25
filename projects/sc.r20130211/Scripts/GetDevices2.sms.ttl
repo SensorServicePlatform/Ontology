@@ -1,0 +1,58 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix GetDevices2:  <http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+GetDevices2:ApplyTopSpinToDevices
+      rdf:type sml:ApplyTopSPIN ;
+      sm:next GetDevices2:ReturnSparqlResultsForDevices ;
+      sml:predicate spin:rule ;
+      sml:replace "true"^^xsd:boolean ;
+      sml:singlePass "true"^^xsd:boolean .
+
+GetDevices2:ConvertDeviceJsonToRdf
+      rdf:type sml:ConvertJSONToRDF ;
+      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sm:outputVariable "deviceRdf"^^xsd:string .
+
+GetDevices2:ExportDeviceRdfToFile
+      rdf:type sml:ExportToRDFFile ;
+      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
+      sml:targetFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
+
+GetDevices2:ImportCombinedModel
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
+
+GetDevices2:ImportDeviceJsonFromSensorRepo
+      rdf:type sml:ImportTextFromURL ;
+      sm:next GetDevices2:ConvertDeviceJsonToRdf ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
+
+GetDevices2:ReturnSparqlResultsForDevices
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ()
+              ] ;
+      sml:serialization sm:XML .
