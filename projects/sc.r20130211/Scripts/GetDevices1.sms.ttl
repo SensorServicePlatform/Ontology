@@ -1,11 +1,11 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Devices
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices1
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
-@prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/Devices#> .
+@prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices1#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,7 +18,7 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/Devices>
+<http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices1>
       rdf:type owl:Ontology ;
       owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
