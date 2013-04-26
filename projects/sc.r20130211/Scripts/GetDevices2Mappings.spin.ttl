@@ -1,24 +1,84 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings
 # imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/json
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix GetDevices2Mappings:  <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device>
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice>
       spin:rule
               [ rdf:type sp:Construct ;
-                sp:templates () ;
-                sp:where ()
+                sp:templates ([ sp:object
+                                    [ sp:varName "guid"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#guid> ;
+                            sp:subject spin:_this
+                          ] [ sp:object
+                                    [ sp:varName "uri"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#uri> ;
+                            sp:subject spin:_this
+                          ] [ sp:object
+                                    [ sp:varName "printName"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#printName> ;
+                            sp:subject spin:_this
+                          ]) ;
+                sp:where ([ sp:object <http://topbraid.org/json#Object> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "sensors"^^xsd:string
+                                    ] ;
+                            sp:predicate <http://topbraid.org/json#sensors> ;
+                            sp:subject
+                                    [ sp:varName "device"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Optional ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "guid"^^xsd:string
+                                                ] ;
+                                        sp:predicate <http://topbraid.org/json#guid> ;
+                                        sp:subject
+                                                [ sp:varName "device"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "uri"^^xsd:string
+                                                ] ;
+                                        sp:predicate <http://topbraid.org/json#uri> ;
+                                        sp:subject
+                                                [ sp:varName "device"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ] ;
+                                        sp:predicate <http://topbraid.org/json#device_agent> ;
+                                        sp:subject
+                                                [ sp:varName "device"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "location"^^xsd:string
+                                                ] ;
+                                        sp:predicate <http://topbraid.org/json#location> ;
+                                        sp:subject
+                                                [ sp:varName "device"^^xsd:string
+                                                ]
+                                      ])
+                          ])
               ] .
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings>
       rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://spinrdf.org/spin> ;
+      owl:imports <http://topbraid.org/json> , <http://spinrdf.org/spin> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
