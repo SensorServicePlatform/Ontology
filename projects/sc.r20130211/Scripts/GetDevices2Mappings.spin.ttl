@@ -1,0 +1,24 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings
+# imports: http://spinrdf.org/spin
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
+
+@prefix GetDevices2Mappings:  <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device>
+      spin:rule
+              [ rdf:type sp:Construct ;
+                sp:templates () ;
+                sp:where ()
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://spinrdf.org/spin> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .

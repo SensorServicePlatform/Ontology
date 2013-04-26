@@ -2,11 +2,3742 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:json="http://topbraid.org/json#"
   xml:base="http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:first rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:nodeID="A12"/>
+    <rdf:first rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:rest rdf:nodeID="A19"/>
+    <rdf:first rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:nodeID="A22"/>
+    <rdf:first rdf:nodeID="A23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A24"/>
+    <rdf:first rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A28"/>
+    <rdf:first rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.109</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:rest rdf:nodeID="A18"/>
+    <rdf:first rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.115</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
   <rdf:Description rdf:about="">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A40"/>
+    <rdf:first rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:rest rdf:nodeID="A31"/>
+    <rdf:first rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <rdf:rest rdf:nodeID="A46"/>
+    <rdf:first rdf:nodeID="A47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.104</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:rest rdf:nodeID="A51"/>
+    <rdf:first rdf:nodeID="A52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:rest rdf:nodeID="A54"/>
+    <rdf:first rdf:nodeID="A55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-02</json:uri>
+    <json:device_agent rdf:nodeID="A57"/>
+    <json:location rdf:nodeID="A58"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ac434c12-e222-4c43-92a6-8939ef0529ac</json:guid>
+    <json:sensors rdf:nodeID="A59"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A62"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:nodeID="A63"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:rest rdf:nodeID="A37"/>
+    <rdf:first rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <rdf:rest rdf:nodeID="A42"/>
+    <rdf:first rdf:nodeID="A68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A45"/>
+    <rdf:first rdf:nodeID="A69"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <rdf:rest rdf:nodeID="A72"/>
+    <rdf:first rdf:nodeID="A73"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A76"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:rest rdf:nodeID="A16"/>
+    <rdf:first rdf:nodeID="A77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <rdf:rest rdf:nodeID="A61"/>
+    <rdf:first rdf:nodeID="A79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <rdf:rest rdf:nodeID="A81"/>
+    <rdf:first rdf:nodeID="A82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A85"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0.8.14</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeenet_1</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:29:41Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Polling_interval":"1 minute"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:31:43Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <rdf:rest rdf:nodeID="A90"/>
+    <rdf:first rdf:nodeID="A91"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:rest rdf:nodeID="A93"/>
+    <rdf:first rdf:nodeID="A94"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <rdf:rest rdf:nodeID="A96"/>
+    <rdf:first rdf:nodeID="A97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <rdf:rest rdf:nodeID="A99"/>
+    <rdf:first rdf:nodeID="A100"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A103"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:rest rdf:nodeID="A80"/>
+    <rdf:first rdf:nodeID="A106"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170103</json:uri>
+    <json:device_agent rdf:nodeID="A109"/>
+    <json:location rdf:nodeID="A110"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c10465e3-d239-4dda-8c4c-1dfd50ea11c8</json:guid>
+    <json:sensors rdf:nodeID="A111"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pantry on second floor</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <rdf:rest rdf:nodeID="A95"/>
+    <rdf:first rdf:nodeID="A114"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:rest rdf:nodeID="A92"/>
+    <rdf:first rdf:nodeID="A56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A116"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170104</json:uri>
+    <json:device_agent rdf:nodeID="A119"/>
+    <json:location rdf:nodeID="A120"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1d7266ff-353e-4862-881d-537842663301</json:guid>
+    <json:sensors rdf:nodeID="A121"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:rest rdf:nodeID="A123"/>
+    <rdf:first rdf:nodeID="A124"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170007</json:uri>
+    <json:device_agent rdf:nodeID="A126"/>
+    <json:location rdf:nodeID="A127"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f49d53cb-3e84-4e81-9dd8-31c6f6416dda</json:guid>
+    <json:sensors rdf:nodeID="A128"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <rdf:rest rdf:nodeID="A105"/>
+    <rdf:first rdf:nodeID="A131"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-05</json:uri>
+    <json:device_agent rdf:nodeID="A133"/>
+    <json:location rdf:nodeID="A134"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a7acf3ab-c008-43c7-8dda-b824ea7c7abe</json:guid>
+    <json:sensors rdf:nodeID="A135"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:rest rdf:nodeID="A137"/>
+    <rdf:first rdf:nodeID="A138"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:rest rdf:nodeID="A141"/>
+    <rdf:first rdf:nodeID="A142"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <rdf:rest rdf:nodeID="A34"/>
+    <rdf:first rdf:nodeID="A144"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.214B</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.215</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:rest rdf:nodeID="A147"/>
+    <rdf:first rdf:nodeID="A148"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A150"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <rdf:rest rdf:nodeID="A151"/>
+    <rdf:first rdf:nodeID="A152"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:rest rdf:nodeID="A158"/>
+    <rdf:first rdf:nodeID="A159"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:rest rdf:nodeID="A143"/>
+    <rdf:first rdf:nodeID="A160"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A162"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <rdf:rest rdf:nodeID="A163"/>
+    <rdf:first rdf:nodeID="A164"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <rdf:rest rdf:nodeID="A169"/>
+    <rdf:first rdf:nodeID="A170"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-03</json:uri>
+    <json:device_agent rdf:nodeID="A171"/>
+    <json:location rdf:nodeID="A172"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5957576b-93e5-401e-bb10-3cdd5c022408</json:guid>
+    <json:sensors rdf:nodeID="A173"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <rdf:rest rdf:nodeID="A175"/>
+    <rdf:first rdf:nodeID="A176"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <rdf:rest rdf:nodeID="A178"/>
+    <rdf:first rdf:nodeID="A179"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A161"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A181"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <rdf:rest rdf:nodeID="A183"/>
+    <rdf:first rdf:nodeID="A184"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.116</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_sweetfeedback</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <rdf:rest rdf:nodeID="A191"/>
+    <rdf:first rdf:nodeID="A192"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <rdf:rest rdf:nodeID="A194"/>
+    <rdf:first rdf:nodeID="A195"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <rdf:rest rdf:nodeID="A197"/>
+    <rdf:first rdf:nodeID="A166"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <rdf:rest rdf:nodeID="A198"/>
+    <rdf:first rdf:nodeID="A199"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <rdf:rest rdf:nodeID="A168"/>
+    <rdf:first rdf:nodeID="A201"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A203"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170203</json:uri>
+    <json:device_agent rdf:nodeID="A205"/>
+    <json:location rdf:nodeID="A206"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2d6d2996-0296-4eed-adc1-3ff4e64ab036</json:guid>
+    <json:sensors rdf:nodeID="A207"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <rdf:rest rdf:nodeID="A174"/>
+    <rdf:first rdf:nodeID="A209"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <rdf:rest rdf:nodeID="A196"/>
+    <rdf:first rdf:nodeID="A101"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A212"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <rdf:rest rdf:nodeID="A213"/>
+    <rdf:first rdf:nodeID="A214"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A215">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_sweetfeedback</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A216">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.216</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A217">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A218">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A219">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A220">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A221">
+    <rdf:rest rdf:nodeID="A193"/>
+    <rdf:first rdf:nodeID="A118"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <rdf:rest rdf:nodeID="A222"/>
+    <rdf:first rdf:nodeID="A223"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A224">
+    <rdf:rest rdf:nodeID="A225"/>
+    <rdf:first rdf:nodeID="A226"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A227">
+    <rdf:rest rdf:nodeID="A228"/>
+    <rdf:first rdf:nodeID="A229"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A230">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_Jeenet</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A231">
+    <rdf:rest rdf:nodeID="A115"/>
+    <rdf:first rdf:nodeID="A232"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A233">
+    <rdf:rest rdf:nodeID="A208"/>
+    <rdf:first rdf:nodeID="A234"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A235">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A236">
+    <rdf:rest rdf:nodeID="A237"/>
+    <rdf:first rdf:nodeID="A215"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A238">
+    <rdf:rest rdf:nodeID="A211"/>
+    <rdf:first rdf:nodeID="A239"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A240">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A241">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A222">
+    <rdf:rest rdf:nodeID="A224"/>
+    <rdf:first rdf:nodeID="A242"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A243">
+    <rdf:rest rdf:nodeID="A244"/>
+    <rdf:first rdf:nodeID="A245"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A246">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A228">
+    <rdf:rest rdf:nodeID="A177"/>
+    <rdf:first rdf:nodeID="A247"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A248">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <rdf:rest rdf:nodeID="A231"/>
+    <rdf:first rdf:nodeID="A249"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A250">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_Jeenet</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A251">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_sweetfeedback</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A252">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A253">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:rest rdf:nodeID="A238"/>
+    <rdf:first rdf:nodeID="A254"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A255"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A256">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <rdf:rest rdf:nodeID="A243"/>
+    <rdf:first rdf:nodeID="A257"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A258">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A259">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A260">
+    <rdf:rest rdf:nodeID="A261"/>
+    <rdf:first rdf:nodeID="A262"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A263">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A264">
+    <rdf:rest rdf:nodeID="A78"/>
+    <rdf:first rdf:nodeID="A265"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A266">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A267">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A268"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A269">
+    <rdf:rest rdf:nodeID="A270"/>
+    <rdf:first rdf:nodeID="A271"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A272">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A273">
+    <rdf:rest rdf:nodeID="A274"/>
+    <rdf:first rdf:nodeID="A275"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A276">
+    <rdf:rest rdf:nodeID="A53"/>
+    <rdf:first rdf:nodeID="A277"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A278">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A279">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A280">
+    <rdf:rest rdf:nodeID="A281"/>
+    <rdf:first rdf:nodeID="A282"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A283">
+    <rdf:rest rdf:nodeID="A264"/>
+    <rdf:first rdf:nodeID="A284"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A261">
+    <rdf:rest rdf:nodeID="A227"/>
+    <rdf:first rdf:nodeID="A285"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A268">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A286">
+    <rdf:rest rdf:nodeID="A287"/>
+    <rdf:first rdf:nodeID="A288"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A289">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A244">
+    <rdf:rest rdf:nodeID="A269"/>
+    <rdf:first rdf:nodeID="A290"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A291">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A292">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A274">
+    <rdf:rest rdf:nodeID="A293"/>
+    <rdf:first rdf:nodeID="A294"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A295">
+    <rdf:rest rdf:nodeID="A200"/>
+    <rdf:first rdf:nodeID="A296"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A297">
+    <rdf:rest rdf:nodeID="A280"/>
+    <rdf:first rdf:nodeID="A298"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A299">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A287">
+    <rdf:rest rdf:nodeID="A300"/>
+    <rdf:first rdf:nodeID="A301"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A302">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A303">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A304">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170005</json:uri>
+    <json:device_agent rdf:nodeID="A305"/>
+    <json:location rdf:nodeID="A30"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c23829bf-1523-49a1-9a46-1f61adfdf396</json:guid>
+    <json:sensors rdf:nodeID="A306"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A307">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A308">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A309"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A310">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A293">
+    <rdf:rest rdf:nodeID="A311"/>
+    <rdf:first rdf:nodeID="A312"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A249">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweetfeedback_device_3</json:uri>
+    <json:device_agent rdf:nodeID="A313"/>
+    <json:location rdf:nodeID="A314"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b153bc80-8f3b-4739-8ee0-41df1cd2f824</json:guid>
+    <json:sensors rdf:nodeID="A236"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A315">
+    <rdf:rest rdf:nodeID="A297"/>
+    <rdf:first rdf:nodeID="A316"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A317">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A318">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A300">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:nodeID="A319"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A320">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170305</json:uri>
+    <json:device_agent rdf:nodeID="A149"/>
+    <json:location rdf:nodeID="A321"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49449a24-5096-4998-afe5-215dcf800d27</json:guid>
+    <json:sensors rdf:nodeID="A322"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A270">
+    <rdf:rest rdf:nodeID="A323"/>
+    <rdf:first rdf:nodeID="A324"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A325">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A326"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A327">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A309">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A328">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A329"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A311">
+    <rdf:rest rdf:nodeID="A182"/>
+    <rdf:first rdf:nodeID="A330"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A331">
+    <rdf:rest rdf:nodeID="A332"/>
+    <rdf:first rdf:nodeID="A333"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A334">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A334"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A335">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A336"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A337">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A338">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A339">
+    <rdf:rest rdf:nodeID="A340"/>
+    <rdf:first rdf:nodeID="A341"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A342">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A343">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.129</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A323">
+    <rdf:rest rdf:nodeID="A344"/>
+    <rdf:first rdf:nodeID="A88"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A332">
+    <rdf:rest rdf:nodeID="A283"/>
+    <rdf:first rdf:nodeID="A345"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A346">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A347">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170004</json:uri>
+    <json:device_agent rdf:nodeID="A348"/>
+    <json:location rdf:nodeID="A349"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41d1b8d3-6b66-46ac-8391-3bb8814dd110</json:guid>
+    <json:sensors rdf:nodeID="A350"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A351">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A352">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A213">
+    <rdf:rest rdf:nodeID="A353"/>
+    <rdf:first rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A354">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A254">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A355">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A356"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A344">
+    <rdf:rest rdf:nodeID="A357"/>
+    <rdf:first rdf:nodeID="A157"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A358">
+    <rdf:rest rdf:nodeID="A359"/>
+    <rdf:first rdf:nodeID="A360"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweetfeedback_device_2</json:uri>
+    <json:device_agent rdf:nodeID="A328"/>
+    <json:location rdf:nodeID="A361"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2c15b071-43ab-4c43-bfe5-9ad3086a3ec9</json:guid>
+    <json:sensors rdf:nodeID="A362"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A363">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A364">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A357">
+    <rdf:rest rdf:nodeID="A365"/>
+    <rdf:first rdf:nodeID="A140"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A366">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A247">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A367">
+    <rdf:rest rdf:nodeID="A355"/>
+    <rdf:first rdf:nodeID="A368"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A369">
+    <rdf:rest rdf:nodeID="A331"/>
+    <rdf:first rdf:nodeID="A370"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A359">
+    <rdf:rest rdf:nodeID="A369"/>
+    <rdf:first rdf:nodeID="A371"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A372">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A373"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A374">
+    <rdf:rest rdf:nodeID="A276"/>
+    <rdf:first rdf:nodeID="A375"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A376">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A377">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A378">
+    <rdf:rest rdf:nodeID="A379"/>
+    <rdf:first rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A380">
+    <rdf:rest rdf:nodeID="A381"/>
+    <rdf:first rdf:nodeID="A382"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A229">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A383">
+    <rdf:rest rdf:nodeID="A384"/>
+    <rdf:first rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A385">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A386">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_sweetfeedback</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A387">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_Jeenet</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A388">
+    <rdf:rest rdf:nodeID="A389"/>
+    <rdf:first rdf:nodeID="A390"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A381">
+    <rdf:rest rdf:nodeID="A391"/>
+    <rdf:first rdf:nodeID="A392"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A285">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A257">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A353">
+    <rdf:rest rdf:nodeID="A378"/>
+    <rdf:first rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A393">
+    <rdf:rest rdf:nodeID="A394"/>
+    <rdf:first rdf:nodeID="A395"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A384">
+    <rdf:rest rdf:nodeID="A396"/>
+    <rdf:first rdf:nodeID="A70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A245">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A234">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A397">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_sweetfeedback</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A398">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_Jeenet</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A306">
+    <rdf:rest rdf:nodeID="A358"/>
+    <rdf:first rdf:nodeID="A399"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A389">
+    <rdf:rest rdf:nodeID="A400"/>
+    <rdf:first rdf:nodeID="A401"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A391">
+    <rdf:rest rdf:nodeID="A221"/>
+    <rdf:first rdf:nodeID="A320"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A402">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.212</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A396">
+    <rdf:rest rdf:nodeID="A403"/>
+    <rdf:first rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A404">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A262">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity_Jeenet</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A290">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A362">
+    <rdf:rest rdf:nodeID="A405"/>
+    <rdf:first rdf:nodeID="A397"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A406">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A265">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A379">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A64"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A403">
+    <rdf:rest rdf:nodeID="A210"/>
+    <rdf:first rdf:nodeID="A117"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A407">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_Jeenet</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A271">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A408">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_sweetfeedback</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A409">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A410">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170106</json:uri>
+    <json:device_agent rdf:nodeID="A411"/>
+    <json:location rdf:nodeID="A412"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3e8671e3-b9d8-4f83-a9bd-8816cca87103</json:guid>
+    <json:sensors rdf:nodeID="A413"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A414">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A282">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:rest rdf:nodeID="A415"/>
+    <rdf:first rdf:nodeID="A416"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A417">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A418">
+    <rdf:rest rdf:nodeID="A419"/>
+    <rdf:first rdf:nodeID="A258"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A420">
+    <rdf:rest rdf:nodeID="A421"/>
+    <rdf:first rdf:nodeID="A263"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A324">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A422">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A423"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A424">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A408"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A288">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A425">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A426">
+    <rdf:rest rdf:nodeID="A427"/>
+    <rdf:first rdf:nodeID="A204"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A428">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A429">
+    <rdf:rest rdf:nodeID="A430"/>
+    <rdf:first rdf:nodeID="A431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A432">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A433">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_Jeenet</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A434">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170204</json:uri>
+    <json:device_agent rdf:nodeID="A435"/>
+    <json:location rdf:nodeID="A436"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8e4759b2-7837-4d2d-afad-d7c2c8319201</json:guid>
+    <json:sensors rdf:nodeID="A437"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A438">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A284">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A439">
+    <rdf:rest rdf:nodeID="A440"/>
+    <rdf:first rdf:nodeID="A291"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A441">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A442">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A415">
+    <rdf:rest rdf:nodeID="A443"/>
+    <rdf:first rdf:nodeID="A444"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A419">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A248"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A405">
+    <rdf:rest rdf:nodeID="A424"/>
+    <rdf:first rdf:nodeID="A386"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A445">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170208</json:uri>
+    <json:device_agent rdf:nodeID="A446"/>
+    <json:location rdf:nodeID="A447"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee8312d2-a170-47eb-8068-2e6b5beddf23</json:guid>
+    <json:sensors rdf:nodeID="A286"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A448">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A427">
+    <rdf:rest rdf:nodeID="A449"/>
+    <rdf:first rdf:nodeID="A347"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A450">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A451">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_Jeenet</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A400">
+    <rdf:rest rdf:nodeID="A452"/>
+    <rdf:first rdf:nodeID="A453"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A454">
+    <rdf:rest rdf:nodeID="A455"/>
+    <rdf:first rdf:nodeID="A303"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A456">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A443">
+    <rdf:rest rdf:nodeID="A457"/>
+    <rdf:first rdf:nodeID="A458"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A316">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A459">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A460">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A319">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A329">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-13T00:39:48Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Author":"Yuan"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-16T22:16:28Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5a4d375c-9f89-485a-8ccc-a11bb527f2a4</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A461">
+    <rdf:rest rdf:nodeID="A462"/>
+    <rdf:first rdf:nodeID="A463"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A449">
+    <rdf:rest rdf:nodeID="A464"/>
+    <rdf:first rdf:nodeID="A465"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A466">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A467">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity_Jeenet</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A455">
+    <rdf:rest rdf:nodeID="A418"/>
+    <rdf:first rdf:nodeID="A279"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A452">
+    <rdf:rest rdf:nodeID="A468"/>
+    <rdf:first rdf:nodeID="A469"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A457">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A470"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A298">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A471">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A472">
+    <rdf:rest rdf:nodeID="A473"/>
+    <rdf:first rdf:nodeID="A474"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A301">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A361">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chihiro's office</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A464">
+    <rdf:rest rdf:nodeID="A380"/>
+    <rdf:first rdf:nodeID="A475"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A476">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A477">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_Jeenet</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A478">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A416">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_Jeenet</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A479">
+    <rdf:rest rdf:nodeID="A480"/>
+    <rdf:first rdf:nodeID="A364"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A481">
+    <rdf:rest rdf:nodeID="A367"/>
+    <rdf:first rdf:nodeID="A259"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A482">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A223">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A483">
+    <rdf:rest rdf:nodeID="A484"/>
+    <rdf:first rdf:nodeID="A485"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A365">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A220"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A444">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_Jeenet</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A486">
+    <rdf:rest rdf:nodeID="A479"/>
+    <rdf:first rdf:nodeID="A377"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A487">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A375">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A488">
+    <rdf:rest rdf:nodeID="A481"/>
+    <rdf:first rdf:nodeID="A318"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A489">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A462">
+    <rdf:rest rdf:nodeID="A483"/>
+    <rdf:first rdf:nodeID="A490"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A491">
+    <rdf:rest rdf:nodeID="A492"/>
+    <rdf:first rdf:nodeID="A493"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A494">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.123</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A495">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A496"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A497">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A458">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity_Jeenet</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A498">
+    <rdf:rest rdf:nodeID="A439"/>
+    <rdf:first rdf:nodeID="A272"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A499">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.228</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A500">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A501">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A502">
+    <rdf:rest rdf:nodeID="A488"/>
+    <rdf:first rdf:nodeID="A299"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A503">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A504">
+    <rdf:rest rdf:nodeID="A339"/>
+    <rdf:first rdf:nodeID="A505"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A226">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A492">
+    <rdf:rest rdf:nodeID="A506"/>
+    <rdf:first rdf:nodeID="A507"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A508">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A509">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170209</json:uri>
+    <json:device_agent rdf:nodeID="A325"/>
+    <json:location rdf:nodeID="A510"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ad88ab01-243a-4d5b-bee6-7b30633fcf69</json:guid>
+    <json:sensors rdf:nodeID="A67"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A470">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_Jeenet</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A480">
+    <rdf:rest rdf:nodeID="A498"/>
+    <rdf:first rdf:nodeID="A352"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A511">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A512">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A513">
+    <rdf:rest rdf:nodeID="A502"/>
+    <rdf:first rdf:nodeID="A310"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A506">
+    <rdf:rest rdf:nodeID="A426"/>
+    <rdf:first rdf:nodeID="A514"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A484">
+    <rdf:rest rdf:nodeID="A504"/>
+    <rdf:first rdf:nodeID="A515"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A516">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A242">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A517">
+    <rdf:rest rdf:nodeID="A260"/>
+    <rdf:first rdf:nodeID="A407"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A518">
+    <rdf:rest rdf:nodeID="A519"/>
+    <rdf:first rdf:nodeID="A508"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A520">
+    <rdf:rest rdf:nodeID="A420"/>
+    <rdf:first rdf:nodeID="A278"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A521">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A522">
+    <rdf:rest rdf:nodeID="A523"/>
+    <rdf:first rdf:nodeID="A524"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A525">
+    <rdf:rest rdf:nodeID="A526"/>
+    <rdf:first rdf:nodeID="A252"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A430">
+    <rdf:rest rdf:nodeID="A527"/>
+    <rdf:first rdf:nodeID="A528"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A360">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A496">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A529">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A530">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <rdf:rest rdf:nodeID="A531"/>
+    <rdf:first rdf:nodeID="A532"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A533">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A534">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.124</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A535">
+    <rdf:rest rdf:nodeID="A520"/>
+    <rdf:first rdf:nodeID="A376"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A536">
+    <rdf:rest rdf:nodeID="A518"/>
+    <rdf:first rdf:nodeID="A497"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A537">
+    <rdf:rest rdf:nodeID="A89"/>
+    <rdf:first rdf:nodeID="A538"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A539">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A540">
+    <rdf:rest rdf:nodeID="A541"/>
+    <rdf:first rdf:nodeID="A542"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <rdf:rest rdf:nodeID="A522"/>
+    <rdf:first rdf:nodeID="A543"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A544">
+    <rdf:rest rdf:nodeID="A429"/>
+    <rdf:first rdf:nodeID="A545"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A341">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A526">
+    <rdf:rest rdf:nodeID="A546"/>
+    <rdf:first rdf:nodeID="A186"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A547">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A399">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A527">
+    <rdf:rest rdf:nodeID="A540"/>
+    <rdf:first rdf:nodeID="A548"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A549">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A366"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A550">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A530"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A531">
+    <rdf:rest rdf:nodeID="A551"/>
+    <rdf:first rdf:nodeID="A482"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A552">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A350">
+    <rdf:rest rdf:nodeID="A535"/>
+    <rdf:first rdf:nodeID="A363"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A553">
+    <rdf:rest rdf:nodeID="A554"/>
+    <rdf:first rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:rest rdf:nodeID="A555"/>
+    <rdf:first rdf:nodeID="A556"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A557">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A558"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A559">
+    <rdf:rest rdf:nodeID="A560"/>
+    <rdf:first rdf:nodeID="A561"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A562">
+    <rdf:rest rdf:nodeID="A544"/>
+    <rdf:first rdf:nodeID="A563"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A541">
+    <rdf:rest rdf:nodeID="A564"/>
+    <rdf:first rdf:nodeID="A441"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A370">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A565">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A546">
+    <rdf:rest rdf:nodeID="A513"/>
+    <rdf:first rdf:nodeID="A217"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A566">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A505">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A554">
+    <rdf:rest rdf:nodeID="A567"/>
+    <rdf:first rdf:nodeID="A27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A568">
+    <rdf:rest rdf:nodeID="A549"/>
+    <rdf:first rdf:nodeID="A354"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A569">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A511"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A570">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A571"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A519">
+    <rdf:rest rdf:nodeID="A559"/>
+    <rdf:first rdf:nodeID="A478"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A572">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A573">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A473">
+    <rdf:rest rdf:nodeID="A562"/>
+    <rdf:first rdf:nodeID="A574"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A523">
+    <rdf:rest rdf:nodeID="A566"/>
+    <rdf:first rdf:nodeID="A575"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A564">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A456"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A371">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A515">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A392">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170303</json:uri>
+    <json:device_agent rdf:nodeID="A267"/>
+    <json:location rdf:nodeID="A50"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4df56117-68e3-47b4-9952-55d3d4a98764</json:guid>
+    <json:sensors rdf:nodeID="A576"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A567">
+    <rdf:rest rdf:nodeID="A577"/>
+    <rdf:first rdf:nodeID="A49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A578">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.211</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A579">
+    <rdf:rest rdf:nodeID="A568"/>
+    <rdf:first rdf:nodeID="A342"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A580">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.215B</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A581">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.120</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A345">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A582">
+    <rdf:rest rdf:nodeID="A583"/>
+    <rdf:first rdf:nodeID="A584"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A585">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A586">
+    <rdf:rest rdf:nodeID="A587"/>
+    <rdf:first rdf:nodeID="A588"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A558">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A589">
+    <rdf:rest rdf:nodeID="A590"/>
+    <rdf:first rdf:nodeID="A591"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A592">
+    <rdf:rest rdf:nodeID="A593"/>
+    <rdf:first rdf:nodeID="A230"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A594">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A450"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A595">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A596">
+    <rdf:rest rdf:nodeID="A597"/>
+    <rdf:first rdf:nodeID="A516"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A598">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A503"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A485">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <rdf:rest rdf:nodeID="A592"/>
+    <rdf:first rdf:nodeID="A250"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A599">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A555">
+    <rdf:rest rdf:nodeID="A586"/>
+    <rdf:first rdf:nodeID="A132"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A583">
+    <rdf:rest rdf:nodeID="A557"/>
+    <rdf:first rdf:nodeID="A600"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:rest rdf:nodeID="A553"/>
+    <rdf:first rdf:nodeID="A153"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A514">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170205</json:uri>
+    <json:device_agent rdf:nodeID="A180"/>
+    <json:location rdf:nodeID="A145"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a71103e6-90d9-4b37-98d3-11c4bf8fbcc2</json:guid>
+    <json:sensors rdf:nodeID="A601"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A602">
+    <rdf:rest rdf:nodeID="A486"/>
+    <rdf:first rdf:nodeID="A337"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A603">
+    <rdf:rest rdf:nodeID="A589"/>
+    <rdf:first rdf:nodeID="A604"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A597">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:nodeID="A428"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A490">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A333">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A605">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A599"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A606">
+    <rdf:rest rdf:nodeID="A607"/>
+    <rdf:first rdf:nodeID="A108"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A608">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_Jeenet</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A373">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-13T00:39:48Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Author":"Yuan"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-16T22:16:28Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5a4d375c-9f89-485a-8ccc-a11bb527f2a4</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A281">
+    <rdf:rest rdf:nodeID="A536"/>
+    <rdf:first rdf:nodeID="A442"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A609">
+    <rdf:rest rdf:nodeID="A610"/>
+    <rdf:first rdf:nodeID="A611"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A612">
+    <rdf:rest rdf:nodeID="A603"/>
+    <rdf:first rdf:nodeID="A613"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A395">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A614">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A463">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A551">
+    <rdf:rest rdf:nodeID="A615"/>
+    <rdf:first rdf:nodeID="A489"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A616">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170006</json:uri>
+    <json:device_agent rdf:nodeID="A422"/>
+    <json:location rdf:nodeID="A617"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8faf9cb1-3ee2-4ac2-8e38-1361bb2e62ce</json:guid>
+    <json:sensors rdf:nodeID="A39"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A618">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ted's office</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A619">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity_Jeenet</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A600">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A587">
+    <rdf:rest rdf:nodeID="A606"/>
+    <rdf:first rdf:nodeID="A620"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A610">
+    <rdf:rest rdf:nodeID="A582"/>
+    <rdf:first rdf:nodeID="A621"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A622">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A623">
+    <rdf:rest rdf:nodeID="A612"/>
+    <rdf:first rdf:nodeID="A624"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A625">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A615">
+    <rdf:rest rdf:nodeID="A596"/>
+    <rdf:first rdf:nodeID="A500"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A626"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A411">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A627"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A628">
+    <rdf:rest rdf:nodeID="A629"/>
+    <rdf:first rdf:nodeID="A466"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A630">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A631"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A632">
+    <rdf:rest rdf:nodeID="A491"/>
+    <rdf:first rdf:nodeID="A304"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A633">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A477"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A634">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A635">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A636"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A474">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A637">
+    <rdf:rest rdf:nodeID="A638"/>
+    <rdf:first rdf:nodeID="A434"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A639">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A640"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A277">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A629">
+    <rdf:rest rdf:nodeID="A122"/>
+    <rdf:first rdf:nodeID="A487"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A588">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170202</json:uri>
+    <json:device_agent rdf:nodeID="A641"/>
+    <json:location rdf:nodeID="A216"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a60b7e07-fce7-4de0-8316-af388a4aa86d</json:guid>
+    <json:sensors rdf:nodeID="A642"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A643">
+    <rdf:rest rdf:nodeID="A633"/>
+    <rdf:first rdf:nodeID="A467"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A644">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A645">
+    <rdf:rest rdf:nodeID="A630"/>
+    <rdf:first rdf:nodeID="A646"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A647">
+    <rdf:rest rdf:nodeID="A632"/>
+    <rdf:first rdf:nodeID="A509"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A648">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.105B</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A577">
+    <rdf:rest rdf:nodeID="A609"/>
+    <rdf:first rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A649">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170308</json:uri>
+    <json:device_agent rdf:nodeID="A605"/>
+    <json:location rdf:nodeID="A581"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1ad558f1-a4f5-46b6-8b4d-5054dbd4159c</json:guid>
+    <json:sensors rdf:nodeID="A472"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A650">
+    <rdf:rest rdf:nodeID="A635"/>
+    <rdf:first rdf:nodeID="A651"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A412">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.229</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A607">
+    <rdf:rest rdf:nodeID="A637"/>
+    <rdf:first rdf:nodeID="A410"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A652">
+    <rdf:rest rdf:nodeID="A647"/>
+    <rdf:first rdf:nodeID="A616"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A437">
+    <rdf:rest rdf:nodeID="A653"/>
+    <rdf:first rdf:nodeID="A432"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A654">
+    <rdf:rest rdf:nodeID="A645"/>
+    <rdf:first rdf:nodeID="A655"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A656">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A626">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0.8.14</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeenet_1</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:29:41Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Polling_interval":"1 minute"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:31:43Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A657">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A658"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A659">
+    <rdf:rest rdf:nodeID="A650"/>
+    <rdf:first rdf:nodeID="A660"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A627">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A661">
+    <rdf:rest rdf:nodeID="A662"/>
+    <rdf:first rdf:nodeID="A125"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A663">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A664">
+    <rdf:rest rdf:nodeID="A654"/>
+    <rdf:first rdf:nodeID="A665"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A653">
+    <rdf:rest rdf:nodeID="A628"/>
+    <rdf:first rdf:nodeID="A476"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A666">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.214</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A667">
+    <rdf:rest rdf:nodeID="A652"/>
+    <rdf:first rdf:nodeID="A649"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A590">
+    <rdf:rest rdf:nodeID="A657"/>
+    <rdf:first rdf:nodeID="A668"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A638">
+    <rdf:rest rdf:nodeID="A661"/>
+    <rdf:first rdf:nodeID="A669"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A670">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A636">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_sweetfeedback</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A465">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170306</json:uri>
+    <json:device_agent rdf:nodeID="A671"/>
+    <json:location rdf:nodeID="A534"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4f4e0c2a-4129-48d2-896e-9aa4b0202774</json:guid>
+    <json:sensors rdf:nodeID="A383"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <rdf:rest rdf:nodeID="A579"/>
+    <rdf:first rdf:nodeID="A338"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A672">
+    <rdf:rest rdf:nodeID="A667"/>
+    <rdf:first rdf:nodeID="A673"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A674">
+    <rdf:rest rdf:nodeID="A675"/>
+    <rdf:first rdf:nodeID="A676"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A677">
+    <rdf:rest rdf:nodeID="A678"/>
+    <rdf:first rdf:nodeID="A679"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A680">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A681">
+    <rdf:rest rdf:nodeID="A682"/>
+    <rdf:first rdf:nodeID="A459"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A576">
+    <rdf:rest rdf:nodeID="A683"/>
+    <rdf:first rdf:nodeID="A565"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A684">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A255">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170003</json:uri>
+    <json:device_agent rdf:nodeID="A308"/>
+    <json:location rdf:nodeID="A185"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dfb50784-41da-4e60-b184-0cb36685e996</json:guid>
+    <json:sensors rdf:nodeID="A685"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A675">
+    <rdf:rest rdf:nodeID="A570"/>
+    <rdf:first rdf:nodeID="A686"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A687">
+    <rdf:rest rdf:nodeID="A672"/>
+    <rdf:first rdf:nodeID="A445"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A348">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A688"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A394">
+    <rdf:rest rdf:nodeID="A677"/>
+    <rdf:first rdf:nodeID="A689"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A368">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A690">
+    <rdf:rest rdf:nodeID="A691"/>
+    <rdf:first rdf:nodeID="A417"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A682">
+    <rdf:rest rdf:nodeID="A690"/>
+    <rdf:first rdf:nodeID="A438"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A662">
+    <rdf:rest rdf:nodeID="A687"/>
+    <rdf:first rdf:nodeID="A692"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A693">
+    <rdf:rest rdf:nodeID="A694"/>
+    <rdf:first rdf:nodeID="A695"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A532">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A696">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A296">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170102</json:uri>
+    <json:device_agent rdf:nodeID="A697"/>
+    <json:location rdf:nodeID="A698"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99440a88-8377-432f-9f60-ae41ad664ef6</json:guid>
+    <json:sensors rdf:nodeID="A136"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A691">
+    <rdf:rest rdf:nodeID="A699"/>
+    <rdf:first rdf:nodeID="A512"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A356">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A688">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A700">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A701">
+    <rdf:rest rdf:nodeID="A643"/>
+    <rdf:first rdf:nodeID="A451"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A321">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.126</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0.8.14</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeenet_1</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:29:41Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Polling_interval":"1 minute"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:31:43Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A694">
+    <rdf:rest rdf:nodeID="A702"/>
+    <rdf:first rdf:nodeID="A703"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A692">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170206</json:uri>
+    <json:device_agent rdf:nodeID="A495"/>
+    <json:location rdf:nodeID="A580"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fd754f8a-3d0f-4adb-b678-4e1f26c59cc7</json:guid>
+    <json:sensors rdf:nodeID="A704"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A705">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A706">
+    <rdf:rest rdf:nodeID="A537"/>
+    <rdf:first rdf:nodeID="A533"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A382">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170304</json:uri>
+    <json:device_agent rdf:nodeID="A598"/>
+    <json:location rdf:nodeID="A494"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50068ac7-c9e6-4d29-8793-3fe758d2d501</json:guid>
+    <json:sensors rdf:nodeID="A190"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A707">
+    <rdf:rest rdf:nodeID="A674"/>
+    <rdf:first rdf:nodeID="A708"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A538">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A699">
+    <rdf:rest rdf:nodeID="A374"/>
+    <rdf:first rdf:nodeID="A501"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A349">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.110</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A709">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <rdf:rest rdf:nodeID="A701"/>
+    <rdf:first rdf:nodeID="A433"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A678">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A710"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A711">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's office</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:rest rdf:nodeID="A525"/>
+    <rdf:first rdf:nodeID="A240"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A702">
+    <rdf:rest rdf:nodeID="A639"/>
+    <rdf:first rdf:nodeID="A712"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A713">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A634"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A683">
+    <rdf:rest rdf:nodeID="A706"/>
+    <rdf:first rdf:nodeID="A547"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A714">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A715">
+    <rdf:rest rdf:nodeID="A716"/>
+    <rdf:first rdf:nodeID="A717"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A401">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A542">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A718">
+    <rdf:rest rdf:nodeID="A719"/>
+    <rdf:first rdf:nodeID="A187"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A601">
+    <rdf:rest rdf:nodeID="A720"/>
+    <rdf:first rdf:nodeID="A552"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A721">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A722">
+    <rdf:rest rdf:nodeID="A723"/>
+    <rdf:first rdf:nodeID="A585"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A641">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A724"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A725">
+    <rdf:rest rdf:nodeID="A393"/>
+    <rdf:first rdf:nodeID="A289"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A726">
+    <rdf:rest rdf:nodeID="A727"/>
+    <rdf:first rdf:nodeID="A705"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A312">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A453">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A728">
+    <rdf:rest rdf:nodeID="A718"/>
+    <rdf:first rdf:nodeID="A253"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A729">
+    <rdf:rest rdf:nodeID="A715"/>
+    <rdf:first rdf:nodeID="A730"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A731">
+    <rdf:rest rdf:nodeID="A707"/>
+    <rdf:first rdf:nodeID="A165"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A732">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.122</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A733">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A561">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A724">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A673">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170207</json:uri>
+    <json:device_agent rdf:nodeID="A663"/>
+    <json:location rdf:nodeID="A146"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f06bd865-fd11-469d-a9ac-472eac71cab5</json:guid>
+    <json:sensors rdf:nodeID="A461"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A723">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A573"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A727">
+    <rdf:rest rdf:nodeID="A734"/>
+    <rdf:first rdf:nodeID="A107"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A294">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A528">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A510">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.217B</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A735">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A414"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A469">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A736">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A446">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A737"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A738">
+    <rdf:rest rdf:nodeID="A731"/>
+    <rdf:first rdf:nodeID="A154"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A739">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A595"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A740">
+    <rdf:rest rdf:nodeID="A739"/>
+    <rdf:first rdf:nodeID="A625"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A741">
+    <rdf:rest rdf:nodeID="A742"/>
+    <rdf:first rdf:nodeID="A202"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A275">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A743">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A734">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A86"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A719">
+    <rdf:rest rdf:nodeID="A744"/>
+    <rdf:first rdf:nodeID="A218"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A716">
+    <rdf:rest rdf:nodeID="A735"/>
+    <rdf:first rdf:nodeID="A406"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A326">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A548">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A745">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A737">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A746">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A747">
+    <rdf:rest rdf:nodeID="A738"/>
+    <rdf:first rdf:nodeID="A129"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A742">
+    <rdf:rest rdf:nodeID="A722"/>
+    <rdf:first rdf:nodeID="A167"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <rdf:rest rdf:nodeID="A315"/>
+    <rdf:first rdf:nodeID="A98"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A748">
+    <rdf:rest rdf:nodeID="A740"/>
+    <rdf:first rdf:nodeID="A614"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A620">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170002</json:uri>
+    <json:device_agent rdf:nodeID="A84"/>
+    <json:location rdf:nodeID="A36"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ae2f7f1c-a766-471f-bd72-7ade609bedb3</json:guid>
+    <json:sensors rdf:nodeID="A681"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A744">
+    <rdf:rest rdf:nodeID="A693"/>
+    <rdf:first rdf:nodeID="A139"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A604">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A668">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A749">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A750">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A751">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A545">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A752">
+    <rdf:rest rdf:nodeID="A753"/>
+    <rdf:first rdf:nodeID="A387"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Admin office</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A730">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A754">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A658">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A421">
+    <rdf:rest rdf:nodeID="A755"/>
+    <rdf:first rdf:nodeID="A317"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <rdf:rest rdf:nodeID="A756"/>
+    <rdf:first rdf:nodeID="A335"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A757">
+    <rdf:rest rdf:nodeID="A747"/>
+    <rdf:first rdf:nodeID="A104"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A758">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A460"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A440">
+    <rdf:rest rdf:nodeID="A748"/>
+    <rdf:first rdf:nodeID="A550"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A591">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A759">
+    <rdf:rest rdf:nodeID="A454"/>
+    <rdf:first rdf:nodeID="A529"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A431">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A760">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.210</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A761">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:nodeID="A539"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A753">
+    <rdf:rest rdf:nodeID="A65"/>
+    <rdf:first rdf:nodeID="A398"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:rest rdf:nodeID="A762"/>
+    <rdf:first rdf:nodeID="A696"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A717">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0.8.14</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeenet_1</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:29:41Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Polling_interval":"1 minute"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:31:43Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A763">
+    <rdf:rest rdf:nodeID="A758"/>
+    <rdf:first rdf:nodeID="A471"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A764">
+    <rdf:rest rdf:nodeID="A757"/>
+    <rdf:first rdf:nodeID="A83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A756">
+    <rdf:rest rdf:nodeID="A759"/>
+    <rdf:first rdf:nodeID="A351"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A755">
+    <rdf:rest rdf:nodeID="A741"/>
+    <rdf:first rdf:nodeID="A302"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A765">
+    <rdf:rest rdf:nodeID="A766"/>
+    <rdf:first rdf:nodeID="A736"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A624">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A767">
+    <rdf:rest rdf:nodeID="A761"/>
+    <rdf:first rdf:nodeID="A521"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A574">
+    <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Temperature</json:digital_temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A507">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170008</json:uri>
+    <json:device_agent rdf:nodeID="A594"/>
+    <json:location rdf:nodeID="A402"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e60ca714-111c-41e3-9f66-0e726c35bd47</json:guid>
+    <json:sensors rdf:nodeID="A273"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A646">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity_Jeenet</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A762">
+    <rdf:rest rdf:nodeID="A768"/>
+    <rdf:first rdf:nodeID="A684"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A704">
+    <rdf:rest rdf:nodeID="A764"/>
+    <rdf:first rdf:nodeID="A256"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A239">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A769">
+    <rdf:rest rdf:nodeID="A763"/>
+    <rdf:first rdf:nodeID="A425"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A613">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A720">
+    <rdf:rest rdf:nodeID="A767"/>
+    <rdf:first rdf:nodeID="A572"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A770">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A750"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A631">
+    <json:sound_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sound_level_Jeenet</json:sound_level>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A563">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A768">
+    <rdf:rest rdf:nodeID="A726"/>
+    <rdf:first rdf:nodeID="A714"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A571">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A225">
+    <rdf:rest rdf:nodeID="A769"/>
+    <rdf:first rdf:nodeID="A448"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A686">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A771">
+    <rdf:rest rdf:nodeID="A623"/>
+    <rdf:first rdf:nodeID="A733"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A689">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A685">
+    <rdf:rest rdf:nodeID="A772"/>
+    <rdf:first rdf:nodeID="A680"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A665">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_Jeenet</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.213</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A436">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.214</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweetfeedback_device_1</json:uri>
+    <json:device_agent rdf:nodeID="A372"/>
+    <json:location rdf:nodeID="A618"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ae3f073b-94a7-4cae-b05c-8cdacaa0e384</json:guid>
+    <json:sensors rdf:nodeID="A659"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170105</json:uri>
+    <json:device_agent rdf:nodeID="A569"/>
+    <json:location rdf:nodeID="A499"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61c0417d-d85e-4d81-af5a-61484cb27897</json:guid>
+    <json:sensors rdf:nodeID="A233"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A773">
+    <rdf:rest rdf:nodeID="A774"/>
+    <rdf:first rdf:nodeID="A404"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A676">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A697">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A775"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A772">
+    <rdf:rest rdf:nodeID="A776"/>
+    <rdf:first rdf:nodeID="A709"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A655">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_Jeenet</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A679">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A340">
+    <rdf:rest rdf:nodeID="A113"/>
+    <rdf:first rdf:nodeID="A155"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A777">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A754"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A778">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0.8.14</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeenet_1</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:29:41Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Polling_interval":"1 minute"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-11T19:31:43Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A779">
+    <rdf:rest rdf:nodeID="A773"/>
+    <rdf:first rdf:nodeID="A409"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A766">
+    <rdf:rest rdf:nodeID="A780"/>
+    <rdf:first rdf:nodeID="A746"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A775">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A708">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A710">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A776">
+    <rdf:rest rdf:nodeID="A781"/>
+    <rdf:first rdf:nodeID="A700"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A313">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A782"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:nodeID="A779"/>
+    <rdf:first rdf:nodeID="A385"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A593">
+    <rdf:rest rdf:nodeID="A783"/>
+    <rdf:first rdf:nodeID="A619"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A784">
+    <rdf:rest rdf:nodeID="A777"/>
+    <rdf:first rdf:nodeID="A749"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A703">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A780">
+    <rdf:rest rdf:nodeID="A771"/>
+    <rdf:first rdf:nodeID="A721"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A698">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.129A</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A781">
+    <rdf:rest rdf:nodeID="A130"/>
+    <rdf:first rdf:nodeID="A644"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A232">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-01</json:uri>
+    <json:device_agent rdf:nodeID="A75"/>
+    <json:location rdf:nodeID="A711"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3423d86d-0e41-49d3-962d-5392eb48376f</json:guid>
+    <json:sensors rdf:nodeID="A664"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A322">
+    <rdf:rest rdf:nodeID="A785"/>
+    <rdf:first rdf:nodeID="A235"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A783">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A608"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <rdf:rest rdf:nodeID="A784"/>
+    <rdf:first rdf:nodeID="A346"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A695">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A314">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.120</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A785">
+    <rdf:rest rdf:nodeID="A786"/>
+    <rdf:first rdf:nodeID="A219"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A642">
+    <rdf:rest rdf:nodeID="A787"/>
+    <rdf:first rdf:nodeID="A656"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A671">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A622"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A543">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A617">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.107</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A336">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A447">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.217A</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A640">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A560">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A743"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A214">
+    <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity</json:humidity>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A782">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SweetFeedback</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-13T00:39:48Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{"Author":"Yuan"}</json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-16T22:16:28Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5a4d375c-9f89-485a-8ccc-a11bb527f2a4</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A584">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer z</json:acc_z>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A786">
+    <rdf:rest rdf:nodeID="A788"/>
+    <rdf:first rdf:nodeID="A188"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A475">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170302</json:uri>
+    <json:device_agent rdf:nodeID="A713"/>
+    <json:location rdf:nodeID="A648"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a476efc5-45b9-4e51-aa63-c604bcabd2cc</json:guid>
+    <json:sensors rdf:nodeID="A765"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A423">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A789">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A266"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A712">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A305">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A669">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170307</json:uri>
+    <json:device_agent rdf:nodeID="A102"/>
+    <json:location rdf:nodeID="A732"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">183024b8-4487-4c49-991c-3f2dd93d7a1a</json:guid>
+    <json:sensors rdf:nodeID="A602"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.230</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pressure</json:pressure>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A621">
+    <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audio P2P</json:audio_p2p>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A237">
+    <rdf:rest rdf:nodeID="A790"/>
+    <rdf:first rdf:nodeID="A189"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A575">
+    <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer y</json:acc_y>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A788">
+    <rdf:rest rdf:nodeID="A791"/>
+    <rdf:first rdf:nodeID="A327"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A792">
+    <rdf:rest rdf:nodeID="A789"/>
+    <rdf:first rdf:nodeID="A246"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A793">
+    <rdf:rest rdf:nodeID="A729"/>
+    <rdf:first rdf:nodeID="A751"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A651">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light_sweetfeedback</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A435">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A794"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A795">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A778"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A796">
+    <rdf:rest rdf:nodeID="A728"/>
+    <rdf:first rdf:nodeID="A241"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A493">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10170009</json:uri>
+    <json:device_agent rdf:nodeID="A770"/>
+    <json:location rdf:nodeID="A760"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3f1d4484-b21b-4af0-b55b-83a920c968cf</json:guid>
+    <json:sensors rdf:nodeID="A388"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A578"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A797">
+    <rdf:rest rdf:nodeID="A517"/>
+    <rdf:first rdf:nodeID="A670"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A330">
+    <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light</json:light>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A611">
+    <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion</json:motion>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A790">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A251"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A524">
+    <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerometer x</json:acc_x>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A791">
+    <rdf:rest rdf:nodeID="A725"/>
+    <rdf:first rdf:nodeID="A307"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A795"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A468">
+    <rdf:rest rdf:nodeID="A793"/>
+    <rdf:first rdf:nodeID="A745"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A660">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature_sweetfeedback</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A774">
+    <rdf:rest rdf:nodeID="A792"/>
+    <rdf:first rdf:nodeID="A343"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A556">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-04</json:uri>
+    <json:device_agent rdf:nodeID="A156"/>
+    <json:location rdf:nodeID="A112"/>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2d5dd489-7ca1-4a6f-a85e-2697fd5890cf</json:guid>
+    <json:sensors rdf:nodeID="A752"/>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A390">
+    <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</json:temp>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A794">
+    <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Andrew's Device Agent</json:uri>
+    <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.0.0</json:network_address>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SensorAndrew</json:print_name>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-12-19T01:21:15Z</json:created_at>
+    <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:metadata_json>
+    <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-04-09T22:34:24Z</json:updated_at>
+    <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+    <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</json:id>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A787">
+    <rdf:rest rdf:nodeID="A797"/>
+    <rdf:first rdf:nodeID="A666"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A413">
+    <rdf:rest rdf:nodeID="A796"/>
+    <rdf:first rdf:nodeID="A292"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lat>
+    <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wgs84</json:format>
+    <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B23.213</json:print_name>
+    <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:alt>
+    <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></json:lon>
+    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
   </rdf:Description>
 </rdf:RDF>
 

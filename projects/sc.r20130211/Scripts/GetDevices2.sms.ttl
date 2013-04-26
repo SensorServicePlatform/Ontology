@@ -14,42 +14,49 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-GetDevices2:ApplyTopSpinToDevices
+GetDevices2:ApplyTopSpin
       rdf:type sml:ApplyTopSPIN ;
-      sm:next GetDevices2:ReturnSparqlResultsForDevices ;
+      sm:next GetDevices2:ReturnSparqlResults ;
       sml:predicate spin:rule ;
       sml:replace "true"^^xsd:boolean ;
       sml:singlePass "true"^^xsd:boolean .
 
-GetDevices2:ConvertDeviceJsonToRdf
+GetDevices2:ConvertJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
-      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sm:next GetDevices2:ExportRdfToFile ;
       sm:outputVariable "deviceRdf"^^xsd:string .
 
-GetDevices2:ExportDeviceRdfToFile
+GetDevices2:ExportRdfToFile
       rdf:type sml:ExportToRDFFile ;
-      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sm:next GetDevices2:ApplyTopSpin ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
       sml:targetFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
 
 GetDevices2:ImportCombinedModel
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next GetDevices2:ApplyTopSpinToDevices ;
+      sm:next GetDevices2:ApplyTopSpin ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
 
 GetDevices2:ImportDeviceJsonFromSensorRepo
       rdf:type sml:ImportTextFromURL ;
-      sm:next GetDevices2:ConvertDeviceJsonToRdf ;
+      sm:next GetDevices2:ConvertJsonToRdf ;
       sm:outputVariable "text"^^xsd:string ;
       sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
 
-GetDevices2:ReturnSparqlResultsForDevices
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+GetDevices2:ImportSpinRules
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next GetDevices2:ApplyTopSpin ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings"^^xsd:string ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "/SmartCommunity/Scripts/GetDevices2Mappings.spin.ttl"^^xsd:string .
+
+GetDevices2:ReturnSparqlResults
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
