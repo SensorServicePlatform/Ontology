@@ -14,7 +14,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetDevices2:ApplyTopSpin
@@ -51,12 +51,12 @@ GetDevices2:ImportDeviceJsonFromSensorRepo
 GetDevices2:ImportSpinRules
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next GetDevices2:ApplyTopSpin ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2Mappings"^^xsd:string ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2SPIN"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/Scripts/GetDevices2Mappings.spin.ttl"^^xsd:string .
+      sml:sourceFilePath "/SmartCommunity/Scripts/GetDevices2SPIN.ttl"^^xsd:string .
 
 GetDevices2:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;

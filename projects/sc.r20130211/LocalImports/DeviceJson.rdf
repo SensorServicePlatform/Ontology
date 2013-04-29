@@ -10,17 +10,39 @@
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Created with TopBraid Composer</owl:versionInfo>
   </owl:Ontology>
-  <rdf:Property rdf:ID="guid"/>
+  <rdfs:Class rdf:ID="Object">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <rdf:Property rdf:ID="print_name"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <rdf:Property rdf:ID="uri"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:onProperty>
+          <rdf:Property rdf:ID="guid"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdf:Property rdf:ID="id"/>
   <rdf:Property rdf:ID="alt"/>
   <rdf:Property rdf:ID="network_address"/>
-  <rdf:Property rdf:ID="id"/>
   <rdf:Property rdf:ID="location"/>
-  <rdf:Property rdf:ID="Object"/>
-  <rdf:Property rdf:ID="uri"/>
   <rdf:Property rdf:ID="created_at"/>
   <rdf:Property rdf:ID="device_agent"/>
   <rdf:Property rdf:ID="lat"/>
-  <rdf:Property rdf:ID="print_name"/>
   <rdf:Property rdf:ID="lon"/>
   <rdf:Property rdf:ID="updated_at"/>
   <rdf:Property rdf:ID="format"/>
