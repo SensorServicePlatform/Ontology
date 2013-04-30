@@ -20,7 +20,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices1>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 devices:BindNewDevice
@@ -364,7 +364,7 @@ devices:IterateOverDevices
               ] .
 
 devices:ReturnSparqlResultsForDevices
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;

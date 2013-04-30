@@ -22,6 +22,33 @@
                 spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
                 spinmap:targetPredicate1
                         rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context GetDevices2SPIN:Object-FireflyDevice ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#guid> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#guid>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context GetDevices2SPIN:Object-FireflyDevice ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#print_name> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#printName>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context GetDevices2SPIN:Object-FireflyDevice ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#uri> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#uri>
               ] .
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2SPIN>
@@ -36,6 +63,6 @@ GetDevices2SPIN:Object-FireflyDevice
               [ rdf:type spinmapl:buildURI1 ;
                 sp:arg1 <http://topbraid.org/json#uri> ;
                 spinmap:source spinmap:_source ;
-                spinmapl:template "sc:{?1}"^^xsd:string
+                spinmapl:template "sc:Device-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> .
