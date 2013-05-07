@@ -82,9 +82,64 @@ GetDevices2:PerformUpdate_Device
                           ])
               ] .
 
-GetDevices2:PerformUpdate_Location
+GetDevices2:PerformUpdate_DeviceAgent
       rdf:type sml:PerformUpdate ;
       sm:next GetDevices2:ReturnSparqlResults ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:DeviceAgent ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "id"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:id ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "network_address"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:network_address ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "updated_at"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:updated_at ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
+GetDevices2:PerformUpdate_Location
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices2:PerformUpdate_DeviceAgent ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;

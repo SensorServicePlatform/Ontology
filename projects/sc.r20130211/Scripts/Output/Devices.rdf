@@ -45,7 +45,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >3</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -62,7 +62,7 @@
             >10.0.8.14</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >23-01</json:uri>
@@ -105,7 +105,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >3</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -122,7 +122,7 @@
             >10.0.8.14</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >23-02</json:uri>
@@ -163,7 +163,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >3</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -180,7 +180,7 @@
             >10.0.8.14</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >23-03</json:uri>
@@ -221,7 +221,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >3</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -238,7 +238,7 @@
             >10.0.8.14</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >23-04</json:uri>
@@ -279,7 +279,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >3</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -296,7 +296,7 @@
             >10.0.8.14</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >http://jeenetgw01.sv.cmu.edu/data.json</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >23-05</json:uri>
@@ -333,7 +333,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >4</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -350,7 +350,7 @@
             ></json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >SweetFeedback</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Sweetfeedback_device_1</json:uri>
@@ -387,7 +387,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >4</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -404,7 +404,7 @@
             ></json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >SweetFeedback</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Sweetfeedback_device_2</json:uri>
@@ -441,7 +441,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >4</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -458,7 +458,7 @@
             ></json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >SweetFeedback</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Sweetfeedback_device_3</json:uri>
@@ -523,7 +523,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -540,7 +540,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170207</json:uri>
@@ -605,7 +605,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -622,7 +622,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170208</json:uri>
@@ -687,7 +687,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -704,7 +704,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170009</json:uri>
@@ -769,7 +769,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -786,7 +786,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170203</json:uri>
@@ -851,7 +851,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -868,7 +868,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170206</json:uri>
@@ -933,7 +933,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -950,7 +950,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170005</json:uri>
@@ -1015,7 +1015,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1032,7 +1032,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170007</json:uri>
@@ -1097,7 +1097,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1114,7 +1114,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170103</json:uri>
@@ -1179,7 +1179,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1196,7 +1196,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170304</json:uri>
@@ -1261,7 +1261,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1278,7 +1278,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170303</json:uri>
@@ -1343,7 +1343,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1360,7 +1360,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170008</json:uri>
@@ -1425,7 +1425,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1442,7 +1442,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170302</json:uri>
@@ -1507,7 +1507,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1524,7 +1524,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170106</json:uri>
@@ -1589,7 +1589,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1606,7 +1606,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170202</json:uri>
@@ -1671,7 +1671,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1688,7 +1688,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170102</json:uri>
@@ -1753,7 +1753,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1770,7 +1770,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170002</json:uri>
@@ -1835,7 +1835,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1852,7 +1852,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170307</json:uri>
@@ -1917,7 +1917,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -1934,7 +1934,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170204</json:uri>
@@ -1999,7 +1999,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2016,7 +2016,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170308</json:uri>
@@ -2081,7 +2081,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2098,7 +2098,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170006</json:uri>
@@ -2163,7 +2163,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2180,7 +2180,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170209</json:uri>
@@ -2245,7 +2245,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2262,7 +2262,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170205</json:uri>
@@ -2327,7 +2327,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2344,7 +2344,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170004</json:uri>
@@ -2409,7 +2409,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2426,7 +2426,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170306</json:uri>
@@ -2491,7 +2491,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2508,7 +2508,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170305</json:uri>
@@ -2573,7 +2573,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2590,7 +2590,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170104</json:uri>
@@ -2655,7 +2655,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2672,7 +2672,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170105</json:uri>
@@ -2737,7 +2737,7 @@
           </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
-          <json:Object>
+          <json:DeviceAgent>
             <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
             >1</json:id>
             <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -2754,7 +2754,7 @@
             >192.168.0.0</json:network_address>
             <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
+          </json:DeviceAgent>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >10170003</json:uri>
