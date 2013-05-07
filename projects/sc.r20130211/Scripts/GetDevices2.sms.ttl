@@ -17,31 +17,8 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
+      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
-
-GetDevices2:ApplyTopSpin
-      rdf:type sml:ApplyTopSPIN ;
-      sm:next GetDevices2:ReturnSparqlResults ;
-      sml:flatten "false"^^xsd:boolean ;
-      sml:predicate spin:rule ;
-      sml:replace "true"^^xsd:boolean ;
-      sml:singlePass "true"^^xsd:boolean .
-
-GetDevices2:CollectGarbage_1
-      rdf:type sml:CollectGarbage ;
-      sm:next GetDevices2:Merge_2 ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string .
-
-GetDevices2:CollectGarbage_BaseSessionGraph
-      rdf:type sml:CollectGarbage ;
-      sm:next GetDevices2:Merge_2 ;
-      sml:baseURI "deviceRdf"^^xsd:string .
-
-GetDevices2:CollectGarbage_SessionGraph
-      rdf:type sml:CollectGarbage ;
-      sm:next GetDevices2:Merge_2 ;
-      sml:baseURI "urn:x-tb:session"^^xsd:string .
 
 GetDevices2:ConvertJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
@@ -54,44 +31,15 @@ GetDevices2:ExportRdfToFile_2
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
       sml:targetFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
 
-GetDevices2:ImportCombinedModel
-      rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next GetDevices2:Merge_3 ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
-      sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
-
 GetDevices2:ImportDeviceJsonFromSensorRepo
       rdf:type sml:ImportTextFromURL ;
       sm:next GetDevices2:ConvertJsonToRdf ;
       sm:outputVariable "text"^^xsd:string ;
       sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
 
-GetDevices2:ImportDeviceJsonWithUpdates
-      rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next GetDevices2:Merge_3 ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
-      sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
-
-GetDevices2:ImportSpinRules
-      rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next GetDevices2:Merge_3 ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/GetDevices2SPIN"^^xsd:string ;
-      sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/Scripts/GetDevices2SPIN.ttl"^^xsd:string .
-
 GetDevices2:Merge_1
       rdf:type sml:Merge ;
-      sm:next GetDevices2:Merge_2 .
-
-GetDevices2:Merge_2
-      rdf:type sml:Merge ;
-      sm:next GetDevices2:Merge_3 .
-
-GetDevices2:Merge_3
-      rdf:type sml:Merge ;
-      sm:next GetDevices2:ApplyTopSpin .
+      sm:next GetDevices2:ReturnSparqlResults .
 
 GetDevices2:PerformUpdate_Device
       rdf:type sml:PerformUpdate ;
@@ -175,7 +123,7 @@ GetDevices2:PerformUpdate_Location
               ] .
 
 GetDevices2:ReturnSparqlResults
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
@@ -192,7 +140,221 @@ GetDevices2:ReturnSparqlResults
               ] ;
       sml:serialization sm:XML .
 
-[]    rdf:type json:location .
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
+
+[]    rdf:type json:location ;
+      email:name "Hennessy" .
 
 []    rdf:type json:location .
 
@@ -264,218 +426,4 @@ GetDevices2:ReturnSparqlResults
 
 []    rdf:type json:location .
 
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
-
-[]    rdf:type json:location ;
-      email:name "Hennessy" .
+[]    rdf:type json:location .
