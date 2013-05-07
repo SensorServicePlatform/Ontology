@@ -54,7 +54,6 @@ devices:BindNewDevice
 
 devices:ConstructDeviceInstances
       rdf:type sml:ApplyConstruct ;
-      sm:next devices:BindNewDevice ;
       sml:constructQuery
               [ rdf:type sp:Construct ;
                 sp:templates ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
@@ -254,7 +253,7 @@ devices:ExportRdfToDeviceRdfFile
 
 devices:ImportCombinedModel
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next devices:ImportDeviceJsonFromSensorRepo ;
+      sm:next devices:IterateOverDevices ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/CombinedModel/1.1/CombinedModel.ttl"^^xsd:string .
