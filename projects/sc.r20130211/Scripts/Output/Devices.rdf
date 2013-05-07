@@ -30,17 +30,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >3423d86d-0e41-49d3-962d-5392eb48376f</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.216</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.216</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -88,17 +90,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ac434c12-e222-4c43-92a6-8939ef0529ac</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.Adm</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.Adm</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -144,17 +148,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >5957576b-93e5-401e-bb10-3cdd5c022408</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.213</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.213</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -200,17 +206,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >2d5dd489-7ca1-4a6f-a85e-2697fd5890cf</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.214</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.214</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -256,17 +264,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >a7acf3ab-c008-43c7-8dda-b824ea7c7abe</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.K2</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.K2</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -308,17 +318,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ae3f073b-94a7-4cae-b05c-8cdacaa0e384</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >Ted's office</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ted's office</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -360,17 +372,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >2c15b071-43ab-4c43-bfe5-9ad3086a3ec9</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >Chihiro's office</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Chihiro's office</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -412,17 +426,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >b153bc80-8f3b-4739-8ee0-41df1cd2f824</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.120</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.120</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -446,6 +462,662 @@
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Sweetfeedback_device_3</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >f06bd865-fd11-469d-a9ac-472eac71cab5</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.215</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170207</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ee8312d2-a170-47eb-8068-2e6b5beddf23</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.217A</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170208</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >3f1d4484-b21b-4af0-b55b-83a920c968cf</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.210</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170009</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2d6d2996-0296-4eed-adc1-3ff4e64ab036</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.213</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170203</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >fd754f8a-3d0f-4adb-b678-4e1f26c59cc7</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.215B</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170206</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >c23829bf-1523-49a1-9a46-1f61adfdf396</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.109</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170005</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >f49d53cb-3e84-4e81-9dd8-31c6f6416dda</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.211</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170007</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >c10465e3-d239-4dda-8c4c-1dfd50ea11c8</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.129</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170103</json:uri>
       </json:Device>
       <json:Device>
         <json:sensors rdf:parseType="Collection">
@@ -492,17 +1164,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >50068ac7-c9e6-4d29-8793-3fe758d2d501</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.123</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.123</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -572,17 +1246,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >4df56117-68e3-47b4-9952-55d3d4a98764</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.104</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.104</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -652,17 +1328,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >e60ca714-111c-41e3-9f66-0e726c35bd47</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.212</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.212</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -732,17 +1410,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >a476efc5-45b9-4e51-aa63-c604bcabd2cc</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.105B</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.105B</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -812,17 +1492,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >3e8671e3-b9d8-4f83-a9bd-8816cca87103</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.229</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.229</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -892,17 +1574,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >a60b7e07-fce7-4de0-8316-af388a4aa86d</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.216</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.216</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -972,17 +1656,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >99440a88-8377-432f-9f60-ae41ad664ef6</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.129A</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.129A</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -1052,17 +1738,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >ae2f7f1c-a766-471f-bd72-7ade609bedb3</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.115</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.115</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -1131,258 +1819,20 @@
           </json:Object>
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >c10465e3-d239-4dda-8c4c-1dfd50ea11c8</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.129</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170103</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >2d6d2996-0296-4eed-adc1-3ff4e64ab036</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.213</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170203</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >8e4759b2-7837-4d2d-afad-d7c2c8319201</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.214</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170204</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >183024b8-4487-4c49-991c-3f2dd93d7a1a</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.122</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.122</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -1451,18 +1901,20 @@
           </json:Object>
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >ee8312d2-a170-47eb-8068-2e6b5beddf23</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.217A</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        >8e4759b2-7837-4d2d-afad-d7c2c8319201</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.214</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -1485,247 +1937,7 @@
           </json:Object>
         </json:device_agent>
         <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170208</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >f06bd865-fd11-469d-a9ac-472eac71cab5</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.215</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170207</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >fd754f8a-3d0f-4adb-b678-4e1f26c59cc7</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.215B</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170206</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >f49d53cb-3e84-4e81-9dd8-31c6f6416dda</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.211</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170007</json:uri>
+        >10170204</json:uri>
       </json:Device>
       <json:Device>
         <json:sensors rdf:parseType="Collection">
@@ -1772,17 +1984,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >1ad558f1-a4f5-46b6-8b4d-5054dbd4159c</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.120</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.120</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -1851,258 +2065,20 @@
           </json:Object>
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >c23829bf-1523-49a1-9a46-1f61adfdf396</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.109</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170005</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >ad88ab01-243a-4d5b-bee6-7b30633fcf69</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.217B</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170209</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >3f1d4484-b21b-4af0-b55b-83a920c968cf</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.210</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
-        </json:location>
-        <json:device_agent rdf:parseType="Collection">
-          <json:Object>
-            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
-            >1</json:id>
-            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
-            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2013-04-09T22:34:24Z</json:updated_at>
-            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            ></json:metadata_json>
-            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >2012-12-19T01:21:15Z</json:created_at>
-            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >SensorAndrew</json:print_name>
-            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >192.168.0.0</json:network_address>
-            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Sensor Andrew's Device Agent</json:uri>
-          </json:Object>
-        </json:device_agent>
-        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >10170009</json:uri>
-      </json:Device>
-      <json:Device>
-        <json:sensors rdf:parseType="Collection">
-          <json:Object>
-            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Temperature</json:temp>
-          </json:Object>
-          <json:Object>
-            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Digital Temperature</json:digital_temp>
-          </json:Object>
-          <json:Object>
-            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Light</json:light>
-          </json:Object>
-          <json:Object>
-            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Pressure</json:pressure>
-          </json:Object>
-          <json:Object>
-            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Humidity</json:humidity>
-          </json:Object>
-          <json:Object>
-            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Motion</json:motion>
-          </json:Object>
-          <json:Object>
-            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Audio P2P</json:audio_p2p>
-          </json:Object>
-          <json:Object>
-            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer x</json:acc_x>
-          </json:Object>
-          <json:Object>
-            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer y</json:acc_y>
-          </json:Object>
-          <json:Object>
-            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >Accelerometer z</json:acc_z>
-          </json:Object>
-        </json:sensors>
-        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >8faf9cb1-3ee2-4ac2-8e38-1361bb2e62ce</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.107</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.107</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2171,18 +2147,102 @@
           </json:Object>
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ad88ab01-243a-4d5b-bee6-7b30633fcf69</json:guid>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.217B</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
+        </json:location>
+        <json:device_agent rdf:parseType="Collection">
+          <json:Object>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >1</json:id>
+            <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >aeec51a9-6256-4b17-9a9c-cd8d7603b57e</json:guid>
+            <json:updated_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2013-04-09T22:34:24Z</json:updated_at>
+            <json:metadata_json rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:metadata_json>
+            <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-12-19T01:21:15Z</json:created_at>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >SensorAndrew</json:print_name>
+            <json:network_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >192.168.0.0</json:network_address>
+            <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sensor Andrew's Device Agent</json:uri>
+          </json:Object>
+        </json:device_agent>
+        <json:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >10170209</json:uri>
+      </json:Device>
+      <json:Device>
+        <json:sensors rdf:parseType="Collection">
+          <json:Object>
+            <json:temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Temperature</json:temp>
+          </json:Object>
+          <json:Object>
+            <json:digital_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Digital Temperature</json:digital_temp>
+          </json:Object>
+          <json:Object>
+            <json:light rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Light</json:light>
+          </json:Object>
+          <json:Object>
+            <json:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Pressure</json:pressure>
+          </json:Object>
+          <json:Object>
+            <json:humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Humidity</json:humidity>
+          </json:Object>
+          <json:Object>
+            <json:motion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Motion</json:motion>
+          </json:Object>
+          <json:Object>
+            <json:audio_p2p rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Audio P2P</json:audio_p2p>
+          </json:Object>
+          <json:Object>
+            <json:acc_x rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer x</json:acc_x>
+          </json:Object>
+          <json:Object>
+            <json:acc_y rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer y</json:acc_y>
+          </json:Object>
+          <json:Object>
+            <json:acc_z rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Accelerometer z</json:acc_z>
+          </json:Object>
+        </json:sensors>
+        <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >a71103e6-90d9-4b37-98d3-11c4bf8fbcc2</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.214B</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.214B</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2252,17 +2312,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >41d1b8d3-6b66-46ac-8391-3bb8814dd110</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.110</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.110</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2332,17 +2394,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >4f4e0c2a-4129-48d2-896e-9aa4b0202774</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.124</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.124</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2412,17 +2476,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >49449a24-5096-4998-afe5-215dcf800d27</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.126</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.126</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2492,17 +2558,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >1d7266ff-353e-4862-881d-537842663301</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.230</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.230</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2572,17 +2640,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >61c0417d-d85e-4d81-af5a-61484cb27897</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.228</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.228</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
@@ -2652,17 +2722,19 @@
         </json:sensors>
         <json:guid rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >dfb50784-41da-4e60-b184-0cb36685e996</json:guid>
-        <json:location rdf:parseType="Resource">
-          <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lon>
-          <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:alt>
-          <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >B23.116</json:print_name>
-          <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >wgs84</json:format>
-          <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          ></json:lat>
+        <json:location>
+          <json:Location>
+            <json:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lon>
+            <json:alt rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:alt>
+            <json:print_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >B23.116</json:print_name>
+            <json:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wgs84</json:format>
+            <json:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></json:lat>
+          </json:Location>
         </json:location>
         <json:device_agent rdf:parseType="Collection">
           <json:Object>
