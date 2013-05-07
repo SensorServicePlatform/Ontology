@@ -10,6 +10,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
@@ -17,7 +18,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/GetDevices2>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetDevices2:ConvertJsonToRdf
@@ -84,7 +85,7 @@ GetDevices2:PerformUpdate_Device
 
 GetDevices2:PerformUpdate_DeviceAgent
       rdf:type sml:PerformUpdate ;
-      sm:next GetDevices2:ReturnSparqlResults ;
+      sm:next GetDevices2:PerformUpdate_Sensor ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
@@ -178,8 +179,50 @@ GetDevices2:PerformUpdate_Location
                           ])
               ] .
 
+GetDevices2:PerformUpdate_Sensor
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices2:ReturnSparqlResults ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Sensor ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Filter ;
+                                        sp:expression
+                                                [ rdf:type sp:eq ;
+                                                  sp:arg1 [ rdf:type smf:countResults ;
+                                                            sp:arg1 "SELECT * WHERE {?sensor a json:Object . ?sensor ?p ?o .}"
+                                                          ] ;
+                                                  sp:arg2 2
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
 GetDevices2:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
