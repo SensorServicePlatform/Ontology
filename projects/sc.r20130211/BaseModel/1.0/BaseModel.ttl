@@ -1,0 +1,271 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/1.0/BaseModel
+# imports: http://dbpedia.org/resource/
+# imports: http://geovocab.org/spatial
+# imports: http://purl.org/dc/dcmitype/
+# imports: http://purl.org/dc/terms/
+# imports: http://purl.org/vocab/vann/
+# imports: http://qudt.org/vocab/unit
+# imports: http://rdfs.org/sioc/ns
+# imports: http://www.geonames.org/ontology
+# imports: http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/vcard/ns
+# imports: http://www.w3.org/2007/05/powder-s
+# imports: http://www.w3.org/ns/adms
+# imports: http://xmlns.com/foaf/0.1/
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc:      <http://www.cmusv.edu/SmartCommunity/1.0/BaseModel#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/1.0/BaseModel>
+      rdf:type owl:Ontology ;
+      owl:imports <http://qudt.org/vocab/unit> , <http://www.w3.org/2003/01/geo/wgs84_pos> , <http://purl.org/vocab/vann/> , <http://dbpedia.org/resource/> , <http://www.w3.org/2007/05/powder-s> , <http://rdfs.org/sioc/ns> , <http://www.w3.org/ns/adms> , <http://www.geonames.org/ontology> , <http://geovocab.org/spatial> , <http://purl.org/dc/dcmitype/> , <http://purl.org/dc/terms/> , <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> , <http://www.w3.org/2006/vcard/ns> , <http://www.w3.org/2004/02/skos/core> , <http://xmlns.com/foaf/0.1/> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+sc:Actuation
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Service .
+
+sc:Computation
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Service ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:InformationArtifact ;
+                owl:onProperty sc:produces
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:InformationArtifact ;
+                owl:onProperty sc:consumes
+              ] .
+
+sc:Conversation
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:InformationArtifact .
+
+sc:Device
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Resource .
+
+sc:Event
+      rdf:type owl:Class ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom
+                        [ rdf:type owl:Class ;
+                          owl:unionOf (sc:Resource sc:Service sc:Place sc:Event)
+                        ] ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://xmlns.com/foaf/0.1/name>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:TimeStamp ;
+                owl:onProperty sc:hasTimeStamp
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasTimeStamp
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasIdentifier
+              ] .
+
+sc:InformationArtifact
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Resource .
+
+sc:Measurement
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Service ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#value>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#unit>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
+                owl:onProperty <http://qudt.org/schema/qudt#unit>
+              ] .
+
+sc:Message
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:InformationArtifact ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isPartOf
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Conversation ;
+                owl:onProperty sc:isPartOf
+              ] .
+
+sc:Person
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:Resource .
+
+sc:Photo
+      rdf:type owl:Class ;
+      rdfs:subClassOf sc:InformationArtifact .
+
+sc:Place
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://xmlns.com/foaf/0.1/name>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Event ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
+              ] .
+
+sc:Resource
+      rdf:type owl:Class ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://xmlns.com/foaf/0.1/name>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:locatedAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Place ;
+                owl:onProperty sc:locatedAt
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Service ;
+                owl:onProperty sc:provides
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Event ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
+              ] .
+
+sc:Service
+      rdf:type owl:Class ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://xmlns.com/foaf/0.1/name>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:integer ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:hasIdentifier
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom sc:Event ;
+                owl:onProperty sc:isAssociatedWith
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty sc:isAssociatedWith
+              ] .
+
+sc:TimeStamp
+      rdf:type owl:Class ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#value>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
+                owl:onProperty <http://qudt.org/schema/qudt#value>
+              ] .
+
+sc:consumes
+      rdf:type rdf:Property .
+
+sc:hasIdentifier
+      rdf:type rdf:Property .
+
+sc:hasTimeStamp
+      rdf:type rdf:Property .
+
+sc:isAssociatedWith
+      rdf:type owl:SymmetricProperty .
+
+sc:isPartOf
+      rdf:type rdf:Property .
+
+sc:locatedAt
+      rdf:type owl:ObjectProperty .
+
+sc:produces
+      rdf:type rdf:Property .
+
+sc:provides
+      rdf:type owl:AsymmetricProperty .

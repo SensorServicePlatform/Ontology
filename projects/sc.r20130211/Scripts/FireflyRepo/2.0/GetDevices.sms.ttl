@@ -1,0 +1,236 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices
+# imports: http://topbraid.org/json
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix GetDevices:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices#> .
+@prefix email:   <http://topbraid.org/email#> .
+@prefix json:    <http://topbraid.org/json#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+GetDevices:ConvertJsonToRdf
+      rdf:type sml:ConvertJSONToRDF ;
+      sm:next GetDevices:ExportRdfToFile_2 ;
+      sm:outputVariable "deviceRdf"^^xsd:string .
+
+GetDevices:ExportRdfToFile_2
+      rdf:type sml:ExportToRDFFile ;
+      sm:next GetDevices:PerformUpdate_Device ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices"^^xsd:string ;
+      sml:targetFilePath "/SmartCommunity/Scripts/Output/Devices.rdf"^^xsd:string .
+
+GetDevices:ImportDeviceJsonFromSensorRepo
+      rdf:type sml:ImportTextFromURL ;
+      sm:next GetDevices:ConvertJsonToRdf ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
+
+GetDevices:PerformUpdate_Device
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices:PerformUpdate_Location ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Device ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "sensors"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:sensors ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
+GetDevices:PerformUpdate_DeviceAgent
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices:PerformUpdate_Sensor ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:DeviceAgent ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "id"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:id ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "network_address"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:network_address ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "updated_at"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:updated_at ;
+                                        sp:subject
+                                                [ sp:varName "deviceAgent"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
+GetDevices:PerformUpdate_Location
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices:PerformUpdate_DeviceAgent ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "location"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Location ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "location"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "location"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "lat"^^xsd:string
+                                                ] ;
+                                        sp:predicate json:lat ;
+                                        sp:subject
+                                                [ sp:varName "location"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
+GetDevices:PerformUpdate_Sensor
+      rdf:type sml:PerformUpdate ;
+      sm:next GetDevices:ReturnSparqlResults ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Sensor ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "sensor"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Filter ;
+                                        sp:expression
+                                                [ rdf:type sp:eq ;
+                                                  sp:arg1 [ rdf:type smf:countResults ;
+                                                            sp:arg1 "SELECT * WHERE {?sensor a json:Object . ?sensor ?p ?o .}"
+                                                          ] ;
+                                                  sp:arg2 2
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
+                          ])
+              ] .
+
+GetDevices:ReturnSparqlResults
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
