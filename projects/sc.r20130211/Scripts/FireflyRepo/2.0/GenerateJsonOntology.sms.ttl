@@ -12,6 +12,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spif:    <http://spinrdf.org/spif#> .
@@ -20,8 +21,39 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GenerateJsonOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+GenerateJsonOntology:BindNewType
+      rdf:type sml:BindBySelect ;
+      sm:next GenerateJsonOntology:CreateClass ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "baseUri"^^xsd:string
+                          ] [ sp:varName "newType"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology#" ;
+                            sp:variable
+                                    [ sp:varName "baseUri"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "baseUri"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ rdf:type afn:localname ;
+                                                          sp:arg1 [ sp:varName "type"^^xsd:string
+                                                                  ]
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newType"^^xsd:string
+                                    ]
+                          ])
+              ] .
 
 GenerateJsonOntology:ClearGraph
       rdf:type sml:PerformUpdate ;
@@ -62,9 +94,85 @@ GenerateJsonOntology:ConvertJSONToRDF_1
       sm:next GenerateJsonOntology:Merge_1 ;
       sm:outputVariable "root"^^xsd:string .
 
+GenerateJsonOntology:CreateClass
+      rdf:type sml:PerformUpdate ;
+      sm:next GenerateJsonOntology:CreateProperties ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object rdfs:Class ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "newType"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                          ]) ;
+                sp:where ()
+              ] .
+
+GenerateJsonOntology:CreateProperties
+      rdf:type sml:PerformUpdate ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern () ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "newPredicate"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:Property ;
+                                        sp:subject
+                                                [ sp:varName "newType"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                          ]) ;
+                sp:where ([ sp:object
+                                    [ sp:varName "type"^^xsd:string
+                                    ] ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ] [ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ rdf:type fn:concat ;
+                                                sp:arg1 [ sp:varName "baseUri"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 [ rdf:type afn:localname ;
+                                                          sp:arg1 [ sp:varName "p"^^xsd:string
+                                                                  ]
+                                                        ]
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "newPredicate"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type fn:starts-with ;
+                                      sp:arg1 [ rdf:type smf:qname ;
+                                                sp:arg1 [ sp:varName "p"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg2 "json"
+                                    ]
+                          ])
+              ] .
+
 GenerateJsonOntology:ForEachRdfType
       rdf:type sml:IterateOverSelect ;
-      sm:body GenerateJsonOntology:UpdateClasses ;
+      sm:body GenerateJsonOntology:BindNewType ;
       sm:next GenerateJsonOntology:ReturnSparqlResults ;
       sml:selectQuery
               [ rdf:type sp:Select ;
@@ -103,7 +211,7 @@ GenerateJsonOntology:ModifyPrefixes_1
       sml:addedPrefix "JsonOntology http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology#"^^xsd:string .
 
 GenerateJsonOntology:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
@@ -119,39 +227,3 @@ GenerateJsonOntology:ReturnSparqlResults
                           ])
               ] ;
       sml:serialization sm:XML .
-
-GenerateJsonOntology:UpdateClasses
-      rdf:type sml:PerformUpdate ;
-      sml:updateQuery
-              [ rdf:type sp:Modify ;
-                sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object rdfs:Class ;
-                                        sp:predicate rdf:type ;
-                                        sp:subject
-                                                [ sp:varName "newType"^^xsd:string
-                                                ]
-                                      ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
-                          ]) ;
-                sp:where ([ rdf:type sp:Bind ;
-                            sp:expression "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology#" ;
-                            sp:variable
-                                    [ sp:varName "baseUri"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type spif:buildURI ;
-                                      sp:arg1 [ rdf:type fn:concat ;
-                                                sp:arg1 [ sp:varName "baseUri"^^xsd:string
-                                                        ] ;
-                                                sp:arg2 [ rdf:type afn:localname ;
-                                                          sp:arg1 [ sp:varName "type"^^xsd:string
-                                                                  ]
-                                                        ]
-                                              ]
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "newType"^^xsd:string
-                                    ]
-                          ])
-              ] .
