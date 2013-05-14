@@ -117,12 +117,15 @@ GenerateJsonOntology:CreateProperties
               [ rdf:type sp:Modify ;
                 sp:deletePattern () ;
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object
-                                                [ sp:varName "newPredicate"^^xsd:string
-                                                ] ;
-                                        sp:predicate rdf:Property ;
+                            sp:elements ([ sp:object rdf:Property ;
+                                        sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "newType"^^xsd:string
+                                                [ sp:varName "newPredicate"^^xsd:string
+                                                ]
+                                      ] [ sp:object xsd:string ;
+                                        sp:predicate rdfs:range ;
+                                        sp:subject
+                                                [ sp:varName "newPredicate"^^xsd:string
                                                 ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
