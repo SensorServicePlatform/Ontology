@@ -26,7 +26,7 @@
 
 GenerateJsonOntology:ConvertJSONToRDF_1
       rdf:type sml:ConvertJSONToRDF ;
-      sm:next GenerateJsonOntology:Merge_1 ;
+      sm:next GenerateJsonOntology:ExportRdfOutput ;
       sm:outputVariable "root"^^xsd:string .
 
 GenerateJsonOntology:CreateOntologyFileAndGraph
@@ -34,6 +34,12 @@ GenerateJsonOntology:CreateOntologyFileAndGraph
       sm:next GenerateJsonOntology:Merge_1 ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
       sml:targetFilePath "/SmartCommunity/Scripts/Output/JsonOntology.rdf"^^xsd:string .
+
+GenerateJsonOntology:ExportRdfOutput
+      rdf:type sml:ExportToRDFFile ;
+      sm:next GenerateJsonOntology:Merge_2 ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+      sml:targetFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
 GenerateJsonOntology:ForEachDistinctClass
       rdf:type sml:IterateOverSelect ;
@@ -98,11 +104,11 @@ GenerateJsonOntology:ImportDeviceJsonFromUrl
 
 GenerateJsonOntology:Merge_1
       rdf:type sml:Merge ;
-      sm:next GenerateJsonOntology:Merge_2 .
+      sm:next GenerateJsonOntology:ForEachDistinctClass .
 
 GenerateJsonOntology:Merge_2
       rdf:type sml:Merge ;
-      sm:next GenerateJsonOntology:UpdateCollectionReferencedObjectClassNames , GenerateJsonOntology:ForEachDistinctClass .
+      sm:next GenerateJsonOntology:Merge_1 , GenerateJsonOntology:UpdateCollectionReferencedObjectClassNames .
 
 GenerateJsonOntology:ModifyPrefixes_1
       rdf:type sml:ModifyPrefixes ;
@@ -220,10 +226,10 @@ GenerateJsonOntology:UpdateCollectionReferencedObjectClassNames
                             sp:elements ([ sp:object json:Object ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "s"^^xsd:string
+                                                [ sp:varName "item"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ]) ;
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object
@@ -231,12 +237,14 @@ GenerateJsonOntology:UpdateCollectionReferencedObjectClassNames
                                                 ] ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "s"^^xsd:string
+                                                [ sp:varName "item"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ]) ;
-                sp:where ([ sp:object json:Object ;
+                sp:where ([ sp:object
+                                    [ sp:varName "type"^^xsd:string
+                                    ] ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "parent"^^xsd:string
@@ -308,10 +316,10 @@ GenerateJsonOntology:UpdateReferencedObjectClassNames
                             sp:elements ([ sp:object json:Object ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "s"^^xsd:string
+                                                [ sp:varName "child"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ]) ;
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object
@@ -319,12 +327,14 @@ GenerateJsonOntology:UpdateReferencedObjectClassNames
                                                 ] ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "s"^^xsd:string
+                                                [ sp:varName "child"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ]) ;
-                sp:where ([ sp:object json:Object ;
+                sp:where ([ sp:object
+                                    [ sp:varName "type"^^xsd:string
+                                    ] ;
                             sp:predicate rdf:type ;
                             sp:subject
                                     [ sp:varName "parent"^^xsd:string
