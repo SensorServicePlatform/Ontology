@@ -1,4 +1,5 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData
+# imports: http://purl.org/dc/elements/1.1/
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
@@ -22,7 +23,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetRdfData:ConvertJSONToRDF_1
@@ -102,19 +103,21 @@ GetRdfData:UpdateCollectionReferencedObjectClassNames
                                         sp:subject
                                                 [ sp:varName "parent"^^xsd:string
                                                 ]
-                                      ] [ sp:object
+                                      ] [ rdf:type sp:TriplePath ;
+                                        sp:object
                                                 [ sp:varName "item"^^xsd:string
                                                 ] ;
-                                        sp:predicate
-                                                [ sp:varName "p2"^^xsd:string
+                                        sp:path [ rdf:type sp:SeqPath ;
+                                                  sp:path1
+                                                          [ rdf:type sp:ModPath ;
+                                                            sp:modMax -2 ;
+                                                            sp:modMin 0 ;
+                                                            sp:subPath rdf:rest
+                                                          ] ;
+                                                  sp:path2 rdf:first
                                                 ] ;
                                         sp:subject
                                                 [ sp:varName "collection"^^xsd:string
-                                                ]
-                                      ] [ sp:object json:Object ;
-                                        sp:predicate rdf:type ;
-                                        sp:subject
-                                                [ sp:varName "item"^^xsd:string
                                                 ]
                                       ] [ rdf:type sp:Bind ;
                                         sp:expression
