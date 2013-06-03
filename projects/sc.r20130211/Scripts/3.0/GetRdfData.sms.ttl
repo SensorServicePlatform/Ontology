@@ -1,10 +1,10 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
-@prefix GetRdfData:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData#> .
+@prefix GetRdfData:  <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#> .
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix arg:     <http://spinrdf.org/arg#> .
 @prefix email:   <http://topbraid.org/email#> .
@@ -26,25 +26,51 @@ sp:url
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData>
+GetRdfData:GetRdfData
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+                spl:predicate sp:url ;
+                spl:valueType xsd:string ;
+                sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#>
+              ] ;
+      sm:returnModule GetRdfData:GetRdfData ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData>
       rdf:type owl:Ontology ;
-      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
+      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-GetRdfData:ConvertJSONToRDF_1
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ConvertJSONToRDF_1>
       rdf:type sml:ConvertJSONToRDF ;
-      sm:next GetRdfData:ExportRdfOutput ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ExportRdfOutput> ;
       sm:outputVariable "root"^^xsd:string .
 
-GetRdfData:ExportRdfOutput
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ExportRdfOutput>
       rdf:type sml:ExportToRDFFile ;
-      sm:next GetRdfData:UpdateReferencedObjectClassNames ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#UpdateReferencedObjectClassNames> ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
       sml:targetFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
-GetRdfData:FormatUrl
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#>
       rdf:type sml:BindBySelect ;
-      sm:next GetRdfData:ImportDeviceJsonFromUrl ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ImportDeviceJsonFromUrl> ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:resultVariables ([ sp:varName "formattedUrl"^^xsd:string
@@ -121,35 +147,9 @@ GetRdfData:FormatUrl
                           ])
               ] .
 
-GetRdfData:GetRdfData
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
-      rdfs:subClassOf sm:Functions ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
-                spl:predicate sp:url ;
-                spl:valueType xsd:string ;
-                sm:next GetRdfData:FormatUrl
-              ] ;
-      sm:returnModule GetRdfData:GetRdfData ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .
-
-GetRdfData:ImportDeviceJsonFromUrl
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ImportDeviceJsonFromUrl>
       rdf:type sml:ImportTextFromURL ;
-      sm:next GetRdfData:ConvertJSONToRDF_1 ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#ConvertJSONToRDF_1> ;
       sm:outputVariable "text"^^xsd:string ;
       sml:url "?formattedUrl"^^xsd:string ;
       sml:url [ rdf:type sp:Select ;
@@ -158,7 +158,7 @@ GetRdfData:ImportDeviceJsonFromUrl
                 sp:where ()
               ] .
 
-GetRdfData:UpdateCollectionReferencedObjectClassNames
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#UpdateCollectionReferencedObjectClassNames>
       rdf:type sml:PerformUpdate ;
       sm:next GetRdfData:GetRdfData ;
       sml:updateQuery
@@ -280,9 +280,9 @@ GetRdfData:UpdateCollectionReferencedObjectClassNames
                           ])
               ] .
 
-GetRdfData:UpdateReferencedObjectClassNames
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#UpdateReferencedObjectClassNames>
       rdf:type sml:PerformUpdate ;
-      sm:next GetRdfData:UpdateCollectionReferencedObjectClassNames ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData#UpdateCollectionReferencedObjectClassNames> ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;

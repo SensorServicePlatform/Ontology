@@ -1,11 +1,11 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/1.0/GetDevices
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/1.0/GetDevices
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
-@prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/1.0/GetDevices#> .
+@prefix devices:  <http://www.cmusv.edu/SmartCommunity/Scripts/1.0/GetDevices#> .
 @prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,9 +18,23 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/1.0/GetDevices>
+<http://www.cmusv.edu/SmartCommunity/Scripts/1.0/GetDevices#ReturnSparqlResultsForDevices>
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
+                            sp:predicate rdf:type ;
+                            sp:subject
+                                    [ sp:varName "subject"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/1.0/GetDevices>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/json> ;
+      owl:imports <http://topbraid.org/json> , <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 devices:BindNewDevice
@@ -279,7 +293,7 @@ devices:IterateOverDeviceSensors
 devices:IterateOverDevices
       rdf:type sml:IterateOverSelect ;
       sm:body devices:ConstructDeviceInstances ;
-      sm:next devices:ReturnSparqlResultsForDevices ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/1.0/GetDevices#ReturnSparqlResultsForDevices> ;
       sml:iterationVariable
               "iterationCounter"^^xsd:string ;
       sml:selectQuery
@@ -361,17 +375,3 @@ devices:IterateOverDevices
                                     ]
                           ])
               ] .
-
-devices:ReturnSparqlResultsForDevices
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
-      rdfs:subClassOf sm:Functions ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice> ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "subject"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .

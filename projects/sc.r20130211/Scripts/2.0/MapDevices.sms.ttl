@@ -1,9 +1,9 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevices
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevices
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
-@prefix MapDevices:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevices#> .
+@prefix MapDevices:  <http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevices#> .
 @prefix email:   <http://topbraid.org/email#> .
 @prefix json:    <http://topbraid.org/json#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -15,14 +15,32 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevices>
+<http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevices#ReturnSparqlResults>
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevices>
       rdf:type owl:Ontology ;
       owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 MapDevices:ApplyTopSpin
       rdf:type sml:ApplyTopSPIN ;
-      sm:next MapDevices:ReturnSparqlResults ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevices#ReturnSparqlResults> ;
       sml:flatten "false"^^xsd:boolean ;
       sml:predicate spin:rule ;
       sml:replace "true"^^xsd:boolean ;
@@ -45,28 +63,10 @@ MapDevices:ImportDeviceJsonWithUpdates
 MapDevices:ImportSpinRules
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next MapDevices:Merge_2 ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevicesSPIN"^^xsd:string ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/2.0/MapDevicesSPIN"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevicesSPIN.ttl"^^xsd:string .
+      sml:sourceFilePath "/SmartCommunity/Scripts/2.0/MapDevicesSPIN.ttl"^^xsd:string .
 
 MapDevices:Merge_2
       rdf:type sml:Merge ;
       sm:next MapDevices:ApplyTopSpin .
-
-MapDevices:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
-      rdfs:subClassOf sm:Functions ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .

@@ -1,9 +1,9 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/2.0/GetDevices
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
-@prefix GetDevices:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices#> .
+@prefix GetDevices:  <http://www.cmusv.edu/SmartCommunity/Scripts/2.0/GetDevices#> .
 @prefix email:   <http://topbraid.org/email#> .
 @prefix json:    <http://topbraid.org/json#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -16,9 +16,27 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetDevices>
+<http://www.cmusv.edu/SmartCommunity/Scripts/2.0/GetDevices#ReturnSparqlResults>
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdfs:subClassOf sm:Functions ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/2.0/GetDevices>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetDevices:ConvertJsonToRdf
@@ -177,7 +195,7 @@ GetDevices:PerformUpdate_Location
 
 GetDevices:PerformUpdate_Sensor
       rdf:type sml:PerformUpdate ;
-      sm:next GetDevices:ReturnSparqlResults ;
+      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/2.0/GetDevices#ReturnSparqlResults> ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
@@ -216,21 +234,3 @@ GetDevices:PerformUpdate_Sensor
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/Devices>
                           ])
               ] .
-
-GetDevices:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
-      rdfs:subClassOf sm:Functions ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .

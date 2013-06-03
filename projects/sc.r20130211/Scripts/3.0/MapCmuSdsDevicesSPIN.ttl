@@ -1,10 +1,10 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevicesSPIN
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/3.0/MapCmuSdsDevicesSPIN
 # imports: http://spinrdf.org/spin
 # imports: http://topbraid.org/json
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
-@prefix MapDevicesSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevicesSPIN#> .
+@prefix MapDevicesSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/MapCmuSdsDevicesSPIN#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -57,9 +57,9 @@
                 spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://topbraid.org/json#updated_at> ;
+                        <http://topbraid.org/json#device_guid> ;
                 spinmap:targetPredicate1
-                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#updatedAt>
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#deviceGuid>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -69,13 +69,6 @@
                         <http://topbraid.org/json#metadata_json> ;
                 spinmap:targetPredicate1
                         <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#metadata>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-0-1 ;
-                spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
-                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceAgent> ;
-                spinmap:targetPredicate1
-                        rdf:type
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -91,27 +84,16 @@
                 spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://topbraid.org/json#network_address> ;
+                        <http://topbraid.org/json#updated_at> ;
                 spinmap:targetPredicate1
-                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#networkAddress>
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#updatedAt>
               ] ;
       spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
+              [ rdf:type spinmap:Mapping-0-1 ;
                 spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        <http://topbraid.org/json#device_guid> ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceAgent> ;
                 spinmap:targetPredicate1
-                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#deviceGuid>
-              ] ;
-      spinmap:rule
-              [ rdf:type spinmap:Mapping-1-1 ;
-                spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
-                spinmap:expression spin:_arg1 ;
-                spinmap:sourcePredicate1
-                        <http://topbraid.org/json#created_at> ;
-                spinmap:targetPredicate1
-                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#createdAt>
+                        rdf:type
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -127,9 +109,9 @@
                 spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
                 spinmap:expression spin:_arg1 ;
                 spinmap:sourcePredicate1
-                        <http://topbraid.org/json#location_id> ;
+                        <http://topbraid.org/json#network_address> ;
                 spinmap:targetPredicate1
-                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locationId>
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#networkAddress>
               ] ;
       spinmap:rule
               [ rdf:type spinmap:Mapping-1-1 ;
@@ -148,6 +130,24 @@
                         <http://topbraid.org/json#id> ;
                 spinmap:targetPredicate1
                         <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#id>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#created_at> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#createdAt>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapDevicesSPIN:DeviceAgent-DeviceAgent ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#location_id> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locationId>
               ] .
 
 <http://topbraid.org/json#Location>
@@ -213,7 +213,7 @@
                         rdf:type
               ] .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/MapDevicesSPIN>
+<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/MapCmuSdsDevicesSPIN>
       rdf:type owl:Ontology ;
       owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> , <http://topbraid.org/json> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
