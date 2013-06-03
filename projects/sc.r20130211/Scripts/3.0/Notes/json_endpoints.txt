@@ -1,0 +1,3 @@
+http://cmu-sds.herokuapp.com/get_devices
+
+http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000&end_time=1359582134000
