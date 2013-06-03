@@ -19,11 +19,16 @@
 @prefix sp:      <http://spinrdf.org/sp#> .
 @prefix spif:    <http://spinrdf.org/spif#> .
 @prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+sp:url
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GetRdfData>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetRdfData:ConvertJSONToRDF_1
@@ -37,15 +42,96 @@ GetRdfData:ExportRdfOutput
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
       sml:targetFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
-GetRdfData:ImportDeviceJsonFromUrl
-      rdf:type sml:ImportTextFromURL ;
-      sm:next GetRdfData:ConvertJSONToRDF_1 ;
-      sm:outputVariable "text"^^xsd:string ;
-      sml:url "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string .
+GetRdfData:FormatUrl
+      rdf:type sml:BindBySelect ;
+      sm:next GetRdfData:ImportDeviceJsonFromUrl ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "formattedUrl"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:if ;
+                                      sp:arg1 [ rdf:type fn:starts-with ;
+                                                sp:arg1 [ sp:varName "url"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 "\""
+                                              ] ;
+                                      sp:arg2 [ rdf:type smf:subString ;
+                                                arg:fromIndex 1 ;
+                                                arg:toIndex
+                                                        [ rdf:type fn:string-length ;
+                                                          sp:arg1 [ sp:varName "url"^^xsd:string
+                                                                  ]
+                                                        ] ;
+                                                sp:arg1 [ sp:varName "url"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg3 [ sp:varName "url"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "url1"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:if ;
+                                      sp:arg1 [ rdf:type fn:ends-with ;
+                                                sp:arg1 [ sp:varName "url1"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 "\""
+                                              ] ;
+                                      sp:arg2 [ rdf:type smf:subString ;
+                                                arg:fromIndex 0 ;
+                                                arg:toIndex
+                                                        [ rdf:type sp:sub ;
+                                                          sp:arg1 [ rdf:type fn:string-length ;
+                                                                    sp:arg1 [ sp:varName "url1"^^xsd:string
+                                                                            ]
+                                                                  ] ;
+                                                          sp:arg2 1
+                                                        ] ;
+                                                sp:arg1 [ sp:varName "url1"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg3 [ sp:varName "url1"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "url2"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:replaceAll ;
+                                      sp:arg1 [ sp:varName "url2"^^xsd:string
+                                              ] ;
+                                      sp:arg2 "%26" ;
+                                      sp:arg3 "&"
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "url3"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ sp:varName "url3"^^xsd:string
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "formattedUrl"^^xsd:string
+                                    ]
+                          ])
+              ] .
 
-GetRdfData:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+GetRdfData:GetRdfData
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+                spl:predicate sp:url ;
+                spl:valueType xsd:string ;
+                sm:next GetRdfData:FormatUrl
+              ] ;
+      sm:returnModule GetRdfData:GetRdfData ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:where ([ sp:object
@@ -61,9 +147,20 @@ GetRdfData:ReturnSparqlResults
               ] ;
       sml:serialization sm:XML .
 
+GetRdfData:ImportDeviceJsonFromUrl
+      rdf:type sml:ImportTextFromURL ;
+      sm:next GetRdfData:ConvertJSONToRDF_1 ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "?formattedUrl"^^xsd:string ;
+      sml:url [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "formattedUrl"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
+
 GetRdfData:UpdateCollectionReferencedObjectClassNames
       rdf:type sml:PerformUpdate ;
-      sm:next GetRdfData:ReturnSparqlResults ;
+      sm:next GetRdfData:GetRdfData ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;

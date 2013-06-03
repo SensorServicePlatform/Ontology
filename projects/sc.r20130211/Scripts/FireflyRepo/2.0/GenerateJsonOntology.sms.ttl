@@ -21,7 +21,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/FireflyRepo/2.0/GenerateJsonOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateJsonOntology:CreateOntologyFileAndGraph
@@ -33,7 +33,7 @@ GenerateJsonOntology:CreateOntologyFileAndGraph
 GenerateJsonOntology:ForEachDistinctClass
       rdf:type sml:IterateOverSelect ;
       sm:body GenerateJsonOntology:ForEachDistinctProperty ;
-      sm:next GenerateJsonOntology:ReturnSparqlResults ;
+      sm:next GenerateJsonOntology:GenerateJsonOntology ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:distinct "true"^^xsd:boolean ;
@@ -84,6 +84,25 @@ GenerateJsonOntology:ForEachDistinctProperty
                                     ]
                           ])
               ] .
+
+GenerateJsonOntology:GenerateJsonOntology
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule GenerateJsonOntology:GenerateJsonOntology ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
 
 GenerateJsonOntology:ImportRdfData
       rdf:type sml:ImportRDFFromWorkspace ;
@@ -185,21 +204,3 @@ GenerateJsonOntology:PopulateOntology
                                     ]
                           ])
               ] .
-
-GenerateJsonOntology:ReturnSparqlResults
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
-      rdfs:subClassOf sm:Functions ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .
