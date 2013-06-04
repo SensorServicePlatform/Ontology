@@ -1,5 +1,4 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology
-# imports: http://topbraid.org/json
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
@@ -21,7 +20,7 @@
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateJsonOntology:CreateOntologyFileAndGraph
@@ -86,7 +85,7 @@ GenerateJsonOntology:ForEachDistinctProperty
               ] .
 
 GenerateJsonOntology:GenerateJsonOntology
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       sm:returnModule GenerateJsonOntology:GenerateJsonOntology ;
       sml:selectQuery
