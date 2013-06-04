@@ -19,28 +19,9 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology#GenerateJsonOntology>
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
-      rdfs:subClassOf sm:Functions ;
-      sm:returnModule <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology#GenerateJsonOntology> ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:where ([ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "p"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ])
-              ] ;
-      sml:serialization sm:XML .
-
 <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/json> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:imports <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/json> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateJsonOntology:CreateOntologyFileAndGraph
@@ -52,7 +33,7 @@ GenerateJsonOntology:CreateOntologyFileAndGraph
 GenerateJsonOntology:ForEachDistinctClass
       rdf:type sml:IterateOverSelect ;
       sm:body GenerateJsonOntology:ForEachDistinctProperty ;
-      sm:next <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GenerateJsonOntology#GenerateJsonOntology> ;
+      sm:next GenerateJsonOntology:GenerateJsonOntology ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:distinct "true"^^xsd:boolean ;
@@ -104,6 +85,25 @@ GenerateJsonOntology:ForEachDistinctProperty
                           ])
               ] .
 
+GenerateJsonOntology:GenerateJsonOntology
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule GenerateJsonOntology:GenerateJsonOntology ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
 GenerateJsonOntology:ImportRdfData
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next GenerateJsonOntology:Merge_1 ;
@@ -118,7 +118,7 @@ GenerateJsonOntology:Merge_1
 GenerateJsonOntology:ModifyPrefixes_1
       rdf:type sml:ModifyPrefixes ;
       sm:next GenerateJsonOntology:CreateOntologyFileAndGraph ;
-      sml:addedPrefix "JsonOntology http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology#"^^xsd:string .
+      sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
 
 GenerateJsonOntology:PopulateOntology
       rdf:type sml:PerformUpdate ;
@@ -168,7 +168,7 @@ GenerateJsonOntology:PopulateOntology
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
                           ]) ;
                 sp:where ([ rdf:type sp:Bind ;
-                            sp:expression "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology#" ;
+                            sp:expression "http://topbraid.org/json#" ;
                             sp:variable
                                     [ sp:varName "baseUri"^^xsd:string
                                     ]
