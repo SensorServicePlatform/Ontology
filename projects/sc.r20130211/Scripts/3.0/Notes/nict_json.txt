@@ -1,0 +1,127 @@
+// The ObjectId and ISODate functions are part of MongoDB's BSON. They are not valid JOSN
+{
+  "_id" : ObjectId("112ef3df2153ae4810eab166"),
+  "name": "test",
+  "observation": {
+    "_when": {
+       "type": "TimeStamp",
+       "time": ISODate("2012-11-17T21:00:00Z")
+    },
+    "_where" : {  
+       "type": "Point",
+       "coordinates": [56.0, -13.1]
+    },
+    "_what" : {
+       "names" : ["precipitation_hour", "precipitation_max_day"],
+       "units": ["mm/h", "mm/day"],
+       "values": [461.5, 550]
+    },
+    "_who" : {
+       "type": "URL",
+       "refers": "http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184"
+    },
+    "_members": [ObjectId("112ef3df2153ae4810eab167"), ObjectId("112ef3df2153ae4810eab168")]
+  }
+}
+
+// Here is a valid JSON version
+{
+  "_id" : "112ef3df2153ae4810eab166",
+  "name": "test",
+  "observation": {
+    "_when": {
+       "type": "TimeStamp",
+       "time": "2012-11-17T21:00:00Z"
+    },
+    "_where" : {  
+       "type": "Point",
+       "coordinates": [56.0, -13.1]
+    },
+    "_what" : {
+       "names" : ["precipitation_hour", "precipitation_max_day"],
+       "units": ["mm/h", "mm/day"],
+       "values": [461.5, 550]
+    },
+    "_who" : {
+       "type": "URL",
+       "refers": "http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184"
+    },
+    "_members": ["112ef3df2153ae4810eab167", "112ef3df2153ae4810eab168"]
+  }
+}
+
+// This is a separate JSON object
+{
+  "mm_id":  "1461501637330902918203684832716283019655932542976",
+  "req_id": "req_01234123412341234",
+  "status": "OK\/Error ",
+  "created_at": "2013-04-01 12:00:00",
+  "sensor_info": {
+    "title": "CPSenS-Rain ",
+    "sensor_id": "sensor_cpsens_rain_001",
+    "sensor_name": "Rain Sensor ",
+    "publisher": {
+                 "organaziation": "isp_lab, NICT ",
+                 "country": "JP",
+                 "external_link": "http: \/\/www.much_more_about_us.com",
+                 "contact": "ryonglee@nict.go.jp "
+                  },
+    "spat_coverage": {
+                 "lat.range": [
+                    34.51345, 
+                    35.623456
+                  ],
+                 "lon.range": [
+                    135.123456, 
+                    135.123412
+                  ]
+                },
+   "time_period": ["2012-04-08 18: 00: 00 ", "2012-04-08 18:00:00"],
+   "data_format": { 
+      "id": "numeric",
+      "log_datetime": "datetime",
+      "region": "string",
+      "location": "string",
+      "cur_val": "numeric",
+      "today_max_val": "numeric",
+      "today_time": "time",
+      "last_max_val": "numeric",
+      "last_max_date": "datetime",
+      "stat_start": "string",
+      "geo_loc": "location"
+    },
+    "contact": "ryonglee@nict.go.jp"
+  },
+  "measurements": [
+      {
+        "id": 3925544,
+        "log_datetime": "2012-04-08 18:00:00",
+        "region": "\\u5317\\u6d77\\u9053 \\u5b97\\u8c37\\u5730\\u65b9",
+        "location": "\\u5b97\\u8c37\\u5cac",
+        "cur_val": 0,
+        "today_max_val": 0,
+        "today_time": "00:00:00",
+        "last_max_val": 116,
+        "last_max_date": "1997\/8\/8",
+        "stat_start": "1978\\u5e74",
+        "geo_loc": "POINT(141.935, 45.52)"
+      },
+      {
+        "id": 3925545,
+        "log_datetime": "2012-04-08 18:00:00",
+        "region": "\\u5317\\u6d77\\u9053 \\u5b97\\u8c37\\u5730\\u65b9",
+        "location": "\\u7a1a\\u5185 ",
+        "cur_val": 0,
+        "today_max_val": 0,
+        "today_time": "00:00:00",
+        "last_max_val": 120,
+        "last_max_date": "2007\/8\/2",
+        "stat_start": "1976\\u5e74",
+        "geo_loc": "POINT(141.678333, 45.414)"
+      }
+
+    ],
+    "others": [
+      
+    ]
+}
