@@ -1,0 +1,76 @@
+{
+   "mm_id":"1461501637330902918203684832716283019655932542976",
+   "req_id":"req_01234123412341234",
+   "status":"OK/Error",
+   "created_at":"2013-04-01T12:00:00Z",
+   "sensor_info":{
+      "title":"CPSenS-Rain ",
+      "sensor_id":"sensor_cpsens_rain_001",
+      "sensor_name":"Rain Sensor ",
+      "publisher":{
+         "organaziation":"isp_lab, NICT",
+         "country":"JP",
+         "external_link":"http://www.much_more_about_us.com",
+         "contact":"ryonglee@nict.go.jp"
+      },
+      "spat_coverage":{
+         "lat.range":[
+            34.51345,
+            35.623456
+         ],
+         "lon.range":[
+            135.123456,
+            135.123412
+         ]
+      },
+      "time_period":[
+         "2012-04-08T18:00:00Z",
+         "2012-04-08T18:00:00Z"
+      ],
+      "data_format":{
+         "id":"numeric",
+         "log_datetime":"datetime",
+         "region":"string",
+         "location":"string",
+         "cur_val":"numeric",
+         "today_max_val":"numeric",
+         "today_time":"time",
+         "last_max_val":"numeric",
+         "last_max_date":"datetime",
+         "stat_start":"string",
+         "geo_loc":"location"
+      },
+      "contact":"ryonglee@nict.go.jp"
+   },
+   "measurements":[
+      {
+         "id":3925544,
+         "log_datetime":"2012-04-08 18:00:00",
+         "region":"\\u5317\\u6d77\\u9053 \\u5b97\\u8c37\\u5730\\u65b9",
+         "location":"\\u5b97\\u8c37\\u5cac",
+         "cur_val":0,
+         "today_max_val":0,
+         "today_time":"00:00:00",
+         "last_max_val":116,
+         "last_max_date":"1997/8/8",
+         "stat_start":"1978\\u5e74",
+         "geo_loc":"POINT(141.935, 45.52)"
+      },
+      {
+         "id":3925545,
+         "log_datetime":"2012-04-08 18:00:00",
+         "region":"\\u5317\\u6d77\\u9053 \\u5b97\\u8c37\\u5730\\u65b9",
+         "location":"\\u7a1a\\u5185 ",
+         "cur_val":0,
+         "today_max_val":0,
+         "today_time":"00:00:00",
+         "last_max_val":120,
+         "last_max_date":"2007/8/2",
+         "stat_start":"1976",
+         "geo_loc":"POINT(141.678333, 45.414)"
+      }
+   ],
+   "others":[
+
+   ]
+}

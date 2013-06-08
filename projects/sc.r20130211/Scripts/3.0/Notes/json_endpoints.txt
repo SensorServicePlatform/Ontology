@@ -1,3 +1,7 @@
 http://cmu-sds.herokuapp.com/get_devices
 
 http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000&end_time=1359582134000
+
+file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/3.0/Notes/nict_sensor_measurements_json.txt
+
+file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/3.0/Notes/nict_event_json.txt

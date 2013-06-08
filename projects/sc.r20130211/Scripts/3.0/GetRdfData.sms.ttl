@@ -27,7 +27,7 @@ sp:url
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/3.0/GetRdfData>
       rdf:type owl:Ontology ;
-      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetRdfData:
@@ -121,7 +121,7 @@ GetRdfData:ExportRdfOutput
       sml:targetFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
 GetRdfData:GetRdfData
-      rdf:type sm:Function , sml:ReturnSPARQLResults ;
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -267,12 +267,20 @@ GetRdfData:UpdateCollectionReferencedObjectClassNames
                                                 ]
                                       ] [ rdf:type sp:Filter ;
                                         sp:expression
-                                                [ rdf:type fn:starts-with ;
-                                                  sp:arg1 [ rdf:type smf:qname ;
-                                                            sp:arg1 [ sp:varName "predicate"^^xsd:string
-                                                                    ]
+                                                [ rdf:type sp:and ;
+                                                  sp:arg1 [ rdf:type fn:starts-with ;
+                                                            sp:arg1 [ rdf:type smf:qname ;
+                                                                      sp:arg1 [ sp:varName "predicate"^^xsd:string
+                                                                              ]
+                                                                    ] ;
+                                                            sp:arg2 "json"
                                                           ] ;
-                                                  sp:arg2 "json"
+                                                  sp:arg2 [ rdf:type sp:not ;
+                                                            sp:arg1 [ rdf:type sp:isLiteral ;
+                                                                      sp:arg1 [ sp:varName "item"^^xsd:string
+                                                                              ]
+                                                                    ]
+                                                          ]
                                                 ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>

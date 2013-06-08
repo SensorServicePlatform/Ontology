@@ -7,4 +7,4 @@
 
 "sensors":[{"temp":"Temperature"},{"digital_temp":"Digital Temperature"},{"light":"Light"},{"pressure":"Pressure"},{"humidity":"Humidity"},{"motion":"Motion"},{"audio_p2p":"Audio P2P"},{"acc_x":"Accelerometer x"},{"acc_y":"Accelerometer y"},{"acc_z":"Accelerometer z"}]
 
-}, ..., ...,]
+}, ..., ...]
