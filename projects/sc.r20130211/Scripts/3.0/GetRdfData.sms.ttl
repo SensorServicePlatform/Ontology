@@ -21,7 +21,19 @@
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-sp:url
+sp:baseUri
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:fileName
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:jsonRootClass
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:jsonUrl
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
@@ -30,81 +42,28 @@ sp:url
       owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
-GetRdfData:
+GetRdfData:BindGraphUri
       rdf:type sml:BindBySelect ;
-      sm:next GetRdfData:ImportDeviceJsonFromUrl ;
+      sm:next GetRdfData:ExportRdfOutput ;
       sml:selectQuery
               [ rdf:type sp:Select ;
-                sp:resultVariables ([ sp:varName "formattedUrl"^^xsd:string
+                sp:resultVariables ([ sp:varName "graphUri"^^xsd:string
                           ]) ;
                 sp:where ([ rdf:type sp:Bind ;
                             sp:expression
-                                    [ rdf:type smf:if ;
-                                      sp:arg1 [ rdf:type fn:starts-with ;
-                                                sp:arg1 [ sp:varName "url"^^xsd:string
-                                                        ] ;
-                                                sp:arg2 "\""
-                                              ] ;
-                                      sp:arg2 [ rdf:type smf:subString ;
-                                                arg:fromIndex 1 ;
-                                                arg:toIndex
-                                                        [ rdf:type fn:string-length ;
-                                                          sp:arg1 [ sp:varName "url"^^xsd:string
-                                                                  ]
-                                                        ] ;
-                                                sp:arg1 [ sp:varName "url"^^xsd:string
-                                                        ]
-                                              ] ;
-                                      sp:arg3 [ sp:varName "url"^^xsd:string
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ sp:varName "baseUri"^^xsd:string
                                               ]
                                     ] ;
                             sp:variable
-                                    [ sp:varName "url1"^^xsd:string
+                                    [ sp:varName "foo"^^xsd:string
                                     ]
                           ] [ rdf:type sp:Bind ;
                             sp:expression
-                                    [ rdf:type smf:if ;
-                                      sp:arg1 [ rdf:type fn:ends-with ;
-                                                sp:arg1 [ sp:varName "url1"^^xsd:string
-                                                        ] ;
-                                                sp:arg2 "\""
-                                              ] ;
-                                      sp:arg2 [ rdf:type smf:subString ;
-                                                arg:fromIndex 0 ;
-                                                arg:toIndex
-                                                        [ rdf:type sp:sub ;
-                                                          sp:arg1 [ rdf:type fn:string-length ;
-                                                                    sp:arg1 [ sp:varName "url1"^^xsd:string
-                                                                            ]
-                                                                  ] ;
-                                                          sp:arg2 1
-                                                        ] ;
-                                                sp:arg1 [ sp:varName "url1"^^xsd:string
-                                                        ]
-                                              ] ;
-                                      sp:arg3 [ sp:varName "url1"^^xsd:string
-                                              ]
+                                    [ sp:varName "baseUri"^^xsd:string
                                     ] ;
                             sp:variable
-                                    [ sp:varName "url2"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type spif:replaceAll ;
-                                      sp:arg1 [ sp:varName "url2"^^xsd:string
-                                              ] ;
-                                      sp:arg2 "%26" ;
-                                      sp:arg3 "&"
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "url3"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ sp:varName "url3"^^xsd:string
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "formattedUrl"^^xsd:string
+                                    [ sp:varName "graphUri"^^xsd:string
                                     ]
                           ])
               ] .
@@ -117,18 +76,61 @@ GetRdfData:ConvertJSONToRDF_1
 GetRdfData:ExportRdfOutput
       rdf:type sml:ExportToRDFFile ;
       sm:next GetRdfData:UpdateReferencedObjectClassNames ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-      sml:targetFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
+      sml:baseURI "?baseUri"^^xsd:string ;
+      sml:baseURI
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "baseUri"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] ;
+      sml:targetFilePath "?filePath"^^xsd:string ;
+      sml:targetFilePath
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "filePath"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "/SmartCommunity/Scripts/Output/" ;
+                                      sp:arg2 [ sp:varName "fileName"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "filePath"^^xsd:string
+                                    ]
+                          ])
+              ] .
 
 GetRdfData:GetRdfData
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
-                spl:predicate sp:url ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:baseUri ;
                 spl:valueType xsd:string ;
-                sm:next GetRdfData:
+                sm:next GetRdfData:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "RootObject"^^xsd:string ;
+                spl:predicate sp:jsonRootClass ;
+                spl:valueType xsd:string ;
+                sm:next GetRdfData:UpdateRootObjectClassName
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+                spl:predicate sp:jsonUrl ;
+                spl:valueType xsd:string ;
+                sm:next GetRdfData:formatURL
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "RdfOutput.rdf"^^xsd:string ;
+                spl:predicate sp:fileName ;
+                spl:valueType xsd:string ;
+                sm:next GetRdfData:ExportRdfOutput
               ] ;
       sm:returnModule GetRdfData:GetRdfData ;
       sml:selectQuery
@@ -159,7 +161,7 @@ GetRdfData:ImportDeviceJsonFromUrl
 
 GetRdfData:UpdateCollectionReferencedObjectClassNames
       rdf:type sml:PerformUpdate ;
-      sm:next GetRdfData:GetRdfData ;
+      sm:next GetRdfData:UpdateRootObjectClassName ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
@@ -368,5 +370,154 @@ GetRdfData:UpdateReferencedObjectClassNames
                                                 ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+                          ])
+              ] .
+
+GetRdfData:UpdateRootObjectClassName
+      rdf:type sml:PerformUpdate ;
+      sm:next GetRdfData:GetRdfData ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object json:Object ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "root"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+                          ]) ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "newType"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "root"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "type"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "root"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Bind ;
+                                        sp:expression
+                                                [ rdf:type spif:buildURI ;
+                                                  sp:arg1 [ rdf:type fn:concat ;
+                                                            sp:arg1 "json:" ;
+                                                            sp:arg2 [ sp:varName "jsonRootClass"^^xsd:string
+                                                                    ]
+                                                          ]
+                                                ] ;
+                                        sp:variable
+                                                [ sp:varName "newType"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Filter ;
+                                        sp:expression
+                                                [ rdf:type fn:starts-with ;
+                                                  sp:arg1 [ rdf:type smf:qname ;
+                                                            sp:arg1 [ sp:varName "root"^^xsd:string
+                                                                    ]
+                                                          ] ;
+                                                  sp:arg2 "json"
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+                          ])
+              ] .
+
+GetRdfData:formatURL
+      rdf:type sml:BindBySelect ;
+      sm:next GetRdfData:ImportDeviceJsonFromUrl ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "formattedUrl"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:replaceAll ;
+                                      sp:arg1 [ sp:varName "jsonUrl"^^xsd:string
+                                              ] ;
+                                      sp:arg2 "%22" ;
+                                      sp:arg3 "\""
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "jsonUrl1"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:replaceAll ;
+                                      sp:arg1 [ sp:varName "jsonUrl1"^^xsd:string
+                                              ] ;
+                                      sp:arg2 "%26" ;
+                                      sp:arg3 "&"
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "jsonUrl2"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:if ;
+                                      sp:arg1 [ rdf:type fn:starts-with ;
+                                                sp:arg1 [ sp:varName "jsonUrl2"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 "\""
+                                              ] ;
+                                      sp:arg2 [ rdf:type smf:subString ;
+                                                arg:fromIndex 1 ;
+                                                arg:toIndex
+                                                        [ rdf:type fn:string-length ;
+                                                          sp:arg1 [ sp:varName "jsonUrl2"^^xsd:string
+                                                                  ]
+                                                        ] ;
+                                                sp:arg1 [ sp:varName "jsonUrl2"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg3 [ sp:varName "jsonUrl2"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "jsonUrl3"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type smf:if ;
+                                      sp:arg1 [ rdf:type fn:ends-with ;
+                                                sp:arg1 [ sp:varName "jsonUrl3"^^xsd:string
+                                                        ] ;
+                                                sp:arg2 "\""
+                                              ] ;
+                                      sp:arg2 [ rdf:type smf:subString ;
+                                                arg:fromIndex 0 ;
+                                                arg:toIndex
+                                                        [ rdf:type sp:sub ;
+                                                          sp:arg1 [ rdf:type fn:string-length ;
+                                                                    sp:arg1 [ sp:varName "jsonUrl3"^^xsd:string
+                                                                            ]
+                                                                  ] ;
+                                                          sp:arg2 1
+                                                        ] ;
+                                                sp:arg1 [ sp:varName "jsonUrl3"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg3 [ sp:varName "jsonUrl3"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "jsonUrl4"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ sp:varName "jsonUrl4"^^xsd:string
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "formattedUrl"^^xsd:string
+                                    ]
                           ])
               ] .

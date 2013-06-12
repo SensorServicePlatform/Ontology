@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:json="http://topbraid.org/json#"
+  xml:base="http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictSensorRdfOutput">
+  <owl:Ontology rdf:about=""/>
+  <json:Object>
+    <json:measurements rdf:parseType="Collection">
+      <json:Measurement>
+        <json:geo_loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >POINT(141.935, 45.52)</json:geo_loc>
+        <json:cur_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</json:cur_val>
+        <json:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >\u5b97\u8c37\u5cac</json:location>
+        <json:stat_start rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1978\u5e74</json:stat_start>
+        <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >3925544</json:id>
+        <json:today_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >00:00:00</json:today_time>
+        <json:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >\u5317\u6d77\u9053 \u5b97\u8c37\u5730\u65b9</json:region>
+        <json:last_max_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1997/8/8</json:last_max_date>
+        <json:log_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2012-04-08 18:00:00</json:log_datetime>
+        <json:today_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</json:today_max_val>
+        <json:last_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >116</json:last_max_val>
+      </json:Measurement>
+      <json:Measurement>
+        <json:geo_loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >POINT(141.678333, 45.414)</json:geo_loc>
+        <json:log_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2012-04-08 18:00:00</json:log_datetime>
+        <json:today_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</json:today_max_val>
+        <json:last_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >120</json:last_max_val>
+        <json:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >\u5317\u6d77\u9053 \u5b97\u8c37\u5730\u65b9</json:region>
+        <json:today_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >00:00:00</json:today_time>
+        <json:cur_val rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</json:cur_val>
+        <json:stat_start rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1976</json:stat_start>
+        <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >3925545</json:id>
+        <json:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >\u7a1a\u5185 </json:location>
+        <json:last_max_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2007/8/2</json:last_max_date>
+      </json:Measurement>
+    </json:measurements>
+    <json:sensor_info>
+      <json:Sensor_Info>
+        <json:time_period rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >2012-04-08T18:00:00Z</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-04-08T18:00:00Z</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </json:time_period>
+        <json:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CPSenS-Rain </json:title>
+        <json:sensor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rain Sensor </json:sensor_name>
+        <json:spat_coverage>
+          <json:Spat_Coverage>
+            <json:lat.range rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+              >34.51345</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >35.623456</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:rest>
+            </json:lat.range>
+            <json:lon.range rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+              >135.123456</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >135.123412</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:rest>
+            </json:lon.range>
+          </json:Spat_Coverage>
+        </json:spat_coverage>
+        <json:sensor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >sensor_cpsens_rain_001</json:sensor_id>
+        <json:data_format>
+          <json:Data_Format>
+            <json:cur_val rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >numeric</json:cur_val>
+            <json:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >string</json:region>
+            <json:last_max_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >datetime</json:last_max_date>
+            <json:stat_start rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >string</json:stat_start>
+            <json:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >string</json:location>
+            <json:today_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >numeric</json:today_max_val>
+            <json:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >numeric</json:id>
+            <json:today_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >time</json:today_time>
+            <json:last_max_val rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >numeric</json:last_max_val>
+            <json:geo_loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >location</json:geo_loc>
+            <json:log_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >datetime</json:log_datetime>
+          </json:Data_Format>
+        </json:data_format>
+        <json:contact rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ryonglee@nict.go.jp</json:contact>
+        <json:publisher>
+          <json:Publisher>
+            <json:organaziation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >isp_lab, NICT</json:organaziation>
+            <json:external_link rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://www.much_more_about_us.com</json:external_link>
+            <json:contact rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ryonglee@nict.go.jp</json:contact>
+            <json:country rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >JP</json:country>
+          </json:Publisher>
+        </json:publisher>
+      </json:Sensor_Info>
+    </json:sensor_info>
+    <json:others rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <json:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OK/Error</json:status>
+    <json:created_at rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2013-04-01T12:00:00Z</json:created_at>
+    <json:req_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >req_01234123412341234</json:req_id>
+    <json:mm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1461501637330902918203684832716283019655932542976</json:mm_id>
+  </json:Object>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

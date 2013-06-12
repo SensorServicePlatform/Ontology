@@ -1,8 +1,15 @@
 # Note that the url passed to the url query parameter must be HTML encoded, 
 i.e., you must replace & with %26
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&url="http://cmu-sds.herokuapp.com/get_devices"
+http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="http://cmu-sds.herokuapp.com/get_devices"
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&url="http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000%26end_time=1359582134000"
+http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000%26end_time=1359582134000"
+
+http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/3.0/Notes/nict_sensor_measurements_json.txt"
+
+http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/3.0/Notes/nict_event_json.txt"
+
+
+
 
 http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology
