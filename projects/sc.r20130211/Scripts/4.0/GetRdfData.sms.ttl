@@ -281,11 +281,6 @@ GetRdfData:BindPropertyInfo
                           ])
               ] .
 
-GetRdfData:CollectGarbage_1
-      rdf:type sml:CollectGarbage ;
-      sm:next GetRdfData:ImportRDFOutput ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string .
-
 GetRdfData:ConvertJSONToRDF_1
       rdf:type sml:ConvertJSONToRDF ;
       sm:next GetRdfData:ExportRdfOutput ;
@@ -419,6 +414,13 @@ GetRdfData:GetRdfData
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+                spl:predicate sp:jsonUrl ;
+                spl:valueType xsd:string ;
+                sm:next GetRdfData:formatURL
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
                 spl:predicate sp:baseUri ;
                 spl:valueType xsd:string ;
@@ -430,13 +432,6 @@ GetRdfData:GetRdfData
                 spl:predicate sp:jsonRootClass ;
                 spl:valueType xsd:string ;
                 sm:next GetRdfData:UpdateRootObjectClassName
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
-                spl:predicate sp:jsonUrl ;
-                spl:valueType xsd:string ;
-                sm:next GetRdfData:formatURL
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -499,13 +494,6 @@ GetRdfData:ImportDeviceJsonFromUrl
                           ]) ;
                 sp:where ()
               ] .
-
-GetRdfData:ImportRDFOutput
-      rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next GetRdfData:ForEachDistinctClass ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-      sml:ignoreImports "false"^^xsd:boolean ;
-      sml:sourceFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
 GetRdfData:ModifyPrefixes_1
       rdf:type sml:ModifyPrefixes ;
