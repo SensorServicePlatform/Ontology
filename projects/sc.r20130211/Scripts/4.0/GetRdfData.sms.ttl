@@ -39,7 +39,7 @@ sp:jsonUrl
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GetRdfData>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GetRdfData:AddClassAndProperty
@@ -130,42 +130,37 @@ GetRdfData:AddRestriction_3
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object
-                                                [ sp:varName "?0"^^xsd:string
-                                                ] ;
+                            sp:elements ([ sp:object _:b1 ;
                                         sp:predicate rdfs:subClassOf ;
                                         sp:subject
                                                 [ sp:varName "type"^^xsd:string
                                                 ]
                                       ] [ sp:object owl:Restriction ;
                                         sp:predicate rdf:type ;
-                                        sp:subject
-                                                [ sp:varName "?0"^^xsd:string
-                                                ]
+                                        sp:subject _:b1
                                       ] [ sp:object
                                                 [ sp:varName "property"^^xsd:string
                                                 ] ;
                                         sp:predicate owl:onProperty ;
-                                        sp:subject
-                                                [ sp:varName "?0"^^xsd:string
-                                                ]
+                                        sp:subject _:b1
                                       ] [ sp:object
                                                 [ sp:varName "collectionType"^^xsd:string
                                                 ] ;
                                         sp:predicate owl:allValuesFrom ;
-                                        sp:subject
-                                                [ sp:varName "?0"^^xsd:string
-                                                ]
+                                        sp:subject _:b1
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
                           ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "collectionType"^^xsd:string
-                                    ] ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "collectionItem"^^xsd:string
-                                    ]
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "collectionType"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "collectionItem"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ])
               ] .
 
@@ -177,22 +172,25 @@ GetRdfData:BindCollectionInfo
                 sp:limit "1"^^xsd:long ;
                 sp:resultVariables ([ sp:varName "collectionItem"^^xsd:string
                           ]) ;
-                sp:where ([ rdf:type sp:TriplePath ;
-                            sp:object
-                                    [ sp:varName "collectionItem"^^xsd:string
-                                    ] ;
-                            sp:path [ rdf:type sp:SeqPath ;
-                                      sp:path1
-                                              [ rdf:type sp:ModPath ;
-                                                sp:modMax -2 ;
-                                                sp:modMin 0 ;
-                                                sp:subPath rdf:rest
-                                              ] ;
-                                      sp:path2 rdf:first
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "propertyReference"^^xsd:string
-                                    ]
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ rdf:type sp:TriplePath ;
+                                        sp:object
+                                                [ sp:varName "collectionItem"^^xsd:string
+                                                ] ;
+                                        sp:path [ rdf:type sp:SeqPath ;
+                                                  sp:path1
+                                                          [ rdf:type sp:ModPath ;
+                                                            sp:modMax -2 ;
+                                                            sp:modMin 0 ;
+                                                            sp:subPath rdf:rest
+                                                          ] ;
+                                                  sp:path2 rdf:first
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "propertyReference"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ])
               ] .
 
@@ -228,57 +226,65 @@ GetRdfData:BindPropertyInfo
                 sp:resultVariables ([ sp:varName "propertyReference"^^xsd:string
                           ] [ sp:varName "propertyType"^^xsd:string
                           ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "type"^^xsd:string
-                                    ] ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "propertyReference"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Optional ;
+                sp:where ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object
-                                                [ sp:varName "objectType"^^xsd:string
+                                                [ sp:varName "type"^^xsd:string
                                                 ] ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "propertyReference"^^xsd:string
+                                                [ sp:varName "s"^^xsd:string
                                                 ]
-                                      ])
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type sp:datatype ;
-                                      sp:arg1 [ sp:varName "propertyReference"^^xsd:string
-                                              ]
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "literalType"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Bind ;
-                            sp:expression
-                                    [ rdf:type smf:if ;
-                                      sp:arg1 [ rdf:type smf:isBound ;
-                                                sp:arg1 [ sp:varName "objectType"^^xsd:string
-                                                        ]
-                                              ] ;
-                                      sp:arg2 [ sp:varName "objectType"^^xsd:string
-                                              ] ;
-                                      sp:arg3 [ sp:varName "literalType"^^xsd:string
-                                              ]
-                                    ] ;
-                            sp:variable
-                                    [ sp:varName "propertyType"^^xsd:string
-                                    ]
+                                      ] [ sp:object
+                                                [ sp:varName "propertyReference"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "property"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Optional ;
+                                        sp:elements ([ sp:object
+                                                            [ sp:varName "objectType"^^xsd:string
+                                                            ] ;
+                                                    sp:predicate rdf:type ;
+                                                    sp:subject
+                                                            [ sp:varName "propertyReference"^^xsd:string
+                                                            ]
+                                                  ])
+                                      ] [ rdf:type sp:Bind ;
+                                        sp:expression
+                                                [ rdf:type sp:datatype ;
+                                                  sp:arg1 [ sp:varName "propertyReference"^^xsd:string
+                                                          ]
+                                                ] ;
+                                        sp:variable
+                                                [ sp:varName "literalType"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Bind ;
+                                        sp:expression
+                                                [ rdf:type smf:if ;
+                                                  sp:arg1 [ rdf:type smf:isBound ;
+                                                            sp:arg1 [ sp:varName "objectType"^^xsd:string
+                                                                    ]
+                                                          ] ;
+                                                  sp:arg2 [ sp:varName "objectType"^^xsd:string
+                                                          ] ;
+                                                  sp:arg3 [ sp:varName "literalType"^^xsd:string
+                                                          ]
+                                                ] ;
+                                        sp:variable
+                                                [ sp:varName "propertyType"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ])
               ] .
+
+GetRdfData:CollectGarbage_1
+      rdf:type sml:CollectGarbage ;
+      sm:next GetRdfData:ImportRDFOutput ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string .
 
 GetRdfData:ConvertJSONToRDF_1
       rdf:type sml:ConvertJSONToRDF ;
@@ -346,7 +352,7 @@ GetRdfData:ForEachDistinctClass
                                                   sp:arg2 "json"
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ])
               ] .
 
@@ -385,12 +391,12 @@ GetRdfData:ForEachDistinctProperty
                                                   sp:arg2 "json"
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
                           ])
               ] .
 
 GetRdfData:GenerateJsonOntology
-      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdf:type sm:Function , sml:ReturnSPARQLResults ;
       rdfs:subClassOf sm:Functions ;
       sm:returnModule GetRdfData:GenerateJsonOntology ;
       sml:selectQuery
@@ -497,7 +503,7 @@ GetRdfData:ImportDeviceJsonFromUrl
 GetRdfData:ImportRDFOutput
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next GetRdfData:ForEachDistinctClass ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified"^^xsd:string ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
@@ -505,6 +511,14 @@ GetRdfData:ModifyPrefixes_1
       rdf:type sml:ModifyPrefixes ;
       sm:next GetRdfData:CreateOntologyFileAndGraph ;
       sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
+
+GetRdfData:Template
+      rdf:type spin:UpdateTemplate ;
+      rdfs:subClassOf spin:UpdateTemplates ;
+      spin:body
+              [ rdf:type sp:Clear ;
+                sp:graphIRI <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+              ] .
 
 GetRdfData:UpdateCollectionReferencedObjectClassNames
       rdf:type sml:PerformUpdate ;
@@ -722,7 +736,7 @@ GetRdfData:UpdateReferencedObjectClassNames
 
 GetRdfData:UpdateRootObjectClassName
       rdf:type sml:PerformUpdate ;
-      sm:next GetRdfData:GetRdfData , GetRdfData:ForEachDistinctClass ;
+      sm:next GetRdfData:ForEachDistinctClass , GetRdfData:GetRdfData ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
