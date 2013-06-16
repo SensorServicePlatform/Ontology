@@ -5,85 +5,89 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:json="http://topbraid.org/json#"
-  xml:base="http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput" > 
-  <rdf:Description rdf:nodeID="A0">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-13.1</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/day</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:type rdf:resource="http://topbraid.org/json#_Who"/>
-    <json:refers rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184</json:refers>
-    <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</json:type>
-  </rdf:Description>
-  <rdf:Description rdf:about="">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precipitation_max_day</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/h</rdf:first>
-    <rdf:rest rdf:nodeID="A1"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:type rdf:resource="http://topbraid.org/json#_When"/>
-    <json:time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-11-17T21:00:00Z</json:time>
-    <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TimeStamp</json:type>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precipitation_hour</rdf:first>
-    <rdf:rest rdf:nodeID="A3"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">461.5</rdf:first>
-    <rdf:rest rdf:nodeID="A8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:type rdf:resource="http://topbraid.org/json#_What"/>
-    <json:values rdf:nodeID="A7"/>
-    <json:names rdf:nodeID="A6"/>
-    <json:units rdf:nodeID="A4"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56</rdf:first>
-    <rdf:rest rdf:nodeID="A0"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:type rdf:resource="http://topbraid.org/json#_Where"/>
-    <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Point</json:type>
-    <json:coordinates rdf:nodeID="A10"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112ef3df2153ae4810eab167</rdf:first>
-    <rdf:rest rdf:nodeID="A13"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112ef3df2153ae4810eab168</rdf:first>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <rdf:type rdf:resource="http://topbraid.org/json#Object"/>
-    <json:observation rdf:nodeID="A15"/>
-    <json:_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112ef3df2153ae4810eab166</json:_id>
-    <json:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test</json:name>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:type rdf:resource="http://topbraid.org/json#Observation"/>
-    <json:_who rdf:nodeID="A2"/>
-    <json:_what rdf:nodeID="A9"/>
-    <json:_when rdf:nodeID="A5"/>
-    <json:_where rdf:nodeID="A11"/>
-    <json:_members rdf:nodeID="A12"/>
-  </rdf:Description>
+  xml:base="http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventRdfOutput">
+  <owl:Ontology rdf:about=""/>
+  <json:Object>
+    <json:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >test</json:name>
+    <json:_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >112ef3df2153ae4810eab166</json:_id>
+    <json:observation>
+      <json:Observation>
+        <json:_members rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >112ef3df2153ae4810eab168</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >112ef3df2153ae4810eab167</rdf:first>
+        </json:_members>
+        <json:_where>
+          <json:_Where>
+            <json:coordinates rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >-13.1</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+              >56</rdf:first>
+            </json:coordinates>
+            <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Point</json:type>
+          </json:_Where>
+        </json:_where>
+        <json:_when>
+          <json:_When>
+            <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >TimeStamp</json:type>
+            <json:time rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2012-11-17T21:00:00Z</json:time>
+          </json:_When>
+        </json:_when>
+        <json:_what>
+          <json:_What>
+            <json:units rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >mm/day</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >mm/h</rdf:first>
+            </json:units>
+            <json:names rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >precipitation_max_day</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >precipitation_hour</rdf:first>
+            </json:names>
+            <json:values rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >550</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+              >461.5</rdf:first>
+            </json:values>
+          </json:_What>
+        </json:_what>
+        <json:_who>
+          <json:_Who>
+            <json:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >URL</json:type>
+            <json:refers rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184</json:refers>
+          </json:_Who>
+        </json:_who>
+      </json:Observation>
+    </json:observation>
+  </json:Object>
 </rdf:RDF>
 
 <!-- Created with TopBraid -->

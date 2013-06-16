@@ -328,22 +328,25 @@ GetRdfData:ForEachDistinctClass
                 sp:distinct "true"^^xsd:boolean ;
                 sp:resultVariables ([ sp:varName "type"^^xsd:string
                           ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "type"^^xsd:string
-                                    ] ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "o"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Filter ;
-                            sp:expression
-                                    [ rdf:type fn:starts-with ;
-                                      sp:arg1 [ rdf:type smf:qname ;
-                                                sp:arg1 [ sp:varName "type"^^xsd:string
-                                                        ]
-                                              ] ;
-                                      sp:arg2 "json"
-                                    ]
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "type"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "o"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Filter ;
+                                        sp:expression
+                                                [ rdf:type fn:starts-with ;
+                                                  sp:arg1 [ rdf:type smf:qname ;
+                                                            sp:arg1 [ sp:varName "type"^^xsd:string
+                                                                    ]
+                                                          ] ;
+                                                  sp:arg2 "json"
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified>
                           ])
               ] .
 
@@ -355,31 +358,34 @@ GetRdfData:ForEachDistinctProperty
                 sp:distinct "true"^^xsd:boolean ;
                 sp:resultVariables ([ sp:varName "property"^^xsd:string
                           ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "type"^^xsd:string
-                                    ] ;
-                            sp:predicate rdf:type ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ sp:object
-                                    [ sp:varName "o"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "s"^^xsd:string
-                                    ]
-                          ] [ rdf:type sp:Filter ;
-                            sp:expression
-                                    [ rdf:type fn:starts-with ;
-                                      sp:arg1 [ rdf:type smf:qname ;
-                                                sp:arg1 [ sp:varName "property"^^xsd:string
-                                                        ]
-                                              ] ;
-                                      sp:arg2 "json"
-                                    ]
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "type"^^xsd:string
+                                                ] ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ] [ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "property"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Filter ;
+                                        sp:expression
+                                                [ rdf:type fn:starts-with ;
+                                                  sp:arg1 [ rdf:type smf:qname ;
+                                                            sp:arg1 [ sp:varName "property"^^xsd:string
+                                                                    ]
+                                                          ] ;
+                                                  sp:arg2 "json"
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified>
                           ])
               ] .
 
@@ -488,10 +494,10 @@ GetRdfData:ImportDeviceJsonFromUrl
                 sp:where ()
               ] .
 
-GetRdfData:ImportRdfData
+GetRdfData:ImportRDFOutput
       rdf:type sml:ImportRDFFromWorkspace ;
       sm:next GetRdfData:ForEachDistinctClass ;
-      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputModified"^^xsd:string ;
       sml:ignoreImports "false"^^xsd:boolean ;
       sml:sourceFilePath "/SmartCommunity/Scripts/Output/RdfOutput.rdf"^^xsd:string .
 
