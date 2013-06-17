@@ -537,7 +537,7 @@ GenerateOntology:GenerateJsonOntology
                 spl:defaultValue "RootObject"^^xsd:string ;
                 spl:predicate sp:jsonRootClass ;
                 spl:valueType xsd:string ;
-                sm:next GenerateOntology:UpdateRootObjectClassName
+                sm:next GenerateOntology:Merge_1
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -860,34 +860,27 @@ GenerateOntology:UpdateRootObjectClassName
                             sp:elements ([ sp:object json:Object ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "root"^^xsd:string
+                                                [ sp:varName "jsonRoot"^^xsd:string
                                                 ]
                                       ]) ;
                             sp:graphNameNode <urn:x-var:outputGraphUri>
                           ]) ;
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object rdfs:Class ;
-                                        sp:predicate rdf:type ;
-                                        sp:subject
-                                                [ sp:varName "newType"^^xsd:string
-                                                ]
-                                      ] [ sp:object
+                            sp:elements ([ sp:object
                                                 [ sp:varName "newType"^^xsd:string
                                                 ] ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "root"^^xsd:string
+                                                [ sp:varName "jsonRoot"^^xsd:string
                                                 ]
                                       ]) ;
                             sp:graphNameNode <urn:x-var:outputGraphUri>
                           ]) ;
                 sp:where ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object
-                                                [ sp:varName "type"^^xsd:string
-                                                ] ;
+                            sp:elements ([ sp:object json:Object ;
                                         sp:predicate rdf:type ;
                                         sp:subject
-                                                [ sp:varName "root"^^xsd:string
+                                                [ sp:varName "jsonRoot"^^xsd:string
                                                 ]
                                       ] [ rdf:type sp:Bind ;
                                         sp:expression
@@ -900,15 +893,6 @@ GenerateOntology:UpdateRootObjectClassName
                                                 ] ;
                                         sp:variable
                                                 [ sp:varName "newType"^^xsd:string
-                                                ]
-                                      ] [ rdf:type sp:Filter ;
-                                        sp:expression
-                                                [ rdf:type fn:starts-with ;
-                                                  sp:arg1 [ rdf:type smf:qname ;
-                                                            sp:arg1 [ sp:varName "root"^^xsd:string
-                                                                    ]
-                                                          ] ;
-                                                  sp:arg2 "json"
                                                 ]
                                       ]) ;
                             sp:graphNameNode <urn:x-var:outputGraphUri>
