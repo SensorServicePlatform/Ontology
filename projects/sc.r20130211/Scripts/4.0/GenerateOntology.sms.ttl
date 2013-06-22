@@ -51,7 +51,7 @@ sp:parseRdfFromUrl
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GenerateOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateOntology:AddClassAndProperty
@@ -414,7 +414,7 @@ GenerateOntology:CreateTempFileAndGraph
       rdf:type sml:ExportToRDFFile ;
       sm:next GenerateOntology:ClearTempGraph ;
       sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData"^^xsd:string ;
-      sml:targetFilePath "/SmartCommunity/Scripts/Temp/RdfData.rdf"^^xsd:string .
+      sml:targetFilePath "/SmartCommunity/Scripts/Temp/RdfData.ttl"^^xsd:string .
 
 GenerateOntology:DeclareJsonPrefix
       rdf:type sml:ModifyPrefixes ;
@@ -604,17 +604,24 @@ GenerateOntology:GenerateJsonOntology
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "JsonOntology.rdf"^^xsd:string ;
-                spl:predicate sp:ontologyFileName ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
+                spl:predicate sp:ontologyBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+                spl:predicate sp:outputFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RdfOutput.rdf"^^xsd:string ;
-                spl:predicate sp:outputFileName ;
+                spl:defaultValue "RootObject"^^xsd:string ;
+                spl:predicate sp:jsonRootClass ;
                 spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindFilePaths
+                sm:next GenerateOntology:Merge_1
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -625,24 +632,17 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+                spl:predicate sp:ontologyFileName ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindFilePaths
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
                 spl:predicate sp:jsonUrl ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:FormatUrl
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
-                spl:predicate sp:ontologyBaseUri ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "RootObject"^^xsd:string ;
-                spl:predicate sp:jsonRootClass ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:Merge_1
               ] ;
       sm:returnModule GenerateOntology:GenerateJsonOntology ;
       sml:selectQuery
