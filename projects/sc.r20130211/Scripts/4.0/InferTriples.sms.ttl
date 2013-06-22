@@ -47,7 +47,7 @@ sp:outputFileName
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/InferTriples>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 InferTriples:AddMappingAsImportToOutput
@@ -167,17 +167,17 @@ InferTriples:InferTriples
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:outputBaseUri ;
-                spl:valueType xsd:string ;
-                sm:next InferTriples:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "MapCmuSdsDevicesSPIN.ttl"^^xsd:string ;
                 spl:predicate sp:mappingFileName ;
                 spl:valueType xsd:string ;
                 sm:next InferTriples:BindFilePaths
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -218,7 +218,7 @@ InferTriples:InferTriples
 
 InferTriples:LoadMappingFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:AddMappingAsImportToOutput ;
+      sm:next InferTriples:LoadOntologyFile ;
       sml:baseURI "?mappingBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -237,7 +237,7 @@ InferTriples:LoadMappingFile
 
 InferTriples:LoadOntologyFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:LoadMappingFile ;
+      sm:next InferTriples:LoadOutputFile ;
       sml:baseURI "?ontologyBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -256,7 +256,7 @@ InferTriples:LoadOntologyFile
 
 InferTriples:LoadOutputFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:LoadOntologyFile ;
+      sm:next InferTriples:AddMappingAsImportToOutput ;
       sml:baseURI "?outputBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -275,4 +275,4 @@ InferTriples:LoadOutputFile
 
 InferTriples:Merge_1
       rdf:type sml:Merge ;
-      sm:next InferTriples:LoadOutputFile .
+      sm:next InferTriples:LoadMappingFile .
