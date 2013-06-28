@@ -1,0 +1,339 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/4.0/InferTriples
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix InferTriples:  <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/InferTriples#> .
+@prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix arg:     <http://spinrdf.org/arg#> .
+@prefix email:   <http://topbraid.org/email#> .
+@prefix fn:      <http://www.w3.org/2005/xpath-functions#> .
+@prefix json:    <http://topbraid.org/json#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix smf:     <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spif:    <http://spinrdf.org/spif#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+sp:inferredTriplesBaseUri
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:inferredTriplesFileName
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:mappingBaseUri
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:mappingFileName
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:ontologyBaseUri
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:ontologyFileName
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:outputBaseUri
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+sp:outputFileName
+      rdf:type rdf:Property ;
+      rdfs:subPropertyOf sp:arg .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/4.0/InferTriples>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+InferTriples:AddMappingFileAsImportToOutputFile
+      rdf:type sml:PerformUpdate ;
+      sm:next InferTriples:ApplyTopSPIN ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "mappingGraphUri"^^xsd:string
+                                                ] ;
+                                        sp:predicate owl:imports ;
+                                        sp:subject
+                                                [ sp:varName "outputGraphUri"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                          ]) ;
+                sp:where ()
+              ] .
+
+InferTriples:ApplyTopSPIN
+      rdf:type sml:ApplyTopSPIN ;
+      sm:next InferTriples:ExportInferredTriples ;
+      sml:predicate spin:rule ;
+      sml:replace "true"^^xsd:boolean .
+
+InferTriples:BindFilePaths
+      rdf:type sml:BindBySelect ;
+      sm:next InferTriples:Merge_1 ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "outputFilePath"^^xsd:string
+                          ] [ sp:varName "mappingFilePath"^^xsd:string
+                          ] [ sp:varName "inferredTriplesFilePath"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "/SmartCommunity/Scripts/Output/" ;
+                                      sp:arg2 [ sp:varName "outputFileName"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "outputFilePath"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "/SmartCommunity/Scripts/Output/" ;
+                                      sp:arg2 [ sp:varName "ontologyFileName"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "ontologyFilePath"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "/SmartCommunity/Scripts/Mapping/" ;
+                                      sp:arg2 [ sp:varName "mappingFileName"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "mappingFilePath"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type fn:concat ;
+                                      sp:arg1 "/SmartCommunity/Scripts/Output/" ;
+                                      sp:arg2 [ sp:varName "inferredTriplesFileName"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "inferredTriplesFilePath"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+InferTriples:BindGraphUri
+      rdf:type sml:BindBySelect ;
+      sm:next InferTriples:Merge_1 ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "outputGraphUri"^^xsd:string
+                          ] [ sp:varName "ontologyGraphUri"^^xsd:string
+                          ] [ sp:varName "mappingGraphUri"^^xsd:string
+                          ] [ sp:varName "inferredTriplesGraphUri"^^xsd:string
+                          ]) ;
+                sp:where ([ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ sp:varName "outputBaseUri"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "outputGraphUri"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ sp:varName "ontologyBaseUri"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "ontologyGraphUri"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ sp:varName "mappingBaseUri"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "mappingGraphUri"^^xsd:string
+                                    ]
+                          ] [ rdf:type sp:Bind ;
+                            sp:expression
+                                    [ rdf:type spif:buildURI ;
+                                      sp:arg1 [ sp:varName "inferredTriplesBaseUri"^^xsd:string
+                                              ]
+                                    ] ;
+                            sp:variable
+                                    [ sp:varName "inferredTriplesGraphUri"^^xsd:string
+                                    ]
+                          ])
+              ] .
+
+InferTriples:ExportInferredTriples
+      rdf:type sml:ExportToRDFFile ;
+      sm:next InferTriples:InferTriples ;
+      sml:baseURI "?inferredTriplesBaseUri"^^xsd:string ;
+      sml:baseURI
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "inferredTriplesBaseUri"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] ;
+      sml:targetFilePath "?inferredTriplesFilePath"^^xsd:string ;
+      sml:targetFilePath
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "inferredTriplesFilePath"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
+
+InferTriples:InferTriples
+      rdf:type sml:ReturnSPARQLResults , sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "InferredTriples.ttl"^^xsd:string ;
+                spl:predicate sp:inferredTriplesFileName ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindFilePaths
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/InferredTriples"^^xsd:string ;
+                spl:predicate sp:inferredTriplesBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "MapCmuSdsDevicesSPIN.ttl"^^xsd:string ;
+                spl:predicate sp:mappingFileName ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindFilePaths
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
+                spl:predicate sp:ontologyBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+                spl:predicate sp:ontologyFileName ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindFilePaths
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapCmuSdsDevicesSPIN"^^xsd:string ;
+                spl:predicate sp:mappingBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+                spl:predicate sp:outputFileName ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindFilePaths
+              ] ;
+      sm:returnModule InferTriples:InferTriples ;
+      sml:selectQuery
+              [ rdf:type sp:Select ;
+                sp:where ([ sp:object
+                                    [ sp:varName "o"^^xsd:string
+                                    ] ;
+                            sp:predicate
+                                    [ sp:varName "p"^^xsd:string
+                                    ] ;
+                            sp:subject
+                                    [ sp:varName "s"^^xsd:string
+                                    ]
+                          ])
+              ] ;
+      sml:serialization sm:XML .
+
+InferTriples:LoadMappingFile
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next InferTriples:LoadOntologyFile ;
+      sml:baseURI "?mappingBaseUri"^^xsd:string ;
+      sml:baseURI
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "mappingBaseUri"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "?mappingFilePath"^^xsd:string ;
+      sml:sourceFilePath
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "mappingFilePath"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
+
+InferTriples:LoadOntologyFile
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next InferTriples:LoadOutputFile ;
+      sml:baseURI "?ontologyBaseUri"^^xsd:string ;
+      sml:baseURI
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "ontologyBaseUri"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "?ontologyFilePath"^^xsd:string ;
+      sml:sourceFilePath
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "ontologyFilePath"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
+
+InferTriples:LoadOutputFile
+      rdf:type sml:ImportRDFFromWorkspace ;
+      sm:next InferTriples:AddMappingFileAsImportToOutputFile ;
+      sml:baseURI "?outputBaseUri"^^xsd:string ;
+      sml:baseURI
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "outputBaseUri"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] ;
+      sml:ignoreImports "false"^^xsd:boolean ;
+      sml:sourceFilePath "?outputFilePath"^^xsd:string ;
+      sml:sourceFilePath
+              [ rdf:type sp:Select ;
+                sp:resultVariables ([ sp:varName "outputFilePath"^^xsd:string
+                          ]) ;
+                sp:where ()
+              ] .
+
+InferTriples:Merge_1
+      rdf:type sml:Merge ;
+      sm:next InferTriples:LoadMappingFile .

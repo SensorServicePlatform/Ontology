@@ -45,13 +45,9 @@ sp:outputFileName
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
-sp:parseRdfFromUrl
-      rdf:type rdf:Property ;
-      rdfs:subPropertyOf sp:arg .
-
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GenerateOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateOntology:AddClassAndProperty
@@ -71,12 +67,12 @@ GenerateOntology:AddClassAndProperty
                                                 [ sp:varName "property"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:jsonGraphUri>
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
                           ]) ;
                 sp:where ()
               ] .
 
-GenerateOntology:AddRestriction_1
+GenerateOntology:AddPropertyRestrictions
       rdf:type sml:PerformUpdate ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
@@ -116,12 +112,12 @@ GenerateOntology:AddRestriction_1
                                         sp:predicate owl:allValuesFrom ;
                                         sp:subject _:b2
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:jsonGraphUri>
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
                           ]) ;
                 sp:where ()
               ] .
 
-GenerateOntology:AddRestriction_3
+GenerateOntology:AddCollectionRestrictions
       rdf:type sml:PerformUpdate ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
@@ -145,7 +141,7 @@ GenerateOntology:AddRestriction_3
                                         sp:predicate owl:allValuesFrom ;
                                         sp:subject _:b3
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:jsonGraphUri>
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
                           ]) ;
                 sp:where ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object
@@ -156,13 +152,13 @@ GenerateOntology:AddRestriction_3
                                                 [ sp:varName "collectionItem"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
                           ])
               ] .
 
 GenerateOntology:BindCollectionInfo
       rdf:type sml:BindBySelect ;
-      sm:next GenerateOntology:AddRestriction_3 ;
+      sm:next GenerateOntology:AddCollectionRestrictions ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:limit "1"^^xsd:long ;
@@ -186,7 +182,7 @@ GenerateOntology:BindCollectionInfo
                                                 [ sp:varName "propertyReference"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
                           ])
               ] .
 
@@ -317,18 +313,84 @@ GenerateOntology:BindPropertyInfo
                                                 [ sp:varName "propertyType"^^xsd:string
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
                           ])
               ] .
 
-GenerateOntology:ConvertJSONToRDF_1
+GenerateOntology:ClearOntologyGraph
+      rdf:type sml:PerformUpdate ;
+      sm:next GenerateOntology:ForEachDistinctClass ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
+                          ])
+              ] .
+
+GenerateOntology:ClearTempGraph
+      rdf:type sml:PerformUpdate ;
+      sm:next GenerateOntology:ImportDeviceJsonFromUrl ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:deletePattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
+                          ])
+              ] .
+
+GenerateOntology:ConvertJsonToRdf
       rdf:type sml:ConvertJSONToRDF ;
-      sm:next GenerateOntology:ExportRdfOutput ;
+      sm:next GenerateOntology:ExportRdfToOutputGraph ;
       sm:outputVariable "root"^^xsd:string .
 
 GenerateOntology:CreateOntologyFileAndGraph
       rdf:type sml:ExportToRDFFile ;
-      sm:next GenerateOntology:ForEachDistinctClass ;
+      sm:next GenerateOntology:ClearOntologyGraph ;
       sml:baseURI "?ontologyBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -344,7 +406,18 @@ GenerateOntology:CreateOntologyFileAndGraph
                 sp:where ()
               ] .
 
-GenerateOntology:ExportRdfOutput
+GenerateOntology:CreateTempFileAndGraph
+      rdf:type sml:ExportToRDFFile ;
+      sm:next GenerateOntology:ClearTempGraph ;
+      sml:baseURI "http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData"^^xsd:string ;
+      sml:targetFilePath "/SmartCommunity/Scripts/Temp/RdfData.ttl"^^xsd:string .
+
+GenerateOntology:DeclareJsonPrefix
+      rdf:type sml:ModifyPrefixes ;
+      sm:next GenerateOntology:Merge_1 ;
+      sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
+
+GenerateOntology:ExportRdfToOutputGraph
       rdf:type sml:ExportToRDFFile ;
       sm:next GenerateOntology:UpdateReferencedObjectClassNames ;
       sml:baseURI "?outputBaseUri"^^xsd:string ;
@@ -389,7 +462,7 @@ GenerateOntology:ForEachDistinctClass
                                                   sp:arg2 "json"
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
                           ])
               ] .
 
@@ -428,7 +501,7 @@ GenerateOntology:ForEachDistinctProperty
                                                   sp:arg2 "json"
                                                 ]
                                       ]) ;
-                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
                           ])
               ] .
 
@@ -527,10 +600,17 @@ GenerateOntology:GenerateJsonOntology
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:outputBaseUri ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
+                spl:predicate sp:ontologyBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+                spl:predicate sp:outputFileName ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindFilePaths
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -541,24 +621,17 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
-                spl:predicate sp:ontologyBaseUri ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindGraphUri
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RdfOutput.rdf"^^xsd:string ;
-                spl:predicate sp:outputFileName ;
+                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+                spl:predicate sp:ontologyFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "true"^^xsd:boolean ;
-                spl:predicate sp:parseRdfFromUrl ;
-                spl:valueType xsd:boolean ;
-                sm:next GenerateOntology:IfParseRdfFromUrl
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -566,13 +639,6 @@ GenerateOntology:GenerateJsonOntology
                 spl:predicate sp:jsonUrl ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:FormatUrl
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "JsonOntology.rdf"^^xsd:string ;
-                spl:predicate sp:ontologyFileName ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindFilePaths
               ] ;
       sm:returnModule GenerateOntology:GenerateJsonOntology ;
       sml:selectQuery
@@ -590,23 +656,10 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       sml:serialization sm:XML .
 
-GenerateOntology:IfParseRdfFromUrl
-      rdf:type sml:BranchByAsk ;
-      sm:if   GenerateOntology:ImportDeviceJsonFromUrl ;
-      sm:next GenerateOntology:CreateOntologyFileAndGraph ;
-      sml:askQuery
-              [ rdf:type sp:Ask ;
-                sp:where ([ rdf:type sp:Filter ;
-                            sp:expression
-                                    [ sp:varName "parseRdfFromUrl"^^xsd:string
-                                    ]
-                          ])
-              ] .
-
 GenerateOntology:IfPropertyReferencesAType
       rdf:type sml:BranchByAsk ;
       sm:else GenerateOntology:BindCollectionInfo ;
-      sm:if   GenerateOntology:AddRestriction_1 ;
+      sm:if   GenerateOntology:AddPropertyRestrictions ;
       sml:askQuery
               [ rdf:type sp:Ask ;
                 sp:where ([ rdf:type sp:Filter ;
@@ -620,7 +673,7 @@ GenerateOntology:IfPropertyReferencesAType
 
 GenerateOntology:ImportDeviceJsonFromUrl
       rdf:type sml:ImportTextFromURL ;
-      sm:next GenerateOntology:ConvertJSONToRDF_1 ;
+      sm:next GenerateOntology:ConvertJsonToRdf ;
       sm:outputVariable "text"^^xsd:string ;
       sml:url "?formattedUrl"^^xsd:string ;
       sml:url [ rdf:type sp:Select ;
@@ -629,14 +682,42 @@ GenerateOntology:ImportDeviceJsonFromUrl
                 sp:where ()
               ] .
 
+GenerateOntology:LoadOutputIntoTempGraph
+      rdf:type sml:PerformUpdate ;
+      sm:next GenerateOntology:CreateOntologyFileAndGraph ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
+                          ]) ;
+                sp:where ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object
+                                                [ sp:varName "o"^^xsd:string
+                                                ] ;
+                                        sp:predicate
+                                                [ sp:varName "p"^^xsd:string
+                                                ] ;
+                                        sp:subject
+                                                [ sp:varName "s"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:outputGraphUri>
+                          ])
+              ] .
+
 GenerateOntology:Merge_1
       rdf:type sml:Merge ;
-      sm:next GenerateOntology:IfParseRdfFromUrl .
-
-GenerateOntology:ModifyPrefixes_1
-      rdf:type sml:ModifyPrefixes ;
-      sm:next GenerateOntology:CreateOntologyFileAndGraph ;
-      sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
+      sm:next GenerateOntology:CreateTempFileAndGraph .
 
 GenerateOntology:UpdateCollectionReferencedObjectClassNames
       rdf:type sml:PerformUpdate ;
@@ -854,6 +935,7 @@ GenerateOntology:UpdateReferencedObjectClassNames
 
 GenerateOntology:UpdateRootObjectClassName
       rdf:type sml:PerformUpdate ;
+      sm:next GenerateOntology:LoadOutputIntoTempGraph ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
