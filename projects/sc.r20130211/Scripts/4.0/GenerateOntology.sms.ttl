@@ -47,7 +47,7 @@ sp:outputFileName
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GenerateOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateOntology:AddClassAndProperty
@@ -72,7 +72,7 @@ GenerateOntology:AddClassAndProperty
                 sp:where ()
               ] .
 
-GenerateOntology:AddPropertyRestrictions
+GenerateOntology:AddCollectionRestrictions
       rdf:type sml:PerformUpdate ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
@@ -90,56 +90,11 @@ GenerateOntology:AddPropertyRestrictions
                                                 ] ;
                                         sp:predicate owl:onProperty ;
                                         sp:subject _:b1
-                                      ] [ sp:object "1"^^xsd:nonNegativeInteger ;
-                                        sp:predicate owl:maxCardinality ;
-                                        sp:subject _:b1
-                                      ] [ sp:object _:b2 ;
-                                        sp:predicate rdfs:subClassOf ;
-                                        sp:subject
-                                                [ sp:varName "type"^^xsd:string
-                                                ]
-                                      ] [ sp:object owl:Restriction ;
-                                        sp:predicate rdf:type ;
-                                        sp:subject _:b2
-                                      ] [ sp:object
-                                                [ sp:varName "property"^^xsd:string
-                                                ] ;
-                                        sp:predicate owl:onProperty ;
-                                        sp:subject _:b2
-                                      ] [ sp:object
-                                                [ sp:varName "propertyType"^^xsd:string
-                                                ] ;
-                                        sp:predicate owl:allValuesFrom ;
-                                        sp:subject _:b2
-                                      ]) ;
-                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
-                          ]) ;
-                sp:where ()
-              ] .
-
-GenerateOntology:AddCollectionRestrictions
-      rdf:type sml:PerformUpdate ;
-      sml:updateQuery
-              [ rdf:type sp:Modify ;
-                sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object _:b3 ;
-                                        sp:predicate rdfs:subClassOf ;
-                                        sp:subject
-                                                [ sp:varName "type"^^xsd:string
-                                                ]
-                                      ] [ sp:object owl:Restriction ;
-                                        sp:predicate rdf:type ;
-                                        sp:subject _:b3
-                                      ] [ sp:object
-                                                [ sp:varName "property"^^xsd:string
-                                                ] ;
-                                        sp:predicate owl:onProperty ;
-                                        sp:subject _:b3
                                       ] [ sp:object
                                                 [ sp:varName "collectionType"^^xsd:string
                                                 ] ;
                                         sp:predicate owl:allValuesFrom ;
-                                        sp:subject _:b3
+                                        sp:subject _:b1
                                       ]) ;
                             sp:graphNameNode <urn:x-var:ontologyGraphUri>
                           ]) ;
@@ -156,9 +111,54 @@ GenerateOntology:AddCollectionRestrictions
                           ])
               ] .
 
+GenerateOntology:AddPropertyRestrictions
+      rdf:type sml:PerformUpdate ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object _:b2 ;
+                                        sp:predicate rdfs:subClassOf ;
+                                        sp:subject
+                                                [ sp:varName "type"^^xsd:string
+                                                ]
+                                      ] [ sp:object owl:Restriction ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject _:b2
+                                      ] [ sp:object
+                                                [ sp:varName "property"^^xsd:string
+                                                ] ;
+                                        sp:predicate owl:onProperty ;
+                                        sp:subject _:b2
+                                      ] [ sp:object "1"^^xsd:nonNegativeInteger ;
+                                        sp:predicate owl:maxCardinality ;
+                                        sp:subject _:b2
+                                      ] [ sp:object _:b3 ;
+                                        sp:predicate rdfs:subClassOf ;
+                                        sp:subject
+                                                [ sp:varName "type"^^xsd:string
+                                                ]
+                                      ] [ sp:object owl:Restriction ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject _:b3
+                                      ] [ sp:object
+                                                [ sp:varName "property"^^xsd:string
+                                                ] ;
+                                        sp:predicate owl:onProperty ;
+                                        sp:subject _:b3
+                                      ] [ sp:object
+                                                [ sp:varName "propertyType"^^xsd:string
+                                                ] ;
+                                        sp:predicate owl:allValuesFrom ;
+                                        sp:subject _:b3
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:ontologyGraphUri>
+                          ]) ;
+                sp:where ()
+              ] .
+
 GenerateOntology:BindCollectionInfo
       rdf:type sml:BindBySelect ;
-      sm:next GenerateOntology:AddCollectionRestrictions ;
+      sm:next GenerateOntology:IfPropertyReferencesACollection ;
       sml:selectQuery
               [ rdf:type sp:Select ;
                 sp:limit "1"^^xsd:long ;
@@ -600,6 +600,27 @@ GenerateOntology:GenerateJsonOntology
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "RootObject"^^xsd:string ;
+                spl:predicate sp:jsonRootClass ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:Merge_1
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+                spl:predicate sp:jsonUrl ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:FormatUrl
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
                 spl:predicate sp:ontologyBaseUri ;
                 spl:valueType xsd:string ;
@@ -614,31 +635,10 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RootObject"^^xsd:string ;
-                spl:predicate sp:jsonRootClass ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:Merge_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:outputBaseUri ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
                 spl:predicate sp:ontologyFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
-                spl:predicate sp:jsonUrl ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:FormatUrl
               ] ;
       sm:returnModule GenerateOntology:GenerateJsonOntology ;
       sml:selectQuery
@@ -666,6 +666,20 @@ GenerateOntology:IfPropertyReferencesAType
                             sp:expression
                                     [ rdf:type smf:isBound ;
                                       sp:arg1 [ sp:varName "propertyType"^^xsd:string
+                                              ]
+                                    ]
+                          ])
+              ] .
+
+GenerateOntology:IfPropertyReferencesACollection
+      rdf:type sml:BranchByAsk ;
+      sm:if   GenerateOntology:AddCollectionRestrictions ;
+      sml:askQuery
+              [ rdf:type sp:Ask ;
+                sp:where ([ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type smf:isBound ;
+                                      sp:arg1 [ sp:varName "collectionItem"^^xsd:string
                                               ]
                                     ]
                           ])
