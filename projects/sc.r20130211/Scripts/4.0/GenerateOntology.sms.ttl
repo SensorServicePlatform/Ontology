@@ -91,7 +91,7 @@ GenerateOntology:AddCollectionRestrictions
                                         sp:predicate owl:onProperty ;
                                         sp:subject _:b1
                                       ] [ sp:object
-                                                [ sp:varName "collectionPropertyType"^^xsd:string
+                                                [ sp:varName "collectionItemPropertyType"^^xsd:string
                                                 ] ;
                                         sp:predicate owl:allValuesFrom ;
                                         sp:subject _:b1
@@ -144,70 +144,6 @@ GenerateOntology:AddPropertyRestrictions
                             sp:graphNameNode <urn:x-var:ontologyGraphUri>
                           ]) ;
                 sp:where ()
-              ] .
-
-GenerateOntology:BindCollectionInfo
-      rdf:type sml:BindBySelect ;
-      sm:next GenerateOntology:IfPropertyReferencesACollection ;
-      sml:selectQuery
-              [ rdf:type sp:Select ;
-                sp:limit "1"^^xsd:long ;
-                sp:resultVariables ([ sp:varName "collectionItem"^^xsd:string
-                          ] [ sp:varName "collectionPropertyType"^^xsd:string
-                          ]) ;
-                sp:where ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ rdf:type sp:TriplePath ;
-                                        sp:object
-                                                [ sp:varName "collectionItem"^^xsd:string
-                                                ] ;
-                                        sp:path [ rdf:type sp:SeqPath ;
-                                                  sp:path1
-                                                          [ rdf:type sp:ModPath ;
-                                                            sp:modMax -2 ;
-                                                            sp:modMin 0 ;
-                                                            sp:subPath rdf:rest
-                                                          ] ;
-                                                  sp:path2 rdf:first
-                                                ] ;
-                                        sp:subject
-                                                [ sp:varName "propertyReference"^^xsd:string
-                                                ]
-                                      ] [ rdf:type sp:Optional ;
-                                        sp:elements ([ sp:object
-                                                            [ sp:varName "collectionObjectType"^^xsd:string
-                                                            ] ;
-                                                    sp:predicate rdf:type ;
-                                                    sp:subject
-                                                            [ sp:varName "collectionItem"^^xsd:string
-                                                            ]
-                                                  ])
-                                      ] [ rdf:type sp:Bind ;
-                                        sp:expression
-                                                [ rdf:type sp:datatype ;
-                                                  sp:arg1 [ sp:varName "collectionItem"^^xsd:string
-                                                          ]
-                                                ] ;
-                                        sp:variable
-                                                [ sp:varName "collectionLiteralType"^^xsd:string
-                                                ]
-                                      ] [ rdf:type sp:Bind ;
-                                        sp:expression
-                                                [ rdf:type smf:if ;
-                                                  sp:arg1 [ rdf:type smf:isBound ;
-                                                            sp:arg1 [ sp:varName "collectionObjectType"^^xsd:string
-                                                                    ]
-                                                          ] ;
-                                                  sp:arg2 [ sp:varName "collectionObjectType"^^xsd:string
-                                                          ] ;
-                                                  sp:arg3 [ sp:varName "collectionLiteralType"^^xsd:string
-                                                          ]
-                                                ] ;
-                                        sp:variable
-                                                [ sp:varName "collectionPropertyType"^^xsd:string
-                                                ]
-                                      ]) ;
-                            sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
-                          ])
               ] .
 
 GenerateOntology:BindFilePaths
@@ -285,6 +221,8 @@ GenerateOntology:BindPropertyInfo
                 sp:limit "1"^^xsd:long ;
                 sp:resultVariables ([ sp:varName "propertyReference"^^xsd:string
                           ] [ sp:varName "propertyType"^^xsd:string
+                          ] [ sp:varName "collectionItem"^^xsd:string
+                          ] [ sp:varName "collectionItemPropertyType"^^xsd:string
                           ]) ;
                 sp:where ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object
@@ -335,6 +273,57 @@ GenerateOntology:BindPropertyInfo
                                                 ] ;
                                         sp:variable
                                                 [ sp:varName "propertyType"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Optional ;
+                                        sp:elements ([ rdf:type sp:TriplePath ;
+                                                    sp:object
+                                                            [ sp:varName "collectionItem"^^xsd:string
+                                                            ] ;
+                                                    sp:path [ rdf:type sp:SeqPath ;
+                                                              sp:path1
+                                                                      [ rdf:type sp:ModPath ;
+                                                                        sp:modMax -2 ;
+                                                                        sp:modMin 0 ;
+                                                                        sp:subPath rdf:rest
+                                                                      ] ;
+                                                              sp:path2 rdf:first
+                                                            ] ;
+                                                    sp:subject
+                                                            [ sp:varName "propertyReference"^^xsd:string
+                                                            ]
+                                                  ])
+                                      ] [ rdf:type sp:Optional ;
+                                        sp:elements ([ sp:object
+                                                            [ sp:varName "collectionItemObjectType"^^xsd:string
+                                                            ] ;
+                                                    sp:predicate rdf:type ;
+                                                    sp:subject
+                                                            [ sp:varName "collectionItem"^^xsd:string
+                                                            ]
+                                                  ])
+                                      ] [ rdf:type sp:Bind ;
+                                        sp:expression
+                                                [ rdf:type sp:datatype ;
+                                                  sp:arg1 [ sp:varName "collectionItem"^^xsd:string
+                                                          ]
+                                                ] ;
+                                        sp:variable
+                                                [ sp:varName "collectionItemLiteralType"^^xsd:string
+                                                ]
+                                      ] [ rdf:type sp:Bind ;
+                                        sp:expression
+                                                [ rdf:type smf:if ;
+                                                  sp:arg1 [ rdf:type smf:isBound ;
+                                                            sp:arg1 [ sp:varName "collectionItemObjectType"^^xsd:string
+                                                                    ]
+                                                          ] ;
+                                                  sp:arg2 [ sp:varName "collectionItemObjectType"^^xsd:string
+                                                          ] ;
+                                                  sp:arg3 [ sp:varName "collectionItemLiteralType"^^xsd:string
+                                                          ]
+                                                ] ;
+                                        sp:variable
+                                                [ sp:varName "collectionItemPropertyType"^^xsd:string
                                                 ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
@@ -688,7 +677,7 @@ GenerateOntology:IfPropertyReferencesACollection
                 sp:where ([ rdf:type sp:Filter ;
                             sp:expression
                                     [ rdf:type smf:isBound ;
-                                      sp:arg1 [ sp:varName "collectionPropertyType"^^xsd:string
+                                      sp:arg1 [ sp:varName "collectionItemPropertyType"^^xsd:string
                                               ]
                                     ]
                           ])
@@ -696,7 +685,7 @@ GenerateOntology:IfPropertyReferencesACollection
 
 GenerateOntology:IfPropertyReferencesAType
       rdf:type sml:BranchByAsk ;
-      sm:else GenerateOntology:BindCollectionInfo ;
+      sm:else GenerateOntology:IfPropertyReferencesACollection ;
       sm:if   GenerateOntology:AddPropertyRestrictions ;
       sml:askQuery
               [ rdf:type sp:Ask ;
