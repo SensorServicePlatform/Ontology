@@ -63,46 +63,8 @@ sp:mappingFileName
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/InferTriples>
       rdf:type owl:Ontology ;
-      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
+      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
-
-InferTriples:AddDestinationOntologyAsImportToInferredTriplesFile
-      rdf:type sml:PerformUpdate ;
-      sm:next InferTriples:InferTriples ;
-      sml:updateQuery
-              [ rdf:type sp:Modify ;
-                sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object
-                                                [ sp:varName "destinationOntologyGraphUri"^^xsd:string
-                                                ] ;
-                                        sp:predicate owl:imports ;
-                                        sp:subject
-                                                [ sp:varName "inferredTriplesGraphUri"^^xsd:string
-                                                ]
-                                      ]) ;
-                            sp:graphNameNode <urn:x-var:inferredTriplesGraphUri>
-                          ]) ;
-                sp:where ()
-              ] .
-
-InferTriples:AddMappingFileAsImportToOutputFile
-      rdf:type sml:PerformUpdate ;
-      sm:next InferTriples:ApplyTopSPIN ;
-      sml:updateQuery
-              [ rdf:type sp:Modify ;
-                sp:insertPattern ([ rdf:type sp:NamedGraph ;
-                            sp:elements ([ sp:object
-                                                [ sp:varName "mappingGraphUri"^^xsd:string
-                                                ] ;
-                                        sp:predicate owl:imports ;
-                                        sp:subject
-                                                [ sp:varName "dataGraphUri"^^xsd:string
-                                                ]
-                                      ]) ;
-                            sp:graphNameNode <urn:x-var:dataGraphUri>
-                          ]) ;
-                sp:where ()
-              ] .
 
 InferTriples:ApplyTopSPIN
       rdf:type sml:ApplyTopSPIN ;
@@ -235,7 +197,7 @@ InferTriples:BindGraphUri
 
 InferTriples:ExportInferredTriples
       rdf:type sml:ExportToRDFFile ;
-      sm:next InferTriples:AddDestinationOntologyAsImportToInferredTriplesFile ;
+      sm:next InferTriples:InferTriples ;
       sml:baseURI "?inferredTriplesBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -256,29 +218,15 @@ InferTriples:InferTriples
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapCmuSdsDevicesSPIN"^^xsd:string ;
-                spl:predicate sp:mappingBaseUri ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:dataBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next InferTriples:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "InferredTriples.ttl"^^xsd:string ;
-                spl:predicate sp:inferredTriplesFileName ;
-                spl:valueType xsd:string ;
-                sm:next InferTriples:BindFilePaths
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1"^^xsd:string ;
                 spl:predicate sp:destinationOntologyBaseUri ;
-                spl:valueType xsd:string ;
-                sm:next InferTriples:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:dataBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next InferTriples:BindGraphUri
               ] ;
@@ -319,10 +267,24 @@ InferTriples:InferTriples
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapCmuSdsDevicesSPIN"^^xsd:string ;
+                spl:predicate sp:mappingBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/InferredTriples"^^xsd:string ;
                 spl:predicate sp:inferredTriplesBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next InferTriples:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "InferredTriples.ttl"^^xsd:string ;
+                spl:predicate sp:inferredTriplesFileName ;
+                spl:valueType xsd:string ;
+                sm:next InferTriples:BindFilePaths
               ] ;
       sm:returnModule InferTriples:InferTriples ;
       sml:selectQuery
@@ -342,7 +304,7 @@ InferTriples:InferTriples
 
 InferTriples:LoadDataFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:AddMappingFileAsImportToOutputFile ;
+      sm:next InferTriples:ApplyTopSPIN ;
       sml:baseURI "?dataBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -361,7 +323,7 @@ InferTriples:LoadDataFile
 
 InferTriples:LoadJsonOntologyFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:LoadDataFile ;
+      sm:next InferTriples:ApplyTopSPIN ;
       sml:baseURI "?jsonOntologyBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -380,7 +342,7 @@ InferTriples:LoadJsonOntologyFile
 
 InferTriples:LoadMappingFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:LoadJsonOntologyFile ;
+      sm:next InferTriples:ApplyTopSPIN ;
       sml:baseURI "?mappingBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
@@ -399,4 +361,4 @@ InferTriples:LoadMappingFile
 
 InferTriples:Merge_1
       rdf:type sml:Merge ;
-      sm:next InferTriples:LoadMappingFile .
+      sm:next InferTriples:LoadDataFile , InferTriples:LoadJsonOntologyFile , InferTriples:LoadMappingFile .

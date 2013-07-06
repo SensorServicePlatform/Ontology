@@ -1,5 +1,4 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsDeviceInferredTriples
-# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix MapDevicesSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapCmuSdsDevicesSPIN#> .
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
@@ -50,6 +49,310 @@
 @prefix wgs:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix wot:     <http://xmlns.com/wot/0.1/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+sc:Device-10170002
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ae2f7f1c-a766-471f-bd72-7ade609bedb3"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170002"^^xsd:string ;
+      sc:uri  "10170002"^^xsd:string .
+
+sc:Device-10170003
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "dfb50784-41da-4e60-b184-0cb36685e996"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170003"^^xsd:string ;
+      sc:uri  "10170003"^^xsd:string .
+
+sc:Device-10170004
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "41d1b8d3-6b66-46ac-8391-3bb8814dd110"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170004"^^xsd:string ;
+      sc:uri  "10170004"^^xsd:string .
+
+sc:Device-10170005
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "c23829bf-1523-49a1-9a46-1f61adfdf396"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170005"^^xsd:string ;
+      sc:uri  "10170005"^^xsd:string .
+
+sc:Device-10170006
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "8faf9cb1-3ee2-4ac2-8e38-1361bb2e62ce"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170006"^^xsd:string ;
+      sc:uri  "10170006"^^xsd:string .
+
+sc:Device-10170007
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "f49d53cb-3e84-4e81-9dd8-31c6f6416dda"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170007"^^xsd:string ;
+      sc:uri  "10170007"^^xsd:string .
+
+sc:Device-10170008
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "e60ca714-111c-41e3-9f66-0e726c35bd47"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170008"^^xsd:string ;
+      sc:uri  "10170008"^^xsd:string .
+
+sc:Device-10170009
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "3f1d4484-b21b-4af0-b55b-83a920c968cf"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170009"^^xsd:string ;
+      sc:uri  "10170009"^^xsd:string .
+
+sc:Device-10170102
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "99440a88-8377-432f-9f60-ae41ad664ef6"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170102"^^xsd:string ;
+      sc:uri  "10170102"^^xsd:string .
+
+sc:Device-10170103
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "c10465e3-d239-4dda-8c4c-1dfd50ea11c8"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170103"^^xsd:string ;
+      sc:uri  "10170103"^^xsd:string .
+
+sc:Device-10170104
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "1d7266ff-353e-4862-881d-537842663301"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170104"^^xsd:string ;
+      sc:uri  "10170104"^^xsd:string .
+
+sc:Device-10170105
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "61c0417d-d85e-4d81-af5a-61484cb27897"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170105"^^xsd:string ;
+      sc:uri  "10170105"^^xsd:string .
+
+sc:Device-10170106
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "3e8671e3-b9d8-4f83-a9bd-8816cca87103"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170106"^^xsd:string ;
+      sc:uri  "10170106"^^xsd:string .
+
+sc:Device-10170202
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "a60b7e07-fce7-4de0-8316-af388a4aa86d"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170202"^^xsd:string ;
+      sc:uri  "10170202"^^xsd:string .
+
+sc:Device-10170203
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "2d6d2996-0296-4eed-adc1-3ff4e64ab036"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170203"^^xsd:string ;
+      sc:uri  "10170203"^^xsd:string .
+
+sc:Device-10170204
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "8e4759b2-7837-4d2d-afad-d7c2c8319201"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170204"^^xsd:string ;
+      sc:uri  "10170204"^^xsd:string .
+
+sc:Device-10170205
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "a71103e6-90d9-4b37-98d3-11c4bf8fbcc2"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170205"^^xsd:string ;
+      sc:uri  "10170205"^^xsd:string .
+
+sc:Device-10170206
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "fd754f8a-3d0f-4adb-b678-4e1f26c59cc7"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170206"^^xsd:string ;
+      sc:uri  "10170206"^^xsd:string .
+
+sc:Device-10170207
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "f06bd865-fd11-469d-a9ac-472eac71cab5"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170207"^^xsd:string ;
+      sc:uri  "10170207"^^xsd:string .
+
+sc:Device-10170208
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ee8312d2-a170-47eb-8068-2e6b5beddf23"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170208"^^xsd:string ;
+      sc:uri  "10170208"^^xsd:string .
+
+sc:Device-10170209
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ad88ab01-243a-4d5b-bee6-7b30633fcf69"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170209"^^xsd:string ;
+      sc:uri  "10170209"^^xsd:string .
+
+sc:Device-10170302
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "a476efc5-45b9-4e51-aa63-c604bcabd2cc"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170302"^^xsd:string ;
+      sc:uri  "10170302"^^xsd:string .
+
+sc:Device-10170303
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "4df56117-68e3-47b4-9952-55d3d4a98764"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170303"^^xsd:string ;
+      sc:uri  "10170303"^^xsd:string .
+
+sc:Device-10170304
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "50068ac7-c9e6-4d29-8793-3fe758d2d501"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170304"^^xsd:string ;
+      sc:uri  "10170304"^^xsd:string .
+
+sc:Device-10170305
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "49449a24-5096-4998-afe5-215dcf800d27"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170305"^^xsd:string ;
+      sc:uri  "10170305"^^xsd:string .
+
+sc:Device-10170306
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "4f4e0c2a-4129-48d2-896e-9aa4b0202774"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170306"^^xsd:string ;
+      sc:uri  "10170306"^^xsd:string .
+
+sc:Device-10170307
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "183024b8-4487-4c49-991c-3f2dd93d7a1a"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170307"^^xsd:string ;
+      sc:uri  "10170307"^^xsd:string .
+
+sc:Device-10170308
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "1ad558f1-a4f5-46b6-8b4d-5054dbd4159c"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "10170308"^^xsd:string ;
+      sc:uri  "10170308"^^xsd:string .
+
+sc:Device-23-01
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "3423d86d-0e41-49d3-962d-5392eb48376f"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "23-01"^^xsd:string ;
+      sc:uri  "23-01"^^xsd:string .
+
+sc:Device-23-02
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ac434c12-e222-4c43-92a6-8939ef0529ac"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "23-02"^^xsd:string ;
+      sc:uri  "23-02"^^xsd:string .
+
+sc:Device-23-03
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "5957576b-93e5-401e-bb10-3cdd5c022408"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "23-03"^^xsd:string ;
+      sc:uri  "23-03"^^xsd:string .
+
+sc:Device-23-04
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "2d5dd489-7ca1-4a6f-a85e-2697fd5890cf"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "23-04"^^xsd:string ;
+      sc:uri  "23-04"^^xsd:string .
+
+sc:Device-23-05
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "a7acf3ab-c008-43c7-8dda-b824ea7c7abe"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "23-05"^^xsd:string ;
+      sc:uri  "23-05"^^xsd:string .
+
+sc:Device-DCTN102T
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "167cd504-4111-4716-b08c-ea37be50917e"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "DCTN102T"^^xsd:string ;
+      sc:uri  "DCTN102T"^^xsd:string .
+
+sc:Device-DCTN122T
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ad160153-d443-48de-aad1-92e01922de08"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "DCTN122T"^^xsd:string ;
+      sc:uri  "DCTN122T"^^xsd:string .
+
+sc:Device-Sweetfeedback_device_1
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "ae3f073b-94a7-4cae-b05c-8cdacaa0e384"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "Sweetfeedback_device_1"^^xsd:string ;
+      sc:uri  "Sweetfeedback_device_1"^^xsd:string .
+
+sc:Device-Sweetfeedback_device_2
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "2c15b071-43ab-4c43-bfe5-9ad3086a3ec9"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "Sweetfeedback_device_2"^^xsd:string ;
+      sc:uri  "Sweetfeedback_device_2"^^xsd:string .
+
+sc:Device-Sweetfeedback_device_3
+      rdf:type sc:FireflyDevice ;
+      sc:hasGUID "b153bc80-8f3b-4739-8ee0-41df1cd2f824"^^xsd:string ;
+      sc:locatedAt
+              [] ;
+      sc:printName "Sweetfeedback_device_3"^^xsd:string ;
+      sc:uri  "Sweetfeedback_device_3"^^xsd:string .
 
 sc:DeviceAgent-5a4d375c-9f89-485a-8ccc-a11bb527f2a4
       rdf:type sc:DeviceAgent ;
@@ -368,8 +671,7 @@ sc:Location-122
       sc:printName "Ted's office"^^xsd:string .
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsDeviceInferredTriples>
-      rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> .
+      rdf:type owl:Ontology .
 
 []    rdf:type sc:Sensor .
 
