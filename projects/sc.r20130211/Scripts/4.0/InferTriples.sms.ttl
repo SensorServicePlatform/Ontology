@@ -233,23 +233,6 @@ InferTriples:BindGraphUri
                           ])
               ] .
 
-InferTriples:ConstructImports
-      rdf:type sml:ApplyConstruct ;
-      sm:next InferTriples:ApplyTopSPIN ;
-      sml:constructQuery
-              [ rdf:type sp:Construct ;
-                sp:templates ([ sp:object
-                                    [ sp:varName "mappingGraphUri"^^xsd:string
-                                    ] ;
-                            sp:predicate owl:imports ;
-                            sp:subject
-                                    [ sp:varName "dataGraphUri"^^xsd:string
-                                    ]
-                          ]) ;
-                sp:where ()
-              ] ;
-      sml:replace "true"^^xsd:boolean .
-
 InferTriples:ExportInferredTriples
       rdf:type sml:ExportToRDFFile ;
       sm:next InferTriples:AddDestinationOntologyAsImportToInferredTriplesFile ;
@@ -359,7 +342,7 @@ InferTriples:InferTriples
 
 InferTriples:LoadDataFile
       rdf:type sml:ImportRDFFromWorkspace ;
-      sm:next InferTriples:ApplyTopSPIN ;
+      sm:next InferTriples:AddMappingFileAsImportToOutputFile ;
       sml:baseURI "?dataBaseUri"^^xsd:string ;
       sml:baseURI
               [ rdf:type sp:Select ;
