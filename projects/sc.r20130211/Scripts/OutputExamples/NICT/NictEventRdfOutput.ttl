@@ -1,0 +1,39 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventRdfOutput
+
+@prefix json:    <http://topbraid.org/json#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventRdfOutput>
+      rdf:type owl:Ontology .
+
+[]    rdf:type json:Event ;
+      json:_id "112ef3df2153ae4810eab166"^^xsd:string ;
+      json:name "test"^^xsd:string ;
+      json:observation
+              [ rdf:type json:Observation ;
+                json:_members ("112ef3df2153ae4810eab167"^^xsd:string "112ef3df2153ae4810eab168"^^xsd:string) ;
+                json:_what
+                        [ rdf:type json:_What ;
+                          json:names ("precipitation_hour"^^xsd:string "precipitation_max_day"^^xsd:string) ;
+                          json:units ("mm/h"^^xsd:string "mm/day"^^xsd:string) ;
+                          json:values (461.5 "550"^^xsd:decimal)
+                        ] ;
+                json:_when
+                        [ rdf:type json:_When ;
+                          json:time "2012-11-17T21:00:00Z"^^xsd:string ;
+                          json:type "TimeStamp"^^xsd:string
+                        ] ;
+                json:_where
+                        [ rdf:type json:_Where ;
+                          json:coordinates ("56"^^xsd:decimal -13.1) ;
+                          json:type "Point"^^xsd:string
+                        ] ;
+                json:_who
+                        [ rdf:type json:_Who ;
+                          json:refers "http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184"^^xsd:string ;
+                          json:type "URL"^^xsd:string
+                        ]
+              ] .
