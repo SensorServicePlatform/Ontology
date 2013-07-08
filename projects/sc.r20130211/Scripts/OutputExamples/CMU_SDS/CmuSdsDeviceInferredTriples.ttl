@@ -1,4 +1,5 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsDeviceInferredTriples
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
 
 @prefix MapDevicesSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapCmuSdsDevicesSPIN#> .
 @prefix afn:     <http://jena.hpl.hp.com/ARQ/function#> .
@@ -671,7 +672,8 @@ sc:Location-122
       sc:printName "Ted's office"^^xsd:string .
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsDeviceInferredTriples>
-      rdf:type owl:Ontology .
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> .
 
 []    rdf:type sc:Sensor .
 
