@@ -1,15 +1,17 @@
-# Note that the url passed to the url query parameter must be HTML encoded, 
-i.e., you must replace & with %26
+# Note that the url passed to the jsonInputUrl query parameter must be HTML encoded, 
+i.e., you must replace '&' with '%26'
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="http://cmu-sds.herokuapp.com/get_devices"
+Demo
+==
+http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology&jsonRootClass=Device&jsonInputUrl="http://cmu-sds.herokuapp.com/get_devices"
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000%26end_time=1359582134000"
+http://localhost:8083/tbl/sparqlmotion?id=InferTriples
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/Notes/nict_sensor_measurements_json.txt"
+Misc.
+==
+http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology&jsonInputUrl="http://cmu-sds.herokuapp.com/sensor_readings/23100015?start_time=1359581004000%26end_time=1359582134000"
 
-http://localhost:8083/tbl/sparqlmotion?id=GetRdfData&jsonUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/Notes/nict_event_json.txt"
+http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology&jsonInputUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/Notes/SampleJSON/nict_sensor_measurements_json.txt"
 
+http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology&jsonInputUrl="file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/Notes/SampleJSON/nict_event_json.txt"
 
-
-
-http://localhost:8083/tbl/sparqlmotion?id=GenerateJsonOntology
