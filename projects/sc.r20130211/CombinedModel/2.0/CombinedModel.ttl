@@ -1,0 +1,650 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0
+# imports: http://data.qudt.org/qudt/owl/1.0.0/quantity.owl
+# imports: http://geovocab.org/spatial
+# imports: http://purl.org/dc/dcam/
+# imports: http://purl.org/dc/dcmitype/
+# imports: http://purl.org/dc/terms/
+# imports: http://purl.org/vocab/vann/
+# imports: http://qudt.org/vocab/unit
+# imports: http://rdfs.org/sioc/ns
+# imports: http://www.geonames.org/ontology
+# imports: http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/vcard/ns
+# imports: http://www.w3.org/2007/05/powder-s
+# imports: http://www.w3.org/ns/adms
+# imports: http://www.w3.org/ns/dcat
+# imports: http://xmlns.com/foaf/0.1/
+
+# c14n-version: 3
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#> .
+@prefix spatial: <http://geovocab.org/spatial#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0>
+  rdf:type owl:Ontology ;
+  owl:imports <http://data.qudt.org/qudt/owl/1.0.0/quantity.owl> ;
+  owl:imports <http://geovocab.org/spatial> ;
+  owl:imports <http://purl.org/dc/dcam/> ;
+  owl:imports <http://purl.org/dc/dcmitype/> ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://purl.org/vocab/vann/> ;
+  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://rdfs.org/sioc/ns> ;
+  owl:imports <http://www.geonames.org/ontology> ;
+  owl:imports <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/vcard/ns> ;
+  owl:imports <http://www.w3.org/2007/05/powder-s> ;
+  owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <http://xmlns.com/foaf/0.1/> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+sc:ActuationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:Actuator
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+.
+sc:ComplexDevice
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Device ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComplexSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComplexService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComputationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:ComputerProgram
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:InformationArtifact ;
+.
+sc:Device
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:DeviceAgent
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:TimeStamp ;
+      owl:onProperty sc:createdAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:TimeStamp ;
+      owl:onProperty sc:updatedAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:createdAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:deviceGuid ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:guid ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:locationId ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:metadata ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:networkAddress ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:updatedAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:uri ;
+    ] ;
+.
+sc:DeviceRegistrationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:RegistryService ;
+.
+sc:DeviceRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:ResourceRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Device ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:Event
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:TimeStamp ;
+      owl:onProperty sc:hasTimeStamp ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:boolean ;
+      owl:onProperty sc:isHazard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              sc:Resource
+              sc:Service
+              sc:Place
+              sc:Event
+            ) ;
+        ] ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasTimeStamp ;
+    ] ;
+.
+sc:FireflyDevice
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:uri ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty sc:isAssociatedWith ;
+      owl:someValuesFrom sc:DeviceAgent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty sc:isAssociatedWith ;
+      owl:someValuesFrom sc:Location ;
+    ] ;
+.
+sc:Image
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:anyURI ;
+      owl:onProperty sc:hasPayload ;
+    ] ;
+.
+sc:InformationArtifact
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:Location
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:altitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:format ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:latitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:longitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+.
+sc:MeasurementDevice
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+.
+sc:MeasurementService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:MeasurementValuePair
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
+      owl:onProperty <http://qudt.org/schema/qudt#unit> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              xsd:float
+              xsd:boolean
+            ) ;
+        ] ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://qudt.org/schema/qudt#unit> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+.
+sc:Person
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:Place
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+.
+sc:RegistryService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:Resource
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Place ;
+      owl:onProperty sc:locatedAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              sc:ServiceConductor
+              sc:ServiceProvider
+            ) ;
+        ] ;
+      owl:onProperty sc:playsRoleOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+.
+sc:ResourceRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:Sensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:MeasurementDevice ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://data.nasa.gov/qudt/owl/qudt#QuantityKind> ;
+      owl:onProperty sc:measures ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:ServiceProvider ;
+      owl:onProperty sc:playsRoleOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:shortName ;
+    ] ;
+.
+sc:SensorRegistrationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:RegistryService ;
+.
+sc:SensorRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:ResourceRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:Service
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:InformationArtifact ;
+      owl:onProperty sc:consumes ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:InformationArtifact ;
+      owl:onProperty sc:produces ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+.
+sc:ServiceConductor
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:orchestrates ;
+    ] ;
+.
+sc:ServiceProvider
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:provides ;
+    ] ;
+.
+sc:TemperatureSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Restriction ;
+      owl:hasValue <http://data.nasa.gov/qudt/owl/quantity#ThermodynamicTemperature> ;
+      owl:onProperty sc:measures ;
+    ] ;
+.
+sc:TimeStamp
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+.
+sc:altitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:composedOf
+  rdf:type owl:TransitiveProperty ;
+  owl:inverseOf sc:isPartOf ;
+.
+sc:consumes
+  rdf:type rdf:Property ;
+.
+sc:createdAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:deviceGuid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:format
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:from
+  rdf:type rdf:Property ;
+.
+sc:guid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:hasAlias
+  rdf:type rdf:Property ;
+.
+sc:hasGUID
+  rdf:type rdf:Property ;
+.
+sc:hasLabel
+  rdf:type rdf:Property ;
+.
+sc:hasPayload
+  rdf:type rdf:Property ;
+.
+sc:hasTimeStamp
+  rdf:type rdf:Property ;
+.
+sc:id
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
+.
+sc:isAssociatedWith
+  rdf:type owl:SymmetricProperty ;
+.
+sc:isHazard
+  rdf:type rdf:Property ;
+.
+sc:isPartOf
+  rdf:type owl:TransitiveProperty ;
+.
+sc:latitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:locatedAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:locationId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
+.
+sc:longitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:measures
+  rdf:type rdf:Property ;
+  rdfs:label "measures"^^xsd:string ;
+  core:prefLabel "measures"^^xsd:string ;
+.
+sc:metadata
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:networkAddress
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:orchestrates
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:playsRoleOf
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:printName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:produces
+  rdf:type rdf:Property ;
+.
+sc:provides
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:shortName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:to
+  rdf:type rdf:Property ;
+.
+sc:updatedAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:uri
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.

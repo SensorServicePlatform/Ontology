@@ -9,6 +9,19 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >108</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >238</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >521</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >193</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Service"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >44</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >206</cd:width>
@@ -22,14 +35,40 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
+        >36</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >226</cd:width>
+        >157</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1049</cd:y>
+        >744</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >570</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor"/>
+        >1271</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ResourceRegistry"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >186</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1217</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >910</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SensorRegistry"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >206</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1217</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >528</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -48,14 +87,14 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >152</cd:height>
+        >76</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >238</cd:width>
+        >226</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >744</cd:y>
+        >1049</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >701</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
+        >570</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -63,12 +102,12 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >36</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >157</cd:width>
+        >185</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >744</cd:y>
+        >951</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1271</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ResourceRegistry"/>
+        >649</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementDevice"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -100,40 +139,14 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
+        >76</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >183</cd:width>
+        >221</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >597</cd:y>
+        >408</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >524</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceConductor"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >185</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >951</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >649</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementDevice"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >186</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1217</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >910</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SensorRegistry"/>
+        >1152</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -152,6 +165,33 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >186</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >951</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >841</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceRegistry"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>CombinedModel Diagram 3</rdfs:label>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >164</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >690</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >494</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >108</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >227</cd:width>
@@ -160,6 +200,19 @@
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >1158</cd:x>
         <cd:class rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >140</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >695</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1397</cd:x>
+        <cd:class rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -175,7 +228,6 @@
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceAgent"/>
       </cd:URINode>
     </cd:nodes>
-    <cd:selectedResource rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -189,85 +241,7 @@
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device"/>
       </cd:URINode>
     </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >108</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >238</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >521</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >193</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Service"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >164</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >690</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >494</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
-      </cd:URINode>
-    </cd:nodes>
-    <rdfs:label>CombinedModel Diagram 3</rdfs:label>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >221</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >408</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1152</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >162</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1217</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >741</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#HumiditySensor"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >186</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >951</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >841</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceRegistry"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >206</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1217</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >528</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
-      </cd:URINode>
-    </cd:nodes>
+    <cd:selectedResource rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -284,32 +258,44 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >152</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >238</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >744</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >701</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >183</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >597</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >524</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceConductor"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >36</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >140</cd:width>
+        >162</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >695</cd:y>
+        >1217</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1397</cd:x>
-        <cd:class rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
+        >741</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#HumiditySensor"/>
       </cd:URINode>
     </cd:nodes>
   </cd:Diagram>
   <cd:Diagram>
-    <rdfs:label>CombinedModel Diagram 5</rdfs:label>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >122</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >239</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >275</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1315</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Resource"/>
-      </cd:URINode>
-    </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -328,64 +314,25 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >108</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >397</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >555</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >749</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >175</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >652</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1609</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementDevice"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >196</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >722</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1753</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexDevice"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >146</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >382</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >392</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#RegistryService"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >108</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >238</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >334</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >747</cd:x>
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Service"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >76</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >221</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >504</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1352</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -406,6 +353,19 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >44</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >154</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >220</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1043</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >213</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >757</cd:y>
@@ -414,7 +374,47 @@
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#TimeStamp"/>
       </cd:URINode>
     </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >198</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >592</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >344</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexService"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >196</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >722</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1753</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexDevice"/>
+      </cd:URINode>
+    </cd:nodes>
     <cd:selectedResource rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >102</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >562</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1670</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>CombinedModel Diagram 5</rdfs:label>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -433,12 +433,64 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >36</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >169</cd:width>
+        >103</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >352</cd:y>
+        >465</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1073</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact"/>
+        >1673</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Person"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >175</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >652</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1609</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementDevice"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >146</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >382</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >392</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#RegistryService"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >175</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >459</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >368</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComputationService"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >122</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >239</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >275</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1315</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Resource"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -459,265 +511,29 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >36</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >102</cd:width>
+        >169</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >562</cd:y>
+        >352</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1670</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device"/>
+        >1073</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
+        >108</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >175</cd:width>
+        >397</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >459</cd:y>
+        >555</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >368</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComputationService"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >103</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >465</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1673</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Person"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >154</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >220</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1043</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >198</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >592</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >344</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexService"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >221</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >504</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1352</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
+        >749</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
       </cd:URINode>
     </cd:nodes>
   </cd:Diagram>
   <cd:Diagram>
-    <cd:selectedResource rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >140</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >922</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1132</cd:x>
-        <cd:class rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >196</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >691</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >114</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexDevice"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >181</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1110</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >976</cd:x>
-        <cd:class rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >221</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >456</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1084</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >226</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >986</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >460</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >213</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >786</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1092</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#TimeStamp"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >188</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >215</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >559</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1087</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceAgent"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >162</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1114</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >466</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#HumiditySensor"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >186</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1000</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >832</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SensorRegistry"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >164</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >568</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >492</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >44</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >236</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1113</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >656</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#TemperatureSensor"/>
-      </cd:URINode>
-    </cd:nodes>
-    <rdfs:label>CombinedModel Diagram 4</rdfs:label>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >113</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >802</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >192</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Actuator"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >152</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >238</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >679</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >643</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >157</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >880</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >882</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ResourceRegistry"/>
-      </cd:URINode>
-    </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -747,27 +563,27 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >36</cd:height>
+        >44</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >102</cd:width>
+        >186</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >801</cd:y>
+        >1000</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >413</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device"/>
+        >832</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SensorRegistry"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >76</cd:height>
+        >188</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >171</cd:width>
+        >215</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >867</cd:y>
+        >559</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >138</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice"/>
+        >1087</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DeviceAgent"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -775,12 +591,12 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >44</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >183</cd:width>
+        >236</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >488</cd:y>
+        >1113</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >489</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceConductor"/>
+        >656</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#TemperatureSensor"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -801,12 +617,143 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >44</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >206</cd:width>
+        >164</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >568</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >492</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceProvider"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >181</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1110</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >976</cd:x>
+        <cd:class rdf:resource="http://qudt.org/schema/qudt#TemperatureUnit"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >76</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >171</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >867</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >138</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#FireflyDevice"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:selectedResource rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >213</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >786</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1092</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#TimeStamp"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >76</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >226</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >986</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >460</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >113</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >802</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >192</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Actuator"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >157</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >880</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >882</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ResourceRegistry"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >196</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >691</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >114</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexDevice"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >162</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >1114</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >253</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
+        >466</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#HumiditySensor"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >140</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >922</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1132</cd:x>
+        <cd:class rdf:resource="http://qudt.org/schema/qudt#TimeUnit"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >152</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >238</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >679</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >643</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -820,6 +767,59 @@
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >732</cd:x>
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Resource"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >76</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >221</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >456</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1084</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Place"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >36</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >102</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >801</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >413</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Device"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >183</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >488</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >489</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ServiceConductor"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>CombinedModel Diagram 4</rdfs:label>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >44</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >206</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1114</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >253</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#ComplexSensor"/>
       </cd:URINode>
     </cd:nodes>
   </cd:Diagram>
