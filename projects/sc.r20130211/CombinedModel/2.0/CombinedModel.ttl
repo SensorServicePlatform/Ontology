@@ -1,10 +1,10 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0
-# imports: http://data.qudt.org/qudt/owl/1.0.0/quantity.owl
 # imports: http://geovocab.org/spatial
 # imports: http://purl.org/dc/dcam/
 # imports: http://purl.org/dc/dcmitype/
 # imports: http://purl.org/dc/terms/
 # imports: http://purl.org/vocab/vann/
+# imports: http://qudt.org/1.1/schema/quantity
 # imports: http://qudt.org/vocab/unit
 # imports: http://rdfs.org/sioc/ns
 # imports: http://www.geonames.org/ontology
@@ -27,12 +27,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0>
   rdf:type owl:Ontology ;
-  owl:imports <http://data.qudt.org/qudt/owl/1.0.0/quantity.owl> ;
   owl:imports <http://geovocab.org/spatial> ;
   owl:imports <http://purl.org/dc/dcam/> ;
   owl:imports <http://purl.org/dc/dcmitype/> ;
   owl:imports <http://purl.org/dc/terms/> ;
   owl:imports <http://purl.org/vocab/vann/> ;
+  owl:imports <http://qudt.org/1.1/schema/quantity> ;
   owl:imports <http://qudt.org/vocab/unit> ;
   owl:imports <http://rdfs.org/sioc/ns> ;
   owl:imports <http://www.geonames.org/ontology> ;
@@ -425,8 +425,18 @@ sc:Sensor
   rdfs:subClassOf sc:MeasurementDevice ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://data.nasa.gov/qudt/owl/qudt#QuantityKind> ;
-      owl:onProperty sc:measures ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityKind> ;
+      owl:onProperty sc:measuresQuantityKind ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityValue> ;
+      owl:onProperty sc:measuresValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
+      owl:onProperty sc:measuresInUnit ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -609,6 +619,15 @@ sc:measures
   rdf:type rdf:Property ;
   rdfs:label "measures"^^xsd:string ;
   core:prefLabel "measures"^^xsd:string ;
+.
+sc:measuresInUnit
+  rdf:type rdf:Property ;
+.
+sc:measuresQuantityKind
+  rdf:type rdf:Property ;
+.
+sc:measuresValue
+  rdf:type rdf:Property ;
 .
 sc:metadata
   rdf:type owl:DatatypeProperty ;
