@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel
 # imports: http://geovocab.org/spatial
 # imports: http://purl.org/dc/dcam/
 # imports: http://purl.org/dc/dcmitype/
@@ -23,10 +23,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#> .
+@prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#> .
 @prefix spatial: <http://geovocab.org/spatial#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-<http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0>
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel>
   rdf:type owl:Ontology ;
   owl:imports <http://geovocab.org/spatial> ;
   owl:imports <http://purl.org/dc/dcam/> ;
@@ -261,30 +261,6 @@ sc:Event
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:hasTimeStamp ;
-    ] ;
-.
-sc:FireflyDevice
-  rdf:type owl:Class ;
-  rdfs:subClassOf sc:Device ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:printName ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:uri ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty sc:isAssociatedWith ;
-      owl:someValuesFrom sc:DeviceAgent ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty sc:isAssociatedWith ;
-      owl:someValuesFrom sc:Location ;
     ] ;
 .
 sc:HumiditySensor
