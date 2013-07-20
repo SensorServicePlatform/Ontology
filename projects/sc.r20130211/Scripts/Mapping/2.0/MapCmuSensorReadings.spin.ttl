@@ -1,0 +1,156 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Mapping/2.0/MapCmuSensorReadings
+# imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/spin/spinmapl
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsSensorReadingOntology
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsSensorReadingRdfOutput
+
+# c14n-version: 3
+@prefix MapCmuSensorReadings: <http://www.cmusv.edu/SmartCommunity/Mapping/2.0/MapCmuSensorReadings#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://topbraid.org/json#SensorReading>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Accelerometer ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Accelerometer> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Event ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-HumiditySensor ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#HumiditySensor> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Accelerometer ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#acc_x> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measuresValue> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Accelerometer ;
+      spinmap:expression [
+          rdf:type spinmapl:constantResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmapl:result <http://qudt.org/vocab/quantity#LinearAcceleration> ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#acc_x> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measuresQuantityKind> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Event ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#timestamp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasTimeStamp> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-HumiditySensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#humidity> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measuresValue> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-HumiditySensor ;
+      spinmap:expression [
+          rdf:type spinmapl:constantResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmapl:result <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#humidity> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measuresQuantityKind> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-3-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Accelerometer ;
+      spinmap:expression [
+          rdf:type spinmapl:buildURI2 ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 spin:_arg2 ;
+          spinmap:source spin:_arg3 ;
+          spinmapl:template "sc:Event{?1}-{?2}"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#id> ;
+      spinmap:sourcePredicate2 <http://topbraid.org/json#timestamp> ;
+      spinmap:sourcePredicate3 rdfs:label ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#isAssociatedWith> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-3-1 ;
+      spinmap:context MapCmuSensorReadings:SensorReading-Accelerometer ;
+      spinmap:expression [
+          rdf:type spinmapl:buildURI3 ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 spin:_arg1 ;
+          sp:arg3 spin:_arg2 ;
+          spinmap:source spin:_arg3 ;
+          spinmapl:template "sc:Event{?1}-{?2}"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate2 <http://topbraid.org/json#id> ;
+      spinmap:sourcePredicate3 <http://topbraid.org/json#timestamp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#isAssociatedWith> ;
+    ] ;
+.
+<http://www.cmusv.edu/SmartCommunity/Mapping/2.0/MapCmuSensorReadings>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://topbraid.org/spin/spinmapl> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsSensorReadingOntology> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/CmuSdsSensorReadingRdfOutput> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+MapCmuSensorReadings:SensorReading-Accelerometer
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#SensorReading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI2 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      sp:arg2 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:AccelerometerXReading{?1}-{?2}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Accelerometer> ;
+.
+MapCmuSensorReadings:SensorReading-Event
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#SensorReading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI2 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      sp:arg2 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:Event{?1}-{?2}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event> ;
+.
+MapCmuSensorReadings:SensorReading-HumiditySensor
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#SensorReading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI2 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      sp:arg2 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:HumidityReading{?1}-{?2}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#HumiditySensor> ;
+.
