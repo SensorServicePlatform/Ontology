@@ -7,6 +7,50 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DateFormat>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#hasGUID>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locatedAt>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#region>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locatedAt>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#region>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://qudt.org/schema/qudt#quantityValue>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty <http://qudt.org/schema/qudt#quantityValue>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#hasGUID>
+              ] .
+
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event>
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -17,6 +61,28 @@
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation> ;
                 owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#observation>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementValuePair>
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locatedAt>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#locatedAt>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#region>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#region>
               ] .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Member>
@@ -70,6 +136,155 @@
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#where>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Publisher>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Resource> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#organization>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#organization>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#country>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#country>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#contact>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#contact>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor>
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementValuePair> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#measures>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#status>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#status>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#createdAt>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#createdAt>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SensorInfo>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorName>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#dateFormat>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#spatCoverage>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorName>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Publisher> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#publisher>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorId>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DateFormat> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#dateFormat>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SpatCoverage> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#spatCoverage>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#contact>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#title>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#publisher>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorId>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#contact>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#title>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SpatCoverage>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#long>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#lat>
               ] .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#What>
@@ -158,7 +373,22 @@
                 owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
               ] .
 
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#contact>
+      rdf:type rdf:Property .
+
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#coordinates>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#country>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#dateFormat>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#lat>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#long>
       rdf:type rdf:Property .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#member>
@@ -170,10 +400,34 @@
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#observation>
       rdf:type rdf:Property .
 
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#organization>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#publisher>
+      rdf:type rdf:Property .
+
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
       rdf:type rdf:Property .
 
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#region>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorId>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#sensorName>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#spatCoverage>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#status>
+      rdf:type rdf:Property .
+
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#time>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#title>
       rdf:type rdf:Property .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
