@@ -1,0 +1,339 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN
+# imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/spin/spinmapl
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventOntology
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictSensorOntology
+
+@prefix MapNictDataSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spinmap:  <http://spinrdf.org/spinmap#> .
+@prefix spinmapl:  <http://topbraid.org/spin/spinmapl#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://topbraid.org/json#Event>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Event-Event ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Event-Event ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_id> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#hasGUID>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Event-Event ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#observation> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#observation>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Event-Event ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#name> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:Event-Event ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://topbraid.org/json#Observation>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_members> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#member>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_what> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#what>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_when> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#when>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_where> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#where>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#_who> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#who>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:Observation-Observation ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] .
+
+<http://topbraid.org/json#_What>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_What-What ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_What-What ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#values> ;
+                spinmap:targetPredicate1
+                        <http://qudt.org/schema/qudt#value>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_What-What ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#units> ;
+                spinmap:targetPredicate1
+                        <http://qudt.org/schema/qudt#unit>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_What-What ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#names> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:_What-What ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#What> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://topbraid.org/json#_When>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_When-When ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_When-When ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#type> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_When-When ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#time> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#time>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:_When-When ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#When> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://topbraid.org/json#_Where>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Where-Where ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#type> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Where-Where ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#coordinates> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#coordinates>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Where-Where ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:_Where-Where ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Where> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://topbraid.org/json#_Who>
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Who-Who ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        rdfs:label ;
+                spinmap:targetPredicate1
+                        rdfs:label
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Who-Who ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#type> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-1-1 ;
+                spinmap:context MapNictDataSPIN:_Who-Who ;
+                spinmap:expression spin:_arg1 ;
+                spinmap:sourcePredicate1
+                        <http://topbraid.org/json#refers> ;
+                spinmap:targetPredicate1
+                        <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
+              ] ;
+      spinmap:rule
+              [ rdf:type spinmap:Mapping-0-1 ;
+                spinmap:context MapNictDataSPIN:_Who-Who ;
+                spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Who> ;
+                spinmap:targetPredicate1
+                        rdf:type
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictSensorOntology> , <http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventOntology> , <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT> , <http://topbraid.org/spin/spinmapl> , <http://spinrdf.org/spin> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+MapNictDataSPIN:Event-Event
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#Event> ;
+      spinmap:target
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://topbraid.org/json#name> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Event-{?1}"^^xsd:string
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event> .
+
+MapNictDataSPIN:Observation-Observation
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#Observation> ;
+      spinmap:target
+              [ rdf:type spinmapl:self ;
+                spinmap:source spinmap:_source
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation> .
+
+MapNictDataSPIN:_What-What
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#_What> ;
+      spinmap:target
+              [ rdf:type spinmapl:self ;
+                spinmap:source spinmap:_source
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#What> .
+
+MapNictDataSPIN:_When-When
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#_When> ;
+      spinmap:target
+              [ rdf:type spinmapl:self ;
+                spinmap:source spinmap:_source
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#When> .
+
+MapNictDataSPIN:_Where-Where
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#_Where> ;
+      spinmap:target
+              [ rdf:type spinmapl:self ;
+                spinmap:source spinmap:_source
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Where> .
+
+MapNictDataSPIN:_Who-Who
+      rdf:type spinmap:Context ;
+      spinmap:sourceClass <http://topbraid.org/json#_Who> ;
+      spinmap:target
+              [ rdf:type spinmapl:self ;
+                spinmap:source spinmap:_source
+              ] ;
+      spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Who> .

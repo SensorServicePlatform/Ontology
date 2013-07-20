@@ -1,0 +1,197 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1
+
+@prefix nict:    <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/NICT#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Event>
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#observation>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Member>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation>
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#what>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#who>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#when>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Member> ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#member>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#where>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#who>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#when>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#what>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#where>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#What>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://qudt.org/schema/qudt#value>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://qudt.org/schema/qudt#unit>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#When>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#time>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#time>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Where>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#coordinates>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Who>
+      rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#InformationArtifact> ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
+              ] .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#coordinates>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#member>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#name>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#observation>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#refers>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#time>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#type>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#what>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#when>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#where>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#who>
+      rdf:type rdf:Property .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT>
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
