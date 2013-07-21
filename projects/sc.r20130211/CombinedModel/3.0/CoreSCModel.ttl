@@ -57,8 +57,18 @@ sc:Accelerometer
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#LinearAcceleration> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#LinearAcceleration> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
@@ -80,8 +90,18 @@ sc:AudioSensor
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#Pressure> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#Pressure> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
@@ -272,8 +292,18 @@ sc:HumiditySensor
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
@@ -300,8 +330,18 @@ sc:LightSensor
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#Illuminance> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#Illuminance> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
@@ -342,36 +382,6 @@ sc:MeasurementDevice
 sc:MeasurementService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
-.
-sc:MeasurementValuePair
-  rdf:type owl:Class ;
-  rdfs:subClassOf sc:InformationArtifact ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
-      owl:onProperty <http://qudt.org/schema/qudt#unit> ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom [
-          rdf:type owl:Class ;
-          owl:unionOf (
-              xsd:float
-              xsd:boolean
-            ) ;
-        ] ;
-      owl:onProperty <http://qudt.org/schema/qudt#value> ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty <http://qudt.org/schema/qudt#unit> ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty <http://qudt.org/schema/qudt#value> ;
-    ] ;
 .
 sc:Person
   rdf:type owl:Class ;
@@ -415,8 +425,18 @@ sc:PressureSensor
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#AtmosphericPressure> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#AtmosphericPressure> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
@@ -478,18 +498,8 @@ sc:Sensor
   rdfs:subClassOf sc:MeasurementDevice ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityKind> ;
-      owl:onProperty sc:measuresQuantityKind ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityValue> ;
-      owl:onProperty sc:measuresValue ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
-      owl:onProperty sc:measuresInUnit ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Quantity> ;
+      owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -583,8 +593,18 @@ sc:TemperatureSensor
           sc:Sensor
           [
             rdf:type owl:Restriction ;
-            owl:hasValue <http://qudt.org/vocab/quantity#ThermodynamicTemperature> ;
-            owl:onProperty sc:measuresQuantityKind ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#ThermodynamicTemperature> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
           ]
         ) ;
     ] ;
