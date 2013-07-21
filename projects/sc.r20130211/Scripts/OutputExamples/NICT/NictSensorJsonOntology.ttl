@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictSensorRdfOutput
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictSensorJsonOntology
 
 @prefix json:    <http://topbraid.org/json#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -6,12 +6,12 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput>
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology>
       rdf:type owl:Ontology .
 
-[]    rdf:type json:Sensor ;
+[]    rdf:type json:Object ;
       json:created_at "2013-04-01T12:00:00Z"^^xsd:string ;
-      json:measurements ([ rdf:type json:Measurement ;
+      json:measurements ([ rdf:type json:Object ;
                   json:cur_val "0"^^xsd:decimal ;
                   json:geo_loc "POINT(141.935, 45.52)"^^xsd:string ;
                   json:id "3925544"^^xsd:decimal ;
@@ -23,7 +23,7 @@
                   json:stat_start "1978\\u5e74"^^xsd:string ;
                   json:today_max_val "0"^^xsd:decimal ;
                   json:today_time "00:00:00"^^xsd:string
-                ] [ rdf:type json:Measurement ;
+                ] [ rdf:type json:Object ;
                   json:cur_val "0"^^xsd:decimal ;
                   json:geo_loc "POINT(141.678333, 45.414)"^^xsd:string ;
                   json:id "3925545"^^xsd:decimal ;
@@ -40,10 +40,10 @@
       json:others () ;
       json:req_id "req_01234123412341234"^^xsd:string ;
       json:sensor_info
-              [ rdf:type json:Sensor_Info ;
+              [ rdf:type json:Object ;
                 json:contact "ryonglee@nict.go.jp"^^xsd:string ;
                 json:data_format
-                        [ rdf:type json:Data_Format ;
+                        [ rdf:type json:Object ;
                           json:cur_val "numeric"^^xsd:string ;
                           json:geo_loc "location"^^xsd:string ;
                           json:id "numeric"^^xsd:string ;
@@ -57,7 +57,7 @@
                           json:today_time "time"^^xsd:string
                         ] ;
                 json:publisher
-                        [ rdf:type json:Publisher ;
+                        [ rdf:type json:Object ;
                           json:contact "ryonglee@nict.go.jp"^^xsd:string ;
                           json:country "JP"^^xsd:string ;
                           json:external_link "http://www.much_more_about_us.com"^^xsd:string ;
@@ -66,7 +66,7 @@
                 json:sensor_id "sensor_cpsens_rain_001"^^xsd:string ;
                 json:sensor_name "Rain Sensor "^^xsd:string ;
                 json:spat_coverage
-                        [ rdf:type json:Spat_Coverage ;
+                        [ rdf:type json:Object ;
                           <http://topbraid.org/json#lat.range>
                                   (34.51345 35.623456) ;
                           <http://topbraid.org/json#lon.range>

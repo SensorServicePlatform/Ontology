@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventOntology
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventJsonOntology
 
 @prefix json:    <http://topbraid.org/json#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
@@ -10,8 +10,23 @@ json:Event
       rdf:type rdfs:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty json:name
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
                 owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:observation
+                owl:onProperty json:name
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty json:_id
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty json:_id
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -21,31 +36,11 @@ json:Event
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:_id
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty json:_id
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:name
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty json:name
+                owl:onProperty json:observation
               ] .
 
 json:Observation
       rdf:type rdfs:Class ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom json:_Who ;
-                owl:onProperty json:_who
-              ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom json:_What ;
@@ -53,13 +48,18 @@ json:Observation
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom json:_Where ;
-                owl:onProperty json:_where
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty json:_what
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:_what
+                owl:allValuesFrom json:_Who ;
+                owl:onProperty json:_who
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom json:_When ;
+                owl:onProperty json:_when
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -68,8 +68,8 @@ json:Observation
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom json:_When ;
-                owl:onProperty json:_when
+                owl:allValuesFrom json:_Where ;
+                owl:onProperty json:_where
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -91,8 +91,8 @@ json:_What
       rdf:type rdfs:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty json:values
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty json:units
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -101,21 +101,16 @@ json:_What
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty json:units
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty json:values
               ] .
 
 json:_When
       rdf:type rdfs:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty json:type
+                owl:onProperty json:time
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -125,15 +120,20 @@ json:_When
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty json:time
+                owl:onProperty json:type
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty json:type
               ] .
 
 json:_Where
       rdf:type rdfs:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:type
+                owl:allValuesFrom xsd:decimal ;
+                owl:onProperty json:coordinates
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -142,21 +142,16 @@ json:_Where
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty json:coordinates
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty json:type
               ] .
 
 json:_Who
       rdf:type rdfs:Class ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty json:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty json:type
+                owl:onProperty json:refers
               ] ;
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
@@ -166,7 +161,12 @@ json:_Who
       rdfs:subClassOf
               [ rdf:type owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty json:refers
+                owl:onProperty json:type
+              ] ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty json:type
               ] .
 
 json:_id
@@ -213,6 +213,3 @@ json:units
 
 json:values
       rdf:type rdf:Property .
-
-<http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventOntology>
-      rdf:type owl:Ontology .
