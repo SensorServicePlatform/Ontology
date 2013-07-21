@@ -601,8 +601,10 @@ MapNictDataSPIN:Data_Format-DateFormat
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Data_Format> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:DateFormat-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#DateFormat> .
 
@@ -621,8 +623,10 @@ MapNictDataSPIN:Measurement-MeasurementValuePair
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:MeasurementValuePair-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#MeasurementValuePair> .
 
@@ -630,8 +634,10 @@ MapNictDataSPIN:Observation-Observation
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Observation> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Observation-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Observation> .
 
@@ -639,8 +645,10 @@ MapNictDataSPIN:Publisher-Publisher
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Publisher-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Publisher> .
 
@@ -648,8 +656,10 @@ MapNictDataSPIN:Sensor-Sensor
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Sensor> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Sensor-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Sensor> .
 
@@ -658,7 +668,7 @@ MapNictDataSPIN:Sensor_Info-SensorInfo
       spinmap:sourceClass <http://topbraid.org/json#Sensor_Info> ;
       spinmap:target
               [ rdf:type spinmapl:buildURI1 ;
-                sp:arg1 <http://topbraid.org/json#title> ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
                 spinmap:source spinmap:_source ;
                 spinmapl:template "sc:SensorInfo-{?1}"^^xsd:string
               ] ;
@@ -668,8 +678,10 @@ MapNictDataSPIN:Spat_Coverage-SpatCoverage
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#Spat_Coverage> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:SpatCoverage-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#SpatCoverage> .
 
@@ -677,8 +689,10 @@ MapNictDataSPIN:_What-What
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#_What> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:What-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#What> .
 
@@ -686,8 +700,10 @@ MapNictDataSPIN:_When-When
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#_When> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:When-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#When> .
 
@@ -695,8 +711,10 @@ MapNictDataSPIN:_Where-Where
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#_Where> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Where-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Where> .
 
@@ -704,7 +722,9 @@ MapNictDataSPIN:_Who-Who
       rdf:type spinmap:Context ;
       spinmap:sourceClass <http://topbraid.org/json#_Who> ;
       spinmap:target
-              [ rdf:type spinmapl:self ;
-                spinmap:source spinmap:_source
+              [ rdf:type spinmapl:buildURI1 ;
+                sp:arg1 <http://www.w3.org/2000/01/rdf-schema#label> ;
+                spinmap:source spinmap:_source ;
+                spinmapl:template "sc:Who-{?1}"^^xsd:string
               ] ;
       spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/1.1#Who> .

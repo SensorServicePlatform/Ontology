@@ -9,31 +9,39 @@
 <http://www.cmusv.edu/SmartCommunity/Scripts/Output/NictEventRdfOutput>
       rdf:type owl:Ontology .
 
-[]    rdf:type json:Event ;
-      json:_id "112ef3df2153ae4810eab166"^^xsd:string ;
-      json:name "test"^^xsd:string ;
-      json:observation
-              [ rdf:type json:Observation ;
-                json:_members ("112ef3df2153ae4810eab167"^^xsd:string "112ef3df2153ae4810eab168"^^xsd:string) ;
-                json:_what
-                        [ rdf:type json:_What ;
-                          json:names ("precipitation_hour"^^xsd:string "precipitation_max_day"^^xsd:string) ;
-                          json:units ("mm/h"^^xsd:string "mm/day"^^xsd:string) ;
-                          json:values (461.5 "550"^^xsd:decimal)
-                        ] ;
-                json:_when
-                        [ rdf:type json:_When ;
-                          json:time "2012-11-17T21:00:00Z"^^xsd:string ;
-                          json:type "TimeStamp"^^xsd:string
-                        ] ;
-                json:_where
-                        [ rdf:type json:_Where ;
-                          json:coordinates ("56"^^xsd:decimal -13.1) ;
-                          json:type "Point"^^xsd:string
-                        ] ;
-                json:_who
-                        [ rdf:type json:_Who ;
-                          json:refers "http://172.19.4.84/EventWarehouseView/WorldWeather_View_Rain$id=99543184"^^xsd:string ;
-                          json:type "URL"^^xsd:string
-                        ]
-              ] .
+[]    rdf:type json:Event .
+
+[]    rdf:type json:Observation .
+
+[]    rdf:type json:_What .
+
+[]    rdf:type json:_When .
+
+[]    rdf:type json:_Where .
+
+[]    rdf:type json:_Who .
+
+[] rdf:rest _:b1 .
+[] rdf:first 461.5 .
+_:b1 rdf:rest () .
+_:b1 rdf:first "550"^^xsd:decimal .
+
+[] rdf:rest _:b2 .
+[] rdf:first "mm/h"^^xsd:string .
+_:b2 rdf:rest () .
+_:b2 rdf:first "mm/day"^^xsd:string .
+
+[] rdf:rest _:b3 .
+[] rdf:first "112ef3df2153ae4810eab167"^^xsd:string .
+_:b3 rdf:rest () .
+_:b3 rdf:first "112ef3df2153ae4810eab168"^^xsd:string .
+
+[] rdf:rest _:b4 .
+[] rdf:first "precipitation_hour"^^xsd:string .
+_:b4 rdf:rest () .
+_:b4 rdf:first "precipitation_max_day"^^xsd:string .
+
+[] rdf:rest _:b5 .
+[] rdf:first "56"^^xsd:decimal .
+_:b5 rdf:rest () .
+_:b5 rdf:first -13.1 .
