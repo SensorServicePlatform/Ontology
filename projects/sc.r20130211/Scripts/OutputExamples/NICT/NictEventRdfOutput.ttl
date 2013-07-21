@@ -21,27 +21,22 @@
 
 []    rdf:type json:_Who .
 
-[] rdf:rest _:b1 .
-[] rdf:first 461.5 .
-_:b1 rdf:rest () .
-_:b1 rdf:first "550"^^xsd:decimal .
+[]    rdf:rest ("550"^^xsd:decimal) .
 
-[] rdf:rest _:b2 .
-[] rdf:first "mm/h"^^xsd:string .
-_:b2 rdf:rest () .
-_:b2 rdf:first "mm/day"^^xsd:string .
+[]    rdf:rest ("mm/day"^^xsd:string) .
 
-[] rdf:rest _:b3 .
-[] rdf:first "112ef3df2153ae4810eab167"^^xsd:string .
-_:b3 rdf:rest () .
-_:b3 rdf:first "112ef3df2153ae4810eab168"^^xsd:string .
+[]    rdf:rest ("112ef3df2153ae4810eab168"^^xsd:string) .
 
-[] rdf:rest _:b4 .
-[] rdf:first "precipitation_hour"^^xsd:string .
-_:b4 rdf:rest () .
-_:b4 rdf:first "precipitation_max_day"^^xsd:string .
+[]    rdf:rest ("precipitation_max_day"^^xsd:string) .
 
-[] rdf:rest _:b5 .
-[] rdf:first "56"^^xsd:decimal .
-_:b5 rdf:rest () .
-_:b5 rdf:first -13.1 .
+[]    rdf:rest (-13.1) .
+
+[]    rdf:first "112ef3df2153ae4810eab167"^^xsd:string .
+
+[]    rdf:first 461.5 .
+
+[]    rdf:first "56"^^xsd:decimal .
+
+[]    rdf:first "mm/h"^^xsd:string .
+
+[]    rdf:first "precipitation_hour"^^xsd:string .
