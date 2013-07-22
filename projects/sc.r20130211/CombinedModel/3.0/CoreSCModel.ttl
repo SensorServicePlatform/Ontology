@@ -266,7 +266,7 @@ sc:Event
           owl:unionOf (
               sc:Resource
               sc:Service
-              sc:Place
+              sc:Location
               sc:Event
             ) ;
         ] ;
@@ -352,27 +352,27 @@ sc:Location
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:altitude ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:format ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:altitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:latitude ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:longitude ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:printName ;
     ] ;
 .
 sc:MeasurementDevice
@@ -386,35 +386,6 @@ sc:MeasurementService
 sc:Person
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Resource ;
-.
-sc:Place
-  rdf:type owl:Class ;
-  rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom sc:Event ;
-      owl:onProperty sc:isAssociatedWith ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty sc:hasGUID ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty sc:hasLabel ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:hasGUID ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:isAssociatedWith ;
-    ] ;
 .
 sc:PressureSensor
   rdf:type owl:Class ;
@@ -454,7 +425,7 @@ sc:Resource
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom sc:Place ;
+      owl:allValuesFrom sc:Location ;
       owl:onProperty sc:locatedAt ;
     ] ;
   rdfs:subClassOf [
