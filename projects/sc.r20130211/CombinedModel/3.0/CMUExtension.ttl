@@ -37,10 +37,3 @@ cmusc:FireflyDevice
       owl:someValuesFrom sc:Location ;
     ] ;
 .
-cmusc:SensorCollection
-  rdf:type owl:Class ;
-  rdfs:subClassOf sc:InformationArtifact ;
-.
-cmusc:hasSensorCollection
-  rdf:type rdf:Property ;
-.

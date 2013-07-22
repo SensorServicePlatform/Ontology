@@ -380,8 +380,8 @@ sc:MeasurementDevice
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:onProperty sc:composedOf ;
-      owl:someValuesFrom sc:Sensor ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:hasSensor ;
     ] ;
 .
 sc:MeasurementService
@@ -638,6 +638,9 @@ sc:hasLabel
 .
 sc:hasPayload
   rdf:type rdf:Property ;
+.
+sc:hasSensor
+  rdf:type owl:TransitiveProperty ;
 .
 sc:hasTimeStamp
   rdf:type rdf:Property ;
