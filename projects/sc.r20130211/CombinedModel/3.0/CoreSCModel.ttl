@@ -378,6 +378,11 @@ sc:Location
 sc:MeasurementDevice
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty sc:composedOf ;
+      owl:someValuesFrom sc:Sensor ;
+    ] ;
 .
 sc:MeasurementService
   rdf:type owl:Class ;

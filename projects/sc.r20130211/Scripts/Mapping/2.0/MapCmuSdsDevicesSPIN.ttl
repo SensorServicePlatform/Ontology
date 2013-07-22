@@ -19,30 +19,9 @@
 <http://topbraid.org/json#Device>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context MapDevicesSPIN:Device-Device ;
-      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Device> ;
+      spinmap:context MapDevicesSPIN:Device-MeasurementDevice ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#MeasurementDevice> ;
       spinmap:targetPredicate1 rdf:type ;
-    ] ;
-  spinmap:rule [
-      rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context MapDevicesSPIN:Device-Device ;
-      spinmap:expression spin:_arg1 ;
-      spinmap:sourcePredicate1 <http://topbraid.org/json#guid> ;
-      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
-    ] ;
-  spinmap:rule [
-      rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context MapDevicesSPIN:Device-Device ;
-      spinmap:expression spin:_arg1 ;
-      spinmap:sourcePredicate1 <http://topbraid.org/json#location> ;
-      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
-    ] ;
-  spinmap:rule [
-      rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context MapDevicesSPIN:Device-Device ;
-      spinmap:expression spin:_arg1 ;
-      spinmap:sourcePredicate1 rdfs:label ;
-      spinmap:targetPredicate1 rdfs:label ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
@@ -82,6 +61,34 @@
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context MapDevicesSPIN:Device-FireflyDevice_1 ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 rdfs:label ;
+      spinmap:targetPredicate1 rdfs:label ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapDevicesSPIN:Device-MeasurementDevice ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#guid> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapDevicesSPIN:Device-MeasurementDevice ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#location> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapDevicesSPIN:Device-MeasurementDevice ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#sensors> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#hasSensorCollection> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapDevicesSPIN:Device-MeasurementDevice ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 rdfs:label ;
       spinmap:targetPredicate1 rdfs:label ;
@@ -198,6 +205,12 @@
 .
 <http://topbraid.org/json#Sensor>
   spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapDevicesSPIN:Sensor-Sensor_2 ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context MapDevicesSPIN:Sensor-Sensor_1 ;
       spinmap:expression spin:_arg1 ;
@@ -298,17 +311,6 @@
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
-MapDevicesSPIN:Device-Device
-  rdf:type spinmap:Context ;
-  spinmap:sourceClass <http://topbraid.org/json#Device> ;
-  spinmap:target [
-      rdf:type spinmapl:buildURI1 ;
-      sp:arg1 <http://topbraid.org/json#guid> ;
-      spinmap:source spinmap:_source ;
-      spinmapl:template "sc:Device-{?1}"^^xsd:string ;
-    ] ;
-  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Device> ;
-.
 MapDevicesSPIN:Device-FireflyDevice
   rdf:type spinmap:Context ;
   spinmap:target [
@@ -327,6 +329,17 @@ MapDevicesSPIN:Device-FireflyDevice_1
       spinmap:source spinmap:_source ;
       spinmapl:template "sc:Device-{?1}"^^xsd:string ;
     ] ;
+.
+MapDevicesSPIN:Device-MeasurementDevice
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Device> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#guid> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:MeasurementDevice-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#MeasurementDevice> ;
 .
 MapDevicesSPIN:DeviceAgent-DeviceAgent
   rdf:type spinmap:Context ;
@@ -380,6 +393,15 @@ MapDevicesSPIN:Sensor-Sensor_1
       rdf:type spinmapl:self ;
       spinmap:source spinmap:_source ;
     ] ;
+.
+MapDevicesSPIN:Sensor-Sensor_2
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Sensor> ;
+  spinmap:target [
+      rdf:type spinmapl:self ;
+      spinmap:source spinmap:_source ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
 .
 MapDevicesSPIN:location-Location
   rdf:type spinmap:Context ;
