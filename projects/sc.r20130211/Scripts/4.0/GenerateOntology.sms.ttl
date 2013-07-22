@@ -21,11 +21,11 @@
 @prefix spl:     <http://spinrdf.org/spl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-sp:jsonRootClass
+sp:jsonInputUrl
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
-sp:jsonInputUrl
+sp:jsonRootClass
       rdf:type rdf:Property ;
       rdfs:subPropertyOf sp:arg .
 
@@ -427,7 +427,7 @@ GenerateOntology:CreateTempFileAndGraph
 
 GenerateOntology:DeclareJsonPrefix
       rdf:type sml:ModifyPrefixes ;
-      sm:next GenerateOntology:Merge_1 ;
+      sm:next GenerateOntology:ImportDeviceJsonFromUrl , GenerateOntology:ForEachDistinctClass ;
       sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
 
 GenerateOntology:ExportRdfToOutputGraph
@@ -465,17 +465,17 @@ GenerateOntology:ForEachDistinctClass
                                         sp:subject
                                                 [ sp:varName "o"^^xsd:string
                                                 ]
-                                      ] [ rdf:type sp:Filter ;
-                                        sp:expression
-                                                [ rdf:type fn:starts-with ;
-                                                  sp:arg1 [ rdf:type smf:qname ;
-                                                            sp:arg1 [ sp:varName "type"^^xsd:string
-                                                                    ]
-                                                          ] ;
-                                                  sp:arg2 "json"
-                                                ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type fn:starts-with ;
+                                      sp:arg1 [ rdf:type smf:qname ;
+                                                sp:arg1 [ sp:varName "type"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg2 "json"
+                                    ]
                           ])
               ] .
 
@@ -504,17 +504,17 @@ GenerateOntology:ForEachDistinctProperty
                                         sp:subject
                                                 [ sp:varName "s"^^xsd:string
                                                 ]
-                                      ] [ rdf:type sp:Filter ;
-                                        sp:expression
-                                                [ rdf:type fn:starts-with ;
-                                                  sp:arg1 [ rdf:type smf:qname ;
-                                                            sp:arg1 [ sp:varName "property"^^xsd:string
-                                                                    ]
-                                                          ] ;
-                                                  sp:arg2 "json"
-                                                ]
                                       ]) ;
                             sp:graphNameNode <http://www.cmusv.edu/SmartCommunity/Scripts/Temp/RdfData>
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type fn:starts-with ;
+                                      sp:arg1 [ rdf:type smf:qname ;
+                                                sp:arg1 [ sp:varName "property"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg2 "json"
+                                    ]
                           ])
               ] .
 
@@ -613,13 +613,6 @@ GenerateOntology:GenerateJsonOntology
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RootObject"^^xsd:string ;
-                spl:predicate sp:jsonRootClass ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:Merge_1
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
                 spl:predicate sp:outputOntologyBaseUri ;
                 spl:valueType xsd:string ;
@@ -627,8 +620,15 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
-                spl:predicate sp:outputRdfFileName ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputRdfBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+                spl:predicate sp:outputOntologyFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
               ] ;
@@ -641,17 +641,17 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
-                spl:predicate sp:outputOntologyFileName ;
+                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+                spl:predicate sp:outputRdfFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:outputRdfBaseUri ;
+                spl:defaultValue "RootObject"^^xsd:string ;
+                spl:predicate sp:jsonRootClass ;
                 spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindGraphUri
+                sm:next GenerateOntology:Merge_1
               ] ;
       sm:returnModule GenerateOntology:GenerateJsonOntology ;
       sml:selectQuery
@@ -854,25 +854,25 @@ GenerateOntology:UpdateCollectionReferencedObjectClassNames
                                         sp:variable
                                                 [ sp:varName "newType"^^xsd:string
                                                 ]
-                                      ] [ rdf:type sp:Filter ;
-                                        sp:expression
-                                                [ rdf:type sp:and ;
-                                                  sp:arg1 [ rdf:type fn:starts-with ;
-                                                            sp:arg1 [ rdf:type smf:qname ;
-                                                                      sp:arg1 [ sp:varName "predicate"^^xsd:string
-                                                                              ]
-                                                                    ] ;
-                                                            sp:arg2 "json"
-                                                          ] ;
-                                                  sp:arg2 [ rdf:type sp:not ;
-                                                            sp:arg1 [ rdf:type sp:isLiteral ;
-                                                                      sp:arg1 [ sp:varName "item"^^xsd:string
-                                                                              ]
-                                                                    ]
-                                                          ]
-                                                ]
                                       ]) ;
                             sp:graphNameNode <urn:x-var:outputRdfGraphUri>
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type sp:and ;
+                                      sp:arg1 [ rdf:type fn:starts-with ;
+                                                sp:arg1 [ rdf:type smf:qname ;
+                                                          sp:arg1 [ sp:varName "predicate"^^xsd:string
+                                                                  ]
+                                                        ] ;
+                                                sp:arg2 "json"
+                                              ] ;
+                                      sp:arg2 [ rdf:type sp:not ;
+                                                sp:arg1 [ rdf:type sp:isLiteral ;
+                                                          sp:arg1 [ sp:varName "item"^^xsd:string
+                                                                  ]
+                                                        ]
+                                              ]
+                                    ]
                           ])
               ] .
 
@@ -946,17 +946,17 @@ GenerateOntology:UpdateReferencedObjectClassNames
                                         sp:variable
                                                 [ sp:varName "newType"^^xsd:string
                                                 ]
-                                      ] [ rdf:type sp:Filter ;
-                                        sp:expression
-                                                [ rdf:type fn:starts-with ;
-                                                  sp:arg1 [ rdf:type smf:qname ;
-                                                            sp:arg1 [ sp:varName "predicate"^^xsd:string
-                                                                    ]
-                                                          ] ;
-                                                  sp:arg2 "json"
-                                                ]
                                       ]) ;
                             sp:graphNameNode <urn:x-var:outputRdfGraphUri>
+                          ] [ rdf:type sp:Filter ;
+                            sp:expression
+                                    [ rdf:type fn:starts-with ;
+                                      sp:arg1 [ rdf:type smf:qname ;
+                                                sp:arg1 [ sp:varName "predicate"^^xsd:string
+                                                        ]
+                                              ] ;
+                                      sp:arg2 "json"
+                                    ]
                           ])
               ] .
 
