@@ -13,4 +13,4 @@ file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Script
 
 file://localhost/Users/mhennessy/dev/SmartCommunity/projects/sc.r20130211/Scripts/Notes/SampleJSON/nict_event_json.txt
 
-Hennessy
+Hennessy 2
