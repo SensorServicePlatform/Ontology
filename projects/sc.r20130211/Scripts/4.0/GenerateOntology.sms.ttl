@@ -599,26 +599,8 @@ GenerateOntology:ForEachDistinctProperty
                                                 ]
                                       ] [ rdf:type sp:Bind ;
                                         sp:expression
-                                                [ rdf:type smf:lowerCamelCase ;
-                                                  sp:arg1 [ rdf:type fn:concat ;
-                                                            sp:arg1 "backRef" ;
-                                                            sp:arg2 [ rdf:type smf:titleCase ;
-                                                                      sp:arg1 [ sp:varName "propLocalName"^^xsd:string
-                                                                              ]
-                                                                    ]
-                                                          ]
-                                                ] ;
-                                        sp:variable
-                                                [ sp:varName "backReferencePropertyName"^^xsd:string
-                                                ]
-                                      ] [ rdf:type sp:Bind ;
-                                        sp:expression
                                                 [ rdf:type spif:buildURI ;
-                                                  sp:arg1 [ rdf:type fn:concat ;
-                                                            sp:arg1 "json:" ;
-                                                            sp:arg2 [ sp:varName "backReferencePropertyName"^^xsd:string
-                                                                    ]
-                                                          ]
+                                                  sp:arg1 "http://topbraid.org/json#referencedBy"
                                                 ] ;
                                         sp:variable
                                                 [ sp:varName "backReferenceProperty"^^xsd:string
