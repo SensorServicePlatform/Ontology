@@ -47,7 +47,7 @@ sp:outputRdfFileName
 
 <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GenerateOntology>
       rdf:type owl:Ontology ;
-      owl:imports <http://purl.org/dc/elements/1.1/> , <http://topbraid.org/sparqlmotionfunctions> , <http://topbraid.org/sparqlmotionlib-tbc> ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> , <http://purl.org/dc/elements/1.1/> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
 
 GenerateOntology:AddBackReferenceRestrictions
@@ -87,6 +87,11 @@ GenerateOntology:AddClassAndProperty
                 sp:insertPattern ([ rdf:type sp:NamedGraph ;
                             sp:elements ([ sp:object rdfs:Class ;
                                         sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "type"^^xsd:string
+                                                ]
+                                      ] [ sp:object owl:Thing ;
+                                        sp:predicate rdfs:subClassOf ;
                                         sp:subject
                                                 [ sp:varName "type"^^xsd:string
                                                 ]
@@ -510,7 +515,7 @@ GenerateOntology:CreateTempFileAndGraph
 
 GenerateOntology:DeclareJsonPrefix
       rdf:type sml:ModifyPrefixes ;
-      sm:next GenerateOntology:ForEachDistinctClass , GenerateOntology:ImportDeviceJsonFromUrl ;
+      sm:next GenerateOntology:ImportDeviceJsonFromUrl , GenerateOntology:ForEachDistinctClass ;
       sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
 
 GenerateOntology:ExportRdfToOutputGraph
@@ -587,15 +592,6 @@ GenerateOntology:ForEachDistinctProperty
                                                 ] ;
                                         sp:subject
                                                 [ sp:varName "s"^^xsd:string
-                                                ]
-                                      ] [ rdf:type sp:Bind ;
-                                        sp:expression
-                                                [ rdf:type afn:localname ;
-                                                  sp:arg1 [ sp:varName "property"^^xsd:string
-                                                          ]
-                                                ] ;
-                                        sp:variable
-                                                [ sp:varName "propLocalName"^^xsd:string
                                                 ]
                                       ] [ rdf:type sp:Bind ;
                                         sp:expression
@@ -714,10 +710,24 @@ GenerateOntology:GenerateJsonOntology
       rdfs:subClassOf sm:Functions ;
       spin:constraint
               [ rdf:type spl:Argument ;
+                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+                spl:predicate sp:outputRdfBaseUri ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
                 spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
                 spl:predicate sp:outputOntologyBaseUri ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindGraphUri
+              ] ;
+      spin:constraint
+              [ rdf:type spl:Argument ;
+                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+                spl:predicate sp:outputOntologyFileName ;
+                spl:valueType xsd:string ;
+                sm:next GenerateOntology:BindFilePaths
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
@@ -728,20 +738,6 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
-                spl:predicate sp:outputRdfFileName ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindFilePaths
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
-                spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
-                spl:predicate sp:outputRdfBaseUri ;
-                spl:valueType xsd:string ;
-                sm:next GenerateOntology:BindGraphUri
-              ] ;
-      spin:constraint
-              [ rdf:type spl:Argument ;
                 spl:defaultValue "RootObject"^^xsd:string ;
                 spl:predicate sp:jsonRootClass ;
                 spl:valueType xsd:string ;
@@ -749,8 +745,8 @@ GenerateOntology:GenerateJsonOntology
               ] ;
       spin:constraint
               [ rdf:type spl:Argument ;
-                spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
-                spl:predicate sp:outputOntologyFileName ;
+                spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+                spl:predicate sp:outputRdfFileName ;
                 spl:valueType xsd:string ;
                 sm:next GenerateOntology:BindFilePaths
               ] ;
