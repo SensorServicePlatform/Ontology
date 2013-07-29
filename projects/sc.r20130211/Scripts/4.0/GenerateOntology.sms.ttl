@@ -420,7 +420,7 @@ GenerateOntology:BindPropertyInfo
 
 GenerateOntology:ClearOntologyGraph
       rdf:type sml:PerformUpdate ;
-      sm:next GenerateOntology:ForEachDistinctClass ;
+      sm:next GenerateOntology:DeclareOntology ;
       sml:updateQuery
               [ rdf:type sp:Modify ;
                 sp:deletePattern ([ rdf:type sp:NamedGraph ;
@@ -517,6 +517,23 @@ GenerateOntology:DeclareJsonPrefix
       rdf:type sml:ModifyPrefixes ;
       sm:next GenerateOntology:ImportDeviceJsonFromUrl , GenerateOntology:ForEachDistinctClass ;
       sml:addedPrefix "json http://topbraid.org/json#"^^xsd:string .
+
+GenerateOntology:DeclareOntology
+      rdf:type sml:PerformUpdate ;
+      sm:next GenerateOntology:ForEachDistinctClass ;
+      sml:updateQuery
+              [ rdf:type sp:Modify ;
+                sp:insertPattern ([ rdf:type sp:NamedGraph ;
+                            sp:elements ([ sp:object owl:Ontology ;
+                                        sp:predicate rdf:type ;
+                                        sp:subject
+                                                [ sp:varName "outputOntologyGraphUri"^^xsd:string
+                                                ]
+                                      ]) ;
+                            sp:graphNameNode <urn:x-var:outputOntologyGraphUri>
+                          ]) ;
+                sp:where ()
+              ] .
 
 GenerateOntology:ExportRdfToOutputGraph
       rdf:type sml:ExportToRDFFile ;
