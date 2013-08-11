@@ -8,7 +8,6 @@
 # imports: http://qudt.org/1.1/vocab/dimension
 # imports: http://qudt.org/vocab/unit
 # imports: http://rdfs.org/sioc/ns
-# imports: http://www.geonames.org/ontology
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/vcard/ns
@@ -25,6 +24,10 @@
 @prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#> .
 @prefix spatial: <http://geovocab.org/spatial#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#uri>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel>
   rdf:type owl:Ontology ;
   owl:imports <http://geovocab.org/spatial> ;
@@ -36,7 +39,6 @@
   owl:imports <http://qudt.org/1.1/vocab/dimension> ;
   owl:imports <http://qudt.org/vocab/unit> ;
   owl:imports <http://rdfs.org/sioc/ns> ;
-  owl:imports <http://www.geonames.org/ontology> ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2006/vcard/ns> ;
@@ -157,70 +159,6 @@ sc:ComputerProgram
 sc:Device
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Resource ;
-.
-sc:DeviceAgent
-  rdf:type owl:Class ;
-  rdfs:subClassOf sc:Resource ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom sc:TimeStamp ;
-      owl:onProperty sc:createdAt ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom sc:TimeStamp ;
-      owl:onProperty sc:updatedAt ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:createdAt ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:deviceGuid ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:guid ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:id ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:locationId ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:metadata ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:networkAddress ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:printName ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:updatedAt ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:uri ;
-    ] ;
 .
 sc:DeviceRegistrationService
   rdf:type owl:Class ;
@@ -718,8 +656,4 @@ sc:to
 .
 sc:updatedAt
   rdf:type owl:ObjectProperty ;
-.
-sc:uri
-  rdf:type owl:DatatypeProperty ;
-  rdfs:range xsd:string ;
 .

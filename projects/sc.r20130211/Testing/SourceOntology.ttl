@@ -1,0 +1,53 @@
+# baseURI: http://sv.cmu.edu/SourceOntology
+
+# c14n-version: 3
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix so: <http://sv.cmu.edu/SourceOntology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://sv.cmu.edu/SourceOntology>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+so:ClassA
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom so:ClassB ;
+      owl:onProperty so:hasClassBInstance ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty so:hasClassAGuid ;
+    ] ;
+.
+so:ClassA_1
+  rdf:type so:ClassA ;
+  so:hasClassAGuid "InstanceClassA-1"^^xsd:string ;
+  so:hasClassBInstance so:ClassB_1 ;
+.
+so:ClassB
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty so:hasClassBGuid ;
+    ] ;
+.
+so:ClassB_1
+  rdf:type so:ClassB ;
+  so:hasClassBGuid "InstanceClassB-1"^^xsd:string ;
+.
+so:hasClassAGuid
+  rdf:type rdf:Property ;
+.
+so:hasClassBGuid
+  rdf:type rdf:Property ;
+.
+so:hasClassBInstance
+  rdf:type rdf:Property ;
+.

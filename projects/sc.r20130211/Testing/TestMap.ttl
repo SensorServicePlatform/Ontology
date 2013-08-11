@@ -1,0 +1,74 @@
+# baseURI: http://sv.cmu.edu/TestMap
+# imports: http://spinrdf.org/spin
+# imports: http://sv.cmu.edu/SourceOntology
+# imports: http://sv.cmu.edu/TargetOntology
+# imports: http://topbraid.org/spin/spinmapl
+
+# c14n-version: 3
+@prefix TestMap: <http://sv.cmu.edu/TestMap#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://sv.cmu.edu/SourceOntology#ClassA>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context TestMap:ClassA-ClassTA ;
+      spinmap:expression <http://sv.cmu.edu/TargetOntology#ClassTA> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context TestMap:ClassA-ClassTA ;
+      spinmap:expression [
+          rdf:type spinmap:targetResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmap:context TestMap:ClassB-ClassTB ;
+        ] ;
+      spinmap:sourcePredicate1 <http://sv.cmu.edu/SourceOntology#hasClassBInstance> ;
+      spinmap:targetPredicate1 <http://sv.cmu.edu/TargetOntology#hasNewClassBInstance> ;
+    ] ;
+.
+<http://sv.cmu.edu/SourceOntology#ClassB>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context TestMap:ClassB-ClassTB ;
+      spinmap:expression <http://sv.cmu.edu/TargetOntology#ClassTB> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+.
+<http://sv.cmu.edu/TestMap>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://sv.cmu.edu/SourceOntology> ;
+  owl:imports <http://sv.cmu.edu/TargetOntology> ;
+  owl:imports <http://topbraid.org/spin/spinmapl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+TestMap:ClassA-ClassTA
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://sv.cmu.edu/SourceOntology#ClassA> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://sv.cmu.edu/SourceOntology#hasClassAGuid> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "to:New-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://sv.cmu.edu/TargetOntology#ClassTA> ;
+.
+TestMap:ClassB-ClassTB
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://sv.cmu.edu/SourceOntology#ClassB> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://sv.cmu.edu/SourceOntology#hasClassBGuid> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "to:New-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://sv.cmu.edu/TargetOntology#ClassTB> ;
+.

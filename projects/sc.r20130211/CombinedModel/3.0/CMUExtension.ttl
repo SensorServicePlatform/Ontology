@@ -13,27 +13,85 @@
   owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
+cmusc:Device
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cmusc:DeviceAgent ;
+      owl:onProperty cmusc:hasAgent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:hasSensor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty cmusc:uri ;
+    ] ;
+.
+cmusc:DeviceAgent
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:createdAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasNetworkAddress ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:metadataJson ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:uri ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:updatedAt ;
+    ] ;
+.
 cmusc:FireflyDevice
   rdf:type owl:Class ;
-  rdfs:subClassOf sc:MeasurementDevice ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:printName ;
+  rdfs:subClassOf cmusc:Device ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          cmusc:Device
+          [
+            rdf:type owl:Restriction ;
+            owl:onProperty cmusc:hasAgent ;
+            owl:someValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    cmusc:DeviceAgent
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue "SensorAndrew"^^xsd:string ;
+                      owl:onProperty sc:hasLabel ;
+                    ]
+                  ) ;
+              ] ;
+          ]
+        ) ;
     ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sc:uri ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty sc:isAssociatedWith ;
-      owl:someValuesFrom sc:DeviceAgent ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty sc:isAssociatedWith ;
-      owl:someValuesFrom sc:Location ;
-    ] ;
+.
+cmusc:hasAgent
+  rdf:type rdf:Property ;
+.
+cmusc:hasNetworkAddress
+  rdf:type rdf:Property ;
+.
+cmusc:metadataJson
+  rdf:type rdf:Property ;
 .
