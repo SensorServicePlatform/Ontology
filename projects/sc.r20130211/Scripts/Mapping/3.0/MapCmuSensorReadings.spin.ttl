@@ -6,17 +6,28 @@
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput
 
 # c14n-version: 3
+@prefix arg: <http://spinrdf.org/arg#> .
 @prefix cmumap: <http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix owlrl: <http://topbraid.org/spin/owlrl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sp: <http://spinrdf.org/sp#> .
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix spinmap: <http://spinrdf.org/spinmap#> .
 @prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
 @prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+arg:context
+  rdf:type rdf:Property ;
+  rdfs:label "context"^^xsd:string ;
+  rdfs:subPropertyOf sp:arg ;
+.
+arg:targetProperty
+  rdf:type rdf:Property ;
+  rdfs:label "Target property"^^xsd:string ;
+.
 <http://topbraid.org/json#Device>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
@@ -252,6 +263,29 @@ cmumap:Device_Agent-DeviceAgent
       spinmapl:template "cmusc:DeviceAgent-{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#DeviceAgent> ;
+.
+cmumap:MapListMembers
+  rdf:type spin:Template ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:context ;
+      spl:valueType spinmap:Context ;
+      rdfs:comment "An instance of spinMapContext that represents the class for the target mappings."^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:property ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The property that contains an RDF list."^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:targetProperty ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The target property, i.e. the property being mapped to."^^xsd:string ;
+    ] ;
+  rdfs:label "Map members of a list"^^xsd:string ;
+  rdfs:subClassOf spin:Templates ;
 .
 cmumap:SensorReading-Accelerometer
   rdf:type spinmap:Context ;

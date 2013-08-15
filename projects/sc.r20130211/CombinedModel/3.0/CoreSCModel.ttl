@@ -407,7 +407,7 @@ sc:ResourceRegistry
 .
 sc:Sensor
   rdf:type owl:Class ;
-  rdfs:subClassOf sc:MeasurementDevice ;
+  rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom <http://qudt.org/schema/qudt#Quantity> ;
