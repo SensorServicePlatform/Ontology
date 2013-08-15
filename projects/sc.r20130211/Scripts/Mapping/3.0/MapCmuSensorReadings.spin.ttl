@@ -139,6 +139,14 @@ arg:targetProperty
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#uri> ;
     ] ;
 .
+<http://topbraid.org/json#Sensor>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+.
 <http://topbraid.org/json#SensorReading>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
@@ -286,6 +294,16 @@ cmumap:MapListMembers
     ] ;
   rdfs:label "Map members of a list"^^xsd:string ;
   rdfs:subClassOf spin:Templates ;
+.
+cmumap:Sensor-Sensor
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Sensor> ;
+  spinmap:target [
+      rdf:type spinmapl:changeNamespace ;
+      spinmap:source spinmap:_source ;
+      spinmapl:targetNamespace "http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
 .
 cmumap:SensorReading-Accelerometer
   rdf:type spinmap:Context ;
