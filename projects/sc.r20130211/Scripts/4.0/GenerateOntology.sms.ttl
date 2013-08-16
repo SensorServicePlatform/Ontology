@@ -1216,6 +1216,15 @@ GenerateOntology:UpdateCollectionReferencedObjectClassNames
                       sp:varName "item"^^xsd:string ;
                     ] ;
                 ]
+                [
+                  sp:object [
+                      sp:varName "keyId"^^xsd:string ;
+                    ] ;
+                  sp:predicate <http://purl.org/dc/elements/1.1/identifier> ;
+                  sp:subject [
+                      sp:varName "item"^^xsd:string ;
+                    ] ;
+                ]
               ) ;
             sp:graphNameNode <urn:x-var:outputRdfGraphUri> ;
           ]
@@ -1330,6 +1339,15 @@ sp:varName "singularClassName"^^xsd:string ;
                       sp:varName "newType"^^xsd:string ;
                     ] ;
                 ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:generateUUID ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "keyId"^^xsd:string ;
+                    ] ;
+                ]
               ) ;
             sp:graphNameNode <urn:x-var:outputRdfGraphUri> ;
           ]
@@ -1390,6 +1408,15 @@ GenerateOntology:UpdateReferencedObjectClassNames
                       sp:varName "newType"^^xsd:string ;
                     ] ;
                   sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "child"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object [
+                      sp:varName "keyId"^^xsd:string ;
+                    ] ;
+                  sp:predicate <http://purl.org/dc/elements/1.1/identifier> ;
                   sp:subject [
                       sp:varName "child"^^xsd:string ;
                     ] ;
@@ -1460,6 +1487,15 @@ sp:varName "className"^^xsd:string ;
                       sp:varName "newType"^^xsd:string ;
                     ] ;
                 ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:generateUUID ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "keyId"^^xsd:string ;
+                    ] ;
+                ]
               ) ;
             sp:graphNameNode <urn:x-var:outputRdfGraphUri> ;
           ]
@@ -1512,6 +1548,15 @@ GenerateOntology:UpdateRootObjectClassName
                       sp:varName "jsonRoot"^^xsd:string ;
                     ] ;
                 ]
+                [
+                  sp:object [
+                      sp:varName "keyId"^^xsd:string ;
+                    ] ;
+                  sp:predicate <http://purl.org/dc/elements/1.1/identifier> ;
+                  sp:subject [
+                      sp:varName "jsonRoot"^^xsd:string ;
+                    ] ;
+                ]
               ) ;
             sp:graphNameNode <urn:x-var:outputRdfGraphUri> ;
           ]
@@ -1541,6 +1586,15 @@ sp:varName "jsonRootClass"^^xsd:string ;
                     ] ;
                   sp:variable [
                       sp:varName "newType"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:generateUUID ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "keyId"^^xsd:string ;
                     ] ;
                 ]
               ) ;
