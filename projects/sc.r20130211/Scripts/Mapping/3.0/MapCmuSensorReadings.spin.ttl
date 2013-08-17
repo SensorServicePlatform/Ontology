@@ -24,11 +24,23 @@ arg:context
   rdfs:label "context"^^xsd:string ;
   rdfs:subPropertyOf sp:arg ;
 .
+arg:contextTwo
+  rdf:type rdf:Property ;
+  rdfs:label "context"^^xsd:string ;
+  rdfs:subPropertyOf sp:arg ;
+.
 arg:targetProperty
   rdf:type rdf:Property ;
   rdfs:label "Target property"^^xsd:string ;
 .
 <http://topbraid.org/json#Device>
+  spin:rule [
+      rdf:type cmumap:DoubleMapListElements ;
+      arg:context cmumap:Device-Device ;
+      arg:contextTwo cmumap:Sensor-Sensor ;
+      arg:property <http://topbraid.org/json#sensors> ;
+      arg:targetProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasSensor> ;
+    ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
       spinmap:context cmumap:Device-Device ;
@@ -214,6 +226,76 @@ arg:targetProperty
       spinmap:sourcePredicate1 <http://topbraid.org/json#acc_z> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
     ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#audio_p2p> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#digital_temp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#humidity> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#light> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#motion> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#pressure> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#referencedBy> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#sound_level> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#temp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#temperature> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+    ] ;
 .
 <http://topbraid.org/json#SensorReading>
   spinmap:rule [
@@ -309,6 +391,14 @@ owlrl:cls-int1_1
 owlrl:cls-int2_1
   rdf:type owlrl:cls-int2 ;
 .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Device>
+  spinmap:rule [
+      rdf:type cmumap:MapListMembers ;
+      arg:context cmumap:Sensor-Sensor ;
+      arg:property <http://topbraid.org/json#sensors> ;
+      arg:targetProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasSensor> ;
+    ] ;
+.
 <http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings>
   rdf:type owl:Ontology ;
   owl:imports <http://spinrdf.org/spin> ;
@@ -340,6 +430,110 @@ cmumap:Device_Agent-DeviceAgent
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#DeviceAgent> ;
 .
+cmumap:DoubleMapListElements
+  rdf:type spin:Template ;
+  spin:body [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "mappedItem"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "targetProperty"^^xsd:string ;
+              ] ;
+            sp:subject [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 spin:_this ;
+                spinmap:context [
+                    sp:varName "context"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 [
+                    sp:varName "item"^^xsd:string ;
+                  ] ;
+                spinmap:context [
+                    sp:varName "contextTwo"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "mappedItem"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:context ;
+      spl:valueType spinmap:Context ;
+      rdfs:comment "The context that represents the base class mapping"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:contextTwo ;
+      spl:valueType spinmap:Context ;
+      rdfs:comment "The context for mapping the referred properties"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:property ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The property that contains the RDF list whose members will be mapped"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:targetProperty ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The property of the target class where the mapped instances will appear"^^xsd:string ;
+    ] ;
+  spin:labelTemplate "Get list members from {?property}, map them using their (?contextTwo}, and map the references to {?targetProperty} for the base class {?context} mapping."^^xsd:string ;
+  rdfs:label "Map (mapped elements of a list) to multiple instances of a target property"^^xsd:string ;
+  rdfs:subClassOf spin:Templates ;
+.
 cmumap:Location-Location
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Location> ;
@@ -351,27 +545,168 @@ cmumap:Location-Location
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location> ;
 .
-cmumap:MapListMembers
+cmumap:MapListElements
   rdf:type spin:Template ;
+  spin:body [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "targetProperty"^^xsd:string ;
+              ] ;
+            sp:subject [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 spin:_this ;
+                spinmap:context [
+                    sp:varName "context"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
   spin:constraint [
       rdf:type spl:Argument ;
       spl:predicate arg:context ;
       spl:valueType spinmap:Context ;
-      rdfs:comment "An instance of spinMapContext that represents the class for the target mappings."^^xsd:string ;
+      rdfs:comment "The context for the property mappings"^^xsd:string ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
       spl:predicate arg:property ;
       spl:valueType rdf:Property ;
-      rdfs:comment "The property that contains an RDF list."^^xsd:string ;
+      rdfs:comment "The property containing the RDF list"^^xsd:string ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
       spl:predicate arg:targetProperty ;
       spl:valueType rdf:Property ;
-      rdfs:comment "The target property, i.e. the property being mapped to."^^xsd:string ;
+      rdfs:comment "The target property that will contain the multiple instances"^^xsd:string ;
     ] ;
-  rdfs:label "Map members of a list"^^xsd:string ;
+  spin:labelTemplate "Get list members from {?property} and map to {?targetProperty} for {?context} mapping."^^xsd:string ;
+  rdfs:label "Map elements of a list to multiple instances of a target property"^^xsd:string ;
+  rdfs:subClassOf spin:Templates ;
+.
+cmumap:MapListMembers
+  rdf:type spin:Template ;
+  spin:body [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "targetProperty"^^xsd:string ;
+              ] ;
+            sp:subject [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 spin:_this ;
+                spinmap:context [
+                    sp:varName "context"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:context ;
+      spl:valueType spinmap:Context ;
+      rdfs:comment "An instance of spinMapContext that represents the class for the target mappings"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:property ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The property that contains and RDF list"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:targetProperty ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The target property, i.e. the property being mapped to"^^xsd:string ;
+    ] ;
   rdfs:subClassOf spin:Templates ;
 .
 cmumap:Sensor-Sensor

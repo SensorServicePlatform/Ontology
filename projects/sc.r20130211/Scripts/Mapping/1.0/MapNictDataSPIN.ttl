@@ -1,10 +1,10 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/1.0/MapNictDataSPIN
 # imports: http://spinrdf.org/spin
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology
 
-@prefix MapNictDataSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN#> .
+@prefix MapNictDataSPIN:  <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/1.0/MapNictDataSPIN#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -582,7 +582,7 @@
                         rdf:type
               ] .
 
-<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/MapNictDataSPIN>
+<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/1.0/MapNictDataSPIN>
       rdf:type owl:Ontology ;
       owl:imports <http://spinrdf.org/spin> , <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT> , <http://topbraid.org/spin/spinmapl> , <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology> ;
       owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
