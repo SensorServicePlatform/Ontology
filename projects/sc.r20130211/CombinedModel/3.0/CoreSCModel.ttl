@@ -311,6 +311,16 @@ sc:Location
       owl:onProperty sc:longitude ;
     ] ;
 .
+sc:Measurement
+  rdf:type owl:Class ;
+  rdfs:label "A measurement made by a reading device such as a sensor"^^xsd:string ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Quantity> ;
+      owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+    ] ;
+.
 sc:MeasurementDevice
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Device ;
@@ -410,8 +420,8 @@ sc:Sensor
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom <http://qudt.org/schema/qudt#Quantity> ;
-      owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+      owl:allValuesFrom sc:Measurement ;
+      owl:onProperty sc:provides ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;

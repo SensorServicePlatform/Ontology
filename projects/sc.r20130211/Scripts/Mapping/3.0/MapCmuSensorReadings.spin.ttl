@@ -4,6 +4,8 @@
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfReadingOutput
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/ReadingOntology
 
 # c14n-version: 3
 @prefix arg: <http://spinrdf.org/arg#> .
@@ -19,6 +21,144 @@
 @prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
 @prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://geovocab.org/spatial#Feature>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://purl.org/dc/dcam/VocabularyEncodingScheme>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Collection>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Dataset>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Event>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Image>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/InteractiveResource>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/PhysicalObject>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Service>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Software>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Sound>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/dcmitype/Text>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Agent>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/AgentClass>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/BibliographicResource>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Box>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Frequency>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/ISO3166>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/ISO639-2>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/ISO639-3>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/LinguisticSystem>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/LocationPeriodOrJurisdiction>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/MediaTypeOrExtent>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/MethodOfAccrual>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/MethodOfInstruction>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Period>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/PhysicalResource>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Point>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Policy>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/ProvenanceStatement>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/RFC1766>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/RFC3066>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/RFC4646>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/RFC5646>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/RightsStatement>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/Standard>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/URI>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://purl.org/dc/terms/W3CDTF>
+  rdfs:subClassOf rdfs:Resource ;
+.
+<http://qudt.org/schema/qudt#DimensionVector>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://qudt.org/schema/qudt#SystemOfUnits>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Community>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Container>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Item>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Role>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Space>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://rdfs.org/sioc/ns#Usergroup>
+  rdfs:subClassOf owl:Thing ;
+.
 arg:context
   rdf:type rdf:Property ;
   rdfs:label "context"^^xsd:string ;
@@ -32,6 +172,9 @@ arg:contextTwo
 arg:targetProperty
   rdf:type rdf:Property ;
   rdfs:label "Target property"^^xsd:string ;
+.
+spinmap:Context
+  rdfs:subClassOf rdfs:Resource ;
 .
 <http://topbraid.org/json#Device>
   spin:rule [
@@ -198,6 +341,152 @@ arg:targetProperty
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#printName> ;
     ] ;
 .
+<http://topbraid.org/json#Reading>
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "targetProperty"^^xsd:string ;
+              ] ;
+            sp:subject [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "deviceId"^^xsd:string ;
+              ] ;
+            sp:predicate <http://topbraid.org/json#device_id> ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object [
+                sp:varName "sensorType"^^xsd:string ;
+              ] ;
+            sp:predicate <http://topbraid.org/json#sensor_type> ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 spin:_this ;
+                spinmap:context [
+                    sp:varName "context"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Event ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Measurement ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Measurement> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Measurement ;
+      spinmap:expression [
+          rdf:type spinmap:targetResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmap:context cmumap:Reading-Event ;
+        ] ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#isAssociatedWith> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Measurement ;
+      spinmap:expression [
+          rdf:type spinmap:targetResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmap:context cmumap:Reading-Quantity ;
+        ] ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#quantity> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Quantity ;
+      spinmap:expression <http://qudt.org/schema/qudt#Quantity> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-Quantity ;
+      spinmap:expression [
+          rdf:type spinmap:targetResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmap:context cmumap:Reading-QuantityValue ;
+        ] ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#quantityValue> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-QuantityValue ;
+      spinmap:expression <http://qudt.org/schema/qudt#QuantityValue> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context cmumap:Reading-QuantityValue ;
+      spinmap:expression [
+          rdf:type spinmap:targetResource ;
+          sp:arg1 spin:_arg1 ;
+          spinmap:context cmumap:Reading-Quantity ;
+        ] ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#valueQuantity> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-Event ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#timestamp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasTimeStamp> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-Measurement ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 rdfs:label ;
+      spinmap:targetPredicate1 rdfs:label ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-Quantity ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#sensor_type> ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#description> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-QuantityValue ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#value> ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#numericValue> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-QuantityValue ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 rdfs:label ;
+      spinmap:targetPredicate1 rdfs:label ;
+    ] ;
+.
 <http://topbraid.org/json#Sensor>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
@@ -296,14 +585,152 @@ arg:targetProperty
       spinmap:sourcePredicate1 <http://topbraid.org/json#temperature> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
     ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "acc_x"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#acc_x> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "acc_y"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#acc_y> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "acc_z"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#acc_z> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "audio_p2p"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#audio_p2p> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "digital_temp"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#digital_temp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "humidity"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#humidity> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "light"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#light> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "motion"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#motion> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "pressure"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#pressure> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "sound_level"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#sound_level> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "t"^^xsd:string ;
+          sp:arg3 "temp"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#temp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Sensor-Sensor ;
+      spinmap:expression [
+          rdf:type smf:if ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg2 "temperature"^^xsd:string ;
+          sp:arg3 "temperature"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#temperature> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+    ] ;
 .
 <http://topbraid.org/json#SensorReading>
-  spinmap:rule [
-      rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context cmumap:SensorReading-QuantityValue ;
-      spinmap:expression <http://qudt.org/schema/qudt#QuantityValue> ;
-      spinmap:targetPredicate1 rdf:type ;
-    ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context cmumap:SensorReading-Accelerometer ;
@@ -348,13 +775,6 @@ arg:targetProperty
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measuresQuantityKind> ;
     ] ;
   spinmap:rule [
-      rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context cmumap:SensorReading-QuantityValue ;
-      spinmap:expression spin:_arg1 ;
-      spinmap:sourcePredicate1 <http://topbraid.org/json#humidity> ;
-      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#numericValue> ;
-    ] ;
-  spinmap:rule [
       rdf:type spinmap:Mapping-3-1 ;
       spinmap:context cmumap:SensorReading-Accelerometer ;
       spinmap:expression [
@@ -391,13 +811,200 @@ owlrl:cls-int1_1
 owlrl:cls-int2_1
   rdf:type owlrl:cls-int2 ;
 .
-<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Device>
-  spinmap:rule [
-      rdf:type cmumap:MapListMembers ;
-      arg:context cmumap:Sensor-Sensor ;
-      arg:property <http://topbraid.org/json#sensors> ;
-      arg:targetProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasSensor> ;
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Resource>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor>
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Accelerometer> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "acc_x"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "acc_y"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "acc_z"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
     ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Accelerometer> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "motion"^^xsd:string ;
+            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#AudioSensor> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "audio_p2p"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "sound_level"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#HumiditySensor> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "humidity"^^xsd:string ;
+            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#LightSensor> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "light"^^xsd:string ;
+            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#PressureSensor> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "pressure"^^xsd:string ;
+            sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TemperatureSensor> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "temp"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "temperature"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "digital_temp"^^xsd:string ;
+                    sp:predicate <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#shortName> ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
+    ] ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Service>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#ServiceConductor>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#ServiceProvider>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TimeStamp>
+  rdfs:subClassOf owl:Thing ;
 .
 <http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings>
   rdf:type owl:Ontology ;
@@ -406,7 +1013,98 @@ owlrl:cls-int2_1
   owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension> ;
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology> ;
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfReadingOutput> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/ReadingOntology> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+cmumap:CombineJointUniqueProperties
+  rdf:type spin:Template ;
+  spin:body [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "targetProperty"^^xsd:string ;
+              ] ;
+            sp:subject [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "list"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spinmap:targetResource ;
+                sp:arg1 spin:_this ;
+                spinmap:context [
+                    sp:varName "context"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "uri"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:context ;
+      spl:valueType spinmap:Context ;
+      rdfs:comment "The context for the property mappings"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:otherProperty ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The second property of two that jointly identify the instance of interest"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:property ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The first property of two that jointly identify the instance of interest"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:targetProperty ;
+      spl:valueType rdf:Property ;
+      rdfs:comment "The target property that will contain the multiple instances"^^xsd:string ;
+    ] ;
+  spin:labelTemplate "Get list members from {?property} and map to {?targetProperty} for {?context} mapping."^^xsd:string ;
+  rdfs:label "Map elements of a list to multiple instances of a target property"^^xsd:string ;
+  rdfs:subClassOf spin:Templates ;
 .
 cmumap:Device-Device
   rdf:type spinmap:Context ;
@@ -628,86 +1326,57 @@ cmumap:MapListElements
   rdfs:label "Map elements of a list to multiple instances of a target property"^^xsd:string ;
   rdfs:subClassOf spin:Templates ;
 .
-cmumap:MapListMembers
-  rdf:type spin:Template ;
-  spin:body [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object [
-                sp:varName "item"^^xsd:string ;
-              ] ;
-            sp:predicate [
-                sp:varName "targetProperty"^^xsd:string ;
-              ] ;
-            sp:subject [
-                sp:varName "uri"^^xsd:string ;
-              ] ;
-          ]
-        ) ;
-      sp:where (
-          [
-            sp:object [
-                sp:varName "list"^^xsd:string ;
-              ] ;
-            sp:predicate [
-                sp:varName "property"^^xsd:string ;
-              ] ;
-            sp:subject spin:_this ;
-          ]
-          [
-            rdf:type sp:TriplePath ;
-            sp:object [
-                sp:varName "item"^^xsd:string ;
-              ] ;
-            sp:path [
-                rdf:type sp:SeqPath ;
-                sp:path1 [
-                    rdf:type sp:ModPath ;
-                    sp:modMax -2 ;
-                    sp:modMin 0 ;
-                    sp:subPath rdf:rest ;
-                  ] ;
-                sp:path2 rdf:first ;
-              ] ;
-            sp:subject [
-                sp:varName "list"^^xsd:string ;
-              ] ;
-          ]
-          [
-            rdf:type sp:Bind ;
-            sp:expression [
-                rdf:type spinmap:targetResource ;
-                sp:arg1 spin:_this ;
-                spinmap:context [
-                    sp:varName "context"^^xsd:string ;
-                  ] ;
-              ] ;
-            sp:variable [
-                sp:varName "uri"^^xsd:string ;
-              ] ;
-          ]
-        ) ;
+cmumap:Reading-Event
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Reading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI3 ;
+      sp:arg1 <http://topbraid.org/json#device_id> ;
+      sp:arg2 <http://topbraid.org/json#sensor_type> ;
+      sp:arg3 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:Event-{?1}-{?2}-{?3}"^^xsd:string ;
     ] ;
-  spin:constraint [
-      rdf:type spl:Argument ;
-      spl:predicate arg:context ;
-      spl:valueType spinmap:Context ;
-      rdfs:comment "An instance of spinMapContext that represents the class for the target mappings"^^xsd:string ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event> ;
+.
+cmumap:Reading-Measurement
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Reading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI3 ;
+      sp:arg1 <http://topbraid.org/json#device_id> ;
+      sp:arg2 <http://topbraid.org/json#sensor_type> ;
+      sp:arg3 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:Measurement-{?1}-{?2}-{?3}"^^xsd:string ;
     ] ;
-  spin:constraint [
-      rdf:type spl:Argument ;
-      spl:predicate arg:property ;
-      spl:valueType rdf:Property ;
-      rdfs:comment "The property that contains and RDF list"^^xsd:string ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Measurement> ;
+.
+cmumap:Reading-Quantity
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Reading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI3 ;
+      sp:arg1 <http://topbraid.org/json#device_id> ;
+      sp:arg2 <http://topbraid.org/json#sensor_type> ;
+      sp:arg3 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "qudt:Quantity-{?1}-{?2}-{?3}"^^xsd:string ;
     ] ;
-  spin:constraint [
-      rdf:type spl:Argument ;
-      spl:predicate arg:targetProperty ;
-      spl:valueType rdf:Property ;
-      rdfs:comment "The target property, i.e. the property being mapped to"^^xsd:string ;
+  spinmap:targetClass <http://qudt.org/schema/qudt#Quantity> ;
+.
+cmumap:Reading-QuantityValue
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Reading> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI3 ;
+      sp:arg1 <http://topbraid.org/json#device_id> ;
+      sp:arg2 <http://topbraid.org/json#sensor_type> ;
+      sp:arg3 <http://topbraid.org/json#timestamp> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "qudt:QuantityValue-{?1}-{?2}-{?3}"^^xsd:string ;
     ] ;
-  rdfs:subClassOf spin:Templates ;
+  spinmap:targetClass <http://qudt.org/schema/qudt#QuantityValue> ;
 .
 cmumap:Sensor-Sensor
   rdf:type spinmap:Context ;
@@ -752,18 +1421,6 @@ cmumap:SensorReading-HumiditySensor
       spinmap:source spinmap:_source ;
       spinmapl:template "sc:HumidityReading{?1}-{?2}"^^xsd:string ;
     ] ;
-.
-cmumap:SensorReading-QuantityValue
-  rdf:type spinmap:Context ;
-  spinmap:sourceClass <http://topbraid.org/json#SensorReading> ;
-  spinmap:target [
-      rdf:type spinmapl:buildURI2 ;
-      sp:arg1 <http://topbraid.org/json#id> ;
-      sp:arg2 <http://topbraid.org/json#timestamp> ;
-      spinmap:source spinmap:_source ;
-      spinmapl:template "qudt:QuantityValue-{?1}-{?2}"^^xsd:string ;
-    ] ;
-  spinmap:targetClass <http://qudt.org/schema/qudt#QuantityValue> ;
 .
 cmumap:targetResource
   rdf:type spin:Function ;
@@ -934,6 +1591,78 @@ cmumap:targetResource
         ) ;
     ] ;
   rdfs:subClassOf spl:URIFunctions ;
+.
+<http://www.linkedmodel.org/schema/vaem#CatalogEntry>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.linkedmodel.org/schema/vaem#LicenseModel>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Address>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Dom>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Email>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Home>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Intl>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Label>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Location>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Name>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Organization>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Parcel>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Postal>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Pref>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Tel>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#VCard>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/2006/vcard/ns#Work>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/ns/dcat#Catalog>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/ns/dcat#CatalogRecord>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://www.w3.org/ns/dcat#Distribution>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://xmlns.com/foaf/0.1/Agent>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://xmlns.com/foaf/0.1/Document>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://xmlns.com/foaf/0.1/Image>
+  rdfs:subClassOf owl:Thing ;
+.
+<http://xmlns.com/foaf/0.1/Project>
+  rdfs:subClassOf owl:Thing ;
 .
 [
   rdf:type spinmap:Mapping-1-1 ;
