@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="MacRoman"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:cd="http://www.topbraidcomposer.org/2006/04/02/ClassDiagrams.owl#"
@@ -22,19 +22,6 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >19</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >80</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >20</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >345</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings#Device-Device"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >214</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >361</cd:width>
@@ -50,19 +37,6 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >198</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >233</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >184</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >42</cd:x>
-        <cd:class rdf:resource="http://topbraid.org/json#Device_Agent"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >198</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >361</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >20</cd:y>
@@ -71,6 +45,7 @@
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#Device"/>
       </cd:URINode>
     </cd:nodes>
+    <cd:selectedResource rdf:resource="http://topbraid.org/json#Sensor"/>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -91,34 +66,6 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >80</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >248</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >345</cd:x>
-        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings#Device_Agent-DeviceAgent"/>
-      </cd:URINode>
-    </cd:nodes>
-    <rdfs:label>2013-08-18 Mapping of CMU Devices and Sensors</rdfs:label>
-    <cd:selectedResource rdf:resource="http://topbraid.org/json#Sensor"/>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >134</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >255</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >20</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >20</cd:x>
-        <cd:class rdf:resource="http://topbraid.org/json#Device"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >19</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >80</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >656</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >345</cd:x>
@@ -128,14 +75,14 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >262</cd:height>
+        >19</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >211</cd:width>
+        >80</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >592</cd:y>
+        >20</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >64</cd:x>
-        <cd:class rdf:resource="http://topbraid.org/json#Sensor"/>
+        >345</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings#Device-Device"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -164,5 +111,58 @@
         <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor"/>
       </cd:URINode>
     </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >134</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >255</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >20</cd:x>
+        <cd:class rdf:resource="http://topbraid.org/json#Device"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >19</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >80</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >248</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >345</cd:x>
+        <cd:class rdf:resource="http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapCmuSensorReadings#Device_Agent-DeviceAgent"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >198</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >233</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >184</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >42</cd:x>
+        <cd:class rdf:resource="http://topbraid.org/json#Device_Agent"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >262</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >211</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >592</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >64</cd:x>
+        <cd:class rdf:resource="http://topbraid.org/json#Sensor"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>2013-08-18 Mapping of CMU Devices and Sensors</rdfs:label>
   </cd:Diagram>
 </rdf:RDF>

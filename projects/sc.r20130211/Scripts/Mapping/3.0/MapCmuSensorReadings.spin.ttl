@@ -811,6 +811,30 @@ owlrl:cls-int1_1
 owlrl:cls-int2_1
   rdf:type owlrl:cls-int2 ;
 .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#Device>
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#FireflyDevice> ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object "SensorAndrew"^^xsd:string ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#hasAgent> ;
+                sp:path2 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasLabel> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+.
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event>
   rdfs:subClassOf owl:Thing ;
 .
