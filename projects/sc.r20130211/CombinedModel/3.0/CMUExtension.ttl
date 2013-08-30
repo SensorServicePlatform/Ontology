@@ -7,6 +7,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension>
   rdf:type owl:Ontology ;
@@ -15,6 +17,28 @@
 .
 cmusc:Device
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object cmusc:FireflyDevice ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object "SensorAndrew"^^xsd:string ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 cmusc:hasAgent ;
+                sp:path2 sc:hasLabel ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;

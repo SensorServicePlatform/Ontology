@@ -8,6 +8,7 @@
 # imports: http://qudt.org/1.1/vocab/dimension
 # imports: http://qudt.org/vocab/unit
 # imports: http://rdfs.org/sioc/ns
+# imports: http://spinrdf.org/spin
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/vcard/ns
@@ -22,7 +23,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#> .
+@prefix sp: <http://spinrdf.org/sp#> .
 @prefix spatial: <http://geovocab.org/spatial#> .
+@prefix spin: <http://spinrdf.org/spin#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#uri>
   rdf:type owl:DatatypeProperty ;
@@ -39,6 +42,7 @@
   owl:imports <http://qudt.org/1.1/vocab/dimension> ;
   owl:imports <http://qudt.org/vocab/unit> ;
   owl:imports <http://rdfs.org/sioc/ns> ;
+  owl:imports <http://spinrdf.org/spin> ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2006/vcard/ns> ;
@@ -417,6 +421,181 @@ sc:ResourceRegistry
 .
 sc:Sensor
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:Accelerometer ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "acc_x"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "acc_y"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "acc_z"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:Accelerometer ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "motion"^^xsd:string ;
+            sp:predicate sc:shortName ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:AudioSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "audio_p2p"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "sound_level"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:HumiditySensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "humidity"^^xsd:string ;
+            sp:predicate sc:shortName ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:LightSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "light"^^xsd:string ;
+            sp:predicate sc:shortName ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:PressureSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object "pressure"^^xsd:string ;
+            sp:predicate sc:shortName ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:TemperatureSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Union ;
+            sp:elements (
+                (
+                  [
+                    sp:object "temp"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "temperature"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+                (
+                  [
+                    sp:object "digital_temp"^^xsd:string ;
+                    sp:predicate sc:shortName ;
+                    sp:subject spin:_this ;
+                  ]
+                )
+              ) ;
+          ]
+        ) ;
+    ] ;
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
