@@ -1,0 +1,45 @@
+# baseURI: http://cmu.sv.edu/dynamictest
+# imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+# c14n-version: 3
+@prefix dt: <http://cmu.sv.edu/dynamictest#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm: <http://topbraid.org/sparqlmotion#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://cmu.sv.edu/dynamictest>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://topbraid.org/sparqlmotionfunctions> ;
+  owl:imports <http://topbraid.org/sparqlmotionlib-tbc> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+dt:LatestMeasurement
+  rdf:type owl:Class ;
+  rdfs:label "A measurement made by a reading device such as a sensor"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty dt:hasValue ;
+    ] ;
+.
+dt:LatestMeasurement_1
+  rdf:type dt:LatestMeasurement ;
+  dt:hasValue "<http://einstein.sv.cmu.edu/lastest_readings_from_all_devices/temp/json>"^^xsd:string ;
+  rdfs:label "A measurement made by a reading device such as a sensor"^^xsd:string ;
+.
+dt:getReadings
+  rdf:type sm:Function ;
+  rdfs:subClassOf sm:Functions ;
+.
+dt:hasValue
+  rdf:type rdf:Property ;
+  rdfs:label "A measurement made by a reading device such as a sensor"^^xsd:string ;
+.

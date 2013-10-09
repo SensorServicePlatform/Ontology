@@ -1,451 +1,452 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel
 
-@prefix nict:    <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/NICT#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-
+# c14n-version: 3
+@prefix nict: <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/NICT#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Event>
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:name
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:Observation ;
-                owl:onProperty nict:observation
-              ] .
-
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:Observation ;
+      owl:onProperty nict:observation ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:name ;
+    ] ;
+.
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#MeasurementValuePair>
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:region
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:region
-              ] .
-
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:region ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:region ;
+    ] ;
+.
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor>
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#MeasurementValuePair> ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measures>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:status
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:status
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#createdAt>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#createdAt>
-              ] .
-
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#MeasurementValuePair> ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#measures> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#createdAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:status ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#createdAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:status ;
+    ] ;
+.
 <http://www.cmusv.edu/SmartCommunity/Scripts/CombinedModel/1.0/NICT>
-      rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel> ;
-      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
-
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
 nict:DateFormat
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:region
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty <http://qudt.org/schema/qudt#quantityValue>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:region
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://qudt.org/schema/qudt#quantityValue>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID>
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://qudt.org/schema/qudt#quantityValue> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:region ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://qudt.org/schema/qudt#quantityValue> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:region ;
+    ] ;
+.
 nict:Member
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+.
 nict:Observation
-      rdf:type owl:Class ;
-      rdfs:subClassOf owl:Thing ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:who
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:When ;
-                owl:onProperty nict:when
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:where
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:Member ;
-                owl:onProperty nict:member
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:Where ;
-                owl:onProperty nict:where
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:What ;
-                owl:onProperty nict:what
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:Who ;
-                owl:onProperty nict:who
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:what
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:when
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:Member ;
+      owl:onProperty nict:member ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:What ;
+      owl:onProperty nict:what ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:When ;
+      owl:onProperty nict:when ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:Where ;
+      owl:onProperty nict:where ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:Who ;
+      owl:onProperty nict:who ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:what ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:when ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:where ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:who ;
+    ] ;
+.
 nict:Publisher
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Resource> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:contact
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:contact
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:country
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:country
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:organization
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:organization
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Resource> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:contact ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:country ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:organization ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:contact ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:country ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:organization ;
+    ] ;
+.
 nict:SensorInfo
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty nict:sensorId
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:title
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:publisher
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:Publisher ;
-                owl:onProperty nict:publisher
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:DateFormat ;
-                owl:onProperty nict:dateFormat
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:contact
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:dateFormat
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:title
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:sensorId
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:sensorName
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:sensorName
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:spatCoverage
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:contact
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom nict:SpatCoverage ;
-                owl:onProperty nict:spatCoverage
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:DateFormat ;
+      owl:onProperty nict:dateFormat ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:Publisher ;
+      owl:onProperty nict:publisher ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom nict:SpatCoverage ;
+      owl:onProperty nict:spatCoverage ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty nict:sensorId ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:contact ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:sensorName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:contact ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:dateFormat ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:publisher ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:sensorId ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:sensorName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:spatCoverage ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:title ;
+    ] ;
+.
 nict:SpatCoverage
-      rdf:type owl:Class ;
-      rdfs:subClassOf owl:Thing ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty nict:lat
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty nict:long
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty nict:lat ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty nict:long ;
+    ] ;
+.
 nict:What
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:name
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://qudt.org/schema/qudt#unit>
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty <http://qudt.org/schema/qudt#value>
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://qudt.org/schema/qudt#unit> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:name ;
+    ] ;
+.
 nict:When
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
-                owl:onProperty nict:time
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:time
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
+      owl:onProperty nict:time ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:time ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:type ;
+    ] ;
+.
 nict:Where
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:decimal ;
-                owl:onProperty nict:coordinates
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:type
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty nict:coordinates ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:type ;
+    ] ;
+.
 nict:Who
-      rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:refers
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty nict:type
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:refers
-              ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty nict:type
-              ] .
-
+  rdf:type owl:Class ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#InformationArtifact> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:refers ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty nict:type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:refers ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty nict:type ;
+    ] ;
+.
 nict:contact
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:coordinates
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:country
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:dateFormat
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:lat
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:long
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:member
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:name
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:observation
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:organization
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:publisher
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:refers
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:region
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:sensorId
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:sensorName
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:spatCoverage
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:status
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:time
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:title
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:type
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:what
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:when
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:where
-      rdf:type rdf:Property .
-
+  rdf:type rdf:Property ;
+.
 nict:who
-      rdf:type rdf:Property .
+  rdf:type rdf:Property ;
+.
