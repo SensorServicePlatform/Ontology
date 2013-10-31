@@ -75,12 +75,6 @@ dt2:GetDynamicDevices_Return
   sm:nodeX 326 ;
   sm:nodeY 355 ;
 .
-dt2:GetReadingsFromEinstein
-  rdf:type sml:ImportRDFFromURL ;
-  sm:next dt2:ConvertJSONToRDF_2 ;
-  sml:url "http://einstein.sv.cmu.edu/lastest_readings_from_all_devices/temp/json"^^xsd:string ;
-  rdfs:label "GetReadingsFromEinstein"^^xsd:string ;
-.
 dt2:ImportTextFromURL_1
   rdf:type sml:ImportTextFromURL ;
   sm:next dt2:ConvertJSONToRDF_3 ;
@@ -96,4 +90,11 @@ dt2:ImportTextFromURL_2
   sm:outputVariable "text"^^xsd:string ;
   sml:url "http://einstein.sv.cmu.edu/get_devices/json"^^xsd:string ;
   rdfs:label "Declare Imports"^^xsd:string ;
+.
+dt2:ImportTextFromURL_3
+  rdf:type sml:ImportTextFromURL ;
+  sm:next dt2:ConvertJSONToRDF_2 ;
+  sm:outputVariable "text"^^xsd:string ;
+  sml:url "http://einstein.sv.cmu.edu/lastest_readings_from_all_devices/temp/json"^^xsd:string ;
+  rdfs:label "Get Einstein Data"^^xsd:string ;
 .
