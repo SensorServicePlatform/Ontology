@@ -1,0 +1,118 @@
+# baseURI: http://cmu.sv.edu/dynamicstest3
+# imports: http://topbraid.org/sparqlmotionfunctions
+# imports: http://topbraid.org/sparqlmotionlib-tbc
+
+@prefix dt3:     <http://cmu.sv.edu/dynamicstest3#> .
+@prefix json:    <http://topbraid.org/json#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sm:      <http://topbraid.org/sparqlmotion#> .
+@prefix sml:     <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cmu.sv.edu/dynamicstest3>
+      rdf:type owl:Ontology ;
+      owl:imports <http://topbraid.org/sparqlmotionlib-tbc> , <http://topbraid.org/sparqlmotionfunctions> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ConvertEinsteinJSONToRDF>
+      rdf:type sml:ConvertJSONToRDF ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#GetLatestRdfReadings_Return> ;
+      sm:outputVariable "root"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ConvertJSONToRDF_2>
+      rdf:type sml:ConvertJSONToRDF ;
+      rdfs:label "ConvertToRDF"^^xsd:string ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#GetAllLatestReadings_Return> ;
+      sm:nodeX 416 ;
+      sm:nodeY 218 ;
+      sm:outputVariable "dt2:Object"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ConvertJSONToRDF_3>
+      rdf:type sml:ConvertJSONToRDF ;
+      rdfs:label "ConvertToRDF"^^xsd:string ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#GetDevicesRDF_Return> ;
+      sm:outputVariable "Device"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ConvertTextToRDF_1>
+      rdf:type sml:ConvertTextToRDF ;
+      rdfs:label "Declare Imports"^^xsd:string ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#GetDynamicDevices_Return> ;
+      sm:nodeX 339 ;
+      sm:nodeY 204 ;
+      sml:serialization sml:Turtle .
+
+<http://cmu.sv.edu/dynamicstest3#GetAllLatestReadings>
+      rdf:type sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule <http://cmu.sv.edu/dynamicstest3#GetAllLatestReadings_Return> .
+
+<http://cmu.sv.edu/dynamicstest3#GetAllLatestReadings_Return>
+      rdf:type sml:ReturnText ;
+      sm:nodeX 394 ;
+      sm:nodeY 365 .
+
+<http://cmu.sv.edu/dynamicstest3#GetDevices>
+      rdf:type sm:Function ;
+      rdfs:subClassOf sm:Functions .
+
+<http://cmu.sv.edu/dynamicstest3#GetDevicesRDF>
+      rdf:type sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule <http://cmu.sv.edu/dynamicstest3#GetDevicesRDF_Return> .
+
+<http://cmu.sv.edu/dynamicstest3#GetDevicesRDF_Return>
+      rdf:type sml:ReturnRDF ;
+      sm:nodeX 345 ;
+      sm:nodeY 347 .
+
+<http://cmu.sv.edu/dynamicstest3#GetDynamicDevices>
+      rdf:type sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule <http://cmu.sv.edu/dynamicstest3#GetDynamicDevices_Return> .
+
+<http://cmu.sv.edu/dynamicstest3#GetDynamicDevices_Return>
+      rdf:type sml:ReturnText ;
+      sm:nodeX 326 ;
+      sm:nodeY 355 .
+
+<http://cmu.sv.edu/dynamicstest3#GetLatestRdfReadings>
+      rdf:type sm:Function ;
+      rdfs:subClassOf sm:Functions ;
+      sm:returnModule <http://cmu.sv.edu/dynamicstest3#GetLatestRdfReadings_Return> .
+
+<http://cmu.sv.edu/dynamicstest3#GetLatestRdfReadings_Return>
+      rdf:type sml:ReturnRDF .
+
+<http://cmu.sv.edu/dynamicstest3#ImportEinsteinJSON>
+      rdf:type sml:ImportTextFromURL ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#ConvertEinsteinJSONToRDF> ;
+      sm:nodeX 47 ;
+      sm:nodeY 176 ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://einstein.sv.cmu.edu/get_devices/json"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ImportTextFromURL>
+      rdf:type sml:ImportTextFromURL ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#ConvertJSONToRDF_2> ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://einstein.sv.cmu.edu/lastest_readings_from_all_devices/temp/json"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ImportTextFromURL_1>
+      rdf:type sml:ImportTextFromURL ;
+      rdfs:label "Declare Imports"^^xsd:string ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#ConvertJSONToRDF_3> ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://einstein.sv.cmu.edu/get_devices/json"^^xsd:string .
+
+<http://cmu.sv.edu/dynamicstest3#ImportTextFromURL_2>
+      rdf:type sml:ImportTextFromURL ;
+      rdfs:label "Declare Imports"^^xsd:string ;
+      sm:next <http://cmu.sv.edu/dynamicstest3#ConvertTextToRDF_1> ;
+      sm:nodeX 347 ;
+      sm:nodeY 69 ;
+      sm:outputVariable "text"^^xsd:string ;
+      sml:url "http://einstein.sv.cmu.edu/get_devices/json"^^xsd:string .
