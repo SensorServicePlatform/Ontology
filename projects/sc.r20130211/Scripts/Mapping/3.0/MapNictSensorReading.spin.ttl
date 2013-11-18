@@ -1,0 +1,26 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading
+# imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/spin/spinmapl
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntologyNict
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputNict
+
+# c14n-version: 3
+@prefix : <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading#> .
+@prefix mapnict: <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNictSensorReading#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://topbraid.org/spin/spinmapl> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntologyNict> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputNict> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
