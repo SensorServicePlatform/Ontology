@@ -156,6 +156,11 @@ sc:ComputationService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
 .
+sc:ComputationalEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
+.
 sc:ComputerProgram
   rdf:type owl:Class ;
   rdfs:subClassOf sc:InformationArtifact ;
@@ -334,6 +339,11 @@ sc:MeasurementDevice
       owl:onProperty sc:hasSensor ;
     ] ;
 .
+sc:MeasurementEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
+.
 sc:MeasurementService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
@@ -366,6 +376,11 @@ sc:PressureSensor
           ]
         ) ;
     ] ;
+.
+sc:RegistrationEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
 .
 sc:RegistryService
   rdf:type owl:Class ;
