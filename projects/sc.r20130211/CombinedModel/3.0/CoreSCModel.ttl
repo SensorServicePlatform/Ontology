@@ -604,6 +604,11 @@ sc:Sensor
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Resource ;
+      owl:onProperty sc:informationSource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:allValuesFrom sc:ServiceProvider ;
       owl:onProperty sc:playsRoleOf ;
     ] ;
@@ -773,6 +778,10 @@ sc:hasTimeStamp
 sc:id
   rdf:type owl:DatatypeProperty ;
   rdfs:range xsd:integer ;
+.
+sc:informationSource
+  rdf:type rdf:Property ;
+  rdfs:label "information source"^^xsd:string ;
 .
 sc:isAssociatedWith
   rdf:type owl:SymmetricProperty ;
