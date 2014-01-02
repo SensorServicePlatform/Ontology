@@ -62,6 +62,19 @@
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context :Measurement-TimeStamp ;
+      spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TimeStamp> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context :Measurement-Measurement ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#id> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
+    ] ;
+  spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context :Measurement-Measurement ;
       spinmap:expression spin:_arg1 ;
@@ -74,6 +87,54 @@
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#cur_val> ;
       spinmap:targetPredicate1 <http://qudt.org/schema/qudt#numericValue> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context :Measurement-TimeStamp ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#today_time> ;
+      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#value> ;
+    ] ;
+.
+<http://topbraid.org/json#Publisher>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context :Publisher-Address ;
+      spinmap:expression <http://www.w3.org/2006/vcard/ns#Address> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context :Publisher-Email ;
+      spinmap:expression <http://www.w3.org/2006/vcard/ns#Email> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context :Publisher-Organization ;
+      spinmap:expression <http://www.w3.org/2006/vcard/ns#Organization> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context :Publisher-Address ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#country> ;
+      spinmap:targetPredicate1 <http://www.w3.org/2006/vcard/ns#country-name> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context :Publisher-Email ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#contact> ;
+      spinmap:targetPredicate1 rdfs:label ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context :Publisher-Organization ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#organization> ;
+      spinmap:targetPredicate1 <http://www.w3.org/2006/vcard/ns#organization-name> ;
     ] ;
 .
 <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading>
@@ -139,4 +200,48 @@
       spinmapl:template "qudt:{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://qudt.org/schema/qudt#QuantityValue> ;
+.
+:Measurement-TimeStamp
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "sc:{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TimeStamp> ;
+.
+:Publisher-Address
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#organization> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "v:{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.w3.org/2006/vcard/ns#Address> ;
+.
+:Publisher-Email
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#contact> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "v:{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.w3.org/2006/vcard/ns#Email> ;
+.
+:Publisher-Organization
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#organization> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "v:{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.w3.org/2006/vcard/ns#Organization> ;
 .
