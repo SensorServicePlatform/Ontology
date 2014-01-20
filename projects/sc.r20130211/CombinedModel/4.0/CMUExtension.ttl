@@ -119,3 +119,12 @@ cmusc:hasNetworkAddress
 cmusc:metadataJson
   rdf:type rdf:Property ;
 .
+sc:Sensor
+  spin:rule [] ;
+  spin:rule [] ;
+  spin:rule [] ;
+  spin:rule [] ;
+  spin:rule [] ;
+  spin:rule [] ;
+  spin:rule [] ;
+.

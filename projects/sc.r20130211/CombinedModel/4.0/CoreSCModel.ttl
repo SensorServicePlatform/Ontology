@@ -423,181 +423,6 @@ sc:ResourceRegistry
 .
 sc:Sensor
   rdf:type owl:Class ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:Accelerometer ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            rdf:type sp:Union ;
-            sp:elements (
-                (
-                  [
-                    sp:object "acc_x"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-                (
-                  [
-                    sp:object "acc_y"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-                (
-                  [
-                    sp:object "acc_z"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-              ) ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:Accelerometer ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            sp:object "motion"^^xsd:string ;
-            sp:predicate sc:shortName ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:AudioSensor ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            rdf:type sp:Union ;
-            sp:elements (
-                (
-                  [
-                    sp:object "audio_p2p"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-                (
-                  [
-                    sp:object "sound_level"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-              ) ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:HumiditySensor ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            sp:object "humidity"^^xsd:string ;
-            sp:predicate sc:shortName ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:LightSensor ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            sp:object "light"^^xsd:string ;
-            sp:predicate sc:shortName ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:PressureSensor ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            sp:object "pressure"^^xsd:string ;
-            sp:predicate sc:shortName ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-    ] ;
-  spin:rule [
-      rdf:type sp:Construct ;
-      sp:templates (
-          [
-            sp:object sc:TemperatureSensor ;
-            sp:predicate rdf:type ;
-            sp:subject spin:_this ;
-          ]
-        ) ;
-      sp:where (
-          [
-            rdf:type sp:Union ;
-            sp:elements (
-                (
-                  [
-                    sp:object "temp"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-                (
-                  [
-                    sp:object "temperature"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-                (
-                  [
-                    sp:object "digital_temp"^^xsd:string ;
-                    sp:predicate sc:shortName ;
-                    sp:subject spin:_this ;
-                  ]
-                )
-              ) ;
-          ]
-        ) ;
-    ] ;
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -857,3 +682,178 @@ sc:to
 sc:updatedAt
   rdf:type owl:ObjectProperty ;
 .
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:Accelerometer ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        rdf:type sp:Union ;
+        sp:elements (
+            (
+              [
+                sp:object "acc_x"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+            (
+              [
+                sp:object "acc_y"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+            (
+              [
+                sp:object "acc_z"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+          ) ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:Accelerometer ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        sp:object "motion"^^xsd:string ;
+        sp:predicate sc:shortName ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:AudioSensor ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        rdf:type sp:Union ;
+        sp:elements (
+            (
+              [
+                sp:object "audio_p2p"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+            (
+              [
+                sp:object "sound_level"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+          ) ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:HumiditySensor ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        sp:object "humidity"^^xsd:string ;
+        sp:predicate sc:shortName ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:LightSensor ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        sp:object "light"^^xsd:string ;
+        sp:predicate sc:shortName ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:PressureSensor ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        sp:object "pressure"^^xsd:string ;
+        sp:predicate sc:shortName ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+].
+[
+  rdf:type sp:Construct ;
+  sp:templates (
+      [
+        sp:object sc:TemperatureSensor ;
+        sp:predicate rdf:type ;
+        sp:subject spin:_this ;
+      ]
+    ) ;
+  sp:where (
+      [
+        rdf:type sp:Union ;
+        sp:elements (
+            (
+              [
+                sp:object "temp"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+            (
+              [
+                sp:object "temperature"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+            (
+              [
+                sp:object "digital_temp"^^xsd:string ;
+                sp:predicate sc:shortName ;
+                sp:subject spin:_this ;
+              ]
+            )
+          ) ;
+      ]
+    ) ;
+].
