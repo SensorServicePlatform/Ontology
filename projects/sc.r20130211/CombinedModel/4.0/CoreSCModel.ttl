@@ -1,0 +1,697 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/CoreSCModel
+# imports: http://geovocab.org/spatial
+# imports: http://purl.org/dc/dcam/
+# imports: http://purl.org/dc/dcmitype/
+# imports: http://purl.org/dc/terms/
+# imports: http://purl.org/vocab/vann/
+# imports: http://qudt.org/1.1/schema/quantity
+# imports: http://qudt.org/1.1/vocab/dimension
+# imports: http://qudt.org/vocab/unit
+# imports: http://rdfs.org/sioc/ns
+# imports: http://spinrdf.org/spin
+# imports: http://www.w3.org/2003/01/geo/wgs84_pos
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/2006/vcard/ns
+# imports: http://www.w3.org/2007/05/powder-s
+# imports: http://www.w3.org/ns/adms
+# imports: http://www.w3.org/ns/dcat
+# imports: http://xmlns.com/foaf/0.1/
+
+# c14n-version: 3
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/CoreSCModel#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spatial: <http://geovocab.org/spatial#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/CMUExtension#uri>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/CoreSCModel>
+  rdf:type owl:Ontology ;
+  owl:imports <http://geovocab.org/spatial> ;
+  owl:imports <http://purl.org/dc/dcam/> ;
+  owl:imports <http://purl.org/dc/dcmitype/> ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://purl.org/vocab/vann/> ;
+  owl:imports <http://qudt.org/1.1/schema/quantity> ;
+  owl:imports <http://qudt.org/1.1/vocab/dimension> ;
+  owl:imports <http://qudt.org/vocab/unit> ;
+  owl:imports <http://rdfs.org/sioc/ns> ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2006/vcard/ns> ;
+  owl:imports <http://www.w3.org/2007/05/powder-s> ;
+  owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports <http://xmlns.com/foaf/0.1/> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+sc:Accelerometer
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#LinearAcceleration> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:ActuationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:Actuator
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+.
+sc:AudioSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#Pressure> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:ComplexDevice
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Device ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComplexSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComplexService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:ComputationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:ComputationalEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
+.
+sc:ComputerProgram
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:InformationArtifact ;
+.
+sc:Device
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:DeviceRegistrationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:RegistryService ;
+.
+sc:DeviceRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:ResourceRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Device ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:Event
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:TimeStamp ;
+      owl:onProperty sc:hasTimeStamp ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:boolean ;
+      owl:onProperty sc:isHazard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              sc:Resource
+              sc:Service
+              sc:Location
+              sc:Event
+            ) ;
+        ] ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasTimeStamp ;
+    ] ;
+.
+sc:HumiditySensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:Image
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:anyURI ;
+      owl:onProperty sc:hasPayload ;
+    ] ;
+.
+sc:InformationArtifact
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:LightSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#Illuminance> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:Location
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:format ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:altitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:latitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:longitude ;
+    ] ;
+.
+sc:Measurement
+  rdf:type owl:Class ;
+  rdfs:label "A measurement made by a reading device such as a sensor"^^xsd:string ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Quantity> ;
+      owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+    ] ;
+.
+sc:MeasurementDevice
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:hasSensor ;
+    ] ;
+.
+sc:MeasurementEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
+.
+sc:MeasurementService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:Person
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:PressureSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#AtmosphericPressure> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:RegistrationEvent
+  rdf:type owl:Class ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:Event ;
+.
+sc:RegistryService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Service ;
+.
+sc:Resource
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Location ;
+      owl:onProperty sc:locatedAt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:unionOf (
+              sc:ServiceConductor
+              sc:ServiceProvider
+            ) ;
+        ] ;
+      owl:onProperty sc:playsRoleOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+.
+sc:ResourceRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Resource ;
+.
+sc:Sensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Measurement ;
+      owl:onProperty sc:provides ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Resource ;
+      owl:onProperty sc:informationSource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:ServiceProvider ;
+      owl:onProperty sc:playsRoleOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:printName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:shortName ;
+    ] ;
+.
+sc:SensorRegistrationService
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:RegistryService ;
+.
+sc:SensorRegistry
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:ResourceRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:composedOf ;
+    ] ;
+.
+sc:Service
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Event ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:InformationArtifact ;
+      owl:onProperty sc:consumes ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:InformationArtifact ;
+      owl:onProperty sc:produces ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty sc:hasLabel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:hasGUID ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
+.
+sc:ServiceConductor
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:orchestrates ;
+    ] ;
+.
+sc:ServiceProvider
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:provides ;
+    ] ;
+.
+sc:TemperatureSensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf sc:Sensor ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          sc:Sensor
+          [
+            rdf:type owl:Restriction ;
+            owl:allValuesFrom [
+                rdf:type owl:Class ;
+                owl:intersectionOf (
+                    <http://qudt.org/schema/qudt#Quantity>
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:hasValue <http://qudt.org/vocab/quantity#ThermodynamicTemperature> ;
+                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
+                    ]
+                  ) ;
+              ] ;
+            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
+          ]
+        ) ;
+    ] ;
+.
+sc:TimeStamp
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#TimeUnit> ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://qudt.org/schema/qudt#value> ;
+    ] ;
+.
+sc:altitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:composedOf
+  rdf:type owl:TransitiveProperty ;
+  owl:inverseOf sc:isPartOf ;
+.
+sc:consumes
+  rdf:type rdf:Property ;
+.
+sc:createdAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:deviceGuid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:format
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:from
+  rdf:type rdf:Property ;
+.
+sc:guid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:hasAlias
+  rdf:type rdf:Property ;
+.
+sc:hasGUID
+  rdf:type rdf:Property ;
+.
+sc:hasLabel
+  rdf:type rdf:Property ;
+.
+sc:hasPayload
+  rdf:type rdf:Property ;
+.
+sc:hasSensor
+  rdf:type owl:TransitiveProperty ;
+.
+sc:hasTimeStamp
+  rdf:type rdf:Property ;
+.
+sc:id
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
+.
+sc:informationSource
+  rdf:type rdf:Property ;
+  rdfs:label "information source"^^xsd:string ;
+.
+sc:isAssociatedWith
+  rdf:type owl:SymmetricProperty ;
+.
+sc:isHazard
+  rdf:type rdf:Property ;
+.
+sc:isPartOf
+  rdf:type owl:TransitiveProperty ;
+.
+sc:latitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:locatedAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:locationId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
+.
+sc:longitude
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:measures
+  rdf:type rdf:Property ;
+  rdfs:label "measures"^^xsd:string ;
+  core:prefLabel "measures"^^xsd:string ;
+.
+sc:measuresInUnit
+  rdf:type rdf:Property ;
+.
+sc:measuresQuantityKind
+  rdf:type rdf:Property ;
+.
+sc:measuresValue
+  rdf:type rdf:Property ;
+.
+sc:metadata
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:networkAddress
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:orchestrates
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:playsRoleOf
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:printName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:produces
+  rdf:type rdf:Property ;
+.
+sc:provides
+  rdf:type owl:AsymmetricProperty ;
+.
+sc:shortName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+.
+sc:to
+  rdf:type rdf:Property ;
+.
+sc:updatedAt
+  rdf:type owl:ObjectProperty ;
+.
