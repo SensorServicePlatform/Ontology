@@ -1,0 +1,155 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension
+
+# c14n-version: 3
+@prefix NICTExtension: <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+NICTExtension:Measurement
+  rdf:type owl:Class ;
+  rdfs:label "Measurement"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty NICTExtension:last_max_val ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty NICTExtension:today_max_val ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:last_max_date ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:location ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:region ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:stat_start ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:last_max_date ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:last_max_val ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:location ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:region ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:stat_start ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:today_max_val ;
+    ] ;
+.
+NICTExtension:Publisher
+  rdf:type owl:Class ;
+  rdfs:label "Publisher"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:external_link ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:external_link ;
+    ] ;
+.
+NICTExtension:Sensor_Info
+  rdf:type owl:Class ;
+  rdfs:label "Sensor Info"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty NICTExtension:title ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty NICTExtension:title ;
+    ] ;
+.
+NICTExtension:Spat_Coverage
+  rdf:type owl:Class ;
+  rdfs:label "spat coverage"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension#lat.range> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension#lon.range> ;
+    ] ;
+.
+NICTExtension:external_link
+  rdf:type rdf:Property ;
+.
+NICTExtension:last_max_date
+  rdf:type rdf:Property ;
+.
+NICTExtension:last_max_val
+  rdf:type rdf:Property ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension#lat.range>
+  rdf:type rdf:Property ;
+.
+NICTExtension:location
+  rdf:type rdf:Property ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/NICTExtension#lon.range>
+  rdf:type rdf:Property ;
+.
+NICTExtension:measurements
+  rdf:type rdf:Property ;
+.
+NICTExtension:region
+  rdf:type rdf:Property ;
+.
+NICTExtension:stat_start
+  rdf:type rdf:Property ;
+.
+NICTExtension:title
+  rdf:type rdf:Property ;
+.
+NICTExtension:today_max_val
+  rdf:type rdf:Property ;
+.
