@@ -1,4 +1,4 @@
-# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNictSensorReading
 # imports: http://spinrdf.org/spin
 # imports: http://topbraid.org/spin/spinmapl
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension
@@ -6,7 +6,7 @@
 # imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputNict
 
 # c14n-version: 3
-@prefix : <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading#> .
+@prefix : <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNictSensorReading#> .
 @prefix mapnict: <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNictSensorReading#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -20,23 +20,23 @@
 <http://topbraid.org/json#Device>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Device-Quantity ;
+      spinmap:context mapnict:Device-Quantity ;
       spinmap:expression <http://qudt.org/schema/qudt#Quantity> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Device-Sensor ;
+      spinmap:context mapnict:Device-Sensor ;
       spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Device-Quantity ;
+      spinmap:context mapnict:Device-Quantity ;
       spinmap:expression [
           rdf:type spinmap:targetResource ;
           sp:arg1 spin:_arg1 ;
-          spinmap:context :Measurement-QuantityValue ;
+          spinmap:context mapnict:Measurement-QuantityValue ;
         ] ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#measurements> ;
       spinmap:targetPredicate1 <http://qudt.org/schema/qudt#quantityValue> ;
@@ -45,52 +45,52 @@
 <http://topbraid.org/json#Measurement>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Measurement-Location ;
+      spinmap:context mapnict:Measurement-Location ;
       spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Measurement-Measurement ;
+      spinmap:context mapnict:Measurement-Measurement ;
       spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Measurement> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Measurement-QuantityValue ;
+      spinmap:context mapnict:Measurement-QuantityValue ;
       spinmap:expression <http://qudt.org/schema/qudt#QuantityValue> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Measurement-TimeStamp ;
+      spinmap:context mapnict:Measurement-TimeStamp ;
       spinmap:expression <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TimeStamp> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Measurement-Measurement ;
+      spinmap:context mapnict:Measurement-Measurement ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#id> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#hasGUID> ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Measurement-Measurement ;
+      spinmap:context mapnict:Measurement-Measurement ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#location> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#locatedAt> ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Measurement-QuantityValue ;
+      spinmap:context mapnict:Measurement-QuantityValue ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#cur_val> ;
       spinmap:targetPredicate1 <http://qudt.org/schema/qudt#numericValue> ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Measurement-TimeStamp ;
+      spinmap:context mapnict:Measurement-TimeStamp ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#today_time> ;
       spinmap:targetPredicate1 <http://qudt.org/schema/qudt#value> ;
@@ -99,45 +99,45 @@
 <http://topbraid.org/json#Publisher>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Publisher-Address ;
+      spinmap:context mapnict:Publisher-Address ;
       spinmap:expression <http://www.w3.org/2006/vcard/ns#Address> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Publisher-Email ;
+      spinmap:context mapnict:Publisher-Email ;
       spinmap:expression <http://www.w3.org/2006/vcard/ns#Email> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context :Publisher-Organization ;
+      spinmap:context mapnict:Publisher-Organization ;
       spinmap:expression <http://www.w3.org/2006/vcard/ns#Organization> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Publisher-Address ;
+      spinmap:context mapnict:Publisher-Address ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#country> ;
       spinmap:targetPredicate1 <http://www.w3.org/2006/vcard/ns#country-name> ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Publisher-Email ;
+      spinmap:context mapnict:Publisher-Email ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#contact> ;
       spinmap:targetPredicate1 rdfs:label ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context :Publisher-Organization ;
+      spinmap:context mapnict:Publisher-Organization ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#organization> ;
       spinmap:targetPredicate1 <http://www.w3.org/2006/vcard/ns#organization-name> ;
     ] ;
 .
-<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNoctSensorReading>
+<http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/3.0/MapNictSensorReading>
   rdf:type owl:Ontology ;
   owl:imports <http://spinrdf.org/spin> ;
   owl:imports <http://topbraid.org/spin/spinmapl> ;
@@ -146,7 +146,7 @@
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutputNict> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
-:Device-Quantity
+mapnict:Device-Quantity
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Device> ;
   spinmap:target [
@@ -157,7 +157,7 @@
     ] ;
   spinmap:targetClass <http://qudt.org/schema/qudt#Quantity> ;
 .
-:Device-Sensor
+mapnict:Device-Sensor
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Device> ;
   spinmap:target [
@@ -168,7 +168,7 @@
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Sensor> ;
 .
-:Measurement-Location
+mapnict:Measurement-Location
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
   spinmap:target [
@@ -179,7 +179,7 @@
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location> ;
 .
-:Measurement-Measurement
+mapnict:Measurement-Measurement
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
   spinmap:target [
@@ -190,7 +190,7 @@
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Measurement> ;
 .
-:Measurement-QuantityValue
+mapnict:Measurement-QuantityValue
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
   spinmap:target [
@@ -201,7 +201,7 @@
     ] ;
   spinmap:targetClass <http://qudt.org/schema/qudt#QuantityValue> ;
 .
-:Measurement-TimeStamp
+mapnict:Measurement-TimeStamp
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Measurement> ;
   spinmap:target [
@@ -212,7 +212,7 @@
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#TimeStamp> ;
 .
-:Publisher-Address
+mapnict:Publisher-Address
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
   spinmap:target [
@@ -223,7 +223,7 @@
     ] ;
   spinmap:targetClass <http://www.w3.org/2006/vcard/ns#Address> ;
 .
-:Publisher-Email
+mapnict:Publisher-Email
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
   spinmap:target [
@@ -234,7 +234,7 @@
     ] ;
   spinmap:targetClass <http://www.w3.org/2006/vcard/ns#Email> ;
 .
-:Publisher-Organization
+mapnict:Publisher-Organization
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Publisher> ;
   spinmap:target [
