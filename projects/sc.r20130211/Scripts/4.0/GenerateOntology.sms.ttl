@@ -3,7 +3,6 @@
 # imports: http://topbraid.org/sparqlmotionfunctions
 # imports: http://topbraid.org/sparqlmotionlib-tbc
 
-# c14n-version: 3
 @prefix GenerateOntology: <http://www.cmusv.edu/SmartCommunity/Scripts/4.0/GenerateOntology#> .
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix arg: <http://spinrdf.org/arg#> .
@@ -21,6 +20,7 @@
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 sp:jsonInputUrl
   rdf:type rdf:Property ;
   rdfs:subPropertyOf sp:arg ;
@@ -498,11 +498,11 @@ GenerateOntology:BindPropertyInfo
                         sp:path [
                             rdf:type sp:SeqPath ;
                             sp:path1 [
-  rdf:type sp:ModPath ;
-  sp:modMax -2 ;
-  sp:modMin 0 ;
-  sp:subPath rdf:rest ;
-] ;
+                                rdf:type sp:ModPath ;
+                                sp:modMax -2 ;
+                                sp:modMin 0 ;
+                                sp:subPath rdf:rest ;
+                              ] ;
                             sp:path2 rdf:first ;
                           ] ;
                         sp:subject [
@@ -556,7 +556,7 @@ GenerateOntology:BindPropertyInfo
                       sp:arg1 [
                           rdf:type smf:isBound ;
                           sp:arg1 [
-sp:varName "collectionItemObjectType"^^xsd:string ;
+                              sp:varName "collectionItemObjectType"^^xsd:string ;
                             ] ;
                         ] ;
                       sp:arg2 [
@@ -955,8 +955,8 @@ GenerateOntology:FormatUrl
                         sp:arg1 [
                             rdf:type fn:string-length ;
                             sp:arg1 [
-  sp:varName "jsonInputUrl3"^^xsd:string ;
-] ;
+                                sp:varName "jsonInputUrl3"^^xsd:string ;
+                              ] ;
                           ] ;
                         sp:arg2 1 ;
                       ] ;
@@ -989,42 +989,42 @@ GenerateOntology:GenerateJsonOntology
   rdf:type sml:ReturnSPARQLResults ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "Device"^^xsd:string ;
+      spl:defaultValue "DeviceType"^^xsd:string ;
       spl:predicate sp:jsonRootClass ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:Merge_1 ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "JsonOntology.ttl"^^xsd:string ;
+      spl:defaultValue "SRRJsonOntology.ttl"^^xsd:string ;
       spl:predicate sp:outputOntologyFileName ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:BindFilePaths ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "RdfOutput.ttl"^^xsd:string ;
+      spl:defaultValue "SRRRdfOutput.ttl"^^xsd:string ;
       spl:predicate sp:outputRdfFileName ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:BindFilePaths ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "http://cmu-sds.herokuapp.com/get_devices"^^xsd:string ;
+      spl:defaultValue "http://einstein.sv.cmu.edu:9000/getAllDeviceTypes/json"^^xsd:string ;
       spl:predicate sp:jsonInputUrl ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:FormatUrl ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/JsonOntology"^^xsd:string ;
+      spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRJsonOntology"^^xsd:string ;
       spl:predicate sp:outputOntologyBaseUri ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:BindGraphUri ;
     ] ;
   spin:constraint [
       rdf:type spl:Argument ;
-      spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfOutput"^^xsd:string ;
+      spl:defaultValue "http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRRdfOutput"^^xsd:string ;
       spl:predicate sp:outputRdfBaseUri ;
       spl:valueType xsd:string ;
       sm:next GenerateOntology:BindGraphUri ;
@@ -1279,7 +1279,7 @@ GenerateOntology:UpdateCollectionReferencedObjectClassNames
                       sp:arg1 [
                           rdf:type afn:localname ;
                           sp:arg1 [
-sp:varName "predicate"^^xsd:string ;
+                              sp:varName "predicate"^^xsd:string ;
                             ] ;
                         ] ;
                     ] ;
@@ -1294,7 +1294,7 @@ sp:varName "predicate"^^xsd:string ;
                       sp:arg1 [
                           rdf:type fn:ends-with ;
                           sp:arg1 [
-sp:varName "className"^^xsd:string ;
+                              sp:varName "className"^^xsd:string ;
                             ] ;
                           sp:arg2 "s" ;
                         ] ;
@@ -1302,17 +1302,17 @@ sp:varName "className"^^xsd:string ;
                           rdf:type smf:subString ;
                           arg:fromIndex 0 ;
                           arg:toIndex [
-rdf:type sp:sub ;
-sp:arg1 [
-    rdf:type fn:string-length ;
-    sp:arg1 [
-        sp:varName "className"^^xsd:string ;
-      ] ;
-  ] ;
-sp:arg2 1 ;
+                              rdf:type sp:sub ;
+                              sp:arg1 [
+                                  rdf:type fn:string-length ;
+                                  sp:arg1 [
+                                      sp:varName "className"^^xsd:string ;
+                                    ] ;
+                                ] ;
+                              sp:arg2 1 ;
                             ] ;
                           sp:arg1 [
-sp:varName "className"^^xsd:string ;
+                              sp:varName "className"^^xsd:string ;
                             ] ;
                         ] ;
                       sp:arg3 [
@@ -1331,7 +1331,7 @@ sp:varName "className"^^xsd:string ;
                           rdf:type fn:concat ;
                           sp:arg1 "json:" ;
                           sp:arg2 [
-sp:varName "singularClassName"^^xsd:string ;
+                              sp:varName "singularClassName"^^xsd:string ;
                             ] ;
                         ] ;
                     ] ;
@@ -1463,7 +1463,7 @@ GenerateOntology:UpdateReferencedObjectClassNames
                       sp:arg1 [
                           rdf:type afn:localname ;
                           sp:arg1 [
-sp:varName "predicate"^^xsd:string ;
+                              sp:varName "predicate"^^xsd:string ;
                             ] ;
                         ] ;
                     ] ;
@@ -1479,7 +1479,7 @@ sp:varName "predicate"^^xsd:string ;
                           rdf:type fn:concat ;
                           sp:arg1 "json:" ;
                           sp:arg2 [
-sp:varName "className"^^xsd:string ;
+                              sp:varName "className"^^xsd:string ;
                             ] ;
                         ] ;
                     ] ;
@@ -1580,7 +1580,7 @@ GenerateOntology:UpdateRootObjectClassName
                           rdf:type fn:concat ;
                           sp:arg1 "json:" ;
                           sp:arg2 [
-sp:varName "jsonRootClass"^^xsd:string ;
+                              sp:varName "jsonRootClass"^^xsd:string ;
                             ] ;
                         ] ;
                     ] ;

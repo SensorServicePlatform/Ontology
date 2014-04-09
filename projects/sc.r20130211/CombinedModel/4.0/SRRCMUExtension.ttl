@@ -7,6 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCoreSCModel#> .
 @prefix sp: <http://spinrdf.org/sp#> .
+@prefix spif: <http://spinrdf.org/spif#> .
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -47,18 +48,8 @@ cmusc:Device
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom cmusc:DeviceCatalogEntry ;
-      owl:onProperty cmusc:hasCatalogEntry ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:allValuesFrom sc:Sensor ;
       owl:onProperty sc:hasSensor ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cmusc:hasCatalogEntry ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -95,10 +86,217 @@ cmusc:DeviceAgent
       owl:onProperty sc:updatedAt ;
     ] ;
 .
-cmusc:DeviceCatalogEntry
+cmusc:DeviceRegistry
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object cmusc:Device ;
+            sp:predicate rdfs:subClassOf ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object owl:Class ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "manufacturer"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasManufacturer ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "version"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasVersion ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "userFields"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasDeviceTypeUserDefinedFields ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "sensorType"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasSensorType ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object owl:Class ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "sensorType"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "subClassName"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasDeviceTypeName ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:camelCase ;
+                sp:arg1 [
+                    sp:varName "subClassName"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "camelCaseName"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:buildURI ;
+                sp:arg1 "cmusc:{?camelCaseName}" ;
+              ] ;
+            sp:variable [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "manufacturer"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasManufacturer ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "version"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasVersion ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "userFields"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasDeviceTypeUserDefinedFields ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "sensorTypeNames"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasSensorTypeNames ;
+                  sp:subject spin:_this ;
+                ]
+                [
+                  rdf:type sp:TriplePath ;
+                  sp:object [
+                      sp:varName "item"^^xsd:string ;
+                    ] ;
+                  sp:path [
+                      rdf:type sp:SeqPath ;
+                      sp:path1 [
+                          rdf:type sp:ModPath ;
+                          sp:modMax -2 ;
+                          sp:modMin 0 ;
+                          sp:subPath rdf:rest ;
+                        ] ;
+                      sp:path2 rdf:first ;
+                    ] ;
+                  sp:subject [
+                      sp:varName "sensorTypeNames"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:camelCase ;
+                      sp:arg1 [
+                          sp:varName "item"^^xsd:string ;
+                        ] ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "sensorTypeName"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:buildURI ;
+                      sp:arg1 "cmusc:{?sensorTypeName}" ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "sensorType"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
   rdfs:label ""^^xsd:string ;
-  rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf sc:DeviceRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasDeviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasDeviceTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasManufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorTypeNames ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasVersion ;
+    ] ;
 .
 cmusc:FireflyDevice
   rdf:type owl:Class ;
@@ -125,24 +323,340 @@ cmusc:FireflyDevice
         ) ;
     ] ;
 .
-cmusc:SensorCatalogEntry
+cmusc:Sensor
   rdf:type owl:Class ;
+  rdfs:label "This CMU-specific sensor class contains all the SPIN rules for dynamically declaring new subclasses, based on the sensorTypeName field"^^xsd:string ;
+  rdfs:subClassOf sc:Sensor ;
+.
+cmusc:SensorRegistry
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object cmusc:Sensor ;
+            sp:predicate rdfs:subClassOf ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object owl:Class ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "manufacturer"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasManufacturer ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "max"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasMaximumValue ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "min"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasMinimumValue ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "category"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasSensorCategoryName ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "userFields"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasSensorTypeUserDefinedFields ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "unit"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasUnit ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "version"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasVersion ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "interpreter"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasInterpreter ;
+            sp:subject [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "subClassName"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasSensorTypeName ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:camelCase ;
+                sp:arg1 [
+                    sp:varName "subClassName"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "camelCaseName"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:buildURI ;
+                sp:arg1 "cmusc:{?camelCaseName}" ;
+              ] ;
+            sp:variable [
+                sp:varName "newSubClass"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "manufacturer"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasManufacturer ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "max"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasMaximumValue ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "min"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasMinimumValue ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "category"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasSensorCategoryName ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "userFields"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasSensorTypeUserDefinedFields ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "unit"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasUnit ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "version"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasVersion ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "interpreter"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasInterpreter ;
+                  sp:subject spin:_this ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
   rdfs:label ""^^xsd:string ;
-  rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf sc:SensorRegistry ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasInterpreter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasManufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasMaximumValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasMinimumValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorCategoryName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasVersion ;
+    ] ;
 .
 cmusc:hasAgent
   rdf:type rdf:Property ;
-.
-cmusc:hasCatalogEntry
-  rdf:type owl:ObjectProperty ;
-  rdfs:label ""^^xsd:string ;
 .
 cmusc:hasDeviceTypeName
   rdf:type owl:DatatypeProperty ;
   rdfs:label ""^^xsd:string ;
 .
+cmusc:hasDeviceTypeUserDefinedFields
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasInterpreter
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasManufacturer
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasMaximumValue
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasMinimumValue
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
 cmusc:hasNetworkAddress
   rdf:type rdf:Property ;
+.
+cmusc:hasSensorCategoryName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorRegistryEntry
+  rdf:type owl:ObjectProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorType
+  rdf:type owl:ObjectProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorTypeName
+  rdf:type rdf:Property ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorTypeNames
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorTypeUserDefinedFields
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasUnit
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasVersion
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
 .
 cmusc:metadataJson
   rdf:type rdf:Property ;
@@ -322,15 +836,5 @@ sc:Sensor
               ) ;
           ]
         ) ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom cmusc:SensorCatalogEntry ;
-      owl:onProperty cmusc:hasCatalogEntry ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cmusc:hasCatalogEntry ;
     ] ;
 .
