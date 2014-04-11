@@ -22,39 +22,130 @@ cmusc:Device
       rdf:type sp:Construct ;
       sp:templates (
           [
-            sp:object cmusc:FireflyDevice ;
+            sp:object [
+                sp:varName "sensor"^^xsd:string ;
+              ] ;
+            sp:predicate sc:hasSensor ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object cmusc:Sensor ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "sensor"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "deviceType"^^xsd:string ;
+              ] ;
             sp:predicate rdf:type ;
             sp:subject spin:_this ;
           ]
         ) ;
       sp:where (
           [
-            rdf:type sp:TriplePath ;
-            sp:object "SensorAndrew"^^xsd:string ;
-            sp:path [
-                rdf:type sp:SeqPath ;
-                sp:path1 cmusc:hasAgent ;
-                sp:path2 sc:hasLabel ;
+            sp:object [
+                sp:varName "deviceTypeName"^^xsd:string ;
               ] ;
+            sp:predicate cmusc:hasDeviceTypeName ;
             sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:camelCase ;
+                sp:arg1 [
+                    sp:varName "deviceTypeName"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "deviceTypeNameCamelCase"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:buildURI ;
+                sp:arg1 "cmusc:{?deviceTypeNameCamelCase}" ;
+              ] ;
+            sp:variable [
+                sp:varName "deviceType"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "sensorInstanceNames"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasSensorNameList ;
+                  sp:subject spin:_this ;
+                ]
+                [
+                  rdf:type sp:TriplePath ;
+                  sp:object [
+                      sp:varName "sensorName"^^xsd:string ;
+                    ] ;
+                  sp:path [
+                      rdf:type sp:SeqPath ;
+                      sp:path1 [
+                          rdf:type sp:ModPath ;
+                          sp:modMax -2 ;
+                          sp:modMin 0 ;
+                          sp:subPath rdf:rest ;
+                        ] ;
+                      sp:path2 rdf:first ;
+                    ] ;
+                  sp:subject [
+                      sp:varName "sensorInstanceNames"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:buildURI ;
+                      sp:arg1 "cmusc:{?sensorName}" ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "sensor"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
           ]
         ) ;
     ] ;
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom cmusc:DeviceAgent ;
-      owl:onProperty cmusc:hasAgent ;
+      owl:allValuesFrom cmusc:DeviceRegistry ;
+      owl:onProperty cmusc:hasCatalogEntry ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom sc:Sensor ;
+      owl:allValuesFrom cmusc:Sensor ;
       owl:onProperty sc:hasSensor ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty cmusc:uri ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasDeviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasNetworkAddress ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasRegistrationTime ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorNameList ;
     ] ;
 .
 cmusc:DeviceAgent
@@ -73,12 +164,12 @@ cmusc:DeviceAgent
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:metadataJson ;
+      owl:onProperty cmusc:hasURI ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:uri ;
+      owl:onProperty cmusc:metadataJson ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -298,35 +389,151 @@ cmusc:DeviceRegistry
       owl:onProperty cmusc:hasVersion ;
     ] ;
 .
-cmusc:FireflyDevice
+cmusc:MeasurementEvent
   rdf:type owl:Class ;
-  rdfs:subClassOf cmusc:Device ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          cmusc:Device
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
           [
-            rdf:type owl:Restriction ;
-            owl:onProperty cmusc:hasAgent ;
-            owl:someValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    cmusc:DeviceAgent
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue "SensorAndrew"^^xsd:string ;
-                      owl:onProperty sc:hasLabel ;
-                    ]
-                  ) ;
+            sp:object [
+                sp:varName "sensor"^^xsd:string ;
               ] ;
+            sp:predicate sc:isAssociatedWith ;
+            sp:subject spin:_this ;
           ]
         ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "sensorInstanceName"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:madeBySensorWithName ;
+                  sp:subject spin:_this ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:buildURI ;
+                      sp:arg1 "cmusc:{?sensorInstanceName}" ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "sensor"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  rdfs:comment "This subclass is needed for the CMU context, to tied a measurement back to the sensor that generated it"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf sc:MeasurementEvent ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:madeBySensorWithName ;
     ] ;
 .
 cmusc:Sensor
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "sensorType"^^xsd:string ;
+              ] ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object [
+                sp:varName "device"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:isInDevice ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object cmusc:Device ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "device"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "sensorTypeName"^^xsd:string ;
+              ] ;
+            sp:predicate cmusc:hasSensorTypeName ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:camelCase ;
+                sp:arg1 [
+                    sp:varName "sensorTypeName"^^xsd:string ;
+                  ] ;
+              ] ;
+            sp:variable [
+                sp:varName "sensorTypeNameCamelCase"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Bind ;
+            sp:expression [
+                rdf:type spif:buildURI ;
+                sp:arg1 "cmusc:{?sensorTypeNameCamelCase}" ;
+              ] ;
+            sp:variable [
+                sp:varName "sensorType"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  sp:object [
+                      sp:varName "deviceName"^^xsd:string ;
+                    ] ;
+                  sp:predicate cmusc:hasDeviceName ;
+                  sp:subject spin:_this ;
+                ]
+                [
+                  rdf:type sp:Bind ;
+                  sp:expression [
+                      rdf:type spif:buildURI ;
+                      sp:arg1 "cmusc:{?deviceName}" ;
+                    ] ;
+                  sp:variable [
+                      sp:varName "device"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
   rdfs:label "This CMU-specific sensor class contains all the SPIN rules for dynamically declaring new subclasses, based on the sensorTypeName field"^^xsd:string ;
   rdfs:subClassOf sc:Sensor ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cmusc:Device ;
+      owl:onProperty cmusc:isInDevice ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasDeviceName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasSensorTypeName ;
+    ] ;
 .
 cmusc:SensorRegistry
   rdf:type owl:Class ;
@@ -599,6 +806,14 @@ cmusc:SensorRegistry
 cmusc:hasAgent
   rdf:type rdf:Property ;
 .
+cmusc:hasCatalogEntry
+  rdf:type owl:ObjectProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasDeviceName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
 cmusc:hasDeviceTypeName
   rdf:type owl:DatatypeProperty ;
   rdfs:label ""^^xsd:string ;
@@ -626,7 +841,15 @@ cmusc:hasMinimumValue
 cmusc:hasNetworkAddress
   rdf:type rdf:Property ;
 .
+cmusc:hasRegistrationTime
+  rdf:type rdf:Property ;
+  rdfs:label ""^^xsd:string ;
+.
 cmusc:hasSensorCategoryName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasSensorNameList
   rdf:type owl:DatatypeProperty ;
   rdfs:label ""^^xsd:string ;
 .
@@ -656,6 +879,19 @@ cmusc:hasUnit
 .
 cmusc:hasVersion
   rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:isInDevice
+  rdf:type owl:ObjectProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:isIndoor
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:madeBySensorWithName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "This subclass is needed for the CMU context, to tied a measurement back to the sensor that generated it"^^xsd:string ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:metadataJson
