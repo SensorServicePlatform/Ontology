@@ -784,7 +784,7 @@ cmumap:Device-Device
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#uri> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "cmusc:{?1}"^^xsd:string ;
+      spinmapl:template "cmusc:Device-{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#Device> ;
 .
@@ -795,7 +795,7 @@ cmumap:DeviceType-DeviceRegistry
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#deviceTypeName> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "cmusc:\"DeviceType-{?1}\""^^xsd:string ;
+      spinmapl:template "cmusc:DeviceType-{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#DeviceRegistry> ;
 .
@@ -1039,7 +1039,7 @@ cmumap:Sensor-Sensor
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#sensorName> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "cmusc:{?1}"^^xsd:string ;
+      spinmapl:template "cmusc:Sensor-{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#Sensor> ;
 .
@@ -1083,7 +1083,7 @@ cmumap:SensorType-SensorRegistry
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#sensorTypeName> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "cmusc:{?1}"^^xsd:string ;
+      spinmapl:template "cmusc:SensorType-{?1}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#SensorRegistry> ;
 .

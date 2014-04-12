@@ -106,7 +106,7 @@ cmusc:Device
                   rdf:type sp:Bind ;
                   sp:expression [
                       rdf:type spif:buildURI ;
-                      sp:arg1 "cmusc:{?sensorName}" ;
+                      sp:arg1 "cmusc:Sensor-{?sensorName}" ;
                     ] ;
                   sp:variable [
                       sp:varName "sensor"^^xsd:string ;
@@ -417,7 +417,7 @@ cmusc:MeasurementEvent
                   rdf:type sp:Bind ;
                   sp:expression [
                       rdf:type spif:buildURI ;
-                      sp:arg1 "cmusc:{?sensorInstanceName}" ;
+                      sp:arg1 "cmusc:Sensor-{?sensorInstanceName}" ;
                     ] ;
                   sp:variable [
                       sp:varName "sensor"^^xsd:string ;
@@ -427,7 +427,7 @@ cmusc:MeasurementEvent
           ]
         ) ;
     ] ;
-  rdfs:comment "This subclass is needed for the CMU context, to tied a measurement back to the sensor that generated it"^^xsd:string ;
+  rdfs:comment "This subclass is needed for the CMU context, to tie a measurement back to the sensor that generated it."^^xsd:string ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf sc:MeasurementEvent ;
   rdfs:subClassOf [
@@ -507,7 +507,7 @@ cmusc:Sensor
                   rdf:type sp:Bind ;
                   sp:expression [
                       rdf:type spif:buildURI ;
-                      sp:arg1 "cmusc:{?deviceName}" ;
+                      sp:arg1 "cmusc:Device-{?deviceName}" ;
                     ] ;
                   sp:variable [
                       sp:varName "device"^^xsd:string ;
