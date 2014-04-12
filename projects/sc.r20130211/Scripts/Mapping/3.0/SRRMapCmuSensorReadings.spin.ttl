@@ -421,12 +421,6 @@ spinmap:Context
       spinmap:targetPredicate1 rdf:type ;
     ] ;
   spinmap:rule [
-      rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context cmumap:Reading-QuantityValue ;
-      spinmap:expression <http://qudt.org/schema/qudt#QuantityValue> ;
-      spinmap:targetPredicate1 rdf:type ;
-    ] ;
-  spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context cmumap:Reading-MeasurementEvent_1 ;
       spinmap:expression spin:_arg1 ;
@@ -435,10 +429,17 @@ spinmap:Context
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context cmumap:Reading-QuantityValue ;
+      spinmap:context cmumap:Reading-MeasurementEvent_1 ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#timeStamp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#hasTimeStampString> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-MeasurementEvent_1 ;
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#value> ;
-      spinmap:targetPredicate1 <http://qudt.org/schema/qudt#numericValue> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#hasValueString> ;
     ] ;
 .
 <http://topbraid.org/json#Sensor>
@@ -1019,18 +1020,6 @@ cmumap:Reading-MeasurementEvent_1
       spinmapl:template "cmusc:MeasurementEvent-{?1}-{?2}"^^xsd:string ;
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCMUExtension#MeasurementEvent> ;
-.
-cmumap:Reading-QuantityValue
-  rdf:type spinmap:Context ;
-  spinmap:sourceClass <http://topbraid.org/json#Reading> ;
-  spinmap:target [
-      rdf:type spinmapl:buildURI2 ;
-      sp:arg1 <http://topbraid.org/json#sensorName> ;
-      sp:arg2 <http://topbraid.org/json#timeStamp> ;
-      spinmap:source spinmap:_source ;
-      spinmapl:template "qudt:QuantityValue-{?1}-{?2}"^^xsd:string ;
-    ] ;
-  spinmap:targetClass <http://qudt.org/schema/qudt#QuantityValue> ;
 .
 cmumap:Sensor-Sensor
   rdf:type spinmap:Context ;

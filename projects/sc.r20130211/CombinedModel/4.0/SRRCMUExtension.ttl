@@ -433,6 +433,16 @@ cmusc:MeasurementEvent
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasTimeStampString ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cmusc:hasValueString ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
       owl:onProperty cmusc:madeBySensorWithName ;
     ] ;
 .
@@ -873,8 +883,18 @@ cmusc:hasSensorTypeUserDefinedFields
   rdf:type owl:DatatypeProperty ;
   rdfs:label ""^^xsd:string ;
 .
+cmusc:hasTimeStampString
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "This subclass is needed for the CMU context, to tied a measurement back to the sensor that generated it"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
 cmusc:hasUnit
   rdf:type owl:DatatypeProperty ;
+  rdfs:label ""^^xsd:string ;
+.
+cmusc:hasValueString
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "This is an interim placeholder for a measurement value object that should include metadata"^^xsd:string ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasVersion
