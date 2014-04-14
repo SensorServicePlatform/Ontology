@@ -1,0 +1,70 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/ReadingOntology
+
+# c14n-version: 3
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+json:Reading
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty json:timestamp ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty json:value ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:device_id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:sensor_type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:device_id ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:sensor_type ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:timestamp ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:value ;
+    ] ;
+.
+json:device_id
+  rdf:type rdf:Property ;
+.
+json:referencedBy
+  rdf:type rdf:Property ;
+.
+json:sensor_type
+  rdf:type rdf:Property ;
+.
+json:timestamp
+  rdf:type rdf:Property ;
+.
+json:value
+  rdf:type rdf:Property ;
+.
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/ReadingOntology>
+  rdf:type owl:Ontology ;
+.

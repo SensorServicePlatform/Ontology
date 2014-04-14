@@ -1,0 +1,198 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceJsonOntology
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+json:Device
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom json:Location ;
+      owl:onProperty json:location ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom json:Location ;
+      owl:onProperty json:sensorNames ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:deviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:deviceTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:deviceUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:manufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:sensorTypeNames ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:uri ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:version ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:deviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:deviceTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:deviceUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:location ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:manufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:uri ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:version ;
+    ] ;
+.
+json:Location
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty json:altitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty json:latitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty json:longitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:representation ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:altitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:latitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:longitude ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:representation ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty json:referencedBy ;
+      owl:someValuesFrom json:Device ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty json:referencedBy ;
+      owl:someValuesFrom json:Device ;
+    ] ;
+.
+json:altitude
+  rdf:type rdf:Property ;
+.
+json:deviceTypeName
+  rdf:type rdf:Property ;
+.
+json:deviceTypeUserDefinedFields
+  rdf:type rdf:Property ;
+.
+json:deviceUserDefinedFields
+  rdf:type rdf:Property ;
+.
+json:latitude
+  rdf:type rdf:Property ;
+.
+json:location
+  rdf:type rdf:Property ;
+.
+json:longitude
+  rdf:type rdf:Property ;
+.
+json:manufacturer
+  rdf:type rdf:Property ;
+.
+json:referencedBy
+  rdf:type rdf:Property ;
+.
+json:representation
+  rdf:type rdf:Property ;
+.
+json:sensorNames
+  rdf:type rdf:Property ;
+.
+json:sensorTypeNames
+  rdf:type rdf:Property ;
+.
+json:uri
+  rdf:type rdf:Property ;
+.
+json:version
+  rdf:type rdf:Property ;
+.
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceJsonOntology>
+  rdf:type owl:Ontology ;
+.
+xsd:string
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty json:referencedBy ;
+      owl:someValuesFrom json:Device ;
+    ] ;
+.

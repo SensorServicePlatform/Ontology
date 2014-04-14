@@ -1,0 +1,101 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRReadingRdfOutput
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRReadingRdfOutput>
+  rdf:type owl:Ontology ;
+.
+(
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae77f-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidGameRotationVector"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "0.06419782"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae77d-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidAccelerometer"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "-0.75138855"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae784-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidRotationVector"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "-0.026042512"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae786-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidGravity"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "-1.1284086"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae783-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidProximity"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:49 AM"^^xsd:string ;
+    json:value "5.000305"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae782-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidGyroscope"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "-0.13017273"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae780-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidMageneticField"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "36.904907"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae781-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidPressure"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "1014.1126"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae77e-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidOrientationVector"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "202.2665"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae77c-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidLight"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:48 AM"^^xsd:string ;
+    json:value "0.0"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae785-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:isIndoor "false"^^xsd:boolean ;
+    json:sensorName "androidLinearAcceleration"^^xsd:string ;
+    json:timeStamp "Mar 25, 2014 12:18:52 AM"^^xsd:string ;
+    json:value "-0.113508105"^^xsd:string ;
+  ]
+).

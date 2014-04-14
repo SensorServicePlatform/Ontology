@@ -1,0 +1,196 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRSensorTypeRdfOutput
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRSensorTypeRdfOutput>
+  rdf:type owl:Ontology ;
+.
+(
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae762-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:maximumValue "100"^^xsd:decimal ;
+    json:minimumValue "1"^^xsd:decimal ;
+    json:sensorCategoryName "temp"^^xsd:string ;
+    json:sensorTypeName "motorola temp"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "anything"^^xsd:string ;
+    json:unit "Fahrenheit"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75c-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:maximumValue "100"^^xsd:decimal ;
+    json:minimumValue "1"^^xsd:decimal ;
+    json:sensorCategoryName "temp"^^xsd:string ;
+    json:sensorTypeName "texas instrument temp"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "anything"^^xsd:string ;
+    json:unit "Fahrenheit"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae755-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:interpreter "whatever"^^xsd:string ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:maximumValue "100"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "testSensorCategoryName"^^xsd:string ;
+    json:sensorTypeName "testSensorTypeName"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "anything"^^xsd:string ;
+    json:unit "Celsius"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75d-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:interpreter "bla"^^xsd:string ;
+    json:manufacturer "ti"^^xsd:string ;
+    json:maximumValue "0"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "temp"^^xsd:string ;
+    json:sensorTypeName "sensorType2"^^xsd:string ;
+    json:unit "Celsius"^^xsd:string ;
+    json:version "0.5"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae757-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "50"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "xAccelerometer"^^xsd:string ;
+    json:sensorTypeName "fireImpXAccelerometer"^^xsd:string ;
+    json:unit "ft/sec^2"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae760-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "50"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "yAccelerometer"^^xsd:string ;
+    json:sensorTypeName "fireImpYAccelerometer"^^xsd:string ;
+    json:unit "ft/sec^2"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae753-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "50"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "zAccelerometer"^^xsd:string ;
+    json:sensorTypeName "fireImpZAccelerometer"^^xsd:string ;
+    json:unit "ft/sec^2"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae759-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "1"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "motion"^^xsd:string ;
+    json:sensorTypeName "fireImpMotion"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "x > 950"^^xsd:string ;
+    json:unit "Motion Detected (boolean)"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75a-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "90"^^xsd:decimal ;
+    json:minimumValue "40"^^xsd:decimal ;
+    json:sensorCategoryName "digitalTemperature"^^xsd:string ;
+    json:sensorTypeName "fireImpDigitalTemperature"^^xsd:string ;
+    json:unit "F"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75b-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "1024"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "light"^^xsd:string ;
+    json:sensorTypeName "fireImpLight"^^xsd:string ;
+    json:unit "lumens"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae761-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "31"^^xsd:decimal ;
+    json:minimumValue "28"^^xsd:decimal ;
+    json:sensorCategoryName "pressure"^^xsd:string ;
+    json:sensorTypeName "fireImpPressure"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "0.000295780903035*x"^^xsd:string ;
+    json:unit "hg"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae754-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "31"^^xsd:decimal ;
+    json:minimumValue "28"^^xsd:decimal ;
+    json:sensorCategoryName "pressure"^^xsd:string ;
+    json:sensorTypeName "testPressure"^^xsd:string ;
+    json:unit "hg"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae758-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "31"^^xsd:decimal ;
+    json:minimumValue "28"^^xsd:decimal ;
+    json:sensorCategoryName "pressure"^^xsd:string ;
+    json:sensorTypeName "testPressure2"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "0.000295780903035*x"^^xsd:string ;
+    json:unit "hg"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75f-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:maximumValue "100"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "humidity"^^xsd:string ;
+    json:sensorTypeName "fireImpHumidity"^^xsd:string ;
+    json:sensorTypeUserDefinedFields ""^^xsd:string ;
+    json:unit "Relative Humidity (%)"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae756-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "CMU"^^xsd:string ;
+    json:maximumValue "100"^^xsd:decimal ;
+    json:minimumValue "10"^^xsd:decimal ;
+    json:sensorCategoryName "sensorCategory0228"^^xsd:string ;
+    json:sensorTypeName "tempSensor0228"^^xsd:string ;
+    json:sensorTypeUserDefinedFields ""^^xsd:string ;
+  ]
+  [
+    rdf:type json:SensorType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae75e-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:manufacturer "google.com"^^xsd:string ;
+    json:maximumValue "0"^^xsd:decimal ;
+    json:minimumValue "0"^^xsd:decimal ;
+    json:sensorCategoryName "AndroidSensors"^^xsd:string ;
+    json:sensorTypeName "androidMobile"^^xsd:string ;
+    json:sensorTypeUserDefinedFields "now in production"^^xsd:string ;
+  ]
+).

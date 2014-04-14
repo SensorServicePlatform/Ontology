@@ -1,0 +1,133 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceTypeRdfOutput
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceTypeRdfOutput>
+  rdf:type owl:Ontology ;
+.
+(
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec4-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorTypeNames (
+        "texas instrument temp"^^xsd:string
+        "motorola temp"^^xsd:string
+      ) ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec2-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "CMU"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "Test"^^xsd:string ;
+    json:manufacturer "CMU"^^xsd:string ;
+    json:sensorTypeNames (
+        "texas instrument temp"^^xsd:string
+        "testSensorTypeName"^^xsd:string
+        "sensorType2"^^xsd:string
+      ) ;
+    json:version "1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589debc-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "Firefly_v3"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:manufacturer "CMU"^^xsd:string ;
+    json:sensorTypeNames (
+        "sensorType2"^^xsd:string
+      ) ;
+    json:version "3.0"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec1-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "device_type1"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "anything"^^xsd:string ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:sensorTypeNames (
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589debe-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "DeviceTypetest"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "Test"^^xsd:string ;
+    json:manufacturer "CMU"^^xsd:string ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+      ) ;
+    json:version "1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589debf-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "AndroidDevice"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:manufacturer "Google"^^xsd:string ;
+    json:sensorTypeNames (
+        "androidMobile"^^xsd:string
+      ) ;
+    json:version "1.0"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589debd-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "deviceType2"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "blabla"^^xsd:string ;
+    json:manufacturer "intel"^^xsd:string ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec0-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "Firefly"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "to be retired"^^xsd:string ;
+    json:sensorTypeNames (
+        "testPressure"^^xsd:string
+      ) ;
+    json:version "1.0"^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec3-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "deviceType0228"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:manufacturer ""^^xsd:string ;
+    json:sensorTypeNames (
+        "tempSensor0228"^^xsd:string
+      ) ;
+    json:version ""^^xsd:string ;
+  ]
+  [
+    rdf:type json:DeviceType ;
+    <http://purl.org/dc/elements/1.1/identifier> "e589dec5-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "FireImp V1C"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:sensorTypeNames (
+        "fireImpXAccelerometer"^^xsd:string
+        "fireImpYAccelerometer"^^xsd:string
+        "fireImpZAccelerometer"^^xsd:string
+        "fireImpMotion"^^xsd:string
+        "fireImpDigitalTemperature"^^xsd:string
+        "fireImpLight"^^xsd:string
+        "fireImpPressure"^^xsd:string
+        "fireImpHumidity"^^xsd:string
+      ) ;
+    json:version "1C"^^xsd:string ;
+  ]
+).

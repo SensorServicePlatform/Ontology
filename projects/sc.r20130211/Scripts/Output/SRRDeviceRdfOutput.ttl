@@ -1,0 +1,272 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceRdfOutput
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceRdfOutput>
+  rdf:type owl:Ontology ;
+.
+(
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae749-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "device_type1"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "anything"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589dec6-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude 95.12 ;
+        json:latitude 32.12 ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation "no_representation"^^xsd:string ;
+      ] ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:sensorNames (
+        "sensor2"^^xsd:string
+      ) ;
+    json:sensorTypeNames (
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "www.google.com"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74c-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "device_type1"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "anything"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589dec9-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude 89.12 ;
+        json:latitude 68.12 ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation "nothing here"^^xsd:string ;
+      ] ;
+    json:manufacturer "motorola"^^xsd:string ;
+    json:sensorNames () ;
+    json:sensorTypeNames (
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "www.yahoo.com"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae751-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589dece-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude 95.12 ;
+        json:latitude 32.12 ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation "no_representation"^^xsd:string ;
+      ] ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorNames (
+        "privateSensor1"^^xsd:string
+        "sensor1"^^xsd:string
+      ) ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "bodevice"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74e-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:deviceUserDefinedFields "blabla"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589decb-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "23"^^xsd:decimal ;
+        json:latitude 10.3 ;
+        json:longitude 10.2 ;
+        json:representation "gps"^^xsd:string ;
+      ] ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorNames () ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "www.bo.com"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74d-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:deviceUserDefinedFields "blabla"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589deca-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "20"^^xsd:decimal ;
+        json:latitude 10.3 ;
+        json:longitude 100.2 ;
+        json:representation "gps"^^xsd:string ;
+      ] ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorNames () ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "www.liu.com"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74a-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:deviceUserDefinedFields "blabla"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589dec7-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "21"^^xsd:decimal ;
+        json:latitude 10.3 ;
+        json:longitude 100.2 ;
+        json:representation "gps"^^xsd:string ;
+      ] ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorNames () ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "www.shirley.com"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74f-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "FireImp V1C"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:deviceUserDefinedFields "For test"^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589decc-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "100"^^xsd:decimal ;
+        json:latitude "100"^^xsd:decimal ;
+        json:longitude "100"^^xsd:decimal ;
+        json:representation "room129A"^^xsd:string ;
+      ] ;
+    json:manufacturer "FireImp"^^xsd:string ;
+    json:sensorNames (
+        "fireImpXAccelerometer23420ca4e4830bee"^^xsd:string
+        "fireImpYAccelerometer23420ca4e4830bee"^^xsd:string
+        "fireImpZAccelerometer23420ca4e4830bee"^^xsd:string
+        "fireImpMotion23420ca4e4830bee"^^xsd:string
+        "fireImpLight23420ca4e4830bee"^^xsd:string
+        "fireImpPressure23420ca4e4830bee"^^xsd:string
+        "fireImpHumidity23420ca4e4830bee"^^xsd:string
+        "fireImpDigitalTemperature23420ca4e4830bee"^^xsd:string
+      ) ;
+    json:sensorTypeNames (
+        "fireImpXAccelerometer"^^xsd:string
+        "fireImpYAccelerometer"^^xsd:string
+        "fireImpZAccelerometer"^^xsd:string
+        "fireImpMotion"^^xsd:string
+        "fireImpDigitalTemperature"^^xsd:string
+        "fireImpLight"^^xsd:string
+        "fireImpPressure"^^xsd:string
+        "fireImpHumidity"^^xsd:string
+      ) ;
+    json:uri "23420ca4e4830bee"^^xsd:string ;
+    json:version "1C"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae74b-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "deviceType0228"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:deviceUserDefinedFields ""^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589dec8-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "0"^^xsd:decimal ;
+        json:latitude "0"^^xsd:decimal ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation ""^^xsd:string ;
+      ] ;
+    json:manufacturer ""^^xsd:string ;
+    json:sensorNames (
+        "0228temp"^^xsd:string
+      ) ;
+    json:sensorTypeNames (
+        "tempSensor0228"^^xsd:string
+      ) ;
+    json:uri "B23_129"^^xsd:string ;
+    json:version ""^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae752-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "AndroidDevice"^^xsd:string ;
+    json:deviceTypeUserDefinedFields ""^^xsd:string ;
+    json:deviceUserDefinedFields ""^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589decf-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "0"^^xsd:decimal ;
+        json:latitude "0"^^xsd:decimal ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation ""^^xsd:string ;
+      ] ;
+    json:manufacturer "Google"^^xsd:string ;
+    json:sensorNames (
+        "androidAccelerometer"^^xsd:string
+        "androidTemperature"^^xsd:string
+        "androidGravity"^^xsd:string
+        "androidGyroscope"^^xsd:string
+        "androidLight"^^xsd:string
+        "androidLinearAcceleration"^^xsd:string
+        "androidMageneticField"^^xsd:string
+        "androidProximity"^^xsd:string
+        "androidPressure"^^xsd:string
+        "androidHumidity"^^xsd:string
+        "androidRotationVector"^^xsd:string
+        "androidGameRotationVector"^^xsd:string
+        "androidOrientationVector"^^xsd:string
+      ) ;
+    json:sensorTypeNames (
+        "androidMobile"^^xsd:string
+      ) ;
+    json:uri "356489052345324.androidIMEI"^^xsd:string ;
+    json:version "1.0"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Device ;
+    <http://purl.org/dc/elements/1.1/identifier> "e82ae750-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+    json:deviceTypeName "bodevicetype"^^xsd:string ;
+    json:deviceTypeUserDefinedFields "new info"^^xsd:string ;
+    json:deviceUserDefinedFields ""^^xsd:string ;
+    json:location [
+        rdf:type json:Location ;
+        <http://purl.org/dc/elements/1.1/identifier> "e589decd-2a87-11b2-8048-d4f0ce1e798f"^^xsd:string ;
+        json:altitude "0"^^xsd:decimal ;
+        json:latitude "0"^^xsd:decimal ;
+        json:longitude "0"^^xsd:decimal ;
+        json:representation ""^^xsd:string ;
+      ] ;
+    json:manufacturer "bo"^^xsd:string ;
+    json:sensorNames () ;
+    json:sensorTypeNames (
+        "motorola temp"^^xsd:string
+        "texas instrument temp"^^xsd:string
+      ) ;
+    json:uri "bunny"^^xsd:string ;
+    json:version "0.1"^^xsd:string ;
+  ]
+).

@@ -1,0 +1,1593 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/InferredTriples1
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension
+
+# c14n-version: 3
+@prefix MapDevicesSPIN: <http://www.cmusv.edu/SmartCommunity/Scripts/Mapping/2.0/MapCmuSdsDevicesSPIN#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix base: <http://www.w3.org/2007/05/powder-s#> .
+@prefix cmusc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension#> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix creativecommons: <http://creativecommons.org/ns#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dimension: <http://qudt.org/schema/dimension#> .
+@prefix dimension-1.1: <http://qudt.org/1.1/schema/dimension#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix dtype-1.0: <http://www.linkedmodel.org/1.0/schema/dtype#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix json: <http://topbraid.org/json#> .
+@prefix msg0: <http://web.resource.org/cc/> .
+@prefix ontology: <http://www.geonames.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix quantity: <http://qudt.org/schema/quantity#> .
+@prefix quantity-1.1: <http://qudt.org/1.1/schema/quantity#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix qudt-1.1: <http://qudt.org/1.1/schema/qudt#> .
+@prefix qudt-dimension: <http://qudt.org/vocab/dimension#> .
+@prefix qudt-dimension-1.1: <http://qudt.org/1.1/vocab/dimension#> .
+@prefix qudt-quantity: <http://qudt.org/vocab/quantity#> .
+@prefix qudt-quantity-1.1: <http://qudt.org/1.1/vocab/quantity#> .
+@prefix qudt-unit: <http://qudt.org/vocab/unit#> .
+@prefix qudt-unit-1.1: <http://qudt.org/1.1/vocab/unit#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#> .
+@prefix schema: <http://schema.org/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://topbraid.org/sparqlmotion#> .
+@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spatial: <http://geovocab.org/spatial#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix tbcgeo: <http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vaem-1.2: <http://www.linkedmodel.org/1.2/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/> .
+@prefix voaf: <http://labs.mondeca.com/vocab/voaf#> .
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#> .
+@prefix voag-1.0: <http://voag.linkedmodel.org/1.0/schema/voag#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+sc:DeviceAgent-5a4d375c-9f89-485a-8ccc-a11bb527f2a4
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#createdAt> "2013-02-13T00:39:48Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#guid> "5a4d375c-9f89-485a-8ccc-a11bb527f2a4"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#id> "4"^^xsd:decimal ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#metadata> "{\"Author\":\"Yuan\"}"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#networkAddress> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "SweetFeedback"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#updatedAt> "2013-04-16T22:16:28Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#uri> "SweetFeedback"^^xsd:string ;
+.
+sc:DeviceAgent-aeec51a9-6256-4b17-9a9c-cd8d7603b57e
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#createdAt> "2012-12-19T01:21:15Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#guid> "aeec51a9-6256-4b17-9a9c-cd8d7603b57e"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#id> "1"^^xsd:decimal ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#metadata> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#networkAddress> "192.168.0.0"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "SensorAndrew"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#updatedAt> "2013-04-09T22:34:24Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#uri> "Sensor Andrew's Device Agent"^^xsd:string ;
+.
+sc:DeviceAgent-d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#createdAt> "2013-02-11T19:29:41Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#guid> "d8e4e4f6-5021-40ba-8688-a3cf5bbd9bb0"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#id> "3"^^xsd:decimal ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#metadata> "{\"Polling_interval\":\"1 minute\"}"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#networkAddress> "10.0.8.14"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "Jeenet_1"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#updatedAt> "2013-02-11T19:31:43Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#uri> "http://jeenetgw01.sv.cmu.edu/data.json"^^xsd:string ;
+.
+sc:DeviceAgent-ee356164-dbed-4fb7-82f3-0f74ee23c8d1
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#createdAt> "2013-06-11T22:57:38Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#guid> "ee356164-dbed-4fb7-82f3-0f74ee23c8d1"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#id> "5"^^xsd:decimal ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#metadata> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#networkAddress> "NASA"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "NASA"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#updatedAt> "2013-06-11T22:57:38Z"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#uri> "NASA"^^xsd:string ;
+.
+sc:Location-102
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "102"^^xsd:string ;
+.
+sc:Location-122
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "122"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.104>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.104"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.105B>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.105B"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.107>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.107"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.109>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.109"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.110>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.110"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.115>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.115"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.116>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.116"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.120>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.120"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.122>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.122"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.123>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.123"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.124>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.124"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.126>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.126"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.129>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.129"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.129A>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.129A"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.210>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.210"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.211>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.211"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.212>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.212"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.213>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.213"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.214>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.214"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.214B>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.214B"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.215>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.215"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.215B>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.215B"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.216>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.216"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.217A>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.217A"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.217B>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.217B"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.228>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.228"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.229>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.229"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.230>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.230"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.Adm>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.Adm"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-B23.K2>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "B23.K2"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-Chihiro's_office>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "Chihiro's office"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CoreSCModel#Location-Ted's_office>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#altitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#format> "wgs84"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#latitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#longitude> ""^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#printName> "Ted's office"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/InferredTriples1>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/3.0/CMUExtension> ;
+.
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer x"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer y"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Accelerometer z"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Audio P2P"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Digital Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Humidity_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Light_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Motion"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Pressure"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Sound_level_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_Jeenet"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_NASA"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_NASA"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_sweetfeedback"^^xsd:string ;
+].
+[
+  rdf:type sc:Sensor ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/2.0#hasLabel> "Temperature_sweetfeedback"^^xsd:string ;
+].

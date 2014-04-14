@@ -1,0 +1,85 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceTypeJsonOntology
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+json:DeviceType
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:deviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:deviceTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:manufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:sensorTypeNames ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty json:version ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:deviceTypeName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:deviceTypeUserDefinedFields ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:manufacturer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty json:version ;
+    ] ;
+.
+json:deviceTypeName
+  rdf:type rdf:Property ;
+.
+json:deviceTypeUserDefinedFields
+  rdf:type rdf:Property ;
+.
+json:manufacturer
+  rdf:type rdf:Property ;
+.
+json:referencedBy
+  rdf:type rdf:Property ;
+.
+json:sensorTypeNames
+  rdf:type rdf:Property ;
+.
+json:version
+  rdf:type rdf:Property ;
+.
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/SRRDeviceTypeJsonOntology>
+  rdf:type owl:Ontology ;
+.
+xsd:string
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty json:referencedBy ;
+      owl:someValuesFrom json:DeviceType ;
+    ] ;
+.

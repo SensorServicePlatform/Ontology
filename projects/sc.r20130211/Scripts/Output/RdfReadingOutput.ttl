@@ -1,0 +1,1973 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfReadingOutput
+
+# c14n-version: 3
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/RdfReadingOutput>
+  rdf:type owl:Ontology ;
+.
+(
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518220-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17010005"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394009000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e3-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000004"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393933000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518217-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17010003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393998000"^^xsd:decimal ;
+    json:value "510"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c36-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1703000a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394010000"^^xsd:decimal ;
+    json:value "508"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e5-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17020005"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393998000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518237-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17010002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394011000"^^xsd:decimal ;
+    json:value "508"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000008"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394008000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181bf-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17010004"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393932000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518221-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17030004"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394001000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518295-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17030003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394012000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17030002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394014000"^^xsd:decimal ;
+    json:value "505"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000001"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394014000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e7-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17020004"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393997000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518257-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17030009"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393991000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251818f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000005"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393986000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518191-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000006"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393996000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17010006"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394014000"^^xsd:decimal ;
+    json:value "510"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394013000"^^xsd:decimal ;
+    json:value "508"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181cc-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17030007"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377393995000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518240-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394012000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518291-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17020002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394010000"^^xsd:decimal ;
+    json:value "519"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518227-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17020003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377394013000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518263-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170501"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1372568420000"^^xsd:decimal ;
+    json:value "506"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518192-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "9238340c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377385925000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181f0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1017030b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1366659536000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518234-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "174bc9e3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377385611000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a4-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17aa04bf"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377391173000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518242-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17912158"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377349560000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518194-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170504"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374110077000"^^xsd:decimal ;
+    json:value "519"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c7-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d550d274"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377334981000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "da95fdab"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377281864000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518269-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "6b9be93d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377315785000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181bd-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "9c57114"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377349827000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518206-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "dd643b7b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377345608000"^^xsd:decimal ;
+    json:value "533"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518231-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17d98f0f"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377311387000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518215-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "body_temp_sensor"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1368220188094"^^xsd:decimal ;
+    json:value 29.328663 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518289-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "c3d3fda7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377340035000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518195-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17040003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1372305833000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518209-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "34bd9337"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377290529000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e4-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170009"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215451000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181be-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f4d6880e"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377314313000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518230-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f41341b3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377327227000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a2b27f25"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377357609000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518208-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "170cdf4c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377327610000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518262-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1775f915"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377360577000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518190-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4e81cef3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377315783000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518218-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "5d34c8f0"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377374454000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17ecacf9"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377383470000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "80875087"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377373016000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181dd-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "dc10d6cb"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377345880000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181cd-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170004"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215449000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a1eb97d5"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377390515000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518266-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "21b5ad9b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377351180000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b9-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f3309fe7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374685196000"^^xsd:decimal ;
+    json:value "18128"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ee-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "test_VirtualSensor"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1368127322666"^^xsd:decimal ;
+    json:value "666"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b5-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "e7503a0a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377288198000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518211-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ef9bf424"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377357018000"^^xsd:decimal ;
+    json:value "530"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ab-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170404"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371016732000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "426b0002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377383527000"^^xsd:decimal ;
+    json:value "1197"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518212-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "edb914a7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377392958000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518235-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "test1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1375328209"^^xsd:decimal ;
+    json:value "2000"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "64caa355"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377288706000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181bb-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170205"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216478000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c38-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4f295e1a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377356402000"^^xsd:decimal ;
+    json:value "530"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e6-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "acb477f2"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377326845000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518239-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a1298cd5"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377325534000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c9-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "7d6f5204"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377378684000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518216-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170001"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1376597772000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "test-device"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1365998584002"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170005"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215458000"^^xsd:decimal ;
+    json:value "532"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ea-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170405"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371016735000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ed384ed6"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377311628000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181af-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "fd537876"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377329148000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518207-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "55cba44c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377291027000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "302127f3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377384986000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518197-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "mobile01"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1370936148210"^^xsd:decimal ;
+    json:value "38"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4e3aedba"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377347082000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d2-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170204"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216505000"^^xsd:decimal ;
+    json:value "530"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c35-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "da0d6137"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377337815000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c31-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f4fb6bc3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377362920000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b2-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d4508b02"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377366336000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170401"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371016724000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518229-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170302"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216501000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c2-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1d8c6d6d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377367562000"^^xsd:decimal ;
+    json:value "527"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "351385ac"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377341288000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518268-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "temp_sensor2"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1368220123937"^^xsd:decimal ;
+    json:value 25.041044 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518248-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "8422c9f8"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377365041000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170402"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371016727000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c33-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "6a1c8e54"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377334541000"^^xsd:decimal ;
+    json:value "523"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d1e9fde5"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377353674000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170203"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216502000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518293-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "df8a4d24"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377342802000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170106"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1376343230000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518225-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170209"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216405000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "54fc60bf"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374513980000"^^xsd:decimal ;
+    json:value "63151"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518232-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "792fe4e8"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377356532000"^^xsd:decimal ;
+    json:value "529"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c39-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17c84f4f"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377365869000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b6-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "8d760b05"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377377388000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518233-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "aa3a1600"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377342110000"^^xsd:decimal ;
+    json:value "525"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518294-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "cc4fbc32"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377335618000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c8-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170102"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216505000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518214-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "29cb4585"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377314041000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c28-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "test"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1373566899100"^^xsd:decimal ;
+    json:value "123"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ef-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "50170d02"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1373497389000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "77690914"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377358799000"^^xsd:decimal ;
+    json:value "529"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170305"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216497000"^^xsd:decimal ;
+    json:value "523"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181f1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "e5d6fb69"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377366907000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518249-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "81735d68"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377318034000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518198-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17050005"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1375991377000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ca-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "71d1865d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377287011000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170309"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216498000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "84ab021"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377369848000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17050001"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1372366380000"^^xsd:decimal ;
+    json:value "506"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b3-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "14eb8cae"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377311618000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a6-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "12c31c7d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377321238000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518261-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "c7cd98d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377374144000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "173cb829"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377293586000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170503"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371071379000"^^xsd:decimal ;
+    json:value "508"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "e8823f3a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377289558000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170006"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215199000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "176b7a27"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377364746000"^^xsd:decimal ;
+    json:value "497"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c34-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ffc545fd"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377307462000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251829c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "bfc74ae1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377351186000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d5-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "236b404cead3dbee"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1375332370"^^xsd:decimal ;
+    json:value "0"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1d515826"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377283818000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c6-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17000cc8"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377306937000"^^xsd:decimal ;
+    json:value "10439"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518210-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "179f9c74"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377316199000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d3e5a426"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377342103000"^^xsd:decimal ;
+    json:value "523"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518267-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "172573ae"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377366065000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518247-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "0"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1365998584000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "b48cb273"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377380777000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d6-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17bacb4b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377314046000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "41f9b77b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377316521000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f3f64627"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377291140000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "3f9d9e2d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377380772000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c4-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ad6aa596"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377295415000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518236-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "6120e3af"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377317780000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518219-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170002"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215457000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518299-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "test_sensor_id"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1234567890"^^xsd:decimal ;
+    json:value 9876.54321 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a2-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170105"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216129000"^^xsd:decimal ;
+    json:value "505"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "65bf9609"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377313917000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518256-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d4344fe0"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374856692000"^^xsd:decimal ;
+    json:value "25337"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a8-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "c28c1dd9"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377337392000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181df-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "6919d57c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377372412000"^^xsd:decimal ;
+    json:value "519"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "69b6779e"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377281865000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251818e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "5d5fc7b5"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377340040000"^^xsd:decimal ;
+    json:value "525"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "23510f9a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377297485000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170206"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216433000"^^xsd:decimal ;
+    json:value "507"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f5028d26"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377332778000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518292-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "de557ec7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377309070000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181aa-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "88b1c508"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377363861000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ac-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "fed3bf0e"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377309360000"^^xsd:decimal ;
+    json:value "523"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e2-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "270045e2"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377380751000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518264-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170208"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216486000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ed-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "2a5dba83"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377315820000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "18329440"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374446518000"^^xsd:decimal ;
+    json:value "46348"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d3-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "78060bf1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377328131000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518245-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170104"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216501000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c29-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "44240a08"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377361124000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ad-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170003"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215453000"^^xsd:decimal ;
+    json:value "508"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518224-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "8c3f2dac"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377334761000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518255-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4b57aadc"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377289751000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17ebf1a3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377354665000"^^xsd:decimal ;
+    json:value "531"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "42da199c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377287690000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "b9d3fb43"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377287722000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518246-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "7c9c959a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374922618000"^^xsd:decimal ;
+    json:value "28285"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518196-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "abe62199"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377327192000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1bb27d17"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377296919000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181dc-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "fd1aeaf6"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377354091000"^^xsd:decimal ;
+    json:value "530"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518226-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "5440e6c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377369611000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17bd7d85"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377324817000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181db-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "d6e5d8ba"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377354117000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518253-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1017030a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216504000"^^xsd:decimal ;
+    json:value "522"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "c2f8d9f0"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377324061000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e8-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "eec11895"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377333628000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181cb-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "126fd870"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377325479000"^^xsd:decimal ;
+    json:value "520"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251823f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "dc25da0f"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377298848000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518290-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "669707f8"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377343691000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181cf-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170304"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216479000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a9-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "538db4c0"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377373624000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518222-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1e1e998e"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377367526000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518254-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170008"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215423000"^^xsd:decimal ;
+    json:value "518"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b4-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "803a26b1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377287825000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ec-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "594a4df7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377337100000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518241-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170505"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1373995075000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518193-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1017000d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374891328000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c37-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "839873cc"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377373864000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518244-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "7fbb3d04"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377338788000"^^xsd:decimal ;
+    json:value "528"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518223-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170303"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216505000"^^xsd:decimal ;
+    json:value "534"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251829a-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "f7fad9a7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377307088000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a3-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ae6eba20"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377356406000"^^xsd:decimal ;
+    json:value "533"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518297-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4d84db6f"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377362094000"^^xsd:decimal ;
+    json:value "549"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518213-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a28af17"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377366632000"^^xsd:decimal ;
+    json:value "525"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518288-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170502"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374016563000"^^xsd:decimal ;
+    json:value "509"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251825b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a7781f0c"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377337106000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ae-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "2cde8468"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377293488000"^^xsd:decimal ;
+    json:value "519"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181da-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1bb4391a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377306943000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518251-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "62a7741d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377288156000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251829b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "a5515a6a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377385817000"^^xsd:decimal ;
+    json:value "511"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518298-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4a081c1b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377296249000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ce-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "63a21a7d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377341497000"^^xsd:decimal ;
+    json:value "526"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170103"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216504000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c30-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170306"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1370281255000"^^xsd:decimal ;
+    json:value "506"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b1-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "235b1952f5cfc4ee"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1375493546"^^xsd:decimal ;
+    json:value 84.2 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518228-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "2d1af3ed"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377315773000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518252-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "dafdc648"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377354086000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "177996e4"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377376508000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518250-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "temp_sensor1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1368220123737"^^xsd:decimal ;
+    json:value 21.96011 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "e314f99b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377349305000"^^xsd:decimal ;
+    json:value "525"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181de-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170403"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1373506907000"^^xsd:decimal ;
+    json:value "523"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518259-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "dfc7b68d"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377314909000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c32-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17e054e5"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377327751000"^^xsd:decimal ;
+    json:value "499"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e0-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17e9e801"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377300393000"^^xsd:decimal ;
+    json:value "496"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181bc-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "173e1d53"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377329185000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518296-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "3a8b8bf2"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377331206000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251819f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "8b6d09f3"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377339385000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d4-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "1721552b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377351206000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518243-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170307"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216482000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181eb-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "28eaeb54"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377370811000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "faa4a146"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377358794000"^^xsd:decimal ;
+    json:value "529"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518199-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "5906a7c1"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377385820000"^^xsd:decimal ;
+    json:value "512"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251820c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "23442518"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374576172000"^^xsd:decimal ;
+    json:value "25734"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c3b-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "63525d88"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377288690000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d7-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "7a20eaa6"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377315351000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518265-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "588df1d4"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377319661000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b8-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "ec2a5b07"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377367475000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181b7-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170007"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377215590000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822c-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "39fd018b"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377330674000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251828f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "58ca8efc"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377371328000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c3-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "3bf8c617"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377379517000"^^xsd:decimal ;
+    json:value "513"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518260-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170308"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216491000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d8-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "233b094dead3dbee"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1375399698"^^xsd:decimal ;
+    json:value 80.24 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824d-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "75db4587"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377353035000"^^xsd:decimal ;
+    json:value "530"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181ba-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "9957f436"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377310044000"^^xsd:decimal ;
+    json:value "514"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181d9-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "virtual_sensor"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1368220228834"^^xsd:decimal ;
+    json:value 29.83781 ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251822e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "79d48fce"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377319057000"^^xsd:decimal ;
+    json:value "517"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "120e7c2e-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "83bebcb7"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377335946000"^^xsd:decimal ;
+    json:value "515"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181c5-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "4288372a"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377371439000"^^xsd:decimal ;
+    json:value "521"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518238-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10160505"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1371185415000"^^xsd:decimal ;
+    json:value "765"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a5-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "8dc4e49e"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377287860000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251821f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "17626889"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377376177000"^^xsd:decimal ;
+    json:value "516"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "1251824f-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "86c5b1c8"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377385823000"^^xsd:decimal ;
+    json:value "493"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181a7-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170202"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216503000"^^xsd:decimal ;
+    json:value "524"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "125181e9-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "34b5ba53"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1374271797000"^^xsd:decimal ;
+    json:value "1832"^^xsd:decimal ;
+  ]
+  [
+    rdf:type json:Reading ;
+    <http://purl.org/dc/elements/1.1/identifier> "12518258-2a59-11b2-8089-a034875b43fd"^^xsd:string ;
+    json:device_id "10170207"^^xsd:string ;
+    json:sensor_type "temp"^^xsd:string ;
+    json:timestamp "1377216133000"^^xsd:decimal ;
+    json:value "510"^^xsd:decimal ;
+  ]
+).
