@@ -1,0 +1,5 @@
+http://einstein.sv.cmu.edu:9000/getAllDeviceTypes/json
+http://einstein.sv.cmu.edu:9000/getAllDevices/json
+http://einstein.sv.cmu.edu:9000/getAllSensorTypes/json
+http://einstein.sv.cmu.edu:9000/getAllSensors/json
+http://einstein.sv.cmu.edu:9000/getLatestReadingsFromAllDevices/androidMobile/json

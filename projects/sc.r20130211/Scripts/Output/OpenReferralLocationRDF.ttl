@@ -1,0 +1,2850 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationRDF
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationJson
+
+@prefix json: <http://topbraid.org/json#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationRDF>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationJson> ;
+.
+(
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1edc-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Elevator"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e545-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "fairfax"^^xsd:string ;
+        json:id "21"^^xsd:decimal ;
+        json:location_id "22"^^xsd:decimal ;
+        json:state "va"^^xsd:string ;
+        json:street "bozo"^^xsd:string ;
+        json:zip "12345"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e10-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "29"^^xsd:decimal ;
+          json:location_id "22"^^xsd:decimal ;
+          json:name "Moncef"^^xsd:string ;
+          json:title "Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -73.9395687
+        42.8142432
+      ) ;
+    json:created_at "2014-04-16T19:51:31.649-07:00"^^xsd:string ;
+    json:description "This is a description"^^xsd:string ;
+    json:emails (
+        "eml@example.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e0a-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "CalFresh"^^xsd:string ;
+          json:id "21"^^xsd:decimal ;
+          json:location_id "22"^^xsd:decimal ;
+          json:number "2025551212"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday 10am-5pm"^^xsd:string ;
+    json:id "22"^^xsd:string ;
+    json:kind "Test"^^xsd:string ;
+    json:latitude 42.8142432 ;
+    json:longitude -73.9395687 ;
+    json:name "Admin Test Location"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e544-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:31.573-07:00"^^xsd:string ;
+        json:id "8"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/8/locations"^^xsd:string ;
+        json:name "Admin Test Org"^^xsd:string ;
+        json:slug "admin-test-org"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:32.099-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/8"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e09-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "CalFresh"^^xsd:string ;
+          json:extension "x1223"^^xsd:string ;
+          json:id "22"^^xsd:decimal ;
+          json:location_id "22"^^xsd:decimal ;
+          json:number "7035551212"^^xsd:string ;
+          json:vanity_number "703555-ABCD"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e0b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "23"^^xsd:decimal ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:31.986-07:00"^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "This is a short description"^^xsd:string ;
+    json:slug "admin-test-location"^^xsd:string ;
+    json:sort (
+        "1397703091649"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1/2 mile."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:31.995-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/22"^^xsd:string ;
+    json:urls (
+        "http://codeforamerica.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1edb-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:created_at "2014-04-16T19:51:31.376-07:00"^^xsd:string ;
+    json:description "no phone"^^xsd:string ;
+    json:id "21"^^xsd:string ;
+    json:kind "Test"^^xsd:string ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e543-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention ""^^xsd:string ;
+        json:city "fairfax"^^xsd:string ;
+        json:id "21"^^xsd:decimal ;
+        json:location_id "21"^^xsd:decimal ;
+        json:state "VA"^^xsd:string ;
+        json:street "puma"^^xsd:string ;
+        json:zip "22031"^^xsd:string ;
+      ] ;
+    json:name "Location with no phone"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e542-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:31.330-07:00"^^xsd:string ;
+        json:id "7"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/7/locations"^^xsd:string ;
+        json:name "Location with no phone"^^xsd:string ;
+        json:slug "location-with-no-phone"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:31.516-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/7"^^xsd:string ;
+      ] ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e05-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "22"^^xsd:decimal ;
+          json:updated_at "2014-04-16T19:51:31.433-07:00"^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "no phone"^^xsd:string ;
+    json:slug "location-with-no-phone"^^xsd:string ;
+    json:sort (
+        "1397703091376"^^xsd:decimal
+      ) ;
+    json:updated_at "2014-04-16T19:51:31.443-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/21"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1eda-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Elevator"^^xsd:string
+        "Ramp"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e540-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "20"^^xsd:decimal ;
+        json:location_id "20"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "19 West 39th Avenue"^^xsd:string ;
+        json:zip "94403"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1db4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "28"^^xsd:decimal ;
+          json:location_id "20"^^xsd:decimal ;
+          json:name "Sharon Petersen"^^xsd:string ;
+          json:title "Administrator"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.2931236
+        37.5326941
+      ) ;
+    json:created_at "2014-04-16T19:51:30.911-07:00"^^xsd:string ;
+    json:description "Provides free medical and dental care to those in need. Offers basic medical care for adults. And also does yoga."^^xsd:string ;
+    json:emails (
+        "smcmed@samaritanhouse.com"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1df9-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "20"^^xsd:decimal ;
+          json:location_id "20"^^xsd:decimal ;
+          json:number "650 578-0440"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 9-12, 1-4"^^xsd:string ;
+    json:id "20"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.5326941 ;
+    json:longitude -122.2931236 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "San Mateo Free Medical/Dental"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "20"^^xsd:decimal ;
+        json:location_id "20"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "19 West 39th Avenue"^^xsd:string ;
+        json:zip "94403"^^xsd:string ;
+      ] ;
+    json:name "San Mateo Free Medical Clinic"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e541-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:30.412-07:00"^^xsd:string ;
+        json:id "6"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/6/locations"^^xsd:string ;
+        json:name "Samaritan House"^^xsd:string ;
+        json:slug "samaritan-house"^^xsd:string ;
+        json:updated_at "2014-04-20T08:42:37.084-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/6"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1df8-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "21"^^xsd:decimal ;
+          json:location_id "20"^^xsd:decimal ;
+          json:number "650 578-0400"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1db9-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Low-income person without access to health care"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Call for screening appointment (650-347-3648)."^^xsd:string ;
+          json:id "21"^^xsd:decimal ;
+          json:keywords (
+              "HEALTH SERVICES"^^xsd:string
+              "Outpatient Care"^^xsd:string
+              "Community Clinics"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Belmont"^^xsd:string
+              "Burlingame"^^xsd:string
+              "Foster City"^^xsd:string
+              "Millbrae"^^xsd:string
+              "San Carlos"^^xsd:string
+              "San Mateo"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-20T08:42:37.067-07:00"^^xsd:string ;
+          json:wait "Varies."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides free medical and dental care to those in need. Offers basic medical care for adults."^^xsd:string ;
+    json:slug "san-mateo-free-medical-clinic"^^xsd:string ;
+    json:sort (
+        "1397703090911"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block."^^xsd:string ;
+    json:updated_at "2014-04-20T08:42:37.078-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/20"^^xsd:string ;
+    json:urls (
+        "http://www.samaritanhouse.com"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed6-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Disabled Restroom"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e535-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "19"^^xsd:decimal ;
+        json:location_id "19"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "114 Fifth Avenue"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cc5-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "27"^^xsd:decimal ;
+          json:location_id "19"^^xsd:decimal ;
+          json:name "Sharon Petersen"^^xsd:string ;
+          json:title "Administrator"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.207057
+        37.468678
+      ) ;
+    json:created_at "2014-04-16T19:51:30.465-07:00"^^xsd:string ;
+    json:description "Provides free medical care to those in need. Offers basic medical exams for adults and tuberculosis screening. Assists the individual to access other services in the community. By appointment only, Project Smile provides a free dental exam, dental cleaning and oral hygiene instruction for children, age 3-12, of Samaritan House clients."^^xsd:string ;
+    json:emails (
+        "gracie@samaritanhouse.com"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cc4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "19"^^xsd:decimal ;
+          json:location_id "19"^^xsd:decimal ;
+          json:number "650 839-1457"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 9-12, 2-5"^^xsd:string ;
+    json:id "19"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.468678 ;
+    json:longitude -122.207057 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e533-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Redwood City Free Medical Clinic"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "19"^^xsd:decimal ;
+        json:location_id "19"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "114 Fifth Avenue"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:name "Redwood City Free Medical Clinic"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e534-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:30.412-07:00"^^xsd:string ;
+        json:id "6"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/6/locations"^^xsd:string ;
+        json:name "Samaritan House"^^xsd:string ;
+        json:slug "samaritan-house"^^xsd:string ;
+        json:updated_at "2014-04-20T08:42:34.878-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/6"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cc0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "20"^^xsd:decimal ;
+          json:location_id "19"^^xsd:decimal ;
+          json:number "650 839-1447"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cc8-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Low-income person without access to health care"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Call for screening appointment. Medical visits are by appointment only."^^xsd:string ;
+          json:id "20"^^xsd:decimal ;
+          json:keywords (
+              "HEALTH SERVICES"^^xsd:string
+              "Outpatient Care"^^xsd:string
+              "Community Clinics"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Atherton"^^xsd:string
+              "East Palo Alto"^^xsd:string
+              "Menlo Park"^^xsd:string
+              "Redwood City"^^xsd:string
+              "San Carlos"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:30.762-07:00"^^xsd:string ;
+          json:wait "Varies."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides free medical care to those in need."^^xsd:string ;
+    json:slug "redwood-city-free-medical-clinic"^^xsd:string ;
+    json:sort (
+        "1397703090465"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 2 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:30.771-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/19"^^xsd:string ;
+    json:urls (
+        "http://www.samaritanhouse.com"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "South San Francisco"^^xsd:string ;
+        json:id "18"^^xsd:decimal ;
+        json:location_id "18"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "409 South Spruce Avenue"^^xsd:string ;
+        json:zip "94080"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1caa-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "26"^^xsd:decimal ;
+          json:location_id "18"^^xsd:decimal ;
+          json:name "Kenneth Gibson"^^xsd:string ;
+          json:title "Major"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.4224905
+        37.6445898
+      ) ;
+    json:created_at "2014-04-16T19:51:29.983-07:00"^^xsd:string ;
+    json:description "Provides emergency food, clothing and furniture vouchers to low-income families in times of crisis.   Administers Project REACH (Relief for Energy Assistance through Community Help) funds to prevent energy shut-off through a one-time payment. Offers a Saturday morning Homeless Feeding Program at 10:30, as well as Sunday services and spiritual counseling. Provides Christmas toys and Back-to-School clothes and supplies. Offers case management, advocacy and referrals to other agencies."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1caf-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "17"^^xsd:decimal ;
+          json:location_id "18"^^xsd:decimal ;
+          json:number "650 266-2594"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "18"^^xsd:decimal ;
+          json:location_id "18"^^xsd:decimal ;
+          json:number "650 266-4594"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Thursday, 9-4:30"^^xsd:string ;
+    json:id "18"^^xsd:string ;
+    json:latitude 37.6445898 ;
+    json:longitude -122.4224905 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Salvation Army"^^xsd:string ;
+        json:city "South San Francisco"^^xsd:string ;
+        json:id "18"^^xsd:decimal ;
+        json:location_id "18"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "409 South Spruce Avenue"^^xsd:string ;
+        json:zip "94080"^^xsd:string ;
+      ] ;
+    json:name "South San Francisco Citadel Corps"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:28.768-07:00"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/5/locations"^^xsd:string ;
+        json:name "Salvation Army"^^xsd:string ;
+        json:slug "salvation-army"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:30.355-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/5"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb3-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "19"^^xsd:decimal ;
+          json:location_id "18"^^xsd:decimal ;
+          json:number "650 266-4591"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Low-income families"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+            ) ;
+          json:how_to_apply "Call for information."^^xsd:string ;
+          json:id "19"^^xsd:decimal ;
+          json:keywords (
+              "COMMODITY SERVICES"^^xsd:string
+              "Clothing/Personal Items"^^xsd:string
+              "COMMUNITY SERVICES"^^xsd:string
+              "Information and Referral"^^xsd:string
+              "EMERGENCY SERVICES"^^xsd:string
+              "Food Boxes/Food Vouchers"^^xsd:string
+              "FINANCIAL ASSISTANCE SERVICES"^^xsd:string
+              "Utilities"^^xsd:string
+              "Emergency Food"^^xsd:string
+              "Food Pantries"^^xsd:string
+              "Furniture"^^xsd:string
+              "Clothing"^^xsd:string
+              "Utility Assistance"^^xsd:string
+              "School Supplies"^^xsd:string
+              "Case/Care Management"^^xsd:string
+              "Holiday Programs"^^xsd:string
+              "Pastoral Counseling"^^xsd:string
+              "Low Income"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Brisbane"^^xsd:string
+              "Colma"^^xsd:string
+              "Daly City"^^xsd:string
+              "Millbrae"^^xsd:string
+              "Pacifica"^^xsd:string
+              "San Bruno"^^xsd:string
+              "South San Francisco"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:30.280-07:00"^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides emergency food and clothing and furniture vouchers to low-income families in times of crisis."^^xsd:string ;
+    json:slug "south-san-francisco-citadel-corps"^^xsd:string ;
+    json:sort (
+        "1397703089983"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block, BART stops within 3 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:30.291-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/18"^^xsd:string ;
+    json:urls (
+        "http://www.tsagoldenstate.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ee0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Sunnyvale"^^xsd:string ;
+        json:id "17"^^xsd:decimal ;
+        json:location_id "17"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1161 South Bernardo"^^xsd:string ;
+        json:zip "94087"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1eb1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "25"^^xsd:decimal ;
+          json:location_id "17"^^xsd:decimal ;
+          json:name "James Lee"^^xsd:string ;
+          json:title "Commanding Officer"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.0600024
+        37.3569004
+      ) ;
+    json:created_at "2014-04-16T19:51:29.608-07:00"^^xsd:string ;
+    json:description "Provides emergency assistance including food and clothing for persons in immediate need. Provides PG&E assistance through REACH program. Youth programs offer tutoring, music and troops. Information on related resources is available. Also provides rental assistance when funds are available."^^xsd:string ;
+    json:emails (
+        "william_nichols@usw.salvationarmy.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1eb2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "16"^^xsd:decimal ;
+          json:location_id "17"^^xsd:decimal ;
+          json:number "408 720-8075"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 9-4"^^xsd:string ;
+    json:id "17"^^xsd:string ;
+    json:languages (
+        "Korean"^^xsd:string
+      ) ;
+    json:latitude 37.3569004 ;
+    json:longitude -122.0600024 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Salvation Army"^^xsd:string ;
+        json:city "Sunnyvale"^^xsd:string ;
+        json:id "17"^^xsd:decimal ;
+        json:location_id "17"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "P.O. Box 61868"^^xsd:string ;
+        json:zip "94088"^^xsd:string ;
+      ] ;
+    json:name "Sunnyvale Corps"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:28.768-07:00"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/5/locations"^^xsd:string ;
+        json:name "Salvation Army"^^xsd:string ;
+        json:slug "salvation-army"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:30.355-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/5"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1eb5-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "18"^^xsd:decimal ;
+          json:location_id "17"^^xsd:decimal ;
+          json:number "408 720-0420"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1eae-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "None for emergency assistance"^^xsd:string ;
+          json:fees "None for emergency services. Vary for after school activities. Cash and checks accepted."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Fees"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in. Written application, identification required for emergency assistance."^^xsd:string ;
+          json:id "18"^^xsd:decimal ;
+          json:keywords (
+              "COMMODITY SERVICES"^^xsd:string
+              "Clothing/Personal Items"^^xsd:string
+              "CHILD PROTECTION AND CARE SERVICES"^^xsd:string
+              "Day Care"^^xsd:string
+              "COMMUNITY SERVICES"^^xsd:string
+              "Information and Referral"^^xsd:string
+              "EMERGENCY SERVICES"^^xsd:string
+              "Food Boxes/Food Vouchers"^^xsd:string
+              "FINANCIAL ASSISTANCE SERVICES"^^xsd:string
+              "Utilities"^^xsd:string
+              "RECREATION/LEISURE SERVICES"^^xsd:string
+              "Camping"^^xsd:string
+              "Emergency Food"^^xsd:string
+              "Clothing"^^xsd:string
+              "Utility Assistance"^^xsd:string
+              "Youth Development"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Los Altos"^^xsd:string
+              "Mountain View"^^xsd:string
+              "Sunnyvale"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:29.853-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides emergency assistance to persons in immediate need and offers after school activities and summer day camp program."^^xsd:string ;
+    json:slug "sunnyvale-corps"^^xsd:string ;
+    json:sort (
+        "1397703089608"^^xsd:decimal
+      ) ;
+    json:transportation "VTA stops within 4 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:29.861-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/17"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1edf-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Francisco"^^xsd:string ;
+        json:id "16"^^xsd:decimal ;
+        json:location_id "16"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1500 Valencia Street"^^xsd:string ;
+        json:zip "94110"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e8e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "24"^^xsd:decimal ;
+          json:location_id "16"^^xsd:decimal ;
+          json:name "Jack Phillips"^^xsd:string ;
+          json:title "Administrator"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.4203671
+        37.7488993
+      ) ;
+    json:created_at "2014-04-16T19:51:29.218-07:00"^^xsd:string ;
+    json:description "Provides a long-term (6-12 month) residential rehabilitation program for men and women with substance abuse and other problems. Residents receive individual counseling, and drug and alcohol education. The spiritual side of recovery is address_attributesed through chapel services and Bible study as well as 12-step programs. Nicotine cessation is a part of the program.   Residents must be physically able to work, seeking treatment for substance abuse, sober long enough to pass urine drug screen before entering and agreeable to participating in weekly 12-step programs such as Alcoholics Anonymous or Narcotics Anonymous. Pinehurst Lodge is a separate facility for women only. Transition houses for men and women graduates also available."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e91-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "15"^^xsd:decimal ;
+          json:location_id "16"^^xsd:decimal ;
+          json:number "415 285-1391"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 8-4"^^xsd:string ;
+    json:id "16"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.7488993 ;
+    json:longitude -122.4203671 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Adult Rehabilitation Center"^^xsd:string ;
+        json:city "San Francisco"^^xsd:string ;
+        json:id "16"^^xsd:decimal ;
+        json:location_id "16"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1500 Valencia Street"^^xsd:string ;
+        json:zip "94110"^^xsd:string ;
+      ] ;
+    json:name "Adult Rehabilitation Center"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b149a-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:28.768-07:00"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/5/locations"^^xsd:string ;
+        json:name "Salvation Army"^^xsd:string ;
+        json:slug "salvation-army"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:30.355-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/5"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e8f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "17"^^xsd:decimal ;
+          json:location_id "16"^^xsd:decimal ;
+          json:number "415 643-8000"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e90-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Adult alcoholic/drug addictive men and women with social and spiritual problems"^^xsd:string ;
+          json:eligibility "Age 21-60, detoxed, physically able and willing to participate in a work therapy program"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Sales"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or through other agency referral."^^xsd:string ;
+          json:id "17"^^xsd:decimal ;
+          json:keywords (
+              "ALCOHOLISM SERVICES"^^xsd:string
+              "Residential Care"^^xsd:string
+              "DRUG ABUSE SERVICES"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Alameda County"^^xsd:string
+              "Contra Costa County"^^xsd:string
+              "Marin County"^^xsd:string
+              "San Francisco County"^^xsd:string
+              "San Mateo County"^^xsd:string
+              "Santa Clara County"^^xsd:string
+              "Northern California"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:29.478-07:00"^^xsd:string ;
+          json:wait "Varies according to available beds for men and women. Women have a longer wait due to small number of beds statewide."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Long-term (6-12 month) residential treatment program for men/women age 21-60."^^xsd:string ;
+    json:slug "adult-rehabilitation-center"^^xsd:string ;
+    json:sort (
+        "1397703089218"^^xsd:decimal
+      ) ;
+    json:transportation "MUNI - 26 Valencia, Mission Street lines."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:29.487-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/16"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed3-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "15"^^xsd:decimal ;
+        json:location_id "15"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "660 Veterans Blvd."^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ca9-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "23"^^xsd:decimal ;
+          json:location_id "15"^^xsd:decimal ;
+          json:name "Andres Espinoza"^^xsd:string ;
+          json:title "Captain, Commanding Officer"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.231539
+        37.49144
+      ) ;
+    json:created_at "2014-04-16T19:51:28.817-07:00"^^xsd:string ;
+    json:description "Provides food, clothing, bus tokens and shelter to individuals and families in times of crisis from the Redwood City Corps office and community centers throughout the county.   Administers Project REACH (Relief for Energy Assistance through Community Help) funds to prevent energy shut-off through a one-time payment. Counseling and translation services (English/Spanish) are available either on a walk-in basis or by appointment. Rental assistance with available funds. Another office (described separately) is located at 409 South Spruce Avenue, South San Francisco (650-266-4591)."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ca4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "14"^^xsd:decimal ;
+          json:location_id "15"^^xsd:decimal ;
+          json:number "650 364-1712"^^xsd:string ;
+        ]
+      ) ;
+    json:id "15"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.49144 ;
+    json:longitude -122.231539 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Salvation Army"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "15"^^xsd:decimal ;
+        json:location_id "15"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "P.O. Box 1147"^^xsd:string ;
+        json:zip "94064"^^xsd:string ;
+      ] ;
+    json:name "Redwood City Corps"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e52a-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:28.768-07:00"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/5/locations"^^xsd:string ;
+        json:name "Salvation Army"^^xsd:string ;
+        json:slug "salvation-army"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:30.355-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/5"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c71-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "16"^^xsd:decimal ;
+          json:location_id "15"^^xsd:decimal ;
+          json:number "650 368-4643"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ca7-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Individuals or families with low or no income and/or trying to obtain public assistance"^^xsd:string ;
+          json:eligibility "None for most services. For emergency assistance, must have low or no income and be willing to apply for public assistance"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Call for appointment. Referral from human service professional preferred for emergency assistance."^^xsd:string ;
+          json:id "16"^^xsd:decimal ;
+          json:keywords (
+              "COMMUNITY SERVICES"^^xsd:string
+              "Interpretation/Translation"^^xsd:string
+              "EMERGENCY SERVICES"^^xsd:string
+              "Shelter/Refuge"^^xsd:string
+              "FINANCIAL ASSISTANCE SERVICES"^^xsd:string
+              "Utilities"^^xsd:string
+              "MENTAL HEALTH SERVICES"^^xsd:string
+              "Individual/Group Counseling"^^xsd:string
+              "Food Pantries"^^xsd:string
+              "Homeless Shelter"^^xsd:string
+              "Rental Deposit Assistance"^^xsd:string
+              "Utility Service Payment Assistance"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Atherton"^^xsd:string
+              "Belmont"^^xsd:string
+              "Burlingame"^^xsd:string
+              "East Palo Alto"^^xsd:string
+              "Foster City"^^xsd:string
+              "Menlo Park"^^xsd:string
+              "Palo Alto"^^xsd:string
+              "Portola Valley"^^xsd:string
+              "Redwood City"^^xsd:string
+              "San Carlos"^^xsd:string
+              "San Mateo"^^xsd:string
+              "Woodside"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:29.058-07:00"^^xsd:string ;
+          json:wait "Up to 20 minutes."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides a variety of emergency services to low-income persons. Also sponsors recreational and educational activities."^^xsd:string ;
+    json:slug "redwood-city-corps"^^xsd:string ;
+    json:sort (
+        "1397703088817"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops nearby."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:29.067-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/15"^^xsd:string ;
+    json:urls (
+        "http://www.tsagoldenstate.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ede-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b1499-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "14"^^xsd:decimal ;
+        json:location_id "14"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "399 Marine Parkway."^^xsd:string ;
+        json:zip "94065"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e25-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "22"^^xsd:decimal ;
+          json:location_id "14"^^xsd:decimal ;
+          json:name "Dave Genesy"^^xsd:string ;
+          json:title "Library Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.2586432
+        37.5304228
+      ) ;
+    json:created_at "2014-04-16T19:51:28.372-07:00"^^xsd:string ;
+    json:description "Provides general reading materials, including large-type books, videos, music cassettes and CDs, and books on tape. Offers children's programs and a Summer Reading Club. Meeting room is available to nonprofit groups. Participates in the Peninsula Library System."^^xsd:string ;
+    json:id "14"^^xsd:string ;
+    json:latitude 37.5304228 ;
+    json:longitude -122.2586432 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e549-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Redwood Shores Branch"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "14"^^xsd:decimal ;
+        json:location_id "14"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "399 Marine Parkway"^^xsd:string ;
+        json:zip "94065"^^xsd:string ;
+      ] ;
+    json:name "Redwood Shores Branch"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b1498-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:26.651-07:00"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/4/locations"^^xsd:string ;
+        json:name "Redwood City Public Library"^^xsd:string ;
+        json:slug "redwood-city-public-library"^^xsd:string ;
+        json:updated_at "2014-04-20T08:59:38.853-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/4"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e23-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "15"^^xsd:decimal ;
+          json:location_id "14"^^xsd:decimal ;
+          json:number "650 780-5740"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e27-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Resident of California to obtain a library card"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in. Proof of California residency required to receive a library card."^^xsd:string ;
+          json:id "15"^^xsd:decimal ;
+          json:keywords (
+              "EDUCATION SERVICES"^^xsd:string
+              "Library"^^xsd:string
+              "Libraries"^^xsd:string
+              "Public Libraries"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:28.610-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides general reading materials and reference services."^^xsd:string ;
+    json:slug "redwood-shores-branch"^^xsd:string ;
+    json:sort (
+        "1397703088372"^^xsd:decimal
+      ) ;
+    json:updated_at "2014-04-16T19:51:28.623-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/14"^^xsd:string ;
+    json:urls (
+        "http://www.redwoodcity.org/library"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Elevator"^^xsd:string
+        "Ramp"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+        "Disabled Parking"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e526-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "13"^^xsd:decimal ;
+        json:location_id "13"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1044 Middlefield Road, 2nd Floor"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c5c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "21"^^xsd:decimal ;
+          json:location_id "13"^^xsd:decimal ;
+          json:name "Kathy Endaya"^^xsd:string ;
+          json:title "Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.227409
+        37.4837662
+      ) ;
+    json:created_at "2014-04-16T19:51:27.978-07:00"^^xsd:string ;
+    json:description "Offers an intergenerational literacy program for youth and English-speaking adults seeking to improver literacy skills. Adult services include: adult one-to-one tutoring to improve basic skills in reading, writing and critical thinking; Families for Literacy (FFL), a home-based family literacy program for parents who want to be able to read to their young children; and small group/English as a Second Language (ESL). Youth services include: Youth Tutoring, Families in Partnership (FIP); Teen-to-Elementary Student Tutoring, Kids in Partnership (KIP); and computer-aided literacy. Redwood City Friends of Literacy is a fundraising board that helps to support and to fund Redwood City's Project Read. Call for more information about each service."^^xsd:string ;
+    json:emails (
+        "rclread@redwoodcity.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c5b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "13"^^xsd:decimal ;
+          json:location_id "13"^^xsd:decimal ;
+          json:number "650 780-7004"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Thursday, 10-8:30; Friday, 10-5"^^xsd:string ;
+    json:id "13"^^xsd:string ;
+    json:latitude 37.4837662 ;
+    json:longitude -122.227409 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e525-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Project Read"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "13"^^xsd:decimal ;
+        json:location_id "13"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1044 Middlefield Road, 2nd Floor"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:name "Project Read"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e524-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:26.651-07:00"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/4/locations"^^xsd:string ;
+        json:name "Redwood City Public Library"^^xsd:string ;
+        json:slug "redwood-city-public-library"^^xsd:string ;
+        json:updated_at "2014-04-20T08:59:38.853-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/4"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c5e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "14"^^xsd:decimal ;
+          json:location_id "13"^^xsd:decimal ;
+          json:number "650 780-7077"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c58-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Adults, parents, children in 1st-12th grades in the Redwood City school districta"^^xsd:string ;
+          json:eligibility "English-speaking adult reading at or below 7th grade level or child in 1st-12th grade in the Redwood City school districts"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+              "Donations"^^xsd:string
+              "Federal"^^xsd:string
+              "Grants"^^xsd:string
+              "State"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or apply by phone, email or webpage registration."^^xsd:string ;
+          json:id "14"^^xsd:decimal ;
+          json:keywords (
+              "EDUCATION SERVICES"^^xsd:string
+              "Adult"^^xsd:string
+              "Alternative"^^xsd:string
+              "Literacy"^^xsd:string
+              "Literacy Programs"^^xsd:string
+              "Libraries"^^xsd:string
+              "Public Libraries"^^xsd:string
+              "Youth"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Redwood City"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:28.218-07:00"^^xsd:string ;
+          json:wait "Depends on availability of tutors for small groups and one-on-one."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Offers an intergenerational literacy program for adults and youth seeking to improver literacy skills."^^xsd:string ;
+    json:slug "project-read"^^xsd:string ;
+    json:sort (
+        "1397703087978"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:28.228-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/13"^^xsd:string ;
+    json:urls (
+        "http://www.projectreadredwoodcity.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed5-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Ramp"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e530-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "12"^^xsd:decimal ;
+        json:location_id "12"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2140 Euclid Avenue."^^xsd:string ;
+        json:zip "94061"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb5-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "19"^^xsd:decimal ;
+          json:location_id "12"^^xsd:decimal ;
+          json:name "Dave Genesy"^^xsd:string ;
+          json:title "Library Director"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb6-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "20"^^xsd:decimal ;
+          json:location_id "12"^^xsd:decimal ;
+          json:name "Elizabeth Meeks"^^xsd:string ;
+          json:title "Branch Manager"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.2430898
+        37.466553
+      ) ;
+    json:created_at "2014-04-16T19:51:27.569-07:00"^^xsd:string ;
+    json:description "Provides general reading materials, including large-type books, DVD's and CDs, books on CD and some Spanish language materials to children. Offers children's programs and a Summer Reading Club. Participates in the Peninsula Library System."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb8-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "12"^^xsd:decimal ;
+          json:location_id "12"^^xsd:decimal ;
+          json:number "650 365-3738"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Tuesday-Thursday, 1-6, Saturday, 10-3"^^xsd:string ;
+    json:id "12"^^xsd:string ;
+    json:latitude 37.466553 ;
+    json:longitude -122.2430898 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e532-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Schaberg Branch"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "12"^^xsd:decimal ;
+        json:location_id "12"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2140 Euclid Avenue"^^xsd:string ;
+        json:zip "94061"^^xsd:string ;
+      ] ;
+    json:name "Schaberg Branch"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e531-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:26.651-07:00"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/4/locations"^^xsd:string ;
+        json:name "Redwood City Public Library"^^xsd:string ;
+        json:slug "redwood-city-public-library"^^xsd:string ;
+        json:updated_at "2014-04-20T08:59:38.853-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/4"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cba-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "13"^^xsd:decimal ;
+          json:location_id "12"^^xsd:decimal ;
+          json:number "650 780-7010"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cb7-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Resident of California to obtain a library card for borrowing materials"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in. Proof of California residency required to receive a library card."^^xsd:string ;
+          json:id "13"^^xsd:decimal ;
+          json:keywords (
+              "EDUCATION SERVICES"^^xsd:string
+              "Library"^^xsd:string
+              "Libraries"^^xsd:string
+              "Public Libraries"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:27.847-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides general reading materials and reference services."^^xsd:string ;
+    json:slug "schaberg-branch"^^xsd:string ;
+    json:sort (
+        "1397703087569"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:27.856-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/12"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed8-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Elevator"^^xsd:string
+        "Information on tape or in Braille"^^xsd:string
+        "Ramp"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+        "Disabled Parking"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e539-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "11"^^xsd:decimal ;
+        json:location_id "11"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1044 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cfd-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "17"^^xsd:decimal ;
+          json:location_id "11"^^xsd:decimal ;
+          json:name "Dave Genesy"^^xsd:string ;
+          json:title "Library Director"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cfe-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "18"^^xsd:decimal ;
+          json:location_id "11"^^xsd:decimal ;
+          json:name "Maria Kramer"^^xsd:string ;
+          json:title "Library Division Manager"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.227409
+        37.4837662
+      ) ;
+    json:created_at "2014-04-16T19:51:27.129-07:00"^^xsd:string ;
+    json:description "Provides general reading and media materials, literacy and homework assistance, and programs for all ages. Provides public computers, wireless connectivity, a children's room, teen center, and a local history collection. The library is a member of the Peninsula Library System. The Fair Oaks Branch (650-780-7261) is located at 2510 Middlefield Road and is open Monday-Thursday, 10-7; Friday, 10-5. The Schaberg Branch (650-780-7010) is located at 2140 Euclid Avenue and is open Tuesday-Thursday, 1-6; Saturday, 10-3. The Redwood Shores Branch (650-780-5740) is located at 399 Marine Parkway and is open Monday-Thursday, 10-8; Saturday, 10-5; Sunday 12-5."^^xsd:string ;
+    json:emails (
+        "rclinfo@redwoodcity.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cf3-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "11"^^xsd:decimal ;
+          json:location_id "11"^^xsd:decimal ;
+          json:number "650 780-7069"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Thursday, 10-9; Friday, Saturday, 10-5; Sunday, 12-5"^^xsd:string ;
+    json:id "11"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.4837662 ;
+    json:longitude -122.227409 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53a-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Main Library"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "11"^^xsd:decimal ;
+        json:location_id "11"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "1044 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:name "Main Library"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:26.651-07:00"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/4/locations"^^xsd:string ;
+        json:name "Redwood City Public Library"^^xsd:string ;
+        json:slug "redwood-city-public-library"^^xsd:string ;
+        json:updated_at "2014-04-20T08:59:38.853-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/4"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cf4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "Circulation"^^xsd:string ;
+          json:id "12"^^xsd:decimal ;
+          json:location_id "11"^^xsd:decimal ;
+          json:number "650 780-7018"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cfb-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:eligibility "Resident of California to obtain a card"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in. Proof of California residency to receive a library card."^^xsd:string ;
+          json:id "12"^^xsd:decimal ;
+          json:keywords (
+              "EDUCATION SERVICES"^^xsd:string
+              "Library"^^xsd:string
+              "Libraries"^^xsd:string
+              "Public Libraries"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:27.431-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides general reference and reading materials to adults, teenagers and children."^^xsd:string ;
+    json:slug "main-library"^^xsd:string ;
+    json:sort (
+        "1397703087129"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block; CALTRAIN stops within 1 block."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:27.441-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/11"^^xsd:string ;
+    json:urls (
+        "http://www.redwoodcity.org/library"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Ramp"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e527-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "10"^^xsd:decimal ;
+        json:location_id "10"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2510 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:admin_emails (
+        "ohana@gmail.com"^^xsd:string
+      ) ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c6b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "15"^^xsd:decimal ;
+          json:location_id "10"^^xsd:decimal ;
+          json:name "Dave Genesy"^^xsd:string ;
+          json:title "Library Director"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c6c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "16"^^xsd:decimal ;
+          json:location_id "10"^^xsd:decimal ;
+          json:name "Maria Kramer"^^xsd:string ;
+          json:title "Library Divisions Manager"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.2141428
+        37.478502
+      ) ;
+    json:created_at "2014-04-16T19:51:26.696-07:00"^^xsd:string ;
+    json:description "Provides general reading material, including bilingual, multi-cultural books, CDs and cassettes, bilingual and Spanish language reference services. School, class and other group visits may be arranged by appointment. The library is a member of the Peninsula Library System."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c6d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "10"^^xsd:decimal ;
+          json:location_id "10"^^xsd:decimal ;
+          json:number "650 569-3371"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Thursday, 10-7; Friday, 10-5"^^xsd:string ;
+    json:id "10"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.478502 ;
+    json:longitude -122.2141428 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e529-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Fair Oaks Branch"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "10"^^xsd:decimal ;
+        json:location_id "10"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2510 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:name "Fair Oaks Branch"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e528-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:26.651-07:00"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/4/locations"^^xsd:string ;
+        json:name "Redwood City Public Library"^^xsd:string ;
+        json:slug "redwood-city-public-library"^^xsd:string ;
+        json:updated_at "2014-04-20T08:59:40.770-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/4"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c69-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "11"^^xsd:decimal ;
+          json:location_id "10"^^xsd:decimal ;
+          json:number "650 780-7261"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c62-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Ethnic minorities, especially Spanish speaking"^^xsd:string ;
+          json:eligibility "Resident of California to obtain a library card"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+              "County"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in. Proof of residency in California required to receive a library card."^^xsd:string ;
+          json:id "11"^^xsd:decimal ;
+          json:keywords (
+              "EDUCATION SERVICES"^^xsd:string
+              "Library"^^xsd:string
+              "Libraries"^^xsd:string
+              "Public Libraries"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-20T08:59:40.739-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides general reading materials and reference services."^^xsd:string ;
+    json:slug "fair-oaks-branch"^^xsd:string ;
+    json:sort (
+        "1397703086696"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops in front."^^xsd:string ;
+    json:updated_at "2014-04-20T08:59:40.755-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/10"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1edd-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e546-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "9"^^xsd:decimal ;
+        json:location_id "9"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "800 Middle Avenue"^^xsd:string ;
+        json:zip "94025-9881"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e20-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "12"^^xsd:decimal ;
+          json:location_id "9"^^xsd:decimal ;
+          json:name "Marilyn Baker-Venturini"^^xsd:string ;
+          json:title "Director"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e21-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "13"^^xsd:decimal ;
+          json:location_id "9"^^xsd:decimal ;
+          json:name "Graciela Hernandez"^^xsd:string ;
+          json:title "Assistant Manager"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e22-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "14"^^xsd:decimal ;
+          json:location_id "9"^^xsd:decimal ;
+          json:name "Julie Avelino"^^xsd:string ;
+          json:title "Assessment Specialist"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.1805905
+        37.4480204
+      ) ;
+    json:created_at "2014-04-16T19:51:26.149-07:00"^^xsd:string ;
+    json:description "Delivers a hot meal to the home of persons age 60 or over who are primarily homebound and unable to prepare their own meals, and have no one to prepare meals. Also, delivers a hot meal to the home of disabled individuals ages 18-59. Meals are delivered between 9 am-1:30 pm, Monday-Friday. Special diets are accommodated: low fat, low sodium, and low sugar."^^xsd:string ;
+    json:emails (
+        "mbaker-venturini@peninsulavolunteers.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e1e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "9"^^xsd:decimal ;
+          json:location_id "9"^^xsd:decimal ;
+          json:number "650 326-9547"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Delivery times: Monday-Friday, 9-1:30"^^xsd:string ;
+    json:id "9"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.4480204 ;
+    json:longitude -122.1805905 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e548-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Meals on Wheels - South County"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "9"^^xsd:decimal ;
+        json:location_id "9"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "800 Middle Avenue"^^xsd:string ;
+        json:zip "94025-9881"^^xsd:string ;
+      ] ;
+    json:name "Meals on Wheels - South County"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e547-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:25.233-07:00"^^xsd:string ;
+        json:id "3"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/3/locations"^^xsd:string ;
+        json:name "Peninsula Volunteers"^^xsd:string ;
+        json:slug "peninsula-volunteers"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:26.601-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/3"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e1b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "10"^^xsd:decimal ;
+          json:location_id "9"^^xsd:decimal ;
+          json:number "650 323-2022"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1e1d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Senior citizens age 60 or over, disabled individuals age 18-59"^^xsd:string ;
+          json:eligibility "Homebound person unable to cook or shop"^^xsd:string ;
+          json:fees "Suggested donation of $4.25 per meal for seniors 60 or over. Mandatory charge of $2 per meal for disabled individuals ages 18-59."^^xsd:string ;
+          json:funding_sources (
+              "County"^^xsd:string
+              "Donations"^^xsd:string
+            ) ;
+          json:how_to_apply "Apply by phone."^^xsd:string ;
+          json:id "10"^^xsd:decimal ;
+          json:keywords (
+              "ADULT PROTECTION AND CARE SERVICES"^^xsd:string
+              "Meal Sites/Home-delivered Mea"^^xsd:string
+              "HEALTH SERVICES"^^xsd:string
+              "Nutrition"^^xsd:string
+              "Home Delivered Meals"^^xsd:string
+              "Older Adults"^^xsd:string
+              "Disabilities Issues"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Atherton"^^xsd:string
+              "Belmont"^^xsd:string
+              "East Palo Alto"^^xsd:string
+              "Menlo Park"^^xsd:string
+              "Portola Valley"^^xsd:string
+              "Redwood City"^^xsd:string
+              "San Carlos"^^xsd:string
+              "Woodside"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:26.479-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Will deliver a hot meal to the home of persons age 60 or over who are homebound and unable to prepare their own meals. Can provide special diets."^^xsd:string ;
+    json:slug "meals-on-wheels-south-county"^^xsd:string ;
+    json:sort (
+        "1397703086149"^^xsd:decimal
+      ) ;
+    json:transportation "Not necessary for service."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:26.487-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/9"^^xsd:string ;
+    json:urls (
+        "http://www.peninsulavolunteers.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ecd-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Ramp"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+        "Disabled Parking"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e519-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "8"^^xsd:decimal ;
+        json:location_id "8"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "500 Arbor Road"^^xsd:string ;
+        json:zip "94025"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14b2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "10"^^xsd:decimal ;
+          json:location_id "8"^^xsd:decimal ;
+          json:name "Bart Charlow"^^xsd:string ;
+          json:title "Executive Director, Peninsula Volunteers"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14b3-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "11"^^xsd:decimal ;
+          json:location_id "8"^^xsd:decimal ;
+          json:name "Barbara Kalt"^^xsd:string ;
+          json:title "Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.1830931
+        37.4441785
+      ) ;
+    json:created_at "2014-04-16T19:51:25.713-07:00"^^xsd:string ;
+    json:description "Rosener House is a day center for older adults who may be unable to live independently but do not require 24-hour nursing care, may be isolated and in need of a planned activity program, may need assistance with activities of daily living or are living in a family situation where the caregiver needs respite from giving full-time care. Assists elderly persons to continue to live with family or alone rather than moving to a skilled nursing facility. Activities are scheduled Monday-Friday, 10 am-2:30 pm, and participants may come two to five days per week. The facility is open from 8 am to 5:30 pm for participants who need to remain all day. Small group late afternoon activities are held from 3-5:30 pm.   The program provides a noon meal including special diets as required. Services offered include social and therapeutic recreational activities, individual and family counseling and occupational, physical and speech therapy. A registered nurse is available daily. The Dementia and Alzheimer's Services Program provides specialized activities in a supportive environment for participants with Alzheimer's disease and other dementias. Holds a weekly support group for caregivers.  An early memory loss class for independent adults, \"Minds in Motion\" meets weekly at Rosener House on Wednesday mornings. Call for more information."^^xsd:string ;
+    json:emails (
+        "bkalt@peninsulavolunteers.org"^^xsd:string
+        "fmarchick@peninsulavolunteers.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14c1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "8"^^xsd:decimal ;
+          json:location_id "8"^^xsd:decimal ;
+          json:number "650 322-4067"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 8-5:30"^^xsd:string ;
+    json:id "8"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+        "Filipino (Tagalog)"^^xsd:string
+        "Vietnamese"^^xsd:string
+      ) ;
+    json:latitude 37.4441785 ;
+    json:longitude -122.1830931 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51a-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Rosener House"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "8"^^xsd:decimal ;
+        json:location_id "8"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "500 Arbor Road"^^xsd:string ;
+        json:zip "94025"^^xsd:string ;
+      ] ;
+    json:name "Rosener House Adult Day Services"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e518-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:25.233-07:00"^^xsd:string ;
+        json:id "3"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/3/locations"^^xsd:string ;
+        json:name "Peninsula Volunteers"^^xsd:string ;
+        json:slug "peninsula-volunteers"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:26.601-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/3"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14b1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "9"^^xsd:decimal ;
+          json:location_id "8"^^xsd:decimal ;
+          json:number "650 322-0126"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14b4-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Older adults who have memory or sensory loss, mobility limitations and may be lonely and in need of socialization"^^xsd:string ;
+          json:eligibility "Age 18 or over"^^xsd:string ;
+          json:fees "$85 per day. Vary according to income for those unable to pay full fee. Cash, checks, credit cards, private insurance and vouchers accepted."^^xsd:string ;
+          json:funding_sources (
+              "Donations"^^xsd:string
+              "Fees"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Apply by phone or be referred by a doctor, social worker or other professional. All prospective participants are interviewed individually before starting the program. A recent physical examination is required, including a TB test."^^xsd:string ;
+          json:id "9"^^xsd:decimal ;
+          json:keywords (
+              "ADULT PROTECTION AND CARE SERVICES"^^xsd:string
+              "Adult Day Health Care"^^xsd:string
+              "Dementia Management"^^xsd:string
+              "Adult Day Programs"^^xsd:string
+              "Older Adults"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Atherton"^^xsd:string
+              "Belmont"^^xsd:string
+              "Burlingame"^^xsd:string
+              "East Palo Alto"^^xsd:string
+              "Los Altos"^^xsd:string
+              "Los Altos Hills"^^xsd:string
+              "Menlo Park"^^xsd:string
+              "Mountain View"^^xsd:string
+              "Palo Alto"^^xsd:string
+              "Portola Valley"^^xsd:string
+              "Redwood City"^^xsd:string
+              "San Carlos"^^xsd:string
+              "San Mateo"^^xsd:string
+              "Sunnyvale"^^xsd:string
+              "Woodside"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:26.008-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "A day center for adults age 50 or over."^^xsd:string ;
+    json:slug "rosener-house-adult-day-services"^^xsd:string ;
+    json:sort (
+        "1397703085713"^^xsd:decimal
+      ) ;
+    json:transportation "Transportation can be arranged via Redi-Wheels or Outreach."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:26.018-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/8"^^xsd:string ;
+    json:urls (
+        "http://www.penvol.org/rosenerhouse"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ece-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Disabled Parking"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "7"^^xsd:decimal ;
+        json:location_id "7"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "800 Middle Avenue"^^xsd:string ;
+        json:zip "94025-9881"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c32-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "8"^^xsd:decimal ;
+          json:location_id "7"^^xsd:decimal ;
+          json:name "Peter Olson"^^xsd:string ;
+          json:title "Little House Director"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c33-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "9"^^xsd:decimal ;
+          json:location_id "7"^^xsd:decimal ;
+          json:name "Bart Charlow"^^xsd:string ;
+          json:title "Executive Director, Peninsula Volunteers"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.1805905
+        37.4480204
+      ) ;
+    json:created_at "2014-04-16T19:51:25.290-07:00"^^xsd:string ;
+    json:description "A multipurpose center offering a wide variety of recreational, education and cultural activities. Lifelong learning courses cover topics such as music, art, languages, etc., are hosted at this location. Little House offers a large variety of classes including arts and crafts, jewelry, languages, current events, lapidary, woodwork, painting, and fitness courses (yoga, strength straining, tai chi). There are monthly art and cultural lectures, movie showings, and a computer center. Recreation activities include mah jong, pinochle, ballroom dancing, bridge, trips and tours. Partners with the Sequoia Adult Education Program. The Alzheimer's Cafe, open the third Tuesday of every month from 2:00 - 4:00 pm, is a place that brings together people liviing with dementia, their families, and their caregivers. Free and no registration is needed. The Little House Community Service Desk offers information and referrals regarding social service issues, such as housing, food, transportation, health insurance counseling, and estate planning. Massage, podiatry, and acupuncture are available by appointment. Lunch is served Monday-Friday, 11:30 am-1:00 pm. Prices vary according to selection."^^xsd:string ;
+    json:emails (
+        "polson@peninsulavolunteers.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c38-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "7"^^xsd:decimal ;
+          json:location_id "7"^^xsd:decimal ;
+          json:number "650 326-9547"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Thursday, 8 am-9 pm; Friday, 8-5"^^xsd:string ;
+    json:id "7"^^xsd:string ;
+    json:languages (
+        "Filipino (Tagalog)"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.4480204 ;
+    json:longitude -122.1805905 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Little House"^^xsd:string ;
+        json:city "Menlo Park"^^xsd:string ;
+        json:id "7"^^xsd:decimal ;
+        json:location_id "7"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "800 Middle Avenue"^^xsd:string ;
+        json:zip "94025-9881"^^xsd:string ;
+      ] ;
+    json:name "Little House"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51b-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:25.233-07:00"^^xsd:string ;
+        json:id "3"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/3/locations"^^xsd:string ;
+        json:name "Peninsula Volunteers"^^xsd:string ;
+        json:slug "peninsula-volunteers"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:26.601-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/3"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c30-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "8"^^xsd:decimal ;
+          json:location_id "7"^^xsd:decimal ;
+          json:number "650 326-2025"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c39-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Any age"^^xsd:string ;
+          json:eligibility "None"^^xsd:string ;
+          json:fees "$55 per year membership dues. Classes have fees. Discounts are available for members. Cash, checks and credit cards accepted."^^xsd:string ;
+          json:funding_sources (
+              "Fees"^^xsd:string
+              "Fundraising"^^xsd:string
+              "Grants"^^xsd:string
+              "Membership dues"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or apply by phone for membership application."^^xsd:string ;
+          json:id "8"^^xsd:decimal ;
+          json:keywords (
+              "ADULT PROTECTION AND CARE SERVICES"^^xsd:string
+              "In-Home Supportive"^^xsd:string
+              "Meal Sites/Home-delivered Meals"^^xsd:string
+              "COMMUNITY SERVICES"^^xsd:string
+              "Group Support"^^xsd:string
+              "Information and Referral"^^xsd:string
+              "EDUCATION SERVICES"^^xsd:string
+              "Adult"^^xsd:string
+              "HEALTH SERVICES"^^xsd:string
+              "Education/Information"^^xsd:string
+              "Family Support"^^xsd:string
+              "Individual/Group Counseling"^^xsd:string
+              "Screening/Immunization"^^xsd:string
+              "RECREATION/LEISURE SERVICES"^^xsd:string
+              "Sports/Games/Exercise"^^xsd:string
+              "Community Adult Schools"^^xsd:string
+              "Senior Centers"^^xsd:string
+              "Older Adults"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+              "Santa Clara County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:25.578-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "A multipurpose senior citizens' center."^^xsd:string ;
+    json:slug "little-house"^^xsd:string ;
+    json:sort (
+        "1397703085290"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 3 blocks, RediWheels and Menlo Park Shuttle stop at door."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:25.586-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/7"^^xsd:string ;
+    json:urls (
+        "http://www.penvol.org/littlehouse"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ecf-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "6"^^xsd:decimal ;
+        json:location_id "6"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c47-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "7"^^xsd:decimal ;
+          json:location_id "6"^^xsd:decimal ;
+          json:name "Joe Bloom"^^xsd:string ;
+          json:title "Financial Empowerment Programs Program Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.3263232
+        37.5639394
+      ) ;
+    json:created_at "2014-04-16T19:51:24.839-07:00"^^xsd:string ;
+    json:description "Provides fixed 8% short term loans to eligible applicants for the purchase of a reliable, used autmobile. Loans are up to $6,000 over 2 1/2 years (30 months). Funds must go towards the entire purchase of the automobile. Peninsula Family Service originates loans and collaborates with commercial partner banks to service the loans, helping clients build credit histories. Formerly known as Family Service Agency of San Mateo County, Ways to Work Family Loan Program."^^xsd:string ;
+    json:emails (
+        "waystowork@peninsulafamilyservice.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c3e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "6"^^xsd:decimal ;
+          json:location_id "6"^^xsd:decimal ;
+          json:number "650 403-4303"^^xsd:string ;
+        ]
+      ) ;
+    json:id "6"^^xsd:string ;
+    json:languages (
+        "Hindi"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.5639394 ;
+    json:longitude -122.3263232 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e520-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Economic Self - Sufficiency Program"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "6"^^xsd:decimal ;
+        json:location_id "6"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:name "Economic Self - Sufficiency Program"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e51e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:22.599-07:00"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/2/locations"^^xsd:string ;
+        json:name "Peninsula Family Service"^^xsd:string ;
+        json:slug "peninsula-family-service"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:25.176-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/2"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c40-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:extension "4100"^^xsd:string ;
+          json:id "7"^^xsd:decimal ;
+          json:location_id "6"^^xsd:decimal ;
+          json:number "650 403-4300"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c3d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Target group: Low-income working families with children transitioning from welfare to work and poor or who do not have access to conventional credit"^^xsd:string ;
+          json:eligibility "Eligibility: Low-income family with legal custody of a minor child or an involved parent of a dependent minor child. Must reside and/or work in San Mateo County. Must be working and have verifiable income and ability to pay off loan. No bankruptcies in the past two years and unable to qualify for other funding sources. Loans approved by loan committee."^^xsd:string ;
+          json:fees "$60 application fee. Cash or checks accepted."^^xsd:string ;
+          json:funding_sources (
+              "County"^^xsd:string
+              "Grants"^^xsd:string
+              "State"^^xsd:string
+            ) ;
+          json:how_to_apply "Phone for information."^^xsd:string ;
+          json:id "7"^^xsd:decimal ;
+          json:keywords (
+              "COMMUNITY SERVICES"^^xsd:string
+              "Speakers"^^xsd:string
+              "Automobile Loans"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:25.102-07:00"^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Makes small loans to working families."^^xsd:string ;
+    json:slug "economic-self-sufficiency-program"^^xsd:string ;
+    json:sort (
+        "1397703084839"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block. CALTRAIN stops within 6 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:25.113-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/6"^^xsd:string ;
+    json:urls (
+        "http://www.peninsulafamilyservice.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed7-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e538-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:location_id "5"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ce5-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "6"^^xsd:decimal ;
+          json:location_id "5"^^xsd:decimal ;
+          json:name "Kimberly Pesavento"^^xsd:string ;
+          json:title "Director of Visitation"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.3263232
+        37.5639394
+      ) ;
+    json:created_at "2014-04-16T19:51:24.425-07:00"^^xsd:string ;
+    json:description "Provides supervised visitation services and a neutral site for parents to carry out supervised exchanges of children in a safe manner. Therapeutic visitation and other counseling services available. Kids in the Middle is an education class for separating or divorcing parents. The goal is to enable parents to focus on their children's needs while the family is going through separation, divorce or other transition. The class explores the psychological aspects of divorce and its impact on children, builds effective communication techniques and points out areas in which outside help may be indicated. The fee is $50 for working parents, $15 for unemployed people. Classes are scheduled on Saturdays and Sundays and held at various sites throughout the county. Call 650-403-4300 ext. 4500 to register. Formerly known as Family Service Agency of San Mateo County, Family Visitation Center."^^xsd:string ;
+    json:emails (
+        "kpesavento@peninsulafamilyservice.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ce1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "5"^^xsd:decimal ;
+          json:location_id "5"^^xsd:decimal ;
+          json:number "650 403-4303"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday, 10-6; Tuesday-Friday, 10-8; Saturday, Sunday, 9:30-5:30"^^xsd:string ;
+    json:id "5"^^xsd:string ;
+    json:languages (
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.5639394 ;
+    json:longitude -122.3263232 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e536-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "PFS Family Visitation Center"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "5"^^xsd:decimal ;
+        json:location_id "5"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:name "Family Visitation Center"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e537-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:22.599-07:00"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/2/locations"^^xsd:string ;
+        json:name "Peninsula Family Service"^^xsd:string ;
+        json:slug "peninsula-family-service"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:25.176-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/2"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cdf-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:extension "4500"^^xsd:string ;
+          json:id "6"^^xsd:decimal ;
+          json:location_id "5"^^xsd:decimal ;
+          json:number "650 403-4300"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1cdd-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Parents, children, families with problems of custody disputes, domestic violence or substance abuse, families going through a separation or divorce"^^xsd:string ;
+          json:eligibility "None"^^xsd:string ;
+          json:fees "Vary according to income ($5-$90). Cash, checks and credit cards accepted."^^xsd:string ;
+          json:funding_sources (
+              "County"^^xsd:string
+              "Donations"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Apply by phone."^^xsd:string ;
+          json:id "6"^^xsd:decimal ;
+          json:keywords (
+              "INDIVIDUAL AND FAMILY DEVELOPMENT SERVICES"^^xsd:string
+              "Growth and Adjustment"^^xsd:string
+              "LEGAL AND CRIMINAL JUSTICE SERVICES"^^xsd:string
+              "Mediation"^^xsd:string
+              "Parental Visitation Monitoring"^^xsd:string
+              "Divorce Counseling"^^xsd:string
+              "Youth"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:24.681-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides supervised visitation services and a neutral site for parents in extremely hostile divorces to carry out supervised exchanges of children."^^xsd:string ;
+    json:slug "family-visitation-center"^^xsd:string ;
+    json:sort (
+        "1397703084425"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block, CALTRAIN stops within 4 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:24.690-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/5"^^xsd:string ;
+    json:urls (
+        "http://www.peninsulafamilyservice.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e521-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:location_id "4"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94403"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c50-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "5"^^xsd:decimal ;
+          json:location_id "4"^^xsd:decimal ;
+          json:name "Howard Lader, LCSW"^^xsd:string ;
+          json:title "Manager, Senior Peer Counseling"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.3263232
+        37.5639394
+      ) ;
+    json:created_at "2014-04-16T19:51:24.008-07:00"^^xsd:string ;
+    json:description "Offers supportive counseling services to San Mateo County residents age 55 or over. Volunteer counselors are selected and professionally trained to help their peers face the challenges and concerns of growing older.  Training provides topics that include understanding depression, cultural competence, sexuality, community resources, and other subjects that are relevant to working with older adults. After completion of training, weekly supervision groups are provided for the volunteer senior peer counselors, as well as quarterly in-service training seminars. Peer counseling services are provided in English, Spanish, Chinese (Cantonese and Mandarin), Tagalog, and to the lesbian, gay, bisexual, transgender older adult community. Formerly known as Family Service Agency of San Mateo County, Senior Peer Counseling."^^xsd:string ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c4d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "4"^^xsd:decimal ;
+          json:location_id "4"^^xsd:decimal ;
+          json:number "650 403-4303"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Any time that is convenient for the client and peer counselor"^^xsd:string ;
+    json:id "4"^^xsd:string ;
+    json:languages (
+        "Chinese (Cantonese)"^^xsd:string
+        "Chinese (Mandarin)"^^xsd:string
+        "Filipino (Tagalog)"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.5639394 ;
+    json:longitude -122.3263232 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e522-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "PFS Senior Peer Counseling"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "4"^^xsd:decimal ;
+        json:location_id "4"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94403"^^xsd:string ;
+      ] ;
+    json:name "Senior Peer Counseling"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e523-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:22.599-07:00"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/2/locations"^^xsd:string ;
+        json:name "Peninsula Family Service"^^xsd:string ;
+        json:slug "peninsula-family-service"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:25.176-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/2"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c4e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "English"^^xsd:string ;
+          json:id "5"^^xsd:decimal ;
+          json:location_id "4"^^xsd:decimal ;
+          json:number "650 403-4300"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1c4f-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Older adults age 55 or over who can benefit from counseling"^^xsd:string ;
+          json:eligibility "Resident of San Mateo County age 55 or over"^^xsd:string ;
+          json:fees "None."^^xsd:string ;
+          json:funding_sources (
+              "County"^^xsd:string
+              "Donations"^^xsd:string
+              "Grants"^^xsd:string
+            ) ;
+          json:how_to_apply "Phone for information (403-4300 Ext. 4322)."^^xsd:string ;
+          json:id "5"^^xsd:decimal ;
+          json:keywords (
+              "Geriatric Counseling"^^xsd:string
+              "Older Adults"^^xsd:string
+              "Gay, Lesbian, Bisexual, Transgender Individuals"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:24.257-07:00"^^xsd:string ;
+          json:wait "Varies."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Offers supportive counseling services to older persons."^^xsd:string ;
+    json:slug "senior-peer-counseling"^^xsd:string ;
+    json:sort (
+        "1397703084008"^^xsd:decimal
+      ) ;
+    json:transportation "Service is provided in person's home or at a mutually agreed upon location."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:24.268-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/4"^^xsd:string ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ecc-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e516-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "3"^^xsd:decimal ;
+        json:location_id "3"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14aa-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "4"^^xsd:decimal ;
+          json:location_id "3"^^xsd:decimal ;
+          json:name "Brenda Brown"^^xsd:string ;
+          json:title "Director, Second Career Services"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.3263232
+        37.5639394
+      ) ;
+    json:created_at "2014-04-16T19:51:23.612-07:00"^^xsd:string ;
+    json:description "Provides training and job placement to eligible people age 55 or over who meet certain income qualifications. An income of 125% of poverty level or less is required for subsidized employment and training. (No income requirements for job matchup program.) If a person seems likely to be qualified after a preliminary phone call or visit, he or she must complete an application at this office. Staff will locate appropriate placements for applicants, provide orientation and on-the-job training and assist with finding a job outside the program. Any county resident, regardless of income, age 55 or over has access to the program, job developers and the job bank. Also provides referrals to classroom training. Formerly known as Family Service Agency of San Mateo County, Senior Employment Services."^^xsd:string ;
+    json:emails (
+        "bbrown@peninsulafamilyservice.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14a8-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "3"^^xsd:decimal ;
+          json:location_id "3"^^xsd:decimal ;
+          json:number "650 403-4302"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 9-5"^^xsd:string ;
+    json:id "3"^^xsd:string ;
+    json:languages (
+        "Chinese (Mandarin)"^^xsd:string
+        "Filipino (Tagalog)"^^xsd:string
+        "Italian"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.5639394 ;
+    json:longitude -122.3263232 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e517-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "PFS Second Career Services"^^xsd:string ;
+        json:city "San Mateo"^^xsd:string ;
+        json:id "3"^^xsd:decimal ;
+        json:location_id "3"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "24 Second Avenue"^^xsd:string ;
+        json:zip "94401"^^xsd:string ;
+      ] ;
+    json:name "Second Career Employment Program"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e515-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:22.599-07:00"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/2/locations"^^xsd:string ;
+        json:name "Peninsula Family Service"^^xsd:string ;
+        json:slug "peninsula-family-service"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:25.176-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/2"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14a9-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:extension "Ext. 4385"^^xsd:string ;
+          json:id "4"^^xsd:decimal ;
+          json:location_id "3"^^xsd:decimal ;
+          json:number "650 403-4300"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b14ab-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Residents of San Mateo County age 55 or over"^^xsd:string ;
+          json:eligibility "Age 55 or over, county resident and willing and able to work. Income requirements vary according to program"^^xsd:string ;
+          json:fees "None. Donations requested of clients who can afford it."^^xsd:string ;
+          json:funding_sources (
+              "County"^^xsd:string
+              "Federal"^^xsd:string
+              "State"^^xsd:string
+            ) ;
+          json:how_to_apply "Apply by phone for an appointment."^^xsd:string ;
+          json:id "4"^^xsd:decimal ;
+          json:keywords (
+              "EMPLOYMENT/TRAINING SERVICES"^^xsd:string
+              "Job Development"^^xsd:string
+              "Job Information/Placement/Referral"^^xsd:string
+              "Job Training"^^xsd:string
+              "Job Training Formats"^^xsd:string
+              "Job Search/Placement"^^xsd:string
+              "Older Adults"^^xsd:string
+            ) ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:23.876-07:00"^^xsd:string ;
+          json:wait "Varies."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "Provides training and job placement to eligible persons age 55 or over. All persons age 55 or over have access to information in the program's job bank."^^xsd:string ;
+    json:slug "second-career-employment-program"^^xsd:string ;
+    json:sort (
+        "1397703083612"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block, CALTRAIN stops within 6 blocks."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:23.885-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/3"^^xsd:string ;
+    json:urls (
+        "http://www.peninsulafamilyservice.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ed9-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Ramp"^^xsd:string
+        "Disabled Restroom"^^xsd:string
+        "Disabled Parking"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53e-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:location_id "2"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2600 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1db0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "2"^^xsd:decimal ;
+          json:location_id "2"^^xsd:decimal ;
+          json:name "Susan Houston"^^xsd:string ;
+          json:title "Director of Older Adult Services"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1db1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "3"^^xsd:decimal ;
+          json:location_id "2"^^xsd:decimal ;
+          json:name "Christina Gonzalez"^^xsd:string ;
+          json:title "Center Director"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -122.213221
+        37.477227
+      ) ;
+    json:created_at "2014-04-16T19:51:23.059-07:00"^^xsd:string ;
+    json:description "A walk-in center for older adults that provides social services, wellness, recreational, educational and creative activities including arts and crafts, computer classes and gardening classes. Coffee and healthy breakfasts are available daily. A hot lunch is served Tuesday-Friday for persons age 60 or over and spouse.        Provides case management (including in-home assessments) and bilingual information and referral about community services to persons age 60 or over on questions of housing, employment, household help, recreation and social activities, home delivered meals, health and counseling services and services to shut-ins. Health insurance and legal counseling is available by appointment. Lectures on a variety of health and fitness topics are held monthly in both English and Spanish.  Provides a variety of physical fitness opportunities, including a garden club, yoga, tai chi, soul line dance and aerobics classes geared toward older adults. Also provides free monthly blood pressure screenings, quarterly blood glucose monitoring and health screenings by a visiting nurse. Offers a Brown Bag Program in which low-income seniors can receive a bag of groceries each week for a membership fee of $10 a year. Offers Spanish lessons. Formerly known as Peninsula Family Service, Fair Oaks Intergenerational Center. Formerly known as the Fair Oaks Senior Center. Formerly known as Family Service Agency of San Mateo County, Fair Oaks Intergenerational Center."^^xsd:string ;
+    json:emails (
+        "cgonzalez@peninsulafamilyservice.org"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1dac-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "2"^^xsd:decimal ;
+          json:location_id "2"^^xsd:decimal ;
+          json:number "650 701-0856"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 9-5"^^xsd:string ;
+    json:id "2"^^xsd:string ;
+    json:languages (
+        "Filipino (Tagalog)"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 37.477227 ;
+    json:longitude -122.213221 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53c-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Fair Oaks Intergenerational Center"^^xsd:string ;
+        json:city "Redwood City"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:location_id "2"^^xsd:decimal ;
+        json:state "CA"^^xsd:string ;
+        json:street "2600 Middlefield Road"^^xsd:string ;
+        json:zip "94063"^^xsd:string ;
+      ] ;
+    json:name "Fair Oaks Adult Activity Center"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "89b1e53d-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:51:22.599-07:00"^^xsd:string ;
+        json:id "2"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/2/locations"^^xsd:string ;
+        json:name "Peninsula Family Service"^^xsd:string ;
+        json:slug "peninsula-family-service"^^xsd:string ;
+        json:updated_at "2014-04-16T19:51:25.176-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/2"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1dab-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "3"^^xsd:decimal ;
+          json:location_id "2"^^xsd:decimal ;
+          json:number "650 780-7525"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1daa-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Older adults age 55 or over, ethnic minorities and low-income persons"^^xsd:string ;
+          json:eligibility "Age 55 or over for most programs, age 60 or over for lunch program"^^xsd:string ;
+          json:fees "$2.50 suggested donation for lunch for age 60 or over, donations for other services appreciated. Cash and checks accepted."^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+              "County"^^xsd:string
+              "Donations"^^xsd:string
+              "Fees"^^xsd:string
+              "Fundraising"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or apply by phone."^^xsd:string ;
+          json:id "3"^^xsd:decimal ;
+          json:keywords (
+              "ADULT PROTECTION AND CARE SERVICES"^^xsd:string
+              "Meal Sites/Home-delivered Mea"^^xsd:string
+              "COMMUNITY SERVICES"^^xsd:string
+              "Group Support"^^xsd:string
+              "Information and Referral"^^xsd:string
+              "EDUCATION SERVICES"^^xsd:string
+              "English Language"^^xsd:string
+              "RECREATION/LEISURE SERVICES"^^xsd:string
+              "Arts and Crafts"^^xsd:string
+              "Sports/Games/Exercise"^^xsd:string
+              "Brown Bag Food Programs"^^xsd:string
+              "Congregate Meals/Nutrition Sites"^^xsd:string
+              "Senior Centers"^^xsd:string
+              "Older Adults"^^xsd:string
+            ) ;
+          json:service_areas (
+              "Redwood City"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:51:23.441-07:00"^^xsd:string ;
+          json:wait "No wait."^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "A multipurpose senior citizens' center serving the Redwood City area."^^xsd:string ;
+    json:slug "fair-oaks-adult-activity-center"^^xsd:string ;
+    json:sort (
+        "1397703083059"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops in front."^^xsd:string ;
+    json:updated_at "2014-04-16T19:51:23.454-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/2"^^xsd:string ;
+    json:urls (
+        "http://www.peninsulafamilyservice.org"^^xsd:string
+      ) ;
+  ]
+  [
+    rdf:type json:Location ;
+    <http://purl.org/dc/elements/1.1/identifier> "8b0b1ee1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+    json:_index "production-ohana_api"^^xsd:string ;
+    json:_type "location"^^xsd:string ;
+    json:accessibility (
+        "Disabled Restroom"^^xsd:string
+        "Disabled Parking"^^xsd:string
+        "Wheelchair"^^xsd:string
+      ) ;
+    json:address [
+        rdf:type json:Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b14a0-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:city "Burlington"^^xsd:string ;
+        json:id "1"^^xsd:decimal ;
+        json:location_id "1"^^xsd:decimal ;
+        json:state "VT"^^xsd:string ;
+        json:street "2013 Avenue of the fellows, Suite 100"^^xsd:string ;
+        json:zip "05201"^^xsd:string ;
+      ] ;
+    json:contacts (
+        [
+          rdf:type json:Contact ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ec1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "1"^^xsd:decimal ;
+          json:location_id "1"^^xsd:decimal ;
+          json:name "Suzanne Badenhoop"^^xsd:string ;
+          json:title "Board President"^^xsd:string ;
+        ]
+      ) ;
+    json:coordinates (
+        -73.1968254
+        42.878036
+      ) ;
+    json:created_at "2014-04-16T19:48:29.958-07:00"^^xsd:string ;
+    json:description "[NOTE THIS IS NOT A REAL ORGANIZATION--THIS IS FOR TESTTING PURPOSES OF THIS ALPHA APP] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit metus eu orci lobortis dictum. In hac habitasse platea dictumst. Vivamus vulputate, neque ut sodales gravida, lorem nunc pharetra ligula, ac cursus sem justo a sapien. Duis vitae vestibulum magna. Sed vel augue in justo rhoncus viverra. Nam ac felis a purus lobortis porttitor sit amet quis est. Suspendisse vulputate nisl quis nisi fermentum aliquet euismod at augue. Sed ultricies, purus dapibus tristique dictum, tortor mauris porttitor nulla, at porta nisl sem sed dolor. Proin ac hendrerit erat. Duis porta iaculis orci, eu euismod quam tristique in. Phasellus nec purus sit amet sapien volutpat egestas."^^xsd:string ;
+    json:emails (
+        "sanmaceo@co.sanmaceo.ca.us"^^xsd:string
+        "maceo@parker.com"^^xsd:string
+      ) ;
+    json:faxes (
+        [
+          rdf:type json:Faxe ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ec7-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:id "1"^^xsd:decimal ;
+          json:location_id "1"^^xsd:decimal ;
+          json:number "650 627-8244"^^xsd:string ;
+        ]
+      ) ;
+    json:hours "Monday-Friday, 8-5; Saturday, 10-6; Sunday 11-5"^^xsd:string ;
+    json:id "1"^^xsd:string ;
+    json:languages (
+        "Chinese (Cantonese)"^^xsd:string
+        "Chinese (Taiwanese)"^^xsd:string
+        "Filipino (Tagalog)"^^xsd:string
+        "Russian"^^xsd:string
+        "Spanish"^^xsd:string
+      ) ;
+    json:latitude 42.878036 ;
+    json:longitude -73.1968254 ;
+    json:mail_address [
+        rdf:type json:Mail_Address ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b14a2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:attention "Hella Fellas"^^xsd:string ;
+        json:city "San Maceo"^^xsd:string ;
+        json:id "1"^^xsd:decimal ;
+        json:location_id "1"^^xsd:decimal ;
+        json:state "VT"^^xsd:string ;
+        json:street "2013 Avenue of the fellows, Suite 100"^^xsd:string ;
+        json:zip "90210"^^xsd:string ;
+      ] ;
+    json:name "San Maceo Agency"^^xsd:string ;
+    json:organization [
+        rdf:type json:Organization ;
+        <http://purl.org/dc/elements/1.1/identifier> "8b0b14a1-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+        json:created_at "2014-04-16T19:48:29.197-07:00"^^xsd:string ;
+        json:id "1"^^xsd:decimal ;
+        json:locations_url "http://ohana-api-demo.herokuapp.com/api/organizations/1/locations"^^xsd:string ;
+        json:name "SanMaceo Example Agency."^^xsd:string ;
+        json:slug "sanmaceo-example-agency"^^xsd:string ;
+        json:updated_at "2014-04-17T06:08:17.818-07:00"^^xsd:string ;
+        json:url "http://ohana-api-demo.herokuapp.com/api/organizations/1"^^xsd:string ;
+      ] ;
+    json:phones (
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ec2-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "Information"^^xsd:string ;
+          json:id "1"^^xsd:decimal ;
+          json:location_id "1"^^xsd:decimal ;
+          json:number "650 372-6200"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Phone ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ec3-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:department "Reservations"^^xsd:string ;
+          json:id "2"^^xsd:decimal ;
+          json:location_id "1"^^xsd:decimal ;
+          json:number "650 372-6200"^^xsd:string ;
+        ]
+      ) ;
+    json:services (
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1eba-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Second service and nonprofit businesses, the public, military facilities, schools and government entities"^^xsd:string ;
+          json:description "[NOTE THIS IS NOT A REAL ORGANIZATION--THIS IS FOR TESTTING PURPOSES OF THIS ALPHA APP] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit metus eu orci lobortis dictum. In hac habitasse platea dictumst. Vivamus vulputate, neque ut sodales gravida, lorem nunc pharetra ligula, ac cursus sem justo a sapien. Duis vitae vestibulum magna. Sed vel augue in justo rhoncus viverra. Nam ac felis a purus lobortis porttitor sit amet quis est. Suspendisse vulputate nisl quis nisi fermentum aliquet euismod at augue. Sed ultricies, purus dapibus tristique dictum, tortor mauris porttitor nulla, at porta nisl sem sed dolor. Proin ac hendrerit erat. Duis porta iaculis orci, eu euismod quam tristique in. Phasellus nec purus sit amet sapien volutpat egestas."^^xsd:string ;
+          json:eligibility "None"^^xsd:string ;
+          json:fees "None, except for permits and photocopying. Cash, checks and credit cards accepted"^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+              "County"^^xsd:string
+              "Federal"^^xsd:string
+              "State"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or apply by phone or mail"^^xsd:string ;
+          json:id "2"^^xsd:decimal ;
+          json:keywords (
+              "Ruby on Rails/MongoDB/Redis"^^xsd:string
+              "FIFA World Cup"^^xsd:string
+            ) ;
+          json:name "hasdfasf"^^xsd:string ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+              "Alameda County"^^xsd:string
+              "Contra Costa County"^^xsd:string
+              "Marin County"^^xsd:string
+              "San Francisco County"^^xsd:string
+              "Santa Clara County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:48:31.094-07:00"^^xsd:string ;
+          json:urls (
+              "http://www.example.com"^^xsd:string
+              "http://www.example2.com"^^xsd:string
+            ) ;
+          json:wait "No wait to 2 weeks"^^xsd:string ;
+        ]
+        [
+          rdf:type json:Service ;
+          <http://purl.org/dc/elements/1.1/identifier> "8b0b1ebb-2a89-11b2-80f2-acbf52928767"^^xsd:string ;
+          json:audience "Profit and nonprofit businesses, the public, military facilities, schools and government entities"^^xsd:string ;
+          json:description "[NOTE THIS IS NOT A REAL ORGANIZATION--THIS IS FOR TESTTING PURPOSES OF THIS ALPHA APP] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit metus eu orci lobortis dictum. In hac habitasse platea dictumst. Vivamus vulputate, neque ut sodales gravida, lorem nunc pharetra ligula, ac cursus sem justo a sapien. Duis vitae vestibulum magna. Sed vel augue in justo rhoncus viverra. Nam ac felis a purus lobortis porttitor sit amet quis est. Suspendisse vulputate nisl quis nisi fermentum aliquet euismod at augue. Sed ultricies, purus dapibus tristique dictum, tortor mauris porttitor nulla, at porta nisl sem sed dolor. Proin ac hendrerit erat. Duis porta iaculis orci, eu euismod quam tristique in. Phasellus nec purus sit amet sapien volutpat egestas."^^xsd:string ;
+          json:eligibility "None"^^xsd:string ;
+          json:fees "None, except for permits and photocopying. Cash, checks and credit cards accepted"^^xsd:string ;
+          json:funding_sources (
+              "City"^^xsd:string
+              "County"^^xsd:string
+              "Federal"^^xsd:string
+              "State"^^xsd:string
+            ) ;
+          json:how_to_apply "Walk in or apply by phone or mail"^^xsd:string ;
+          json:id "1"^^xsd:decimal ;
+          json:keywords (
+              "Ruby on Rails/MongoDB/Redis"^^xsd:string
+              "FIFA World Cup"^^xsd:string
+            ) ;
+          json:name "bazfoo"^^xsd:string ;
+          json:service_areas (
+              "San Mateo County"^^xsd:string
+              "Alameda County"^^xsd:string
+              "Contra Costa County"^^xsd:string
+              "Marin County"^^xsd:string
+              "San Francisco County"^^xsd:string
+              "Santa Clara County"^^xsd:string
+            ) ;
+          json:updated_at "2014-04-16T19:48:30.962-07:00"^^xsd:string ;
+          json:urls (
+              "http://www.smchealth.org"^^xsd:string
+              "http://www.example.com"^^xsd:string
+              "http://www.example2.com"^^xsd:string
+            ) ;
+          json:wait "No wait to 2 weeks"^^xsd:string ;
+        ]
+      ) ;
+    json:short_desc "This is an example of a short description. Maybe a little too short. What do you ththink? Should it go on some more? But not too much. Ok, I think that's good."^^xsd:string ;
+    json:slug "san-maceo-agency"^^xsd:string ;
+    json:sort (
+        "1397702909958"^^xsd:decimal
+      ) ;
+    json:transportation "SAMTRANS stops within 1 block"^^xsd:string ;
+    json:updated_at "2014-04-17T06:08:17.787-07:00"^^xsd:string ;
+    json:url "http://ohana-api-demo.herokuapp.com/api/locations/1"^^xsd:string ;
+    json:urls (
+        "http://www.smchealth.org"^^xsd:string
+        "http://www.example.com"^^xsd:string
+        "http://www.example2.com"^^xsd:string
+      ) ;
+  ]
+).
