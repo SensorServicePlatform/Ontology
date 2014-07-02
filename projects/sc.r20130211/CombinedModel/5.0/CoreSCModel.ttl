@@ -144,7 +144,7 @@ sc:ComplexService
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:composedOf ;
     ] ;
 .
