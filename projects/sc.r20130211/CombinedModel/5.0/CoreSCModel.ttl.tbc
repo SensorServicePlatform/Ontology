@@ -15,4 +15,8 @@
       rdf:type <http://spinrdf.org/spin#TopSPIN> ;
       composite:index "0"^^xsd:int ;
     ] ;
+  composite:child [
+      rdf:type inference:SwiftOWLIMEngine ;
+      composite:index "1"^^xsd:int ;
+    ] ;
 ].
