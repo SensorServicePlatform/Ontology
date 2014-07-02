@@ -15,7 +15,7 @@
   rdf:type owl:Ontology ;
   owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/4.0/SRRCoreSCModel> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
-  
+.
 cmusc:uri
   rdf:type owl:DatatypeProperty ;
   rdfs:range xsd:string ;

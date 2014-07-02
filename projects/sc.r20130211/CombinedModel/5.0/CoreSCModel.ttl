@@ -27,8 +27,6 @@
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-
-.
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel>
   rdf:type owl:Ontology ;
   owl:imports <http://geovocab.org/spatial> ;
