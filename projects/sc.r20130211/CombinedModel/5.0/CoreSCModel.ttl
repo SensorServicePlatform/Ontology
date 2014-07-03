@@ -51,27 +51,6 @@
 sc:Accelerometer
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#LinearAcceleration> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:ActuationService
   rdf:type owl:Class ;
@@ -84,27 +63,6 @@ sc:Actuator
 sc:AudioSensor
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#Pressure> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:ComplexDevice
   rdf:type owl:Class ;
@@ -116,7 +74,7 @@ sc:ComplexDevice
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:composedOf ;
     ] ;
 .
@@ -130,7 +88,7 @@ sc:ComplexSensor
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
       owl:onProperty sc:composedOf ;
     ] ;
 .
@@ -227,27 +185,6 @@ sc:Event
 sc:HumiditySensor
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:Image
   rdf:type owl:Class ;
@@ -265,27 +202,6 @@ sc:InformationArtifact
 sc:LightSensor
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#Illuminance> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:Location
   rdf:type owl:Class ;
@@ -356,27 +272,6 @@ sc:Person
 sc:PressureSensor
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#AtmosphericPressure> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:RegistrationEvent
   rdf:type owl:Class ;
@@ -437,6 +332,186 @@ sc:ResourceRegistry
 .
 sc:Sensor
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:Accelerometer ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#LinearAcceleration> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:AudioSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#Pressure> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:HumiditySensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#AbsoluteHumidity> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:LightSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#Illuminance> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:PressureSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#AtmosphericPressure> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object sc:TemperatureSensor ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:TriplePath ;
+            sp:object <http://qudt.org/vocab/quantity#ThermodynamicTemperature> ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:SeqPath ;
+                    sp:path1 [
+                        rdf:type sp:SeqPath ;
+                        sp:path1 sc:produces ;
+                        sp:path2 sc:hasValue ;
+                      ] ;
+                    sp:path2 <http://qudt.org/schema/qudt#unit> ;
+                  ] ;
+                sp:path2 <http://qudt.org/schema/qudt#quantityKind> ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+    ] ;
   rdfs:subClassOf sc:Device ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -529,27 +604,6 @@ sc:ServiceProvider
 sc:TemperatureSensor
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Sensor ;
-  owl:equivalentClass [
-      rdf:type owl:Class ;
-      owl:intersectionOf (
-          sc:Sensor
-          [
-            rdf:type owl:Restriction ;
-            owl:allValuesFrom [
-                rdf:type owl:Class ;
-                owl:intersectionOf (
-                    <http://qudt.org/schema/qudt#Quantity>
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:hasValue <http://qudt.org/vocab/quantity#ThermodynamicTemperature> ;
-                      owl:onProperty <http://qudt.org/schema/qudt#quantityKind> ;
-                    ]
-                  ) ;
-              ] ;
-            owl:onProperty <http://qudt.org/schema/qudt#quantity> ;
-          ]
-        ) ;
-    ] ;
 .
 sc:TimeStamp
   rdf:type owl:Class ;
