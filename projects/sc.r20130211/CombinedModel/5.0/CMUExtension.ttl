@@ -16,11 +16,6 @@
   owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
-cmusc:uri
-  rdf:type owl:DatatypeProperty ;
-  rdfs:range xsd:string ;
-.
-
 cmusc:Device
   rdf:type owl:Class ;
   spin:rule [
@@ -921,6 +916,10 @@ cmusc:madeBySensorWithName
 .
 cmusc:metadataJson
   rdf:type rdf:Property ;
+.
+cmusc:uri
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
 .
 sc:Sensor
   spin:rule [
