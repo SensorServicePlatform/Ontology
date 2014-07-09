@@ -1,0 +1,116 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapOpenReferralToAirs
+# imports: http://spinrdf.org/spin
+# imports: http://topbraid.org/spin/spinmapl
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationRDF
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralOrgsRdfOutput
+# imports: https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#
+
+@prefix MapOpenReferralToAirs: <http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapOpenReferralToAirs#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix turtle: <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://topbraid.org/json#Address>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferralToAirs:Address-Address ;
+      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Address> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferralToAirs:Address-Address ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 rdfs:label ;
+      spinmap:targetPredicate1 rdfs:label ;
+    ] ;
+.
+<http://topbraid.org/json#Organization>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferralToAirs:Organization-Site ;
+      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Site> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+.
+<http://topbraid.org/json#Service>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferralToAirs:Service-Service ;
+      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Service> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferralToAirs:Service-SiteService ;
+      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#SiteService> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferralToAirs:Service-Service ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#description> ;
+      spinmap:targetPredicate1 <http://purl.org/dc/terms/description> ;
+    ] ;
+.
+<http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapOpenReferralToAirs>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:imports <http://topbraid.org/spin/spinmapl> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationRDF> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralOrgsRdfOutput> ;
+  owl:imports <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+MapOpenReferralToAirs:Address-Address
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Address> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "airs:Address-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Address> ;
+.
+MapOpenReferralToAirs:Organization-Site
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Organization> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "airs:Site-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Site> ;
+.
+MapOpenReferralToAirs:Service-Service
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Service> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "airs:Service-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Service> ;
+.
+MapOpenReferralToAirs:Service-SiteService
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Service> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "airs:SiteService-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#SiteService> ;
+.

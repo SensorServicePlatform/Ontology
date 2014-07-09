@@ -1,0 +1,44 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension
+# imports: http://topbraid.org/schema/schema-single-range
+# imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel
+
+@prefix or: <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension>
+  rdf:type owl:Ontology ;
+  owl:imports <http://topbraid.org/schema/schema-single-range> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+or:AssistanceService
+  rdf:type owl:Class ;
+  rdfs:comment "An organization"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Service> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty or:hasKeyword ;
+    ] ;
+.
+or:Organization
+  rdf:type owl:Class ;
+  rdfs:comment "An organization"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://schema.org/Organization> ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Resource> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom or:Organization ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#isPartOf> ;
+    ] ;
+.
+or:hasKeyword
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Descriptor keywords"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.

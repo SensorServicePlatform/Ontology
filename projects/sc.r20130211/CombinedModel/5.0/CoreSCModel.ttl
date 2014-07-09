@@ -1,9 +1,6 @@
 # baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel
 # imports: http://geovocab.org/spatial
-# imports: http://purl.org/dc/dcam/
-# imports: http://purl.org/dc/dcmitype/
 # imports: http://purl.org/dc/terms/
-# imports: http://purl.org/vocab/vann/
 # imports: http://qudt.org/1.1/schema/quantity
 # imports: http://qudt.org/1.1/vocab/dimension
 # imports: http://qudt.org/vocab/unit
@@ -12,9 +9,6 @@
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/2006/vcard/ns
-# imports: http://www.w3.org/2007/05/powder-s
-# imports: http://www.w3.org/ns/adms
-# imports: http://www.w3.org/ns/dcat
 # imports: http://xmlns.com/foaf/0.1/
 
 @prefix core: <http://www.w3.org/2004/02/skos/core#> .
@@ -30,10 +24,7 @@
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel>
   rdf:type owl:Ontology ;
   owl:imports <http://geovocab.org/spatial> ;
-  owl:imports <http://purl.org/dc/dcam/> ;
-  owl:imports <http://purl.org/dc/dcmitype/> ;
   owl:imports <http://purl.org/dc/terms/> ;
-  owl:imports <http://purl.org/vocab/vann/> ;
   owl:imports <http://qudt.org/1.1/schema/quantity> ;
   owl:imports <http://qudt.org/1.1/vocab/dimension> ;
   owl:imports <http://qudt.org/vocab/unit> ;
@@ -42,9 +33,6 @@
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/2006/vcard/ns> ;
-  owl:imports <http://www.w3.org/2007/05/powder-s> ;
-  owl:imports <http://www.w3.org/ns/adms> ;
-  owl:imports <http://www.w3.org/ns/dcat> ;
   owl:imports <http://xmlns.com/foaf/0.1/> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
