@@ -1,0 +1,16 @@
+# baseURI: http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORRefactoredCore
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationJson
+# imports: http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralOrgsJsonOntology
+
+@prefix ORRefactoredCore: <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORRefactoredCore#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORRefactoredCore>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationJson> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralOrgsJsonOntology> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
