@@ -35,8 +35,8 @@
 <http://topbraid.org/json#Organization>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
-      spinmap:context MapOpenReferralToAirs:Organization-Site ;
-      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Site> ;
+      spinmap:context MapOpenReferralToAirs:Organization-Agency ;
+      spinmap:expression <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Agency> ;
       spinmap:targetPredicate1 rdf:type ;
     ] ;
 .
@@ -81,16 +81,16 @@ MapOpenReferralToAirs:Address-Address
     ] ;
   spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Address> ;
 .
-MapOpenReferralToAirs:Organization-Site
+MapOpenReferralToAirs:Organization-Agency
   rdf:type spinmap:Context ;
   spinmap:sourceClass <http://topbraid.org/json#Organization> ;
   spinmap:target [
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#id> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "airs:Site-{?1}"^^xsd:string ;
+      spinmapl:template "airs:Agency-{?1}"^^xsd:string ;
     ] ;
-  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Site> ;
+  spinmap:targetClass <https://raw.githubusercontent.com/airs-linked-data/lov/latest/src/airs_vocabulary.ttl#Agency> ;
 .
 MapOpenReferralToAirs:Service-Service
   rdf:type spinmap:Context ;
