@@ -17,6 +17,35 @@
 @prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://topbraid.org/json#Address>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferral:Address-PostalAddress ;
+      spinmap:expression <http://schema.org/PostalAddress> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#state> ;
+      spinmap:targetPredicate1 <http://schema.org/addressLocality> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#street> ;
+      spinmap:targetPredicate1 <http://schema.org/streetAddress> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#zip> ;
+      spinmap:targetPredicate1 <http://schema.org/postalCode> ;
+    ] ;
+.
 <http://topbraid.org/json#Contact>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
@@ -92,6 +121,35 @@
       spinmap:targetPredicate1 rdfs:label ;
     ] ;
 .
+<http://topbraid.org/json#Mail_Address>
+  spinmap:rule [
+      rdf:type spinmap:Mapping-0-1 ;
+      spinmap:context MapOpenReferral:Mail_Address-PostalAddress ;
+      spinmap:expression <http://schema.org/PostalAddress> ;
+      spinmap:targetPredicate1 rdf:type ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Mail_Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#state> ;
+      spinmap:targetPredicate1 <http://schema.org/addressLocality> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Mail_Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#street> ;
+      spinmap:targetPredicate1 <http://schema.org/streetAddress> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Mail_Address-PostalAddress ;
+      spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#zip> ;
+      spinmap:targetPredicate1 <http://schema.org/postalCode> ;
+    ] ;
+.
 <http://topbraid.org/json#Organization>
   spinmap:rule [
       rdf:type spinmap:Mapping-0-1 ;
@@ -109,13 +167,6 @@
           spinmapl:separator "-"^^xsd:string ;
         ] ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#hasGUID> ;
-    ] ;
-  spinmap:rule [
-      rdf:type spinmap:Mapping-1-1 ;
-      spinmap:context MapOpenReferral:Organization-Organization ;
-      spinmap:expression spin:_arg1 ;
-      spinmap:sourcePredicate1 <http://topbraid.org/json#contacts> ;
-      spinmap:targetPredicate1 <http://schema.org/contactPoint> ;
     ] ;
   spinmap:rule [
       rdf:type spinmap:Mapping-1-1 ;
@@ -157,6 +208,13 @@
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context MapOpenReferral:Service-AssistanceService ;
       spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#keywords> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Service-AssistanceService ;
+      spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#name> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#hasLabel> ;
     ] ;
@@ -176,6 +234,17 @@
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralLocationRDF> ;
   owl:imports <http://www.cmusv.edu/SmartCommunity/Scripts/Output/OpenReferralOrgsRdfOutput> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+MapOpenReferral:Address-PostalAddress
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Address> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#location_id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "schema:Address-PostalAddress{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://schema.org/PostalAddress> ;
 .
 MapOpenReferral:Contact-Person
   rdf:type spinmap:Context ;
@@ -199,27 +268,16 @@ MapOpenReferral:Location-Location
     ] ;
   spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Location> ;
 .
-MapOpenReferral:Organization-Organization
+MapOpenReferral:Mail_Address-PostalAddress
   rdf:type spinmap:Context ;
-  spinmap:sourceClass <http://topbraid.org/json#Organization> ;
-  spinmap:target [
-      rdf:type spinmapl:buildURI1 ;
-      sp:arg1 <http://purl.org/dc/elements/1.1/identifier> ;
-      spinmap:source spinmap:_source ;
-      spinmapl:template "or:{?1}"^^xsd:string ;
-    ] ;
-  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#Organization> ;
-.
-MapOpenReferral:Service-AssistanceService
-  rdf:type spinmap:Context ;
-  spinmap:sourceClass <http://topbraid.org/json#Service> ;
+  spinmap:sourceClass <http://topbraid.org/json#Mail_Address> ;
   spinmap:target [
       rdf:type spinmapl:buildURI1 ;
       sp:arg1 <http://topbraid.org/json#id> ;
       spinmap:source spinmap:_source ;
-      spinmapl:template "or:ORService-{?1}"^^xsd:string ;
+      spinmapl:template "schema:Mail-PostalAddress-{?1}"^^xsd:string ;
     ] ;
-  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#AssistanceService> ;
+  spinmap:targetClass <http://schema.org/PostalAddress> ;
 .
 MapOpenReferral:MapListElements
   rdf:type spin:Template ;
@@ -303,4 +361,26 @@ MapOpenReferral:MapListElements
   spin:labelTemplate "Get list members from {?property} and map to {?targetProperty} for {?context} mapping."^^xsd:string ;
   rdfs:label "Map elements of a list to multiple instances of a target property"^^xsd:string ;
   rdfs:subClassOf spin:Templates ;
+.
+MapOpenReferral:Organization-Organization
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Organization> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://purl.org/dc/elements/1.1/identifier> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "or:{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#Organization> ;
+.
+MapOpenReferral:Service-AssistanceService
+  rdf:type spinmap:Context ;
+  spinmap:sourceClass <http://topbraid.org/json#Service> ;
+  spinmap:target [
+      rdf:type spinmapl:buildURI1 ;
+      sp:arg1 <http://topbraid.org/json#id> ;
+      spinmap:source spinmap:_source ;
+      spinmapl:template "or:ORService-{?1}"^^xsd:string ;
+    ] ;
+  spinmap:targetClass <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#AssistanceService> ;
 .

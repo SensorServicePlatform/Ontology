@@ -33,6 +33,11 @@ or:Organization
   rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Resource> ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:allValuesFrom or:AssistanceService ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#provides> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:allValuesFrom or:Organization ;
       owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#isPartOf> ;
     ] ;
