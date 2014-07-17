@@ -21,6 +21,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
 @prefix sp: <http://spinrdf.org/sp#> .
+@prefix spif: <http://spinrdf.org/spif#> .
 @prefix spin: <http://spinrdf.org/spin#> .
 @prefix spinmap: <http://spinrdf.org/spinmap#> .
 @prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
@@ -440,6 +441,18 @@ spinmap:Context
       spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#value> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CMUExtension#hasValueString> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context cmumap:Reading-MeasurementEvent_1 ;
+      spinmap:expression [
+          rdf:type spif:parseDate ;
+          arg:pattern "MM dd, yyyy HH:mm:ss"^^xsd:string ;
+          sp:arg1 spin:_arg1 ;
+          sp:arg3 "en"^^xsd:string ;
+        ] ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#timeStamp> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#hasTimeStamp> ;
     ] ;
 .
 <http://topbraid.org/json#Sensor>

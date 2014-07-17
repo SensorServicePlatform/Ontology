@@ -432,18 +432,18 @@ cmusc:MeasurementEvent
   rdfs:subClassOf sc:MeasurementEvent ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasTimeStampString ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityValue> ;
+      owl:onProperty sc:hasValue ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasValueString ;
+      owl:allValuesFrom cmusc:Sensor ;
+      owl:onProperty sc:madeBySensor ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:madeBySensorWithName ;
+      owl:allValuesFrom sc:TimeStamp ;
+      owl:onProperty cmusc:hasTimeStamp ;
     ] ;
 .
 cmusc:Sensor
@@ -769,6 +769,21 @@ cmusc:SensorRegistry
   rdfs:subClassOf sc:SensorRegistry ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityValue> ;
+      owl:onProperty cmusc:hasMaximumValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#QuantityValue> ;
+      owl:onProperty cmusc:hasMinimumValue ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt#Unit> ;
+      owl:onProperty cmusc:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
       owl:onProperty cmusc:hasInterpreter ;
     ] ;
@@ -776,16 +791,6 @@ cmusc:SensorRegistry
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
       owl:onProperty cmusc:hasManufacturer ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasMaximumValue ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasMinimumValue ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -801,11 +806,6 @@ cmusc:SensorRegistry
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
       owl:onProperty cmusc:hasSensorTypeUserDefinedFields ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasUnit ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -841,11 +841,11 @@ cmusc:hasManufacturer
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasMaximumValue
-  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasMinimumValue
-  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasNetworkAddress
@@ -883,13 +883,18 @@ cmusc:hasSensorTypeUserDefinedFields
   rdf:type owl:DatatypeProperty ;
   rdfs:label ""^^xsd:string ;
 .
+cmusc:hasTimeStamp
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
 cmusc:hasTimeStampString
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "This subclass is needed for the CMU context, to tied a measurement back to the sensor that generated it"^^xsd:string ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasUnit
-  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:ObjectProperty ;
   rdfs:label ""^^xsd:string ;
 .
 cmusc:hasValueString
@@ -1097,4 +1102,9 @@ sc:Sensor
           ]
         ) ;
     ] ;
+.
+sc:madeBySensor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Usually used to associate a measurement event with a sensor"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
 .
