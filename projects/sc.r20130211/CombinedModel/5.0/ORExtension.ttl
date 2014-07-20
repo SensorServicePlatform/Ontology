@@ -6,6 +6,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension>
@@ -16,6 +19,47 @@
 .
 or:AssistanceService
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Modify ;
+      sp:insertPattern (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate or:hasKeyword ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+            sp:predicate or:hasKeyword ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Convert lists of keywords to individual instances of keywords"^^xsd:string ;
+    ] ;
   rdfs:comment "An organization"^^xsd:string ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Service> ;
