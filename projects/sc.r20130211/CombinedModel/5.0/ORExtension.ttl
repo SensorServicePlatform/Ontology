@@ -20,13 +20,15 @@
 or:AssistanceService
   rdf:type owl:Class ;
   spin:rule [
-      rdf:type sp:Modify ;
-      sp:insertPattern (
+      rdf:type sp:Construct ;
+      sp:templates (
           [
             sp:object [
                 sp:varName "item"^^xsd:string ;
               ] ;
-            sp:predicate or:hasKeyword ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
             sp:subject spin:_this ;
           ]
         ) ;
@@ -35,7 +37,9 @@ or:AssistanceService
             sp:object [
                 sp:varName "listOrItem"^^xsd:string ;
               ] ;
-            sp:predicate or:hasKeyword ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
             sp:subject spin:_this ;
           ]
           [
@@ -66,11 +70,61 @@ or:AssistanceService
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
+      owl:onProperty or:hasFundingSource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
       owl:onProperty or:hasKeyword ;
     ] ;
 .
 or:Organization
   rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Convert lists of keywords to individual instances of keywords"^^xsd:string ;
+    ] ;
   rdfs:comment "An organization"^^xsd:string ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf <http://schema.org/Organization> ;
@@ -86,8 +140,18 @@ or:Organization
       owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#isPartOf> ;
     ] ;
 .
+or:hasFundingSource
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
 or:hasKeyword
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "Descriptor keywords"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
+or:hasServiceAreas
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment ""^^xsd:string ;
   rdfs:label ""^^xsd:string ;
 .

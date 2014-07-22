@@ -208,6 +208,13 @@
       rdf:type spinmap:Mapping-1-1 ;
       spinmap:context MapOpenReferral:Service-AssistanceService ;
       spinmap:expression spin:_arg1 ;
+      spinmap:sourcePredicate1 <http://topbraid.org/json#funding_sources> ;
+      spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasFundingSource> ;
+    ] ;
+  spinmap:rule [
+      rdf:type spinmap:Mapping-1-1 ;
+      spinmap:context MapOpenReferral:Service-AssistanceService ;
+      spinmap:expression spin:_arg1 ;
       spinmap:sourcePredicate1 <http://topbraid.org/json#keywords> ;
       spinmap:targetPredicate1 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> ;
     ] ;
@@ -225,6 +232,195 @@
       spinmap:sourcePredicate1 rdfs:label ;
       spinmap:targetPredicate1 rdfs:label ;
     ] ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-1>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "FIFA World Cup"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Ruby on Rails/MongoDB/Redis"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-10>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "ADULT PROTECTION AND CARE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Disabilities Issues"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "HEALTH SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Home Delivered Meals"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Meal Sites/Home-delivered Mea"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Nutrition"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-11>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Library"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Public Libraries"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-12>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Library"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Public Libraries"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-13>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Library"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Public Libraries"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-14>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Adult"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Alternative"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Literacy Programs"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Literacy"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Public Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Youth"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-15>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Libraries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Library"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Public Libraries"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-16>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EMERGENCY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "FINANCIAL ASSISTANCE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Food Pantries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Homeless Shelter"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Individual/Group Counseling"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Interpretation/Translation"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "MENTAL HEALTH SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Rental Deposit Assistance"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Shelter/Refuge"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utilities"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utility Service Payment Assistance"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-17>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "ALCOHOLISM SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "DRUG ABUSE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Residential Care"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-18>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "CHILD PROTECTION AND CARE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMODITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Camping"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Clothing"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Clothing/Personal Items"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Day Care"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EMERGENCY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Emergency Food"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "FINANCIAL ASSISTANCE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Food Boxes/Food Vouchers"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Information and Referral"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "RECREATION/LEISURE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utilities"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utility Assistance"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Youth Development"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-19>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMODITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Case/Care Management"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Clothing"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Clothing/Personal Items"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EMERGENCY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Emergency Food"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "FINANCIAL ASSISTANCE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Food Boxes/Food Vouchers"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Food Pantries"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Furniture"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Holiday Programs"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Information and Referral"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Low Income"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Pastoral Counseling"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "School Supplies"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utilities"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Utility Assistance"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-2>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "FIFA World Cup"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Ruby on Rails/MongoDB/Redis"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-20>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Community Clinics"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "HEALTH SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Outpatient Care"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-21>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Community Clinics"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "HEALTH SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Outpatient Care"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-3>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "ADULT PROTECTION AND CARE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Arts and Crafts"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Brown Bag Food Programs"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Congregate Meals/Nutrition Sites"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "English Language"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Group Support"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Information and Referral"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Meal Sites/Home-delivered Mea"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "RECREATION/LEISURE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Senior Centers"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Sports/Games/Exercise"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-4>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EMPLOYMENT/TRAINING SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Job Development"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Job Information/Placement/Referral"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Job Search/Placement"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Job Training Formats"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Job Training"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-5>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Gay, Lesbian, Bisexual, Transgender Individuals"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Geriatric Counseling"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-6>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Divorce Counseling"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Growth and Adjustment"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "INDIVIDUAL AND FAMILY DEVELOPMENT SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "LEGAL AND CRIMINAL JUSTICE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Mediation"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Parental Visitation Monitoring"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Youth"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-7>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Automobile Loans"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Speakers"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-8>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "ADULT PROTECTION AND CARE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Adult"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "COMMUNITY SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Community Adult Schools"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "EDUCATION SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Education/Information"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Family Support"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Group Support"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "HEALTH SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "In-Home Supportive"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Individual/Group Counseling"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Information and Referral"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Meal Sites/Home-delivered Meals"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "RECREATION/LEISURE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Screening/Immunization"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Senior Centers"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Sports/Games/Exercise"^^xsd:string ;
+.
+<http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#ORService-9>
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "ADULT PROTECTION AND CARE SERVICES"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Adult Day Health Care"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Adult Day Programs"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Dementia Management"^^xsd:string ;
+  <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#hasKeyword> "Older Adults"^^xsd:string ;
 .
 <http://www.cmusv.edu/SmartCommunity/Mapping/3.0/MapOpenReferral>
   rdf:type owl:Ontology ;
