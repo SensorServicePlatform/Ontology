@@ -102,6 +102,11 @@ sc:ComputationalEvent
   rdf:type owl:Class ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf sc:Event ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:InformationArtifact ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
 .
 sc:ComputerProgram
   rdf:type owl:Class ;
@@ -110,6 +115,11 @@ sc:ComputerProgram
 sc:Device
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:locatedAt ;
+    ] ;
 .
 sc:DeviceRegistrationService
   rdf:type owl:Class ;
@@ -186,6 +196,11 @@ sc:Image
 sc:InformationArtifact
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:locatedAt ;
+    ] ;
 .
 sc:LightSensor
   rdf:type owl:Class ;
@@ -243,6 +258,11 @@ sc:MeasurementEvent
   rdf:type owl:Class ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf sc:Event ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Sensor ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
 .
 sc:MeasurementService
   rdf:type owl:Class ;
@@ -256,6 +276,7 @@ sc:MeasurementService
 sc:Person
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
 .
 sc:PressureSensor
   rdf:type owl:Class ;
@@ -265,6 +286,11 @@ sc:RegistrationEvent
   rdf:type owl:Class ;
   rdfs:label ""^^xsd:string ;
   rdfs:subClassOf sc:Event ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:ResourceRegistry ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
 .
 sc:RegistryService
   rdf:type owl:Class ;
@@ -316,7 +342,12 @@ sc:Resource
 .
 sc:ResourceRegistry
   rdf:type owl:Class ;
-  rdfs:subClassOf sc:Resource ;
+  rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:RegistrationEvent ;
+      owl:onProperty sc:isAssociatedWith ;
+    ] ;
 .
 sc:Sensor
   rdf:type owl:Class ;
