@@ -2,135 +2,156 @@
 # imports: http://topbraid.org/schema/schema-single-range
 # imports: http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel
 
-@prefix or:      <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sp:      <http://spinrdf.org/sp#> .
-@prefix spin:    <http://spinrdf.org/spin#> .
-@prefix spl:     <http://spinrdf.org/spl#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix or: <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/ORExtension>
-      rdf:type owl:Ontology ;
-      owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel> , <http://topbraid.org/schema/schema-single-range> ;
-      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
-
+  rdf:type owl:Ontology ;
+  owl:imports <http://topbraid.org/schema/schema-single-range> ;
+  owl:imports <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
 or:AssistanceService
-      rdf:type owl:Class ;
-      rdfs:comment "An organization"^^xsd:string ;
-      rdfs:label ""^^xsd:string ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Service> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty or:hasKeyword
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
               ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom xsd:string ;
-                owl:onProperty or:hasFundingSource
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
               ] ;
-      spin:rule
-              [ rdf:type sp:Construct ;
-                rdfs:comment "Convert lists of keywords to individual instances of keywords"^^xsd:string ;
-                sp:templates ([ sp:object
-                                    [ sp:varName "item"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject spin:_this
-                          ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "listOrItem"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject spin:_this
-                          ] [ rdf:type sp:TriplePath ;
-                            sp:object
-                                    [ sp:varName "item"^^xsd:string
-                                    ] ;
-                            sp:path [ rdf:type sp:SeqPath ;
-                                      sp:path1
-                                              [ rdf:type sp:ModPath ;
-                                                sp:modMax -2 ;
-                                                sp:modMin 0 ;
-                                                sp:subPath rdf:rest
-                                              ] ;
-                                      sp:path2 rdf:first
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "listOrItem"^^xsd:string
-                                    ]
-                          ])
-              ] .
-
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "1 Convert lists of keywords to individual instances of keywords"^^xsd:string ;
+    ] ;
+  rdfs:comment "An organization"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Service> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty or:hasFundingSource ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty or:hasKeyword ;
+    ] ;
+.
 or:Organization
-      rdf:type owl:Class ;
-      rdfs:comment "An organization"^^xsd:string ;
-      rdfs:label ""^^xsd:string ;
-      rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Resource> , <http://schema.org/Organization> ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom or:Organization ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#isPartOf>
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "item"^^xsd:string ;
               ] ;
-      rdfs:subClassOf
-              [ rdf:type owl:Restriction ;
-                owl:allValuesFrom or:AssistanceService ;
-                owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#provides>
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
               ] ;
-      spin:rule
-              [ rdf:type sp:Construct ;
-                rdfs:comment "Convert lists of keywords to individual instances of keywords"^^xsd:string ;
-                sp:templates ([ sp:object
-                                    [ sp:varName "item"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject spin:_this
-                          ]) ;
-                sp:where ([ sp:object
-                                    [ sp:varName "listOrItem"^^xsd:string
-                                    ] ;
-                            sp:predicate
-                                    [ sp:varName "property"^^xsd:string
-                                    ] ;
-                            sp:subject spin:_this
-                          ] [ rdf:type sp:TriplePath ;
-                            sp:object
-                                    [ sp:varName "item"^^xsd:string
-                                    ] ;
-                            sp:path [ rdf:type sp:SeqPath ;
-                                      sp:path1
-                                              [ rdf:type sp:ModPath ;
-                                                sp:modMax -2 ;
-                                                sp:modMin 0 ;
-                                                sp:subPath rdf:rest
-                                              ] ;
-                                      sp:path2 rdf:first
-                                    ] ;
-                            sp:subject
-                                    [ sp:varName "listOrItem"^^xsd:string
-                                    ]
-                          ])
-              ] .
-
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+            sp:predicate [
+                sp:varName "property"^^xsd:string ;
+              ] ;
+            sp:subject spin:_this ;
+          ]
+          [
+            rdf:type sp:TriplePath ;
+            sp:object [
+                sp:varName "item"^^xsd:string ;
+              ] ;
+            sp:path [
+                rdf:type sp:SeqPath ;
+                sp:path1 [
+                    rdf:type sp:ModPath ;
+                    sp:modMax -2 ;
+                    sp:modMin 0 ;
+                    sp:subPath rdf:rest ;
+                  ] ;
+                sp:path2 rdf:first ;
+              ] ;
+            sp:subject [
+                sp:varName "listOrItem"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Convert lists of keywords to individual instances of keywords"^^xsd:string ;
+    ] ;
+  rdfs:comment "An organization"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+  rdfs:subClassOf <http://schema.org/Organization> ;
+  rdfs:subClassOf <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#Resource> ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom or:AssistanceService ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#provides> ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom or:Organization ;
+      owl:onProperty <http://www.cmusv.edu/SmartCommunity/CombinedModel/5.0/CoreSCModel#isPartOf> ;
+    ] ;
+.
 or:hasFundingSource
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment ""^^xsd:string ;
-      rdfs:label ""^^xsd:string .
-
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
 or:hasKeyword
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment "Descriptor keywords"^^xsd:string ;
-      rdfs:label ""^^xsd:string .
-
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Descriptor keywords"^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
 or:hasServiceAreas
-      rdf:type owl:DatatypeProperty ;
-      rdfs:comment ""^^xsd:string ;
-      rdfs:label ""^^xsd:string .
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label ""^^xsd:string ;
+.
