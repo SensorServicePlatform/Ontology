@@ -43,10 +43,25 @@ sc:Accelerometer
 sc:ActuationService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Actuator ;
+      owl:onProperty sc:changesStateOf ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:changesStateOf ;
+    ] ;
 .
 sc:Actuator
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Device ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Resource ;
+      owl:onProperty sc:controls ;
+    ] ;
 .
 sc:AudioSensor
   rdf:type owl:Class ;
@@ -97,6 +112,11 @@ sc:ComplexService
 sc:ComputationService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:produces ;
+    ] ;
 .
 sc:ComputationalEvent
   rdf:type owl:Class ;
@@ -111,6 +131,11 @@ sc:ComputationalEvent
 sc:ComputerProgram
   rdf:type owl:Class ;
   rdfs:subClassOf sc:InformationArtifact ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:Service ;
+      owl:onProperty sc:provides ;
+    ] ;
 .
 sc:Device
   rdf:type owl:Class ;
@@ -124,6 +149,16 @@ sc:Device
 sc:DeviceRegistrationService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:RegistryService ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:DeviceRegistry ;
+      owl:onProperty sc:uses ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:uses ;
+    ] ;
 .
 sc:DeviceRegistry
   rdf:type owl:Class ;
@@ -295,6 +330,11 @@ sc:RegistrationEvent
 sc:RegistryService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:Service ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty sc:isAssociatedWith ;
+      owl:someValuesFrom sc:RegistrationEvent ;
+    ] ;
 .
 sc:Resource
   rdf:type owl:Class ;
@@ -556,6 +596,16 @@ sc:Sensor
 sc:SensorRegistrationService
   rdf:type owl:Class ;
   rdfs:subClassOf sc:RegistryService ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom sc:SensorRegistry ;
+      owl:onProperty sc:uses ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sc:uses ;
+    ] ;
 .
 sc:SensorRegistry
   rdf:type owl:Class ;
@@ -641,12 +691,18 @@ sc:altitude
   rdf:type owl:DatatypeProperty ;
   rdfs:range xsd:string ;
 .
+sc:changesStateOf
+  rdf:type owl:ObjectProperty ;
+.
 sc:composedOf
   rdf:type owl:TransitiveProperty ;
   owl:inverseOf sc:isPartOf ;
 .
 sc:consumes
   rdf:type rdf:Property ;
+.
+sc:controls
+  rdf:type owl:ObjectProperty ;
 .
 sc:createdAt
   rdf:type owl:ObjectProperty ;
@@ -762,5 +818,8 @@ sc:to
   rdf:type rdf:Property ;
 .
 sc:updatedAt
+  rdf:type owl:ObjectProperty ;
+.
+sc:uses
   rdf:type owl:ObjectProperty ;
 .
