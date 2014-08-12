@@ -164,12 +164,12 @@ cmusc:DeviceAgent
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:hasURI ;
+      owl:onProperty cmusc:metadataJson ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom xsd:string ;
-      owl:onProperty cmusc:metadataJson ;
+      owl:onProperty cmusc:uri ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
